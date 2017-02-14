@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsCSSPropertyID` enum in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsCSSPropertyID">
+
+    <title>style::gecko_bindings::structs::root::nsCSSPropertyID - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>structs</a>::<wbr><a href='index.html'>root</a></p><script>window.sidebarCurrent = {name: 'nsCSSPropertyID', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>structs</a>::<wbr><a href='index.html'>root</a>::<wbr><a class='enum' href=''>nsCSSPropertyID</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#12560-13040' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'><div class="docblock attributes">#[repr(i32)]
+</div>pub enum nsCSSPropertyID {
+    eCSSProperty_UNKNOWN,
+    eCSSProperty_align_content,
+    eCSSProperty_align_items,
+    eCSSProperty_align_self,
+    eCSSProperty_animation_delay,
+    eCSSProperty_animation_direction,
+    eCSSProperty_animation_duration,
+    eCSSProperty_animation_fill_mode,
+    eCSSProperty_animation_iteration_count,
+    eCSSProperty_animation_name,
+    eCSSProperty_animation_play_state,
+    eCSSProperty_animation_timing_function,
+    eCSSProperty__moz_appearance,
+    eCSSProperty_backface_visibility,
+    eCSSProperty_background_attachment,
+    eCSSProperty_background_blend_mode,
+    eCSSProperty_background_clip,
+    eCSSProperty_background_color,
+    eCSSProperty_background_image,
+    eCSSProperty_background_origin,
+    eCSSProperty_background_position_x,
+    eCSSProperty_background_position_y,
+    eCSSProperty_background_repeat,
+    eCSSProperty_background_size,
+    eCSSProperty__moz_binding,
+    eCSSProperty_block_size,
+    eCSSProperty_border_block_end_color,
+    eCSSProperty_border_block_end_style,
+    eCSSProperty_border_block_end_width,
+    eCSSProperty_border_block_start_color,
+    eCSSProperty_border_block_start_style,
+    eCSSProperty_border_block_start_width,
+    eCSSProperty_border_bottom_color,
+    eCSSProperty__moz_border_bottom_colors,
+    eCSSProperty_border_bottom_left_radius,
+    eCSSProperty_border_bottom_right_radius,
+    eCSSProperty_border_bottom_style,
+    eCSSProperty_border_bottom_width,
+    eCSSProperty_border_collapse,
+    eCSSProperty_border_image_outset,
+    eCSSProperty_border_image_repeat,
+    eCSSProperty_border_image_slice,
+    eCSSProperty_border_image_source,
+    eCSSProperty_border_image_width,
+    eCSSProperty_border_inline_end_color,
+    eCSSProperty_border_inline_end_style,
+    eCSSProperty_border_inline_end_width,
+    eCSSProperty_border_inline_start_color,
+    eCSSProperty_border_inline_start_style,
+    eCSSProperty_border_inline_start_width,
+    eCSSProperty_border_left_color,
+    eCSSProperty__moz_border_left_colors,
+    eCSSProperty_border_left_style,
+    eCSSProperty_border_left_width,
+    eCSSProperty_border_right_color,
+    eCSSProperty__moz_border_right_colors,
+    eCSSProperty_border_right_style,
+    eCSSProperty_border_right_width,
+    eCSSProperty_border_spacing,
+    eCSSProperty_border_top_color,
+    eCSSProperty__moz_border_top_colors,
+    eCSSProperty_border_top_left_radius,
+    eCSSProperty_border_top_right_radius,
+    eCSSProperty_border_top_style,
+    eCSSProperty_border_top_width,
+    eCSSProperty_bottom,
+    eCSSProperty__moz_box_align,
+    eCSSProperty_box_decoration_break,
+    eCSSProperty__moz_box_direction,
+    eCSSProperty__moz_box_flex,
+    eCSSProperty__moz_box_ordinal_group,
+    eCSSProperty__moz_box_orient,
+    eCSSProperty__moz_box_pack,
+    eCSSProperty_box_shadow,
+    eCSSProperty_box_sizing,
+    eCSSProperty_caption_side,
+    eCSSProperty_caret_color,
+    eCSSProperty_clear,
+    eCSSProperty_clip,
+    eCSSProperty_clip_path,
+    eCSSProperty_clip_rule,
+    eCSSProperty_color,
+    eCSSProperty_color_adjust,
+    eCSSProperty_color_interpolation,
+    eCSSProperty_color_interpolation_filters,
+    eCSSProperty_column_count,
+    eCSSProperty_column_fill,
+    eCSSProperty_column_gap,
+    eCSSProperty_column_rule_color,
+    eCSSProperty_column_rule_style,
+    eCSSProperty_column_rule_width,
+    eCSSProperty_column_width,
+    eCSSProperty_contain,
+    eCSSProperty_content,
+    eCSSProperty__moz_control_character_visibility,
+    eCSSProperty_counter_increment,
+    eCSSProperty_counter_reset,
+    eCSSProperty_cursor,
+    eCSSProperty_direction,
+    eCSSProperty_display,
+    eCSSProperty_dominant_baseline,
+    eCSSProperty_empty_cells,
+    eCSSProperty_fill,
+    eCSSProperty_fill_opacity,
+    eCSSProperty_fill_rule,
+    eCSSProperty_filter,
+    eCSSProperty_flex_basis,
+    eCSSProperty_flex_direction,
+    eCSSProperty_flex_grow,
+    eCSSProperty_flex_shrink,
+    eCSSProperty_flex_wrap,
+    eCSSProperty_float_,
+    eCSSProperty__moz_float_edge,
+    eCSSProperty_flood_color,
+    eCSSProperty_flood_opacity,
+    eCSSProperty_font_family,
+    eCSSProperty_font_feature_settings,
+    eCSSProperty_font_kerning,
+    eCSSProperty_font_language_override,
+    eCSSProperty_font_size,
+    eCSSProperty_font_size_adjust,
+    eCSSProperty_font_stretch,
+    eCSSProperty_font_style,
+    eCSSProperty_font_synthesis,
+    eCSSProperty_font_variant_alternates,
+    eCSSProperty_font_variant_caps,
+    eCSSProperty_font_variant_east_asian,
+    eCSSProperty_font_variant_ligatures,
+    eCSSProperty_font_variant_numeric,
+    eCSSProperty_font_variant_position,
+    eCSSProperty_font_variation_settings,
+    eCSSProperty_font_weight,
+    eCSSProperty__moz_force_broken_image_icon,
+    eCSSProperty_grid_auto_columns,
+    eCSSProperty_grid_auto_flow,
+    eCSSProperty_grid_auto_rows,
+    eCSSProperty_grid_column_end,
+    eCSSProperty_grid_column_gap,
+    eCSSProperty_grid_column_start,
+    eCSSProperty_grid_row_end,
+    eCSSProperty_grid_row_gap,
+    eCSSProperty_grid_row_start,
+    eCSSProperty_grid_template_areas,
+    eCSSProperty_grid_template_columns,
+    eCSSProperty_grid_template_rows,
+    eCSSProperty_height,
+    eCSSProperty_hyphens,
+    eCSSProperty_initial_letter,
+    eCSSProperty_image_orientation,
+    eCSSProperty__moz_image_region,
+    eCSSProperty_image_rendering,
+    eCSSProperty_ime_mode,
+    eCSSProperty_inline_size,
+    eCSSProperty_isolation,
+    eCSSProperty_justify_content,
+    eCSSProperty_justify_items,
+    eCSSProperty_justify_self,
+    eCSSProperty__x_lang,
+    eCSSProperty_left,
+    eCSSProperty_letter_spacing,
+    eCSSProperty_lighting_color,
+    eCSSProperty_line_height,
+    eCSSProperty_list_style_image,
+    eCSSProperty_list_style_position,
+    eCSSProperty_list_style_type,
+    eCSSProperty_margin_block_end,
+    eCSSProperty_margin_block_start,
+    eCSSProperty_margin_bottom,
+    eCSSProperty_margin_inline_end,
+    eCSSProperty_margin_inline_start,
+    eCSSProperty_margin_left,
+    eCSSProperty_margin_right,
+    eCSSProperty_margin_top,
+    eCSSProperty_marker_end,
+    eCSSProperty_marker_mid,
+    eCSSProperty_marker_start,
+    eCSSProperty_mask_clip,
+    eCSSProperty_mask_composite,
+    eCSSProperty_mask_image,
+    eCSSProperty_mask_mode,
+    eCSSProperty_mask_origin,
+    eCSSProperty_mask_position_x,
+    eCSSProperty_mask_position_y,
+    eCSSProperty_mask_repeat,
+    eCSSProperty_mask_size,
+    eCSSProperty_mask_type,
+    eCSSProperty__moz_math_display,
+    eCSSProperty__moz_math_variant,
+    eCSSProperty_max_block_size,
+    eCSSProperty_max_height,
+    eCSSProperty_max_inline_size,
+    eCSSProperty_max_width,
+    eCSSProperty_min_block_size,
+    eCSSProperty__moz_min_font_size_ratio,
+    eCSSProperty_min_height,
+    eCSSProperty_min_inline_size,
+    eCSSProperty_min_width,
+    eCSSProperty_mix_blend_mode,
+    eCSSProperty_object_fit,
+    eCSSProperty_object_position,
+    eCSSProperty_offset_block_end,
+    eCSSProperty_offset_block_start,
+    eCSSProperty_offset_inline_end,
+    eCSSProperty_offset_inline_start,
+    eCSSProperty_opacity,
+    eCSSProperty_order,
+    eCSSProperty__moz_orient,
+    eCSSProperty__moz_osx_font_smoothing,
+    eCSSProperty_outline_color,
+    eCSSProperty_outline_offset,
+    eCSSProperty__moz_outline_radius_bottomleft,
+    eCSSProperty__moz_outline_radius_bottomright,
+    eCSSProperty__moz_outline_radius_topleft,
+    eCSSProperty__moz_outline_radius_topright,
+    eCSSProperty_outline_style,
+    eCSSProperty_outline_width,
+    eCSSProperty_overflow_clip_box,
+    eCSSProperty_overflow_x,
+    eCSSProperty_overflow_y,
+    eCSSProperty_padding_block_end,
+    eCSSProperty_padding_block_start,
+    eCSSProperty_padding_bottom,
+    eCSSProperty_padding_inline_end,
+    eCSSProperty_padding_inline_start,
+    eCSSProperty_padding_left,
+    eCSSProperty_padding_right,
+    eCSSProperty_padding_top,
+    eCSSProperty_page_break_after,
+    eCSSProperty_page_break_before,
+    eCSSProperty_page_break_inside,
+    eCSSProperty_paint_order,
+    eCSSProperty_perspective,
+    eCSSProperty_perspective_origin,
+    eCSSProperty_pointer_events,
+    eCSSProperty_position,
+    eCSSProperty_quotes,
+    eCSSProperty_resize,
+    eCSSProperty_right,
+    eCSSProperty_ruby_align,
+    eCSSProperty_ruby_position,
+    eCSSProperty__moz_script_level,
+    eCSSProperty__moz_script_min_size,
+    eCSSProperty__moz_script_size_multiplier,
+    eCSSProperty_scroll_behavior,
+    eCSSProperty_scroll_snap_coordinate,
+    eCSSProperty_scroll_snap_destination,
+    eCSSProperty_scroll_snap_points_x,
+    eCSSProperty_scroll_snap_points_y,
+    eCSSProperty_scroll_snap_type_x,
+    eCSSProperty_scroll_snap_type_y,
+    eCSSProperty_shape_outside,
+    eCSSProperty_shape_rendering,
+    eCSSProperty__x_span,
+    eCSSProperty__moz_stack_sizing,
+    eCSSProperty_stop_color,
+    eCSSProperty_stop_opacity,
+    eCSSProperty_stroke,
+    eCSSProperty_stroke_dasharray,
+    eCSSProperty_stroke_dashoffset,
+    eCSSProperty_stroke_linecap,
+    eCSSProperty_stroke_linejoin,
+    eCSSProperty_stroke_miterlimit,
+    eCSSProperty_stroke_opacity,
+    eCSSProperty_stroke_width,
+    eCSSProperty__x_system_font,
+    eCSSProperty__moz_tab_size,
+    eCSSProperty_table_layout,
+    eCSSProperty_text_align,
+    eCSSProperty_text_align_last,
+    eCSSProperty_text_anchor,
+    eCSSProperty_text_combine_upright,
+    eCSSProperty_text_decoration_color,
+    eCSSProperty_text_decoration_line,
+    eCSSProperty_text_decoration_style,
+    eCSSProperty_text_emphasis_color,
+    eCSSProperty_text_emphasis_position,
+    eCSSProperty_text_emphasis_style,
+    eCSSProperty__webkit_text_fill_color,
+    eCSSProperty_text_indent,
+    eCSSProperty_text_orientation,
+    eCSSProperty_text_overflow,
+    eCSSProperty_text_rendering,
+    eCSSProperty_text_shadow,
+    eCSSProperty__moz_text_size_adjust,
+    eCSSProperty__webkit_text_stroke_color,
+    eCSSProperty__webkit_text_stroke_width,
+    eCSSProperty_text_transform,
+    eCSSProperty__x_text_zoom,
+    eCSSProperty_top,
+    eCSSProperty__moz_top_layer,
+    eCSSProperty_touch_action,
+    eCSSProperty_transform,
+    eCSSProperty_transform_box,
+    eCSSProperty_transform_origin,
+    eCSSProperty_transform_style,
+    eCSSProperty_transition_delay,
+    eCSSProperty_transition_duration,
+    eCSSProperty_transition_property,
+    eCSSProperty_transition_timing_function,
+    eCSSProperty_unicode_bidi,
+    eCSSProperty__moz_user_focus,
+    eCSSProperty__moz_user_input,
+    eCSSProperty__moz_user_modify,
+    eCSSProperty__moz_user_select,
+    eCSSProperty_vector_effect,
+    eCSSProperty_vertical_align,
+    eCSSProperty_visibility,
+    eCSSProperty_white_space,
+    eCSSProperty_width,
+    eCSSProperty_will_change,
+    eCSSProperty__moz_window_dragging,
+    eCSSProperty__moz_window_shadow,
+    eCSSProperty_word_break,
+    eCSSProperty_word_spacing,
+    eCSSProperty_overflow_wrap,
+    eCSSProperty_writing_mode,
+    eCSSProperty_z_index,
+    eCSSProperty_COUNT_no_shorthands,
+    eCSSProperty_animation,
+    eCSSProperty_background,
+    eCSSProperty_background_position,
+    eCSSProperty_border,
+    eCSSProperty_border_block_end,
+    eCSSProperty_border_block_start,
+    eCSSProperty_border_bottom,
+    eCSSProperty_border_color,
+    eCSSProperty_border_image,
+    eCSSProperty_border_inline_end,
+    eCSSProperty_border_inline_start,
+    eCSSProperty_border_left,
+    eCSSProperty_border_radius,
+    eCSSProperty_border_right,
+    eCSSProperty_border_style,
+    eCSSProperty_border_top,
+    eCSSProperty_border_width,
+    eCSSProperty_column_rule,
+    eCSSProperty_columns,
+    eCSSProperty_flex,
+    eCSSProperty_flex_flow,
+    eCSSProperty_font,
+    eCSSProperty_font_variant,
+    eCSSProperty_grid,
+    eCSSProperty_grid_area,
+    eCSSProperty_grid_column,
+    eCSSProperty_grid_gap,
+    eCSSProperty_grid_row,
+    eCSSProperty_grid_template,
+    eCSSProperty_list_style,
+    eCSSProperty_margin,
+    eCSSProperty_marker,
+    eCSSProperty_mask,
+    eCSSProperty_mask_position,
+    eCSSProperty_outline,
+    eCSSProperty__moz_outline_radius,
+    eCSSProperty_overflow,
+    eCSSProperty_padding,
+    eCSSProperty_place_content,
+    eCSSProperty_place_items,
+    eCSSProperty_place_self,
+    eCSSProperty_scroll_snap_type,
+    eCSSProperty_text_decoration,
+    eCSSProperty_text_emphasis,
+    eCSSProperty__webkit_text_stroke,
+    eCSSProperty__moz_transform,
+    eCSSProperty_transition,
+    eCSSProperty_COUNT,
+    eCSSPropertyAlias_MozTransformOrigin,
+    eCSSPropertyAlias_MozPerspectiveOrigin,
+    eCSSPropertyAlias_MozPerspective,
+    eCSSPropertyAlias_MozTransformStyle,
+    eCSSPropertyAlias_MozBackfaceVisibility,
+    eCSSPropertyAlias_MozBorderImage,
+    eCSSPropertyAlias_MozTransition,
+    eCSSPropertyAlias_MozTransitionDelay,
+    eCSSPropertyAlias_MozTransitionDuration,
+    eCSSPropertyAlias_MozTransitionProperty,
+    eCSSPropertyAlias_MozTransitionTimingFunction,
+    eCSSPropertyAlias_MozAnimation,
+    eCSSPropertyAlias_MozAnimationDelay,
+    eCSSPropertyAlias_MozAnimationDirection,
+    eCSSPropertyAlias_MozAnimationDuration,
+    eCSSPropertyAlias_MozAnimationFillMode,
+    eCSSPropertyAlias_MozAnimationIterationCount,
+    eCSSPropertyAlias_MozAnimationName,
+    eCSSPropertyAlias_MozAnimationPlayState,
+    eCSSPropertyAlias_MozAnimationTimingFunction,
+    eCSSPropertyAlias_MozBoxSizing,
+    eCSSPropertyAlias_MozFontFeatureSettings,
+    eCSSPropertyAlias_MozFontLanguageOverride,
+    eCSSPropertyAlias_MozPaddingEnd,
+    eCSSPropertyAlias_MozPaddingStart,
+    eCSSPropertyAlias_MozMarginEnd,
+    eCSSPropertyAlias_MozMarginStart,
+    eCSSPropertyAlias_MozBorderEnd,
+    eCSSPropertyAlias_MozBorderEndColor,
+    eCSSPropertyAlias_MozBorderEndStyle,
+    eCSSPropertyAlias_MozBorderEndWidth,
+    eCSSPropertyAlias_MozBorderStart,
+    eCSSPropertyAlias_MozBorderStartColor,
+    eCSSPropertyAlias_MozBorderStartStyle,
+    eCSSPropertyAlias_MozBorderStartWidth,
+    eCSSPropertyAlias_MozHyphens,
+    eCSSPropertyAlias_MozColumnCount,
+    eCSSPropertyAlias_MozColumnFill,
+    eCSSPropertyAlias_MozColumnGap,
+    eCSSPropertyAlias_MozColumnRule,
+    eCSSPropertyAlias_MozColumnRuleColor,
+    eCSSPropertyAlias_MozColumnRuleStyle,
+    eCSSPropertyAlias_MozColumnRuleWidth,
+    eCSSPropertyAlias_MozColumnWidth,
+    eCSSPropertyAlias_MozColumns,
+    eCSSPropertyAlias_WebkitAnimation,
+    eCSSPropertyAlias_WebkitAnimationDelay,
+    eCSSPropertyAlias_WebkitAnimationDirection,
+    eCSSPropertyAlias_WebkitAnimationDuration,
+    eCSSPropertyAlias_WebkitAnimationFillMode,
+    eCSSPropertyAlias_WebkitAnimationIterationCount,
+    eCSSPropertyAlias_WebkitAnimationName,
+    eCSSPropertyAlias_WebkitAnimationPlayState,
+    eCSSPropertyAlias_WebkitAnimationTimingFunction,
+    eCSSPropertyAlias_WebkitFilter,
+    eCSSPropertyAlias_WebkitTextSizeAdjust,
+    eCSSPropertyAlias_WebkitTransform,
+    eCSSPropertyAlias_WebkitTransformOrigin,
+    eCSSPropertyAlias_WebkitTransformStyle,
+    eCSSPropertyAlias_WebkitBackfaceVisibility,
+    eCSSPropertyAlias_WebkitPerspective,
+    eCSSPropertyAlias_WebkitPerspectiveOrigin,
+    eCSSPropertyAlias_WebkitTransition,
+    eCSSPropertyAlias_WebkitTransitionDelay,
+    eCSSPropertyAlias_WebkitTransitionDuration,
+    eCSSPropertyAlias_WebkitTransitionProperty,
+    eCSSPropertyAlias_WebkitTransitionTimingFunction,
+    eCSSPropertyAlias_WebkitBorderRadius,
+    eCSSPropertyAlias_WebkitBorderTopLeftRadius,
+    eCSSPropertyAlias_WebkitBorderTopRightRadius,
+    eCSSPropertyAlias_WebkitBorderBottomLeftRadius,
+    eCSSPropertyAlias_WebkitBorderBottomRightRadius,
+    eCSSPropertyAlias_WebkitBackgroundClip,
+    eCSSPropertyAlias_WebkitBackgroundOrigin,
+    eCSSPropertyAlias_WebkitBackgroundSize,
+    eCSSPropertyAlias_WebkitBorderImage,
+    eCSSPropertyAlias_WebkitBoxShadow,
+    eCSSPropertyAlias_WebkitBoxSizing,
+    eCSSPropertyAlias_WebkitBoxFlex,
+    eCSSPropertyAlias_WebkitBoxOrdinalGroup,
+    eCSSPropertyAlias_WebkitBoxOrient,
+    eCSSPropertyAlias_WebkitBoxDirection,
+    eCSSPropertyAlias_WebkitBoxAlign,
+    eCSSPropertyAlias_WebkitBoxPack,
+    eCSSPropertyAlias_WebkitFlexDirection,
+    eCSSPropertyAlias_WebkitFlexWrap,
+    eCSSPropertyAlias_WebkitFlexFlow,
+    eCSSPropertyAlias_WebkitOrder,
+    eCSSPropertyAlias_WebkitFlex,
+    eCSSPropertyAlias_WebkitFlexGrow,
+    eCSSPropertyAlias_WebkitFlexShrink,
+    eCSSPropertyAlias_WebkitFlexBasis,
+    eCSSPropertyAlias_WebkitJustifyContent,
+    eCSSPropertyAlias_WebkitAlignItems,
+    eCSSPropertyAlias_WebkitAlignSelf,
+    eCSSPropertyAlias_WebkitAlignContent,
+    eCSSPropertyAlias_WebkitUserSelect,
+    eCSSPropertyAlias_WebkitMask,
+    eCSSPropertyAlias_WebkitMaskClip,
+    eCSSPropertyAlias_WebkitMaskComposite,
+    eCSSPropertyAlias_WebkitMaskImage,
+    eCSSPropertyAlias_WebkitMaskOrigin,
+    eCSSPropertyAlias_WebkitMaskPosition,
+    eCSSPropertyAlias_WebkitMaskPositionX,
+    eCSSPropertyAlias_WebkitMaskPositionY,
+    eCSSPropertyAlias_WebkitMaskRepeat,
+    eCSSPropertyAlias_WebkitMaskSize,
+    eCSSProperty_COUNT_with_aliases,
+    eCSSPropertyExtra_all_properties,
+    eCSSPropertyExtra_x_none_value,
+    eCSSPropertyExtra_x_auto_value,
+    eCSSPropertyExtra_variable,
+    eCSSProperty_DOM,
+}</pre><h2 class='variants'>Variants</h2>
+<span id='variant.eCSSProperty_UNKNOWN' class='variant'><span id='eCSSProperty_UNKNOWN.v' class='invisible'><code>eCSSProperty_UNKNOWN</code></span></span><span id='variant.eCSSProperty_align_content' class='variant'><span id='eCSSProperty_align_content.v' class='invisible'><code>eCSSProperty_align_content</code></span></span><span id='variant.eCSSProperty_align_items' class='variant'><span id='eCSSProperty_align_items.v' class='invisible'><code>eCSSProperty_align_items</code></span></span><span id='variant.eCSSProperty_align_self' class='variant'><span id='eCSSProperty_align_self.v' class='invisible'><code>eCSSProperty_align_self</code></span></span><span id='variant.eCSSProperty_animation_delay' class='variant'><span id='eCSSProperty_animation_delay.v' class='invisible'><code>eCSSProperty_animation_delay</code></span></span><span id='variant.eCSSProperty_animation_direction' class='variant'><span id='eCSSProperty_animation_direction.v' class='invisible'><code>eCSSProperty_animation_direction</code></span></span><span id='variant.eCSSProperty_animation_duration' class='variant'><span id='eCSSProperty_animation_duration.v' class='invisible'><code>eCSSProperty_animation_duration</code></span></span><span id='variant.eCSSProperty_animation_fill_mode' class='variant'><span id='eCSSProperty_animation_fill_mode.v' class='invisible'><code>eCSSProperty_animation_fill_mode</code></span></span><span id='variant.eCSSProperty_animation_iteration_count' class='variant'><span id='eCSSProperty_animation_iteration_count.v' class='invisible'><code>eCSSProperty_animation_iteration_count</code></span></span><span id='variant.eCSSProperty_animation_name' class='variant'><span id='eCSSProperty_animation_name.v' class='invisible'><code>eCSSProperty_animation_name</code></span></span><span id='variant.eCSSProperty_animation_play_state' class='variant'><span id='eCSSProperty_animation_play_state.v' class='invisible'><code>eCSSProperty_animation_play_state</code></span></span><span id='variant.eCSSProperty_animation_timing_function' class='variant'><span id='eCSSProperty_animation_timing_function.v' class='invisible'><code>eCSSProperty_animation_timing_function</code></span></span><span id='variant.eCSSProperty__moz_appearance' class='variant'><span id='eCSSProperty__moz_appearance.v' class='invisible'><code>eCSSProperty__moz_appearance</code></span></span><span id='variant.eCSSProperty_backface_visibility' class='variant'><span id='eCSSProperty_backface_visibility.v' class='invisible'><code>eCSSProperty_backface_visibility</code></span></span><span id='variant.eCSSProperty_background_attachment' class='variant'><span id='eCSSProperty_background_attachment.v' class='invisible'><code>eCSSProperty_background_attachment</code></span></span><span id='variant.eCSSProperty_background_blend_mode' class='variant'><span id='eCSSProperty_background_blend_mode.v' class='invisible'><code>eCSSProperty_background_blend_mode</code></span></span><span id='variant.eCSSProperty_background_clip' class='variant'><span id='eCSSProperty_background_clip.v' class='invisible'><code>eCSSProperty_background_clip</code></span></span><span id='variant.eCSSProperty_background_color' class='variant'><span id='eCSSProperty_background_color.v' class='invisible'><code>eCSSProperty_background_color</code></span></span><span id='variant.eCSSProperty_background_image' class='variant'><span id='eCSSProperty_background_image.v' class='invisible'><code>eCSSProperty_background_image</code></span></span><span id='variant.eCSSProperty_background_origin' class='variant'><span id='eCSSProperty_background_origin.v' class='invisible'><code>eCSSProperty_background_origin</code></span></span><span id='variant.eCSSProperty_background_position_x' class='variant'><span id='eCSSProperty_background_position_x.v' class='invisible'><code>eCSSProperty_background_position_x</code></span></span><span id='variant.eCSSProperty_background_position_y' class='variant'><span id='eCSSProperty_background_position_y.v' class='invisible'><code>eCSSProperty_background_position_y</code></span></span><span id='variant.eCSSProperty_background_repeat' class='variant'><span id='eCSSProperty_background_repeat.v' class='invisible'><code>eCSSProperty_background_repeat</code></span></span><span id='variant.eCSSProperty_background_size' class='variant'><span id='eCSSProperty_background_size.v' class='invisible'><code>eCSSProperty_background_size</code></span></span><span id='variant.eCSSProperty__moz_binding' class='variant'><span id='eCSSProperty__moz_binding.v' class='invisible'><code>eCSSProperty__moz_binding</code></span></span><span id='variant.eCSSProperty_block_size' class='variant'><span id='eCSSProperty_block_size.v' class='invisible'><code>eCSSProperty_block_size</code></span></span><span id='variant.eCSSProperty_border_block_end_color' class='variant'><span id='eCSSProperty_border_block_end_color.v' class='invisible'><code>eCSSProperty_border_block_end_color</code></span></span><span id='variant.eCSSProperty_border_block_end_style' class='variant'><span id='eCSSProperty_border_block_end_style.v' class='invisible'><code>eCSSProperty_border_block_end_style</code></span></span><span id='variant.eCSSProperty_border_block_end_width' class='variant'><span id='eCSSProperty_border_block_end_width.v' class='invisible'><code>eCSSProperty_border_block_end_width</code></span></span><span id='variant.eCSSProperty_border_block_start_color' class='variant'><span id='eCSSProperty_border_block_start_color.v' class='invisible'><code>eCSSProperty_border_block_start_color</code></span></span><span id='variant.eCSSProperty_border_block_start_style' class='variant'><span id='eCSSProperty_border_block_start_style.v' class='invisible'><code>eCSSProperty_border_block_start_style</code></span></span><span id='variant.eCSSProperty_border_block_start_width' class='variant'><span id='eCSSProperty_border_block_start_width.v' class='invisible'><code>eCSSProperty_border_block_start_width</code></span></span><span id='variant.eCSSProperty_border_bottom_color' class='variant'><span id='eCSSProperty_border_bottom_color.v' class='invisible'><code>eCSSProperty_border_bottom_color</code></span></span><span id='variant.eCSSProperty__moz_border_bottom_colors' class='variant'><span id='eCSSProperty__moz_border_bottom_colors.v' class='invisible'><code>eCSSProperty__moz_border_bottom_colors</code></span></span><span id='variant.eCSSProperty_border_bottom_left_radius' class='variant'><span id='eCSSProperty_border_bottom_left_radius.v' class='invisible'><code>eCSSProperty_border_bottom_left_radius</code></span></span><span id='variant.eCSSProperty_border_bottom_right_radius' class='variant'><span id='eCSSProperty_border_bottom_right_radius.v' class='invisible'><code>eCSSProperty_border_bottom_right_radius</code></span></span><span id='variant.eCSSProperty_border_bottom_style' class='variant'><span id='eCSSProperty_border_bottom_style.v' class='invisible'><code>eCSSProperty_border_bottom_style</code></span></span><span id='variant.eCSSProperty_border_bottom_width' class='variant'><span id='eCSSProperty_border_bottom_width.v' class='invisible'><code>eCSSProperty_border_bottom_width</code></span></span><span id='variant.eCSSProperty_border_collapse' class='variant'><span id='eCSSProperty_border_collapse.v' class='invisible'><code>eCSSProperty_border_collapse</code></span></span><span id='variant.eCSSProperty_border_image_outset' class='variant'><span id='eCSSProperty_border_image_outset.v' class='invisible'><code>eCSSProperty_border_image_outset</code></span></span><span id='variant.eCSSProperty_border_image_repeat' class='variant'><span id='eCSSProperty_border_image_repeat.v' class='invisible'><code>eCSSProperty_border_image_repeat</code></span></span><span id='variant.eCSSProperty_border_image_slice' class='variant'><span id='eCSSProperty_border_image_slice.v' class='invisible'><code>eCSSProperty_border_image_slice</code></span></span><span id='variant.eCSSProperty_border_image_source' class='variant'><span id='eCSSProperty_border_image_source.v' class='invisible'><code>eCSSProperty_border_image_source</code></span></span><span id='variant.eCSSProperty_border_image_width' class='variant'><span id='eCSSProperty_border_image_width.v' class='invisible'><code>eCSSProperty_border_image_width</code></span></span><span id='variant.eCSSProperty_border_inline_end_color' class='variant'><span id='eCSSProperty_border_inline_end_color.v' class='invisible'><code>eCSSProperty_border_inline_end_color</code></span></span><span id='variant.eCSSProperty_border_inline_end_style' class='variant'><span id='eCSSProperty_border_inline_end_style.v' class='invisible'><code>eCSSProperty_border_inline_end_style</code></span></span><span id='variant.eCSSProperty_border_inline_end_width' class='variant'><span id='eCSSProperty_border_inline_end_width.v' class='invisible'><code>eCSSProperty_border_inline_end_width</code></span></span><span id='variant.eCSSProperty_border_inline_start_color' class='variant'><span id='eCSSProperty_border_inline_start_color.v' class='invisible'><code>eCSSProperty_border_inline_start_color</code></span></span><span id='variant.eCSSProperty_border_inline_start_style' class='variant'><span id='eCSSProperty_border_inline_start_style.v' class='invisible'><code>eCSSProperty_border_inline_start_style</code></span></span><span id='variant.eCSSProperty_border_inline_start_width' class='variant'><span id='eCSSProperty_border_inline_start_width.v' class='invisible'><code>eCSSProperty_border_inline_start_width</code></span></span><span id='variant.eCSSProperty_border_left_color' class='variant'><span id='eCSSProperty_border_left_color.v' class='invisible'><code>eCSSProperty_border_left_color</code></span></span><span id='variant.eCSSProperty__moz_border_left_colors' class='variant'><span id='eCSSProperty__moz_border_left_colors.v' class='invisible'><code>eCSSProperty__moz_border_left_colors</code></span></span><span id='variant.eCSSProperty_border_left_style' class='variant'><span id='eCSSProperty_border_left_style.v' class='invisible'><code>eCSSProperty_border_left_style</code></span></span><span id='variant.eCSSProperty_border_left_width' class='variant'><span id='eCSSProperty_border_left_width.v' class='invisible'><code>eCSSProperty_border_left_width</code></span></span><span id='variant.eCSSProperty_border_right_color' class='variant'><span id='eCSSProperty_border_right_color.v' class='invisible'><code>eCSSProperty_border_right_color</code></span></span><span id='variant.eCSSProperty__moz_border_right_colors' class='variant'><span id='eCSSProperty__moz_border_right_colors.v' class='invisible'><code>eCSSProperty__moz_border_right_colors</code></span></span><span id='variant.eCSSProperty_border_right_style' class='variant'><span id='eCSSProperty_border_right_style.v' class='invisible'><code>eCSSProperty_border_right_style</code></span></span><span id='variant.eCSSProperty_border_right_width' class='variant'><span id='eCSSProperty_border_right_width.v' class='invisible'><code>eCSSProperty_border_right_width</code></span></span><span id='variant.eCSSProperty_border_spacing' class='variant'><span id='eCSSProperty_border_spacing.v' class='invisible'><code>eCSSProperty_border_spacing</code></span></span><span id='variant.eCSSProperty_border_top_color' class='variant'><span id='eCSSProperty_border_top_color.v' class='invisible'><code>eCSSProperty_border_top_color</code></span></span><span id='variant.eCSSProperty__moz_border_top_colors' class='variant'><span id='eCSSProperty__moz_border_top_colors.v' class='invisible'><code>eCSSProperty__moz_border_top_colors</code></span></span><span id='variant.eCSSProperty_border_top_left_radius' class='variant'><span id='eCSSProperty_border_top_left_radius.v' class='invisible'><code>eCSSProperty_border_top_left_radius</code></span></span><span id='variant.eCSSProperty_border_top_right_radius' class='variant'><span id='eCSSProperty_border_top_right_radius.v' class='invisible'><code>eCSSProperty_border_top_right_radius</code></span></span><span id='variant.eCSSProperty_border_top_style' class='variant'><span id='eCSSProperty_border_top_style.v' class='invisible'><code>eCSSProperty_border_top_style</code></span></span><span id='variant.eCSSProperty_border_top_width' class='variant'><span id='eCSSProperty_border_top_width.v' class='invisible'><code>eCSSProperty_border_top_width</code></span></span><span id='variant.eCSSProperty_bottom' class='variant'><span id='eCSSProperty_bottom.v' class='invisible'><code>eCSSProperty_bottom</code></span></span><span id='variant.eCSSProperty__moz_box_align' class='variant'><span id='eCSSProperty__moz_box_align.v' class='invisible'><code>eCSSProperty__moz_box_align</code></span></span><span id='variant.eCSSProperty_box_decoration_break' class='variant'><span id='eCSSProperty_box_decoration_break.v' class='invisible'><code>eCSSProperty_box_decoration_break</code></span></span><span id='variant.eCSSProperty__moz_box_direction' class='variant'><span id='eCSSProperty__moz_box_direction.v' class='invisible'><code>eCSSProperty__moz_box_direction</code></span></span><span id='variant.eCSSProperty__moz_box_flex' class='variant'><span id='eCSSProperty__moz_box_flex.v' class='invisible'><code>eCSSProperty__moz_box_flex</code></span></span><span id='variant.eCSSProperty__moz_box_ordinal_group' class='variant'><span id='eCSSProperty__moz_box_ordinal_group.v' class='invisible'><code>eCSSProperty__moz_box_ordinal_group</code></span></span><span id='variant.eCSSProperty__moz_box_orient' class='variant'><span id='eCSSProperty__moz_box_orient.v' class='invisible'><code>eCSSProperty__moz_box_orient</code></span></span><span id='variant.eCSSProperty__moz_box_pack' class='variant'><span id='eCSSProperty__moz_box_pack.v' class='invisible'><code>eCSSProperty__moz_box_pack</code></span></span><span id='variant.eCSSProperty_box_shadow' class='variant'><span id='eCSSProperty_box_shadow.v' class='invisible'><code>eCSSProperty_box_shadow</code></span></span><span id='variant.eCSSProperty_box_sizing' class='variant'><span id='eCSSProperty_box_sizing.v' class='invisible'><code>eCSSProperty_box_sizing</code></span></span><span id='variant.eCSSProperty_caption_side' class='variant'><span id='eCSSProperty_caption_side.v' class='invisible'><code>eCSSProperty_caption_side</code></span></span><span id='variant.eCSSProperty_caret_color' class='variant'><span id='eCSSProperty_caret_color.v' class='invisible'><code>eCSSProperty_caret_color</code></span></span><span id='variant.eCSSProperty_clear' class='variant'><span id='eCSSProperty_clear.v' class='invisible'><code>eCSSProperty_clear</code></span></span><span id='variant.eCSSProperty_clip' class='variant'><span id='eCSSProperty_clip.v' class='invisible'><code>eCSSProperty_clip</code></span></span><span id='variant.eCSSProperty_clip_path' class='variant'><span id='eCSSProperty_clip_path.v' class='invisible'><code>eCSSProperty_clip_path</code></span></span><span id='variant.eCSSProperty_clip_rule' class='variant'><span id='eCSSProperty_clip_rule.v' class='invisible'><code>eCSSProperty_clip_rule</code></span></span><span id='variant.eCSSProperty_color' class='variant'><span id='eCSSProperty_color.v' class='invisible'><code>eCSSProperty_color</code></span></span><span id='variant.eCSSProperty_color_adjust' class='variant'><span id='eCSSProperty_color_adjust.v' class='invisible'><code>eCSSProperty_color_adjust</code></span></span><span id='variant.eCSSProperty_color_interpolation' class='variant'><span id='eCSSProperty_color_interpolation.v' class='invisible'><code>eCSSProperty_color_interpolation</code></span></span><span id='variant.eCSSProperty_color_interpolation_filters' class='variant'><span id='eCSSProperty_color_interpolation_filters.v' class='invisible'><code>eCSSProperty_color_interpolation_filters</code></span></span><span id='variant.eCSSProperty_column_count' class='variant'><span id='eCSSProperty_column_count.v' class='invisible'><code>eCSSProperty_column_count</code></span></span><span id='variant.eCSSProperty_column_fill' class='variant'><span id='eCSSProperty_column_fill.v' class='invisible'><code>eCSSProperty_column_fill</code></span></span><span id='variant.eCSSProperty_column_gap' class='variant'><span id='eCSSProperty_column_gap.v' class='invisible'><code>eCSSProperty_column_gap</code></span></span><span id='variant.eCSSProperty_column_rule_color' class='variant'><span id='eCSSProperty_column_rule_color.v' class='invisible'><code>eCSSProperty_column_rule_color</code></span></span><span id='variant.eCSSProperty_column_rule_style' class='variant'><span id='eCSSProperty_column_rule_style.v' class='invisible'><code>eCSSProperty_column_rule_style</code></span></span><span id='variant.eCSSProperty_column_rule_width' class='variant'><span id='eCSSProperty_column_rule_width.v' class='invisible'><code>eCSSProperty_column_rule_width</code></span></span><span id='variant.eCSSProperty_column_width' class='variant'><span id='eCSSProperty_column_width.v' class='invisible'><code>eCSSProperty_column_width</code></span></span><span id='variant.eCSSProperty_contain' class='variant'><span id='eCSSProperty_contain.v' class='invisible'><code>eCSSProperty_contain</code></span></span><span id='variant.eCSSProperty_content' class='variant'><span id='eCSSProperty_content.v' class='invisible'><code>eCSSProperty_content</code></span></span><span id='variant.eCSSProperty__moz_control_character_visibility' class='variant'><span id='eCSSProperty__moz_control_character_visibility.v' class='invisible'><code>eCSSProperty__moz_control_character_visibility</code></span></span><span id='variant.eCSSProperty_counter_increment' class='variant'><span id='eCSSProperty_counter_increment.v' class='invisible'><code>eCSSProperty_counter_increment</code></span></span><span id='variant.eCSSProperty_counter_reset' class='variant'><span id='eCSSProperty_counter_reset.v' class='invisible'><code>eCSSProperty_counter_reset</code></span></span><span id='variant.eCSSProperty_cursor' class='variant'><span id='eCSSProperty_cursor.v' class='invisible'><code>eCSSProperty_cursor</code></span></span><span id='variant.eCSSProperty_direction' class='variant'><span id='eCSSProperty_direction.v' class='invisible'><code>eCSSProperty_direction</code></span></span><span id='variant.eCSSProperty_display' class='variant'><span id='eCSSProperty_display.v' class='invisible'><code>eCSSProperty_display</code></span></span><span id='variant.eCSSProperty_dominant_baseline' class='variant'><span id='eCSSProperty_dominant_baseline.v' class='invisible'><code>eCSSProperty_dominant_baseline</code></span></span><span id='variant.eCSSProperty_empty_cells' class='variant'><span id='eCSSProperty_empty_cells.v' class='invisible'><code>eCSSProperty_empty_cells</code></span></span><span id='variant.eCSSProperty_fill' class='variant'><span id='eCSSProperty_fill.v' class='invisible'><code>eCSSProperty_fill</code></span></span><span id='variant.eCSSProperty_fill_opacity' class='variant'><span id='eCSSProperty_fill_opacity.v' class='invisible'><code>eCSSProperty_fill_opacity</code></span></span><span id='variant.eCSSProperty_fill_rule' class='variant'><span id='eCSSProperty_fill_rule.v' class='invisible'><code>eCSSProperty_fill_rule</code></span></span><span id='variant.eCSSProperty_filter' class='variant'><span id='eCSSProperty_filter.v' class='invisible'><code>eCSSProperty_filter</code></span></span><span id='variant.eCSSProperty_flex_basis' class='variant'><span id='eCSSProperty_flex_basis.v' class='invisible'><code>eCSSProperty_flex_basis</code></span></span><span id='variant.eCSSProperty_flex_direction' class='variant'><span id='eCSSProperty_flex_direction.v' class='invisible'><code>eCSSProperty_flex_direction</code></span></span><span id='variant.eCSSProperty_flex_grow' class='variant'><span id='eCSSProperty_flex_grow.v' class='invisible'><code>eCSSProperty_flex_grow</code></span></span><span id='variant.eCSSProperty_flex_shrink' class='variant'><span id='eCSSProperty_flex_shrink.v' class='invisible'><code>eCSSProperty_flex_shrink</code></span></span><span id='variant.eCSSProperty_flex_wrap' class='variant'><span id='eCSSProperty_flex_wrap.v' class='invisible'><code>eCSSProperty_flex_wrap</code></span></span><span id='variant.eCSSProperty_float_' class='variant'><span id='eCSSProperty_float_.v' class='invisible'><code>eCSSProperty_float_</code></span></span><span id='variant.eCSSProperty__moz_float_edge' class='variant'><span id='eCSSProperty__moz_float_edge.v' class='invisible'><code>eCSSProperty__moz_float_edge</code></span></span><span id='variant.eCSSProperty_flood_color' class='variant'><span id='eCSSProperty_flood_color.v' class='invisible'><code>eCSSProperty_flood_color</code></span></span><span id='variant.eCSSProperty_flood_opacity' class='variant'><span id='eCSSProperty_flood_opacity.v' class='invisible'><code>eCSSProperty_flood_opacity</code></span></span><span id='variant.eCSSProperty_font_family' class='variant'><span id='eCSSProperty_font_family.v' class='invisible'><code>eCSSProperty_font_family</code></span></span><span id='variant.eCSSProperty_font_feature_settings' class='variant'><span id='eCSSProperty_font_feature_settings.v' class='invisible'><code>eCSSProperty_font_feature_settings</code></span></span><span id='variant.eCSSProperty_font_kerning' class='variant'><span id='eCSSProperty_font_kerning.v' class='invisible'><code>eCSSProperty_font_kerning</code></span></span><span id='variant.eCSSProperty_font_language_override' class='variant'><span id='eCSSProperty_font_language_override.v' class='invisible'><code>eCSSProperty_font_language_override</code></span></span><span id='variant.eCSSProperty_font_size' class='variant'><span id='eCSSProperty_font_size.v' class='invisible'><code>eCSSProperty_font_size</code></span></span><span id='variant.eCSSProperty_font_size_adjust' class='variant'><span id='eCSSProperty_font_size_adjust.v' class='invisible'><code>eCSSProperty_font_size_adjust</code></span></span><span id='variant.eCSSProperty_font_stretch' class='variant'><span id='eCSSProperty_font_stretch.v' class='invisible'><code>eCSSProperty_font_stretch</code></span></span><span id='variant.eCSSProperty_font_style' class='variant'><span id='eCSSProperty_font_style.v' class='invisible'><code>eCSSProperty_font_style</code></span></span><span id='variant.eCSSProperty_font_synthesis' class='variant'><span id='eCSSProperty_font_synthesis.v' class='invisible'><code>eCSSProperty_font_synthesis</code></span></span><span id='variant.eCSSProperty_font_variant_alternates' class='variant'><span id='eCSSProperty_font_variant_alternates.v' class='invisible'><code>eCSSProperty_font_variant_alternates</code></span></span><span id='variant.eCSSProperty_font_variant_caps' class='variant'><span id='eCSSProperty_font_variant_caps.v' class='invisible'><code>eCSSProperty_font_variant_caps</code></span></span><span id='variant.eCSSProperty_font_variant_east_asian' class='variant'><span id='eCSSProperty_font_variant_east_asian.v' class='invisible'><code>eCSSProperty_font_variant_east_asian</code></span></span><span id='variant.eCSSProperty_font_variant_ligatures' class='variant'><span id='eCSSProperty_font_variant_ligatures.v' class='invisible'><code>eCSSProperty_font_variant_ligatures</code></span></span><span id='variant.eCSSProperty_font_variant_numeric' class='variant'><span id='eCSSProperty_font_variant_numeric.v' class='invisible'><code>eCSSProperty_font_variant_numeric</code></span></span><span id='variant.eCSSProperty_font_variant_position' class='variant'><span id='eCSSProperty_font_variant_position.v' class='invisible'><code>eCSSProperty_font_variant_position</code></span></span><span id='variant.eCSSProperty_font_variation_settings' class='variant'><span id='eCSSProperty_font_variation_settings.v' class='invisible'><code>eCSSProperty_font_variation_settings</code></span></span><span id='variant.eCSSProperty_font_weight' class='variant'><span id='eCSSProperty_font_weight.v' class='invisible'><code>eCSSProperty_font_weight</code></span></span><span id='variant.eCSSProperty__moz_force_broken_image_icon' class='variant'><span id='eCSSProperty__moz_force_broken_image_icon.v' class='invisible'><code>eCSSProperty__moz_force_broken_image_icon</code></span></span><span id='variant.eCSSProperty_grid_auto_columns' class='variant'><span id='eCSSProperty_grid_auto_columns.v' class='invisible'><code>eCSSProperty_grid_auto_columns</code></span></span><span id='variant.eCSSProperty_grid_auto_flow' class='variant'><span id='eCSSProperty_grid_auto_flow.v' class='invisible'><code>eCSSProperty_grid_auto_flow</code></span></span><span id='variant.eCSSProperty_grid_auto_rows' class='variant'><span id='eCSSProperty_grid_auto_rows.v' class='invisible'><code>eCSSProperty_grid_auto_rows</code></span></span><span id='variant.eCSSProperty_grid_column_end' class='variant'><span id='eCSSProperty_grid_column_end.v' class='invisible'><code>eCSSProperty_grid_column_end</code></span></span><span id='variant.eCSSProperty_grid_column_gap' class='variant'><span id='eCSSProperty_grid_column_gap.v' class='invisible'><code>eCSSProperty_grid_column_gap</code></span></span><span id='variant.eCSSProperty_grid_column_start' class='variant'><span id='eCSSProperty_grid_column_start.v' class='invisible'><code>eCSSProperty_grid_column_start</code></span></span><span id='variant.eCSSProperty_grid_row_end' class='variant'><span id='eCSSProperty_grid_row_end.v' class='invisible'><code>eCSSProperty_grid_row_end</code></span></span><span id='variant.eCSSProperty_grid_row_gap' class='variant'><span id='eCSSProperty_grid_row_gap.v' class='invisible'><code>eCSSProperty_grid_row_gap</code></span></span><span id='variant.eCSSProperty_grid_row_start' class='variant'><span id='eCSSProperty_grid_row_start.v' class='invisible'><code>eCSSProperty_grid_row_start</code></span></span><span id='variant.eCSSProperty_grid_template_areas' class='variant'><span id='eCSSProperty_grid_template_areas.v' class='invisible'><code>eCSSProperty_grid_template_areas</code></span></span><span id='variant.eCSSProperty_grid_template_columns' class='variant'><span id='eCSSProperty_grid_template_columns.v' class='invisible'><code>eCSSProperty_grid_template_columns</code></span></span><span id='variant.eCSSProperty_grid_template_rows' class='variant'><span id='eCSSProperty_grid_template_rows.v' class='invisible'><code>eCSSProperty_grid_template_rows</code></span></span><span id='variant.eCSSProperty_height' class='variant'><span id='eCSSProperty_height.v' class='invisible'><code>eCSSProperty_height</code></span></span><span id='variant.eCSSProperty_hyphens' class='variant'><span id='eCSSProperty_hyphens.v' class='invisible'><code>eCSSProperty_hyphens</code></span></span><span id='variant.eCSSProperty_initial_letter' class='variant'><span id='eCSSProperty_initial_letter.v' class='invisible'><code>eCSSProperty_initial_letter</code></span></span><span id='variant.eCSSProperty_image_orientation' class='variant'><span id='eCSSProperty_image_orientation.v' class='invisible'><code>eCSSProperty_image_orientation</code></span></span><span id='variant.eCSSProperty__moz_image_region' class='variant'><span id='eCSSProperty__moz_image_region.v' class='invisible'><code>eCSSProperty__moz_image_region</code></span></span><span id='variant.eCSSProperty_image_rendering' class='variant'><span id='eCSSProperty_image_rendering.v' class='invisible'><code>eCSSProperty_image_rendering</code></span></span><span id='variant.eCSSProperty_ime_mode' class='variant'><span id='eCSSProperty_ime_mode.v' class='invisible'><code>eCSSProperty_ime_mode</code></span></span><span id='variant.eCSSProperty_inline_size' class='variant'><span id='eCSSProperty_inline_size.v' class='invisible'><code>eCSSProperty_inline_size</code></span></span><span id='variant.eCSSProperty_isolation' class='variant'><span id='eCSSProperty_isolation.v' class='invisible'><code>eCSSProperty_isolation</code></span></span><span id='variant.eCSSProperty_justify_content' class='variant'><span id='eCSSProperty_justify_content.v' class='invisible'><code>eCSSProperty_justify_content</code></span></span><span id='variant.eCSSProperty_justify_items' class='variant'><span id='eCSSProperty_justify_items.v' class='invisible'><code>eCSSProperty_justify_items</code></span></span><span id='variant.eCSSProperty_justify_self' class='variant'><span id='eCSSProperty_justify_self.v' class='invisible'><code>eCSSProperty_justify_self</code></span></span><span id='variant.eCSSProperty__x_lang' class='variant'><span id='eCSSProperty__x_lang.v' class='invisible'><code>eCSSProperty__x_lang</code></span></span><span id='variant.eCSSProperty_left' class='variant'><span id='eCSSProperty_left.v' class='invisible'><code>eCSSProperty_left</code></span></span><span id='variant.eCSSProperty_letter_spacing' class='variant'><span id='eCSSProperty_letter_spacing.v' class='invisible'><code>eCSSProperty_letter_spacing</code></span></span><span id='variant.eCSSProperty_lighting_color' class='variant'><span id='eCSSProperty_lighting_color.v' class='invisible'><code>eCSSProperty_lighting_color</code></span></span><span id='variant.eCSSProperty_line_height' class='variant'><span id='eCSSProperty_line_height.v' class='invisible'><code>eCSSProperty_line_height</code></span></span><span id='variant.eCSSProperty_list_style_image' class='variant'><span id='eCSSProperty_list_style_image.v' class='invisible'><code>eCSSProperty_list_style_image</code></span></span><span id='variant.eCSSProperty_list_style_position' class='variant'><span id='eCSSProperty_list_style_position.v' class='invisible'><code>eCSSProperty_list_style_position</code></span></span><span id='variant.eCSSProperty_list_style_type' class='variant'><span id='eCSSProperty_list_style_type.v' class='invisible'><code>eCSSProperty_list_style_type</code></span></span><span id='variant.eCSSProperty_margin_block_end' class='variant'><span id='eCSSProperty_margin_block_end.v' class='invisible'><code>eCSSProperty_margin_block_end</code></span></span><span id='variant.eCSSProperty_margin_block_start' class='variant'><span id='eCSSProperty_margin_block_start.v' class='invisible'><code>eCSSProperty_margin_block_start</code></span></span><span id='variant.eCSSProperty_margin_bottom' class='variant'><span id='eCSSProperty_margin_bottom.v' class='invisible'><code>eCSSProperty_margin_bottom</code></span></span><span id='variant.eCSSProperty_margin_inline_end' class='variant'><span id='eCSSProperty_margin_inline_end.v' class='invisible'><code>eCSSProperty_margin_inline_end</code></span></span><span id='variant.eCSSProperty_margin_inline_start' class='variant'><span id='eCSSProperty_margin_inline_start.v' class='invisible'><code>eCSSProperty_margin_inline_start</code></span></span><span id='variant.eCSSProperty_margin_left' class='variant'><span id='eCSSProperty_margin_left.v' class='invisible'><code>eCSSProperty_margin_left</code></span></span><span id='variant.eCSSProperty_margin_right' class='variant'><span id='eCSSProperty_margin_right.v' class='invisible'><code>eCSSProperty_margin_right</code></span></span><span id='variant.eCSSProperty_margin_top' class='variant'><span id='eCSSProperty_margin_top.v' class='invisible'><code>eCSSProperty_margin_top</code></span></span><span id='variant.eCSSProperty_marker_end' class='variant'><span id='eCSSProperty_marker_end.v' class='invisible'><code>eCSSProperty_marker_end</code></span></span><span id='variant.eCSSProperty_marker_mid' class='variant'><span id='eCSSProperty_marker_mid.v' class='invisible'><code>eCSSProperty_marker_mid</code></span></span><span id='variant.eCSSProperty_marker_start' class='variant'><span id='eCSSProperty_marker_start.v' class='invisible'><code>eCSSProperty_marker_start</code></span></span><span id='variant.eCSSProperty_mask_clip' class='variant'><span id='eCSSProperty_mask_clip.v' class='invisible'><code>eCSSProperty_mask_clip</code></span></span><span id='variant.eCSSProperty_mask_composite' class='variant'><span id='eCSSProperty_mask_composite.v' class='invisible'><code>eCSSProperty_mask_composite</code></span></span><span id='variant.eCSSProperty_mask_image' class='variant'><span id='eCSSProperty_mask_image.v' class='invisible'><code>eCSSProperty_mask_image</code></span></span><span id='variant.eCSSProperty_mask_mode' class='variant'><span id='eCSSProperty_mask_mode.v' class='invisible'><code>eCSSProperty_mask_mode</code></span></span><span id='variant.eCSSProperty_mask_origin' class='variant'><span id='eCSSProperty_mask_origin.v' class='invisible'><code>eCSSProperty_mask_origin</code></span></span><span id='variant.eCSSProperty_mask_position_x' class='variant'><span id='eCSSProperty_mask_position_x.v' class='invisible'><code>eCSSProperty_mask_position_x</code></span></span><span id='variant.eCSSProperty_mask_position_y' class='variant'><span id='eCSSProperty_mask_position_y.v' class='invisible'><code>eCSSProperty_mask_position_y</code></span></span><span id='variant.eCSSProperty_mask_repeat' class='variant'><span id='eCSSProperty_mask_repeat.v' class='invisible'><code>eCSSProperty_mask_repeat</code></span></span><span id='variant.eCSSProperty_mask_size' class='variant'><span id='eCSSProperty_mask_size.v' class='invisible'><code>eCSSProperty_mask_size</code></span></span><span id='variant.eCSSProperty_mask_type' class='variant'><span id='eCSSProperty_mask_type.v' class='invisible'><code>eCSSProperty_mask_type</code></span></span><span id='variant.eCSSProperty__moz_math_display' class='variant'><span id='eCSSProperty__moz_math_display.v' class='invisible'><code>eCSSProperty__moz_math_display</code></span></span><span id='variant.eCSSProperty__moz_math_variant' class='variant'><span id='eCSSProperty__moz_math_variant.v' class='invisible'><code>eCSSProperty__moz_math_variant</code></span></span><span id='variant.eCSSProperty_max_block_size' class='variant'><span id='eCSSProperty_max_block_size.v' class='invisible'><code>eCSSProperty_max_block_size</code></span></span><span id='variant.eCSSProperty_max_height' class='variant'><span id='eCSSProperty_max_height.v' class='invisible'><code>eCSSProperty_max_height</code></span></span><span id='variant.eCSSProperty_max_inline_size' class='variant'><span id='eCSSProperty_max_inline_size.v' class='invisible'><code>eCSSProperty_max_inline_size</code></span></span><span id='variant.eCSSProperty_max_width' class='variant'><span id='eCSSProperty_max_width.v' class='invisible'><code>eCSSProperty_max_width</code></span></span><span id='variant.eCSSProperty_min_block_size' class='variant'><span id='eCSSProperty_min_block_size.v' class='invisible'><code>eCSSProperty_min_block_size</code></span></span><span id='variant.eCSSProperty__moz_min_font_size_ratio' class='variant'><span id='eCSSProperty__moz_min_font_size_ratio.v' class='invisible'><code>eCSSProperty__moz_min_font_size_ratio</code></span></span><span id='variant.eCSSProperty_min_height' class='variant'><span id='eCSSProperty_min_height.v' class='invisible'><code>eCSSProperty_min_height</code></span></span><span id='variant.eCSSProperty_min_inline_size' class='variant'><span id='eCSSProperty_min_inline_size.v' class='invisible'><code>eCSSProperty_min_inline_size</code></span></span><span id='variant.eCSSProperty_min_width' class='variant'><span id='eCSSProperty_min_width.v' class='invisible'><code>eCSSProperty_min_width</code></span></span><span id='variant.eCSSProperty_mix_blend_mode' class='variant'><span id='eCSSProperty_mix_blend_mode.v' class='invisible'><code>eCSSProperty_mix_blend_mode</code></span></span><span id='variant.eCSSProperty_object_fit' class='variant'><span id='eCSSProperty_object_fit.v' class='invisible'><code>eCSSProperty_object_fit</code></span></span><span id='variant.eCSSProperty_object_position' class='variant'><span id='eCSSProperty_object_position.v' class='invisible'><code>eCSSProperty_object_position</code></span></span><span id='variant.eCSSProperty_offset_block_end' class='variant'><span id='eCSSProperty_offset_block_end.v' class='invisible'><code>eCSSProperty_offset_block_end</code></span></span><span id='variant.eCSSProperty_offset_block_start' class='variant'><span id='eCSSProperty_offset_block_start.v' class='invisible'><code>eCSSProperty_offset_block_start</code></span></span><span id='variant.eCSSProperty_offset_inline_end' class='variant'><span id='eCSSProperty_offset_inline_end.v' class='invisible'><code>eCSSProperty_offset_inline_end</code></span></span><span id='variant.eCSSProperty_offset_inline_start' class='variant'><span id='eCSSProperty_offset_inline_start.v' class='invisible'><code>eCSSProperty_offset_inline_start</code></span></span><span id='variant.eCSSProperty_opacity' class='variant'><span id='eCSSProperty_opacity.v' class='invisible'><code>eCSSProperty_opacity</code></span></span><span id='variant.eCSSProperty_order' class='variant'><span id='eCSSProperty_order.v' class='invisible'><code>eCSSProperty_order</code></span></span><span id='variant.eCSSProperty__moz_orient' class='variant'><span id='eCSSProperty__moz_orient.v' class='invisible'><code>eCSSProperty__moz_orient</code></span></span><span id='variant.eCSSProperty__moz_osx_font_smoothing' class='variant'><span id='eCSSProperty__moz_osx_font_smoothing.v' class='invisible'><code>eCSSProperty__moz_osx_font_smoothing</code></span></span><span id='variant.eCSSProperty_outline_color' class='variant'><span id='eCSSProperty_outline_color.v' class='invisible'><code>eCSSProperty_outline_color</code></span></span><span id='variant.eCSSProperty_outline_offset' class='variant'><span id='eCSSProperty_outline_offset.v' class='invisible'><code>eCSSProperty_outline_offset</code></span></span><span id='variant.eCSSProperty__moz_outline_radius_bottomleft' class='variant'><span id='eCSSProperty__moz_outline_radius_bottomleft.v' class='invisible'><code>eCSSProperty__moz_outline_radius_bottomleft</code></span></span><span id='variant.eCSSProperty__moz_outline_radius_bottomright' class='variant'><span id='eCSSProperty__moz_outline_radius_bottomright.v' class='invisible'><code>eCSSProperty__moz_outline_radius_bottomright</code></span></span><span id='variant.eCSSProperty__moz_outline_radius_topleft' class='variant'><span id='eCSSProperty__moz_outline_radius_topleft.v' class='invisible'><code>eCSSProperty__moz_outline_radius_topleft</code></span></span><span id='variant.eCSSProperty__moz_outline_radius_topright' class='variant'><span id='eCSSProperty__moz_outline_radius_topright.v' class='invisible'><code>eCSSProperty__moz_outline_radius_topright</code></span></span><span id='variant.eCSSProperty_outline_style' class='variant'><span id='eCSSProperty_outline_style.v' class='invisible'><code>eCSSProperty_outline_style</code></span></span><span id='variant.eCSSProperty_outline_width' class='variant'><span id='eCSSProperty_outline_width.v' class='invisible'><code>eCSSProperty_outline_width</code></span></span><span id='variant.eCSSProperty_overflow_clip_box' class='variant'><span id='eCSSProperty_overflow_clip_box.v' class='invisible'><code>eCSSProperty_overflow_clip_box</code></span></span><span id='variant.eCSSProperty_overflow_x' class='variant'><span id='eCSSProperty_overflow_x.v' class='invisible'><code>eCSSProperty_overflow_x</code></span></span><span id='variant.eCSSProperty_overflow_y' class='variant'><span id='eCSSProperty_overflow_y.v' class='invisible'><code>eCSSProperty_overflow_y</code></span></span><span id='variant.eCSSProperty_padding_block_end' class='variant'><span id='eCSSProperty_padding_block_end.v' class='invisible'><code>eCSSProperty_padding_block_end</code></span></span><span id='variant.eCSSProperty_padding_block_start' class='variant'><span id='eCSSProperty_padding_block_start.v' class='invisible'><code>eCSSProperty_padding_block_start</code></span></span><span id='variant.eCSSProperty_padding_bottom' class='variant'><span id='eCSSProperty_padding_bottom.v' class='invisible'><code>eCSSProperty_padding_bottom</code></span></span><span id='variant.eCSSProperty_padding_inline_end' class='variant'><span id='eCSSProperty_padding_inline_end.v' class='invisible'><code>eCSSProperty_padding_inline_end</code></span></span><span id='variant.eCSSProperty_padding_inline_start' class='variant'><span id='eCSSProperty_padding_inline_start.v' class='invisible'><code>eCSSProperty_padding_inline_start</code></span></span><span id='variant.eCSSProperty_padding_left' class='variant'><span id='eCSSProperty_padding_left.v' class='invisible'><code>eCSSProperty_padding_left</code></span></span><span id='variant.eCSSProperty_padding_right' class='variant'><span id='eCSSProperty_padding_right.v' class='invisible'><code>eCSSProperty_padding_right</code></span></span><span id='variant.eCSSProperty_padding_top' class='variant'><span id='eCSSProperty_padding_top.v' class='invisible'><code>eCSSProperty_padding_top</code></span></span><span id='variant.eCSSProperty_page_break_after' class='variant'><span id='eCSSProperty_page_break_after.v' class='invisible'><code>eCSSProperty_page_break_after</code></span></span><span id='variant.eCSSProperty_page_break_before' class='variant'><span id='eCSSProperty_page_break_before.v' class='invisible'><code>eCSSProperty_page_break_before</code></span></span><span id='variant.eCSSProperty_page_break_inside' class='variant'><span id='eCSSProperty_page_break_inside.v' class='invisible'><code>eCSSProperty_page_break_inside</code></span></span><span id='variant.eCSSProperty_paint_order' class='variant'><span id='eCSSProperty_paint_order.v' class='invisible'><code>eCSSProperty_paint_order</code></span></span><span id='variant.eCSSProperty_perspective' class='variant'><span id='eCSSProperty_perspective.v' class='invisible'><code>eCSSProperty_perspective</code></span></span><span id='variant.eCSSProperty_perspective_origin' class='variant'><span id='eCSSProperty_perspective_origin.v' class='invisible'><code>eCSSProperty_perspective_origin</code></span></span><span id='variant.eCSSProperty_pointer_events' class='variant'><span id='eCSSProperty_pointer_events.v' class='invisible'><code>eCSSProperty_pointer_events</code></span></span><span id='variant.eCSSProperty_position' class='variant'><span id='eCSSProperty_position.v' class='invisible'><code>eCSSProperty_position</code></span></span><span id='variant.eCSSProperty_quotes' class='variant'><span id='eCSSProperty_quotes.v' class='invisible'><code>eCSSProperty_quotes</code></span></span><span id='variant.eCSSProperty_resize' class='variant'><span id='eCSSProperty_resize.v' class='invisible'><code>eCSSProperty_resize</code></span></span><span id='variant.eCSSProperty_right' class='variant'><span id='eCSSProperty_right.v' class='invisible'><code>eCSSProperty_right</code></span></span><span id='variant.eCSSProperty_ruby_align' class='variant'><span id='eCSSProperty_ruby_align.v' class='invisible'><code>eCSSProperty_ruby_align</code></span></span><span id='variant.eCSSProperty_ruby_position' class='variant'><span id='eCSSProperty_ruby_position.v' class='invisible'><code>eCSSProperty_ruby_position</code></span></span><span id='variant.eCSSProperty__moz_script_level' class='variant'><span id='eCSSProperty__moz_script_level.v' class='invisible'><code>eCSSProperty__moz_script_level</code></span></span><span id='variant.eCSSProperty__moz_script_min_size' class='variant'><span id='eCSSProperty__moz_script_min_size.v' class='invisible'><code>eCSSProperty__moz_script_min_size</code></span></span><span id='variant.eCSSProperty__moz_script_size_multiplier' class='variant'><span id='eCSSProperty__moz_script_size_multiplier.v' class='invisible'><code>eCSSProperty__moz_script_size_multiplier</code></span></span><span id='variant.eCSSProperty_scroll_behavior' class='variant'><span id='eCSSProperty_scroll_behavior.v' class='invisible'><code>eCSSProperty_scroll_behavior</code></span></span><span id='variant.eCSSProperty_scroll_snap_coordinate' class='variant'><span id='eCSSProperty_scroll_snap_coordinate.v' class='invisible'><code>eCSSProperty_scroll_snap_coordinate</code></span></span><span id='variant.eCSSProperty_scroll_snap_destination' class='variant'><span id='eCSSProperty_scroll_snap_destination.v' class='invisible'><code>eCSSProperty_scroll_snap_destination</code></span></span><span id='variant.eCSSProperty_scroll_snap_points_x' class='variant'><span id='eCSSProperty_scroll_snap_points_x.v' class='invisible'><code>eCSSProperty_scroll_snap_points_x</code></span></span><span id='variant.eCSSProperty_scroll_snap_points_y' class='variant'><span id='eCSSProperty_scroll_snap_points_y.v' class='invisible'><code>eCSSProperty_scroll_snap_points_y</code></span></span><span id='variant.eCSSProperty_scroll_snap_type_x' class='variant'><span id='eCSSProperty_scroll_snap_type_x.v' class='invisible'><code>eCSSProperty_scroll_snap_type_x</code></span></span><span id='variant.eCSSProperty_scroll_snap_type_y' class='variant'><span id='eCSSProperty_scroll_snap_type_y.v' class='invisible'><code>eCSSProperty_scroll_snap_type_y</code></span></span><span id='variant.eCSSProperty_shape_outside' class='variant'><span id='eCSSProperty_shape_outside.v' class='invisible'><code>eCSSProperty_shape_outside</code></span></span><span id='variant.eCSSProperty_shape_rendering' class='variant'><span id='eCSSProperty_shape_rendering.v' class='invisible'><code>eCSSProperty_shape_rendering</code></span></span><span id='variant.eCSSProperty__x_span' class='variant'><span id='eCSSProperty__x_span.v' class='invisible'><code>eCSSProperty__x_span</code></span></span><span id='variant.eCSSProperty__moz_stack_sizing' class='variant'><span id='eCSSProperty__moz_stack_sizing.v' class='invisible'><code>eCSSProperty__moz_stack_sizing</code></span></span><span id='variant.eCSSProperty_stop_color' class='variant'><span id='eCSSProperty_stop_color.v' class='invisible'><code>eCSSProperty_stop_color</code></span></span><span id='variant.eCSSProperty_stop_opacity' class='variant'><span id='eCSSProperty_stop_opacity.v' class='invisible'><code>eCSSProperty_stop_opacity</code></span></span><span id='variant.eCSSProperty_stroke' class='variant'><span id='eCSSProperty_stroke.v' class='invisible'><code>eCSSProperty_stroke</code></span></span><span id='variant.eCSSProperty_stroke_dasharray' class='variant'><span id='eCSSProperty_stroke_dasharray.v' class='invisible'><code>eCSSProperty_stroke_dasharray</code></span></span><span id='variant.eCSSProperty_stroke_dashoffset' class='variant'><span id='eCSSProperty_stroke_dashoffset.v' class='invisible'><code>eCSSProperty_stroke_dashoffset</code></span></span><span id='variant.eCSSProperty_stroke_linecap' class='variant'><span id='eCSSProperty_stroke_linecap.v' class='invisible'><code>eCSSProperty_stroke_linecap</code></span></span><span id='variant.eCSSProperty_stroke_linejoin' class='variant'><span id='eCSSProperty_stroke_linejoin.v' class='invisible'><code>eCSSProperty_stroke_linejoin</code></span></span><span id='variant.eCSSProperty_stroke_miterlimit' class='variant'><span id='eCSSProperty_stroke_miterlimit.v' class='invisible'><code>eCSSProperty_stroke_miterlimit</code></span></span><span id='variant.eCSSProperty_stroke_opacity' class='variant'><span id='eCSSProperty_stroke_opacity.v' class='invisible'><code>eCSSProperty_stroke_opacity</code></span></span><span id='variant.eCSSProperty_stroke_width' class='variant'><span id='eCSSProperty_stroke_width.v' class='invisible'><code>eCSSProperty_stroke_width</code></span></span><span id='variant.eCSSProperty__x_system_font' class='variant'><span id='eCSSProperty__x_system_font.v' class='invisible'><code>eCSSProperty__x_system_font</code></span></span><span id='variant.eCSSProperty__moz_tab_size' class='variant'><span id='eCSSProperty__moz_tab_size.v' class='invisible'><code>eCSSProperty__moz_tab_size</code></span></span><span id='variant.eCSSProperty_table_layout' class='variant'><span id='eCSSProperty_table_layout.v' class='invisible'><code>eCSSProperty_table_layout</code></span></span><span id='variant.eCSSProperty_text_align' class='variant'><span id='eCSSProperty_text_align.v' class='invisible'><code>eCSSProperty_text_align</code></span></span><span id='variant.eCSSProperty_text_align_last' class='variant'><span id='eCSSProperty_text_align_last.v' class='invisible'><code>eCSSProperty_text_align_last</code></span></span><span id='variant.eCSSProperty_text_anchor' class='variant'><span id='eCSSProperty_text_anchor.v' class='invisible'><code>eCSSProperty_text_anchor</code></span></span><span id='variant.eCSSProperty_text_combine_upright' class='variant'><span id='eCSSProperty_text_combine_upright.v' class='invisible'><code>eCSSProperty_text_combine_upright</code></span></span><span id='variant.eCSSProperty_text_decoration_color' class='variant'><span id='eCSSProperty_text_decoration_color.v' class='invisible'><code>eCSSProperty_text_decoration_color</code></span></span><span id='variant.eCSSProperty_text_decoration_line' class='variant'><span id='eCSSProperty_text_decoration_line.v' class='invisible'><code>eCSSProperty_text_decoration_line</code></span></span><span id='variant.eCSSProperty_text_decoration_style' class='variant'><span id='eCSSProperty_text_decoration_style.v' class='invisible'><code>eCSSProperty_text_decoration_style</code></span></span><span id='variant.eCSSProperty_text_emphasis_color' class='variant'><span id='eCSSProperty_text_emphasis_color.v' class='invisible'><code>eCSSProperty_text_emphasis_color</code></span></span><span id='variant.eCSSProperty_text_emphasis_position' class='variant'><span id='eCSSProperty_text_emphasis_position.v' class='invisible'><code>eCSSProperty_text_emphasis_position</code></span></span><span id='variant.eCSSProperty_text_emphasis_style' class='variant'><span id='eCSSProperty_text_emphasis_style.v' class='invisible'><code>eCSSProperty_text_emphasis_style</code></span></span><span id='variant.eCSSProperty__webkit_text_fill_color' class='variant'><span id='eCSSProperty__webkit_text_fill_color.v' class='invisible'><code>eCSSProperty__webkit_text_fill_color</code></span></span><span id='variant.eCSSProperty_text_indent' class='variant'><span id='eCSSProperty_text_indent.v' class='invisible'><code>eCSSProperty_text_indent</code></span></span><span id='variant.eCSSProperty_text_orientation' class='variant'><span id='eCSSProperty_text_orientation.v' class='invisible'><code>eCSSProperty_text_orientation</code></span></span><span id='variant.eCSSProperty_text_overflow' class='variant'><span id='eCSSProperty_text_overflow.v' class='invisible'><code>eCSSProperty_text_overflow</code></span></span><span id='variant.eCSSProperty_text_rendering' class='variant'><span id='eCSSProperty_text_rendering.v' class='invisible'><code>eCSSProperty_text_rendering</code></span></span><span id='variant.eCSSProperty_text_shadow' class='variant'><span id='eCSSProperty_text_shadow.v' class='invisible'><code>eCSSProperty_text_shadow</code></span></span><span id='variant.eCSSProperty__moz_text_size_adjust' class='variant'><span id='eCSSProperty__moz_text_size_adjust.v' class='invisible'><code>eCSSProperty__moz_text_size_adjust</code></span></span><span id='variant.eCSSProperty__webkit_text_stroke_color' class='variant'><span id='eCSSProperty__webkit_text_stroke_color.v' class='invisible'><code>eCSSProperty__webkit_text_stroke_color</code></span></span><span id='variant.eCSSProperty__webkit_text_stroke_width' class='variant'><span id='eCSSProperty__webkit_text_stroke_width.v' class='invisible'><code>eCSSProperty__webkit_text_stroke_width</code></span></span><span id='variant.eCSSProperty_text_transform' class='variant'><span id='eCSSProperty_text_transform.v' class='invisible'><code>eCSSProperty_text_transform</code></span></span><span id='variant.eCSSProperty__x_text_zoom' class='variant'><span id='eCSSProperty__x_text_zoom.v' class='invisible'><code>eCSSProperty__x_text_zoom</code></span></span><span id='variant.eCSSProperty_top' class='variant'><span id='eCSSProperty_top.v' class='invisible'><code>eCSSProperty_top</code></span></span><span id='variant.eCSSProperty__moz_top_layer' class='variant'><span id='eCSSProperty__moz_top_layer.v' class='invisible'><code>eCSSProperty__moz_top_layer</code></span></span><span id='variant.eCSSProperty_touch_action' class='variant'><span id='eCSSProperty_touch_action.v' class='invisible'><code>eCSSProperty_touch_action</code></span></span><span id='variant.eCSSProperty_transform' class='variant'><span id='eCSSProperty_transform.v' class='invisible'><code>eCSSProperty_transform</code></span></span><span id='variant.eCSSProperty_transform_box' class='variant'><span id='eCSSProperty_transform_box.v' class='invisible'><code>eCSSProperty_transform_box</code></span></span><span id='variant.eCSSProperty_transform_origin' class='variant'><span id='eCSSProperty_transform_origin.v' class='invisible'><code>eCSSProperty_transform_origin</code></span></span><span id='variant.eCSSProperty_transform_style' class='variant'><span id='eCSSProperty_transform_style.v' class='invisible'><code>eCSSProperty_transform_style</code></span></span><span id='variant.eCSSProperty_transition_delay' class='variant'><span id='eCSSProperty_transition_delay.v' class='invisible'><code>eCSSProperty_transition_delay</code></span></span><span id='variant.eCSSProperty_transition_duration' class='variant'><span id='eCSSProperty_transition_duration.v' class='invisible'><code>eCSSProperty_transition_duration</code></span></span><span id='variant.eCSSProperty_transition_property' class='variant'><span id='eCSSProperty_transition_property.v' class='invisible'><code>eCSSProperty_transition_property</code></span></span><span id='variant.eCSSProperty_transition_timing_function' class='variant'><span id='eCSSProperty_transition_timing_function.v' class='invisible'><code>eCSSProperty_transition_timing_function</code></span></span><span id='variant.eCSSProperty_unicode_bidi' class='variant'><span id='eCSSProperty_unicode_bidi.v' class='invisible'><code>eCSSProperty_unicode_bidi</code></span></span><span id='variant.eCSSProperty__moz_user_focus' class='variant'><span id='eCSSProperty__moz_user_focus.v' class='invisible'><code>eCSSProperty__moz_user_focus</code></span></span><span id='variant.eCSSProperty__moz_user_input' class='variant'><span id='eCSSProperty__moz_user_input.v' class='invisible'><code>eCSSProperty__moz_user_input</code></span></span><span id='variant.eCSSProperty__moz_user_modify' class='variant'><span id='eCSSProperty__moz_user_modify.v' class='invisible'><code>eCSSProperty__moz_user_modify</code></span></span><span id='variant.eCSSProperty__moz_user_select' class='variant'><span id='eCSSProperty__moz_user_select.v' class='invisible'><code>eCSSProperty__moz_user_select</code></span></span><span id='variant.eCSSProperty_vector_effect' class='variant'><span id='eCSSProperty_vector_effect.v' class='invisible'><code>eCSSProperty_vector_effect</code></span></span><span id='variant.eCSSProperty_vertical_align' class='variant'><span id='eCSSProperty_vertical_align.v' class='invisible'><code>eCSSProperty_vertical_align</code></span></span><span id='variant.eCSSProperty_visibility' class='variant'><span id='eCSSProperty_visibility.v' class='invisible'><code>eCSSProperty_visibility</code></span></span><span id='variant.eCSSProperty_white_space' class='variant'><span id='eCSSProperty_white_space.v' class='invisible'><code>eCSSProperty_white_space</code></span></span><span id='variant.eCSSProperty_width' class='variant'><span id='eCSSProperty_width.v' class='invisible'><code>eCSSProperty_width</code></span></span><span id='variant.eCSSProperty_will_change' class='variant'><span id='eCSSProperty_will_change.v' class='invisible'><code>eCSSProperty_will_change</code></span></span><span id='variant.eCSSProperty__moz_window_dragging' class='variant'><span id='eCSSProperty__moz_window_dragging.v' class='invisible'><code>eCSSProperty__moz_window_dragging</code></span></span><span id='variant.eCSSProperty__moz_window_shadow' class='variant'><span id='eCSSProperty__moz_window_shadow.v' class='invisible'><code>eCSSProperty__moz_window_shadow</code></span></span><span id='variant.eCSSProperty_word_break' class='variant'><span id='eCSSProperty_word_break.v' class='invisible'><code>eCSSProperty_word_break</code></span></span><span id='variant.eCSSProperty_word_spacing' class='variant'><span id='eCSSProperty_word_spacing.v' class='invisible'><code>eCSSProperty_word_spacing</code></span></span><span id='variant.eCSSProperty_overflow_wrap' class='variant'><span id='eCSSProperty_overflow_wrap.v' class='invisible'><code>eCSSProperty_overflow_wrap</code></span></span><span id='variant.eCSSProperty_writing_mode' class='variant'><span id='eCSSProperty_writing_mode.v' class='invisible'><code>eCSSProperty_writing_mode</code></span></span><span id='variant.eCSSProperty_z_index' class='variant'><span id='eCSSProperty_z_index.v' class='invisible'><code>eCSSProperty_z_index</code></span></span><span id='variant.eCSSProperty_COUNT_no_shorthands' class='variant'><span id='eCSSProperty_COUNT_no_shorthands.v' class='invisible'><code>eCSSProperty_COUNT_no_shorthands</code></span></span><span id='variant.eCSSProperty_animation' class='variant'><span id='eCSSProperty_animation.v' class='invisible'><code>eCSSProperty_animation</code></span></span><span id='variant.eCSSProperty_background' class='variant'><span id='eCSSProperty_background.v' class='invisible'><code>eCSSProperty_background</code></span></span><span id='variant.eCSSProperty_background_position' class='variant'><span id='eCSSProperty_background_position.v' class='invisible'><code>eCSSProperty_background_position</code></span></span><span id='variant.eCSSProperty_border' class='variant'><span id='eCSSProperty_border.v' class='invisible'><code>eCSSProperty_border</code></span></span><span id='variant.eCSSProperty_border_block_end' class='variant'><span id='eCSSProperty_border_block_end.v' class='invisible'><code>eCSSProperty_border_block_end</code></span></span><span id='variant.eCSSProperty_border_block_start' class='variant'><span id='eCSSProperty_border_block_start.v' class='invisible'><code>eCSSProperty_border_block_start</code></span></span><span id='variant.eCSSProperty_border_bottom' class='variant'><span id='eCSSProperty_border_bottom.v' class='invisible'><code>eCSSProperty_border_bottom</code></span></span><span id='variant.eCSSProperty_border_color' class='variant'><span id='eCSSProperty_border_color.v' class='invisible'><code>eCSSProperty_border_color</code></span></span><span id='variant.eCSSProperty_border_image' class='variant'><span id='eCSSProperty_border_image.v' class='invisible'><code>eCSSProperty_border_image</code></span></span><span id='variant.eCSSProperty_border_inline_end' class='variant'><span id='eCSSProperty_border_inline_end.v' class='invisible'><code>eCSSProperty_border_inline_end</code></span></span><span id='variant.eCSSProperty_border_inline_start' class='variant'><span id='eCSSProperty_border_inline_start.v' class='invisible'><code>eCSSProperty_border_inline_start</code></span></span><span id='variant.eCSSProperty_border_left' class='variant'><span id='eCSSProperty_border_left.v' class='invisible'><code>eCSSProperty_border_left</code></span></span><span id='variant.eCSSProperty_border_radius' class='variant'><span id='eCSSProperty_border_radius.v' class='invisible'><code>eCSSProperty_border_radius</code></span></span><span id='variant.eCSSProperty_border_right' class='variant'><span id='eCSSProperty_border_right.v' class='invisible'><code>eCSSProperty_border_right</code></span></span><span id='variant.eCSSProperty_border_style' class='variant'><span id='eCSSProperty_border_style.v' class='invisible'><code>eCSSProperty_border_style</code></span></span><span id='variant.eCSSProperty_border_top' class='variant'><span id='eCSSProperty_border_top.v' class='invisible'><code>eCSSProperty_border_top</code></span></span><span id='variant.eCSSProperty_border_width' class='variant'><span id='eCSSProperty_border_width.v' class='invisible'><code>eCSSProperty_border_width</code></span></span><span id='variant.eCSSProperty_column_rule' class='variant'><span id='eCSSProperty_column_rule.v' class='invisible'><code>eCSSProperty_column_rule</code></span></span><span id='variant.eCSSProperty_columns' class='variant'><span id='eCSSProperty_columns.v' class='invisible'><code>eCSSProperty_columns</code></span></span><span id='variant.eCSSProperty_flex' class='variant'><span id='eCSSProperty_flex.v' class='invisible'><code>eCSSProperty_flex</code></span></span><span id='variant.eCSSProperty_flex_flow' class='variant'><span id='eCSSProperty_flex_flow.v' class='invisible'><code>eCSSProperty_flex_flow</code></span></span><span id='variant.eCSSProperty_font' class='variant'><span id='eCSSProperty_font.v' class='invisible'><code>eCSSProperty_font</code></span></span><span id='variant.eCSSProperty_font_variant' class='variant'><span id='eCSSProperty_font_variant.v' class='invisible'><code>eCSSProperty_font_variant</code></span></span><span id='variant.eCSSProperty_grid' class='variant'><span id='eCSSProperty_grid.v' class='invisible'><code>eCSSProperty_grid</code></span></span><span id='variant.eCSSProperty_grid_area' class='variant'><span id='eCSSProperty_grid_area.v' class='invisible'><code>eCSSProperty_grid_area</code></span></span><span id='variant.eCSSProperty_grid_column' class='variant'><span id='eCSSProperty_grid_column.v' class='invisible'><code>eCSSProperty_grid_column</code></span></span><span id='variant.eCSSProperty_grid_gap' class='variant'><span id='eCSSProperty_grid_gap.v' class='invisible'><code>eCSSProperty_grid_gap</code></span></span><span id='variant.eCSSProperty_grid_row' class='variant'><span id='eCSSProperty_grid_row.v' class='invisible'><code>eCSSProperty_grid_row</code></span></span><span id='variant.eCSSProperty_grid_template' class='variant'><span id='eCSSProperty_grid_template.v' class='invisible'><code>eCSSProperty_grid_template</code></span></span><span id='variant.eCSSProperty_list_style' class='variant'><span id='eCSSProperty_list_style.v' class='invisible'><code>eCSSProperty_list_style</code></span></span><span id='variant.eCSSProperty_margin' class='variant'><span id='eCSSProperty_margin.v' class='invisible'><code>eCSSProperty_margin</code></span></span><span id='variant.eCSSProperty_marker' class='variant'><span id='eCSSProperty_marker.v' class='invisible'><code>eCSSProperty_marker</code></span></span><span id='variant.eCSSProperty_mask' class='variant'><span id='eCSSProperty_mask.v' class='invisible'><code>eCSSProperty_mask</code></span></span><span id='variant.eCSSProperty_mask_position' class='variant'><span id='eCSSProperty_mask_position.v' class='invisible'><code>eCSSProperty_mask_position</code></span></span><span id='variant.eCSSProperty_outline' class='variant'><span id='eCSSProperty_outline.v' class='invisible'><code>eCSSProperty_outline</code></span></span><span id='variant.eCSSProperty__moz_outline_radius' class='variant'><span id='eCSSProperty__moz_outline_radius.v' class='invisible'><code>eCSSProperty__moz_outline_radius</code></span></span><span id='variant.eCSSProperty_overflow' class='variant'><span id='eCSSProperty_overflow.v' class='invisible'><code>eCSSProperty_overflow</code></span></span><span id='variant.eCSSProperty_padding' class='variant'><span id='eCSSProperty_padding.v' class='invisible'><code>eCSSProperty_padding</code></span></span><span id='variant.eCSSProperty_place_content' class='variant'><span id='eCSSProperty_place_content.v' class='invisible'><code>eCSSProperty_place_content</code></span></span><span id='variant.eCSSProperty_place_items' class='variant'><span id='eCSSProperty_place_items.v' class='invisible'><code>eCSSProperty_place_items</code></span></span><span id='variant.eCSSProperty_place_self' class='variant'><span id='eCSSProperty_place_self.v' class='invisible'><code>eCSSProperty_place_self</code></span></span><span id='variant.eCSSProperty_scroll_snap_type' class='variant'><span id='eCSSProperty_scroll_snap_type.v' class='invisible'><code>eCSSProperty_scroll_snap_type</code></span></span><span id='variant.eCSSProperty_text_decoration' class='variant'><span id='eCSSProperty_text_decoration.v' class='invisible'><code>eCSSProperty_text_decoration</code></span></span><span id='variant.eCSSProperty_text_emphasis' class='variant'><span id='eCSSProperty_text_emphasis.v' class='invisible'><code>eCSSProperty_text_emphasis</code></span></span><span id='variant.eCSSProperty__webkit_text_stroke' class='variant'><span id='eCSSProperty__webkit_text_stroke.v' class='invisible'><code>eCSSProperty__webkit_text_stroke</code></span></span><span id='variant.eCSSProperty__moz_transform' class='variant'><span id='eCSSProperty__moz_transform.v' class='invisible'><code>eCSSProperty__moz_transform</code></span></span><span id='variant.eCSSProperty_transition' class='variant'><span id='eCSSProperty_transition.v' class='invisible'><code>eCSSProperty_transition</code></span></span><span id='variant.eCSSProperty_COUNT' class='variant'><span id='eCSSProperty_COUNT.v' class='invisible'><code>eCSSProperty_COUNT</code></span></span><span id='variant.eCSSPropertyAlias_MozTransformOrigin' class='variant'><span id='eCSSPropertyAlias_MozTransformOrigin.v' class='invisible'><code>eCSSPropertyAlias_MozTransformOrigin</code></span></span><span id='variant.eCSSPropertyAlias_MozPerspectiveOrigin' class='variant'><span id='eCSSPropertyAlias_MozPerspectiveOrigin.v' class='invisible'><code>eCSSPropertyAlias_MozPerspectiveOrigin</code></span></span><span id='variant.eCSSPropertyAlias_MozPerspective' class='variant'><span id='eCSSPropertyAlias_MozPerspective.v' class='invisible'><code>eCSSPropertyAlias_MozPerspective</code></span></span><span id='variant.eCSSPropertyAlias_MozTransformStyle' class='variant'><span id='eCSSPropertyAlias_MozTransformStyle.v' class='invisible'><code>eCSSPropertyAlias_MozTransformStyle</code></span></span><span id='variant.eCSSPropertyAlias_MozBackfaceVisibility' class='variant'><span id='eCSSPropertyAlias_MozBackfaceVisibility.v' class='invisible'><code>eCSSPropertyAlias_MozBackfaceVisibility</code></span></span><span id='variant.eCSSPropertyAlias_MozBorderImage' class='variant'><span id='eCSSPropertyAlias_MozBorderImage.v' class='invisible'><code>eCSSPropertyAlias_MozBorderImage</code></span></span><span id='variant.eCSSPropertyAlias_MozTransition' class='variant'><span id='eCSSPropertyAlias_MozTransition.v' class='invisible'><code>eCSSPropertyAlias_MozTransition</code></span></span><span id='variant.eCSSPropertyAlias_MozTransitionDelay' class='variant'><span id='eCSSPropertyAlias_MozTransitionDelay.v' class='invisible'><code>eCSSPropertyAlias_MozTransitionDelay</code></span></span><span id='variant.eCSSPropertyAlias_MozTransitionDuration' class='variant'><span id='eCSSPropertyAlias_MozTransitionDuration.v' class='invisible'><code>eCSSPropertyAlias_MozTransitionDuration</code></span></span><span id='variant.eCSSPropertyAlias_MozTransitionProperty' class='variant'><span id='eCSSPropertyAlias_MozTransitionProperty.v' class='invisible'><code>eCSSPropertyAlias_MozTransitionProperty</code></span></span><span id='variant.eCSSPropertyAlias_MozTransitionTimingFunction' class='variant'><span id='eCSSPropertyAlias_MozTransitionTimingFunction.v' class='invisible'><code>eCSSPropertyAlias_MozTransitionTimingFunction</code></span></span><span id='variant.eCSSPropertyAlias_MozAnimation' class='variant'><span id='eCSSPropertyAlias_MozAnimation.v' class='invisible'><code>eCSSPropertyAlias_MozAnimation</code></span></span><span id='variant.eCSSPropertyAlias_MozAnimationDelay' class='variant'><span id='eCSSPropertyAlias_MozAnimationDelay.v' class='invisible'><code>eCSSPropertyAlias_MozAnimationDelay</code></span></span><span id='variant.eCSSPropertyAlias_MozAnimationDirection' class='variant'><span id='eCSSPropertyAlias_MozAnimationDirection.v' class='invisible'><code>eCSSPropertyAlias_MozAnimationDirection</code></span></span><span id='variant.eCSSPropertyAlias_MozAnimationDuration' class='variant'><span id='eCSSPropertyAlias_MozAnimationDuration.v' class='invisible'><code>eCSSPropertyAlias_MozAnimationDuration</code></span></span><span id='variant.eCSSPropertyAlias_MozAnimationFillMode' class='variant'><span id='eCSSPropertyAlias_MozAnimationFillMode.v' class='invisible'><code>eCSSPropertyAlias_MozAnimationFillMode</code></span></span><span id='variant.eCSSPropertyAlias_MozAnimationIterationCount' class='variant'><span id='eCSSPropertyAlias_MozAnimationIterationCount.v' class='invisible'><code>eCSSPropertyAlias_MozAnimationIterationCount</code></span></span><span id='variant.eCSSPropertyAlias_MozAnimationName' class='variant'><span id='eCSSPropertyAlias_MozAnimationName.v' class='invisible'><code>eCSSPropertyAlias_MozAnimationName</code></span></span><span id='variant.eCSSPropertyAlias_MozAnimationPlayState' class='variant'><span id='eCSSPropertyAlias_MozAnimationPlayState.v' class='invisible'><code>eCSSPropertyAlias_MozAnimationPlayState</code></span></span><span id='variant.eCSSPropertyAlias_MozAnimationTimingFunction' class='variant'><span id='eCSSPropertyAlias_MozAnimationTimingFunction.v' class='invisible'><code>eCSSPropertyAlias_MozAnimationTimingFunction</code></span></span><span id='variant.eCSSPropertyAlias_MozBoxSizing' class='variant'><span id='eCSSPropertyAlias_MozBoxSizing.v' class='invisible'><code>eCSSPropertyAlias_MozBoxSizing</code></span></span><span id='variant.eCSSPropertyAlias_MozFontFeatureSettings' class='variant'><span id='eCSSPropertyAlias_MozFontFeatureSettings.v' class='invisible'><code>eCSSPropertyAlias_MozFontFeatureSettings</code></span></span><span id='variant.eCSSPropertyAlias_MozFontLanguageOverride' class='variant'><span id='eCSSPropertyAlias_MozFontLanguageOverride.v' class='invisible'><code>eCSSPropertyAlias_MozFontLanguageOverride</code></span></span><span id='variant.eCSSPropertyAlias_MozPaddingEnd' class='variant'><span id='eCSSPropertyAlias_MozPaddingEnd.v' class='invisible'><code>eCSSPropertyAlias_MozPaddingEnd</code></span></span><span id='variant.eCSSPropertyAlias_MozPaddingStart' class='variant'><span id='eCSSPropertyAlias_MozPaddingStart.v' class='invisible'><code>eCSSPropertyAlias_MozPaddingStart</code></span></span><span id='variant.eCSSPropertyAlias_MozMarginEnd' class='variant'><span id='eCSSPropertyAlias_MozMarginEnd.v' class='invisible'><code>eCSSPropertyAlias_MozMarginEnd</code></span></span><span id='variant.eCSSPropertyAlias_MozMarginStart' class='variant'><span id='eCSSPropertyAlias_MozMarginStart.v' class='invisible'><code>eCSSPropertyAlias_MozMarginStart</code></span></span><span id='variant.eCSSPropertyAlias_MozBorderEnd' class='variant'><span id='eCSSPropertyAlias_MozBorderEnd.v' class='invisible'><code>eCSSPropertyAlias_MozBorderEnd</code></span></span><span id='variant.eCSSPropertyAlias_MozBorderEndColor' class='variant'><span id='eCSSPropertyAlias_MozBorderEndColor.v' class='invisible'><code>eCSSPropertyAlias_MozBorderEndColor</code></span></span><span id='variant.eCSSPropertyAlias_MozBorderEndStyle' class='variant'><span id='eCSSPropertyAlias_MozBorderEndStyle.v' class='invisible'><code>eCSSPropertyAlias_MozBorderEndStyle</code></span></span><span id='variant.eCSSPropertyAlias_MozBorderEndWidth' class='variant'><span id='eCSSPropertyAlias_MozBorderEndWidth.v' class='invisible'><code>eCSSPropertyAlias_MozBorderEndWidth</code></span></span><span id='variant.eCSSPropertyAlias_MozBorderStart' class='variant'><span id='eCSSPropertyAlias_MozBorderStart.v' class='invisible'><code>eCSSPropertyAlias_MozBorderStart</code></span></span><span id='variant.eCSSPropertyAlias_MozBorderStartColor' class='variant'><span id='eCSSPropertyAlias_MozBorderStartColor.v' class='invisible'><code>eCSSPropertyAlias_MozBorderStartColor</code></span></span><span id='variant.eCSSPropertyAlias_MozBorderStartStyle' class='variant'><span id='eCSSPropertyAlias_MozBorderStartStyle.v' class='invisible'><code>eCSSPropertyAlias_MozBorderStartStyle</code></span></span><span id='variant.eCSSPropertyAlias_MozBorderStartWidth' class='variant'><span id='eCSSPropertyAlias_MozBorderStartWidth.v' class='invisible'><code>eCSSPropertyAlias_MozBorderStartWidth</code></span></span><span id='variant.eCSSPropertyAlias_MozHyphens' class='variant'><span id='eCSSPropertyAlias_MozHyphens.v' class='invisible'><code>eCSSPropertyAlias_MozHyphens</code></span></span><span id='variant.eCSSPropertyAlias_MozColumnCount' class='variant'><span id='eCSSPropertyAlias_MozColumnCount.v' class='invisible'><code>eCSSPropertyAlias_MozColumnCount</code></span></span><span id='variant.eCSSPropertyAlias_MozColumnFill' class='variant'><span id='eCSSPropertyAlias_MozColumnFill.v' class='invisible'><code>eCSSPropertyAlias_MozColumnFill</code></span></span><span id='variant.eCSSPropertyAlias_MozColumnGap' class='variant'><span id='eCSSPropertyAlias_MozColumnGap.v' class='invisible'><code>eCSSPropertyAlias_MozColumnGap</code></span></span><span id='variant.eCSSPropertyAlias_MozColumnRule' class='variant'><span id='eCSSPropertyAlias_MozColumnRule.v' class='invisible'><code>eCSSPropertyAlias_MozColumnRule</code></span></span><span id='variant.eCSSPropertyAlias_MozColumnRuleColor' class='variant'><span id='eCSSPropertyAlias_MozColumnRuleColor.v' class='invisible'><code>eCSSPropertyAlias_MozColumnRuleColor</code></span></span><span id='variant.eCSSPropertyAlias_MozColumnRuleStyle' class='variant'><span id='eCSSPropertyAlias_MozColumnRuleStyle.v' class='invisible'><code>eCSSPropertyAlias_MozColumnRuleStyle</code></span></span><span id='variant.eCSSPropertyAlias_MozColumnRuleWidth' class='variant'><span id='eCSSPropertyAlias_MozColumnRuleWidth.v' class='invisible'><code>eCSSPropertyAlias_MozColumnRuleWidth</code></span></span><span id='variant.eCSSPropertyAlias_MozColumnWidth' class='variant'><span id='eCSSPropertyAlias_MozColumnWidth.v' class='invisible'><code>eCSSPropertyAlias_MozColumnWidth</code></span></span><span id='variant.eCSSPropertyAlias_MozColumns' class='variant'><span id='eCSSPropertyAlias_MozColumns.v' class='invisible'><code>eCSSPropertyAlias_MozColumns</code></span></span><span id='variant.eCSSPropertyAlias_WebkitAnimation' class='variant'><span id='eCSSPropertyAlias_WebkitAnimation.v' class='invisible'><code>eCSSPropertyAlias_WebkitAnimation</code></span></span><span id='variant.eCSSPropertyAlias_WebkitAnimationDelay' class='variant'><span id='eCSSPropertyAlias_WebkitAnimationDelay.v' class='invisible'><code>eCSSPropertyAlias_WebkitAnimationDelay</code></span></span><span id='variant.eCSSPropertyAlias_WebkitAnimationDirection' class='variant'><span id='eCSSPropertyAlias_WebkitAnimationDirection.v' class='invisible'><code>eCSSPropertyAlias_WebkitAnimationDirection</code></span></span><span id='variant.eCSSPropertyAlias_WebkitAnimationDuration' class='variant'><span id='eCSSPropertyAlias_WebkitAnimationDuration.v' class='invisible'><code>eCSSPropertyAlias_WebkitAnimationDuration</code></span></span><span id='variant.eCSSPropertyAlias_WebkitAnimationFillMode' class='variant'><span id='eCSSPropertyAlias_WebkitAnimationFillMode.v' class='invisible'><code>eCSSPropertyAlias_WebkitAnimationFillMode</code></span></span><span id='variant.eCSSPropertyAlias_WebkitAnimationIterationCount' class='variant'><span id='eCSSPropertyAlias_WebkitAnimationIterationCount.v' class='invisible'><code>eCSSPropertyAlias_WebkitAnimationIterationCount</code></span></span><span id='variant.eCSSPropertyAlias_WebkitAnimationName' class='variant'><span id='eCSSPropertyAlias_WebkitAnimationName.v' class='invisible'><code>eCSSPropertyAlias_WebkitAnimationName</code></span></span><span id='variant.eCSSPropertyAlias_WebkitAnimationPlayState' class='variant'><span id='eCSSPropertyAlias_WebkitAnimationPlayState.v' class='invisible'><code>eCSSPropertyAlias_WebkitAnimationPlayState</code></span></span><span id='variant.eCSSPropertyAlias_WebkitAnimationTimingFunction' class='variant'><span id='eCSSPropertyAlias_WebkitAnimationTimingFunction.v' class='invisible'><code>eCSSPropertyAlias_WebkitAnimationTimingFunction</code></span></span><span id='variant.eCSSPropertyAlias_WebkitFilter' class='variant'><span id='eCSSPropertyAlias_WebkitFilter.v' class='invisible'><code>eCSSPropertyAlias_WebkitFilter</code></span></span><span id='variant.eCSSPropertyAlias_WebkitTextSizeAdjust' class='variant'><span id='eCSSPropertyAlias_WebkitTextSizeAdjust.v' class='invisible'><code>eCSSPropertyAlias_WebkitTextSizeAdjust</code></span></span><span id='variant.eCSSPropertyAlias_WebkitTransform' class='variant'><span id='eCSSPropertyAlias_WebkitTransform.v' class='invisible'><code>eCSSPropertyAlias_WebkitTransform</code></span></span><span id='variant.eCSSPropertyAlias_WebkitTransformOrigin' class='variant'><span id='eCSSPropertyAlias_WebkitTransformOrigin.v' class='invisible'><code>eCSSPropertyAlias_WebkitTransformOrigin</code></span></span><span id='variant.eCSSPropertyAlias_WebkitTransformStyle' class='variant'><span id='eCSSPropertyAlias_WebkitTransformStyle.v' class='invisible'><code>eCSSPropertyAlias_WebkitTransformStyle</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBackfaceVisibility' class='variant'><span id='eCSSPropertyAlias_WebkitBackfaceVisibility.v' class='invisible'><code>eCSSPropertyAlias_WebkitBackfaceVisibility</code></span></span><span id='variant.eCSSPropertyAlias_WebkitPerspective' class='variant'><span id='eCSSPropertyAlias_WebkitPerspective.v' class='invisible'><code>eCSSPropertyAlias_WebkitPerspective</code></span></span><span id='variant.eCSSPropertyAlias_WebkitPerspectiveOrigin' class='variant'><span id='eCSSPropertyAlias_WebkitPerspectiveOrigin.v' class='invisible'><code>eCSSPropertyAlias_WebkitPerspectiveOrigin</code></span></span><span id='variant.eCSSPropertyAlias_WebkitTransition' class='variant'><span id='eCSSPropertyAlias_WebkitTransition.v' class='invisible'><code>eCSSPropertyAlias_WebkitTransition</code></span></span><span id='variant.eCSSPropertyAlias_WebkitTransitionDelay' class='variant'><span id='eCSSPropertyAlias_WebkitTransitionDelay.v' class='invisible'><code>eCSSPropertyAlias_WebkitTransitionDelay</code></span></span><span id='variant.eCSSPropertyAlias_WebkitTransitionDuration' class='variant'><span id='eCSSPropertyAlias_WebkitTransitionDuration.v' class='invisible'><code>eCSSPropertyAlias_WebkitTransitionDuration</code></span></span><span id='variant.eCSSPropertyAlias_WebkitTransitionProperty' class='variant'><span id='eCSSPropertyAlias_WebkitTransitionProperty.v' class='invisible'><code>eCSSPropertyAlias_WebkitTransitionProperty</code></span></span><span id='variant.eCSSPropertyAlias_WebkitTransitionTimingFunction' class='variant'><span id='eCSSPropertyAlias_WebkitTransitionTimingFunction.v' class='invisible'><code>eCSSPropertyAlias_WebkitTransitionTimingFunction</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBorderRadius' class='variant'><span id='eCSSPropertyAlias_WebkitBorderRadius.v' class='invisible'><code>eCSSPropertyAlias_WebkitBorderRadius</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBorderTopLeftRadius' class='variant'><span id='eCSSPropertyAlias_WebkitBorderTopLeftRadius.v' class='invisible'><code>eCSSPropertyAlias_WebkitBorderTopLeftRadius</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBorderTopRightRadius' class='variant'><span id='eCSSPropertyAlias_WebkitBorderTopRightRadius.v' class='invisible'><code>eCSSPropertyAlias_WebkitBorderTopRightRadius</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBorderBottomLeftRadius' class='variant'><span id='eCSSPropertyAlias_WebkitBorderBottomLeftRadius.v' class='invisible'><code>eCSSPropertyAlias_WebkitBorderBottomLeftRadius</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBorderBottomRightRadius' class='variant'><span id='eCSSPropertyAlias_WebkitBorderBottomRightRadius.v' class='invisible'><code>eCSSPropertyAlias_WebkitBorderBottomRightRadius</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBackgroundClip' class='variant'><span id='eCSSPropertyAlias_WebkitBackgroundClip.v' class='invisible'><code>eCSSPropertyAlias_WebkitBackgroundClip</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBackgroundOrigin' class='variant'><span id='eCSSPropertyAlias_WebkitBackgroundOrigin.v' class='invisible'><code>eCSSPropertyAlias_WebkitBackgroundOrigin</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBackgroundSize' class='variant'><span id='eCSSPropertyAlias_WebkitBackgroundSize.v' class='invisible'><code>eCSSPropertyAlias_WebkitBackgroundSize</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBorderImage' class='variant'><span id='eCSSPropertyAlias_WebkitBorderImage.v' class='invisible'><code>eCSSPropertyAlias_WebkitBorderImage</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBoxShadow' class='variant'><span id='eCSSPropertyAlias_WebkitBoxShadow.v' class='invisible'><code>eCSSPropertyAlias_WebkitBoxShadow</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBoxSizing' class='variant'><span id='eCSSPropertyAlias_WebkitBoxSizing.v' class='invisible'><code>eCSSPropertyAlias_WebkitBoxSizing</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBoxFlex' class='variant'><span id='eCSSPropertyAlias_WebkitBoxFlex.v' class='invisible'><code>eCSSPropertyAlias_WebkitBoxFlex</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBoxOrdinalGroup' class='variant'><span id='eCSSPropertyAlias_WebkitBoxOrdinalGroup.v' class='invisible'><code>eCSSPropertyAlias_WebkitBoxOrdinalGroup</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBoxOrient' class='variant'><span id='eCSSPropertyAlias_WebkitBoxOrient.v' class='invisible'><code>eCSSPropertyAlias_WebkitBoxOrient</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBoxDirection' class='variant'><span id='eCSSPropertyAlias_WebkitBoxDirection.v' class='invisible'><code>eCSSPropertyAlias_WebkitBoxDirection</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBoxAlign' class='variant'><span id='eCSSPropertyAlias_WebkitBoxAlign.v' class='invisible'><code>eCSSPropertyAlias_WebkitBoxAlign</code></span></span><span id='variant.eCSSPropertyAlias_WebkitBoxPack' class='variant'><span id='eCSSPropertyAlias_WebkitBoxPack.v' class='invisible'><code>eCSSPropertyAlias_WebkitBoxPack</code></span></span><span id='variant.eCSSPropertyAlias_WebkitFlexDirection' class='variant'><span id='eCSSPropertyAlias_WebkitFlexDirection.v' class='invisible'><code>eCSSPropertyAlias_WebkitFlexDirection</code></span></span><span id='variant.eCSSPropertyAlias_WebkitFlexWrap' class='variant'><span id='eCSSPropertyAlias_WebkitFlexWrap.v' class='invisible'><code>eCSSPropertyAlias_WebkitFlexWrap</code></span></span><span id='variant.eCSSPropertyAlias_WebkitFlexFlow' class='variant'><span id='eCSSPropertyAlias_WebkitFlexFlow.v' class='invisible'><code>eCSSPropertyAlias_WebkitFlexFlow</code></span></span><span id='variant.eCSSPropertyAlias_WebkitOrder' class='variant'><span id='eCSSPropertyAlias_WebkitOrder.v' class='invisible'><code>eCSSPropertyAlias_WebkitOrder</code></span></span><span id='variant.eCSSPropertyAlias_WebkitFlex' class='variant'><span id='eCSSPropertyAlias_WebkitFlex.v' class='invisible'><code>eCSSPropertyAlias_WebkitFlex</code></span></span><span id='variant.eCSSPropertyAlias_WebkitFlexGrow' class='variant'><span id='eCSSPropertyAlias_WebkitFlexGrow.v' class='invisible'><code>eCSSPropertyAlias_WebkitFlexGrow</code></span></span><span id='variant.eCSSPropertyAlias_WebkitFlexShrink' class='variant'><span id='eCSSPropertyAlias_WebkitFlexShrink.v' class='invisible'><code>eCSSPropertyAlias_WebkitFlexShrink</code></span></span><span id='variant.eCSSPropertyAlias_WebkitFlexBasis' class='variant'><span id='eCSSPropertyAlias_WebkitFlexBasis.v' class='invisible'><code>eCSSPropertyAlias_WebkitFlexBasis</code></span></span><span id='variant.eCSSPropertyAlias_WebkitJustifyContent' class='variant'><span id='eCSSPropertyAlias_WebkitJustifyContent.v' class='invisible'><code>eCSSPropertyAlias_WebkitJustifyContent</code></span></span><span id='variant.eCSSPropertyAlias_WebkitAlignItems' class='variant'><span id='eCSSPropertyAlias_WebkitAlignItems.v' class='invisible'><code>eCSSPropertyAlias_WebkitAlignItems</code></span></span><span id='variant.eCSSPropertyAlias_WebkitAlignSelf' class='variant'><span id='eCSSPropertyAlias_WebkitAlignSelf.v' class='invisible'><code>eCSSPropertyAlias_WebkitAlignSelf</code></span></span><span id='variant.eCSSPropertyAlias_WebkitAlignContent' class='variant'><span id='eCSSPropertyAlias_WebkitAlignContent.v' class='invisible'><code>eCSSPropertyAlias_WebkitAlignContent</code></span></span><span id='variant.eCSSPropertyAlias_WebkitUserSelect' class='variant'><span id='eCSSPropertyAlias_WebkitUserSelect.v' class='invisible'><code>eCSSPropertyAlias_WebkitUserSelect</code></span></span><span id='variant.eCSSPropertyAlias_WebkitMask' class='variant'><span id='eCSSPropertyAlias_WebkitMask.v' class='invisible'><code>eCSSPropertyAlias_WebkitMask</code></span></span><span id='variant.eCSSPropertyAlias_WebkitMaskClip' class='variant'><span id='eCSSPropertyAlias_WebkitMaskClip.v' class='invisible'><code>eCSSPropertyAlias_WebkitMaskClip</code></span></span><span id='variant.eCSSPropertyAlias_WebkitMaskComposite' class='variant'><span id='eCSSPropertyAlias_WebkitMaskComposite.v' class='invisible'><code>eCSSPropertyAlias_WebkitMaskComposite</code></span></span><span id='variant.eCSSPropertyAlias_WebkitMaskImage' class='variant'><span id='eCSSPropertyAlias_WebkitMaskImage.v' class='invisible'><code>eCSSPropertyAlias_WebkitMaskImage</code></span></span><span id='variant.eCSSPropertyAlias_WebkitMaskOrigin' class='variant'><span id='eCSSPropertyAlias_WebkitMaskOrigin.v' class='invisible'><code>eCSSPropertyAlias_WebkitMaskOrigin</code></span></span><span id='variant.eCSSPropertyAlias_WebkitMaskPosition' class='variant'><span id='eCSSPropertyAlias_WebkitMaskPosition.v' class='invisible'><code>eCSSPropertyAlias_WebkitMaskPosition</code></span></span><span id='variant.eCSSPropertyAlias_WebkitMaskPositionX' class='variant'><span id='eCSSPropertyAlias_WebkitMaskPositionX.v' class='invisible'><code>eCSSPropertyAlias_WebkitMaskPositionX</code></span></span><span id='variant.eCSSPropertyAlias_WebkitMaskPositionY' class='variant'><span id='eCSSPropertyAlias_WebkitMaskPositionY.v' class='invisible'><code>eCSSPropertyAlias_WebkitMaskPositionY</code></span></span><span id='variant.eCSSPropertyAlias_WebkitMaskRepeat' class='variant'><span id='eCSSPropertyAlias_WebkitMaskRepeat.v' class='invisible'><code>eCSSPropertyAlias_WebkitMaskRepeat</code></span></span><span id='variant.eCSSPropertyAlias_WebkitMaskSize' class='variant'><span id='eCSSPropertyAlias_WebkitMaskSize.v' class='invisible'><code>eCSSPropertyAlias_WebkitMaskSize</code></span></span><span id='variant.eCSSProperty_COUNT_with_aliases' class='variant'><span id='eCSSProperty_COUNT_with_aliases.v' class='invisible'><code>eCSSProperty_COUNT_with_aliases</code></span></span><span id='variant.eCSSPropertyExtra_all_properties' class='variant'><span id='eCSSPropertyExtra_all_properties.v' class='invisible'><code>eCSSPropertyExtra_all_properties</code></span></span><span id='variant.eCSSPropertyExtra_x_none_value' class='variant'><span id='eCSSPropertyExtra_x_none_value.v' class='invisible'><code>eCSSPropertyExtra_x_none_value</code></span></span><span id='variant.eCSSPropertyExtra_x_auto_value' class='variant'><span id='eCSSPropertyExtra_x_auto_value.v' class='invisible'><code>eCSSPropertyExtra_x_auto_value</code></span></span><span id='variant.eCSSPropertyExtra_variable' class='variant'><span id='eCSSPropertyExtra_variable.v' class='invisible'><code>eCSSPropertyExtra_variable</code></span></span><span id='variant.eCSSProperty_DOM' class='variant'><span id='eCSSProperty_DOM.v' class='invisible'><code>eCSSProperty_DOM</code></span></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsCSSPropertyID.html' title='style::gecko_bindings::structs::root::nsCSSPropertyID'>nsCSSPropertyID</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#12559' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsCSSPropertyID.html' title='style::gecko_bindings::structs::root::nsCSSPropertyID'>nsCSSPropertyID</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#12559' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsCSSPropertyID.html' title='style::gecko_bindings::structs::root::nsCSSPropertyID'>nsCSSPropertyID</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#12559' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsCSSPropertyID.html' title='style::gecko_bindings::structs::root::nsCSSPropertyID'>nsCSSPropertyID</a></code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsCSSPropertyID.html' title='style::gecko_bindings::structs::root::nsCSSPropertyID'>nsCSSPropertyID</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#12559' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsCSSPropertyID.html' title='style::gecko_bindings::structs::root::nsCSSPropertyID'>nsCSSPropertyID</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsCSSPropertyID.html' title='style::gecko_bindings::structs::root::nsCSSPropertyID'>nsCSSPropertyID</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#12559' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html' title='core::hash::Hash'>Hash</a> for <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsCSSPropertyID.html' title='style::gecko_bindings::structs::root::nsCSSPropertyID'>nsCSSPropertyID</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#12559' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.hash' class='method'><span id='hash.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#tymethod.hash' class='fnname'>hash</a>&lt;__H:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a>&gt;(&amp;self, __arg_0: &amp;mut __H)</code></span></h4>
+<div class='docblock'><p>Feeds this value into the state given, updating the hasher as necessary.</p>
+</div><h4 id='method.hash_slice' class='method'><span id='hash_slice.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice' class='fnname'>hash_slice</a>&lt;H&gt;(data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[Self]</a>, state: &amp;mut H) <span class='where fmt-newline'>where H: <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a></span></code><div class='since' title='Stable since Rust version 1.3.0'>1.3.0</div></span></h4>
+<div class='docblock'><p>Feeds a slice of this type into the state provided.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html' title='core::convert::From'>From</a>&lt;<a class='enum' href='../../../../style/properties/animated_properties/enum.TransitionProperty.html' title='style::properties::animated_properties::TransitionProperty'>TransitionProperty</a>&gt; for <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsCSSPropertyID.html' title='style::gecko_bindings::structs::root::nsCSSPropertyID'>nsCSSPropertyID</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/properties.rs.html#60129-60342' title='goto source code'>[src]</a></span></h3>
+<div class='docblock'><p>Convert to nsCSSPropertyID.</p>
+</div><div class='impl-items'><h4 id='method.from' class='method'><span id='from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/convert/trait.From.html#tymethod.from' class='fnname'>from</a>(transition_property: <a class='enum' href='../../../../style/properties/animated_properties/enum.TransitionProperty.html' title='style::properties::animated_properties::TransitionProperty'>TransitionProperty</a>) -&gt; <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsCSSPropertyID.html' title='style::gecko_bindings::structs::root::nsCSSPropertyID'>nsCSSPropertyID</a></code></span></h4>
+<div class='docblock'><p>Performs the conversion.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

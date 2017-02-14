@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["set_recording_detour",""]],"mod":[["renderer","The webrender API."]],"static":[["WEBRENDER_RECORDING_HEADER",""]],"trait":[["ApiRecordingReceiver",""]]});

@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["CascadeInfo","A structure to collect information about the cascade."]]});

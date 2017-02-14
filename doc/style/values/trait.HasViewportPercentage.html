@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `HasViewportPercentage` trait in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, HasViewportPercentage">
+
+    <title>style::values::HasViewportPercentage - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>style</a>::<wbr><a href='index.html'>values</a></p><script>window.sidebarCurrent = {name: 'HasViewportPercentage', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'><span class='in-band'>Trait <a href='../index.html'>style</a>::<wbr><a href='index.html'>values</a>::<wbr><a class='trait' href=''>HasViewportPercentage</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/style/values/mod.rs.html#73-76' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait HasViewportPercentage {
+    fn <a href='#tymethod.has_viewport_percentage' class='fnname'>has_viewport_percentage</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+}</pre><div class='docblock'><p>A trait used to query whether this value has viewport units.</p>
+</div>
+            <h2 id='required-methods'>Required Methods</h2>
+            <div class='methods'>
+        <h3 id='tymethod.has_viewport_percentage' class='method'><span id='has_viewport_percentage.v' class='invisible'><code>fn <a href='#tymethod.has_viewport_percentage' class='fnname'>has_viewport_percentage</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h3><div class='docblock'><p>Returns true if this value has viewport units.</p>
+</div></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><code>impl HasViewportPercentage for style::custom_properties::<a class='struct' href='../../style/custom_properties/struct.SpecifiedValue.html' title='style::custom_properties::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/values/specified/grid/struct.GridLine.html' title='style::values::specified::grid::GridLine'>GridLine</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='enum' href='../../style/values/specified/length/enum.ViewportPercentageLength.html' title='style::values::specified::length::ViewportPercentageLength'>ViewportPercentageLength</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='enum' href='../../style/values/specified/length/enum.NoCalcLength.html' title='style::values::specified::length::NoCalcLength'>NoCalcLength</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='enum' href='../../style/values/specified/length/enum.Length.html' title='style::values::specified::length::Length'>Length</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/values/specified/length/struct.CalcLengthOrPercentage.html' title='style::values::specified::length::CalcLengthOrPercentage'>CalcLengthOrPercentage</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='enum' href='../../style/values/specified/length/enum.LengthOrPercentage.html' title='style::values::specified::length::LengthOrPercentage'>LengthOrPercentage</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='enum' href='../../style/values/specified/length/enum.LengthOrPercentageOrAuto.html' title='style::values::specified::length::LengthOrPercentageOrAuto'>LengthOrPercentageOrAuto</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='enum' href='../../style/values/specified/length/enum.LengthOrPercentageOrNone.html' title='style::values::specified::length::LengthOrPercentageOrNone'>LengthOrPercentageOrNone</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='enum' href='../../style/values/specified/length/enum.LengthOrPercentageOrAutoOrContent.html' title='style::values::specified::length::LengthOrPercentageOrAutoOrContent'>LengthOrPercentageOrAutoOrContent</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/values/specified/position/struct.Position.html' title='style::values::specified::position::Position'>Position</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/values/specified/position/struct.HorizontalPosition.html' title='style::values::specified::position::HorizontalPosition'>HorizontalPosition</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/values/specified/position/struct.VerticalPosition.html' title='style::values::specified::position::VerticalPosition'>VerticalPosition</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='enum' href='../../style/values/specified/position/enum.PositionComponent.html' title='style::values::specified::position::PositionComponent'>PositionComponent</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/values/specified/url/struct.SpecifiedUrl.html' title='style::values::specified::url::SpecifiedUrl'>SpecifiedUrl</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/values/specified/struct.CSSColor.html' title='style::values::specified::CSSColor'>CSSColor</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/values/specified/struct.CSSRGBA.html' title='style::values::specified::CSSRGBA'>CSSRGBA</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/values/specified/struct.BorderRadiusSize.html' title='style::values::specified::BorderRadiusSize'>BorderRadiusSize</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='enum' href='../../style/values/specified/enum.BorderWidth.html' title='style::values::specified::BorderWidth'>BorderWidth</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='enum' href='../../style/values/specified/enum.BorderStyle.html' title='style::values::specified::BorderStyle'>BorderStyle</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/values/specified/struct.Number.html' title='style::values::specified::Number'>Number</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/values/specified/struct.Opacity.html' title='style::values::specified::Opacity'>Opacity</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/values/specified/struct.Shadow.html' title='style::values::specified::Shadow'>Shadow</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/values/specified/struct.ClipRect.html' title='style::values::specified::ClipRect'>ClipRect</a></code></li>
+<li><code>impl&lt;T:&nbsp;<a class='trait' href='../../style/values/trait.HasViewportPercentage.html' title='style::values::HasViewportPercentage'>HasViewportPercentage</a>&gt; HasViewportPercentage for <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;T&gt;</code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/values/struct.None_.html' title='style::values::None_'>None_</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/values/struct.Auto.html' title='style::values::Auto'>Auto</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/values/struct.Normal.html' title='style::values::Normal'>Normal</a></code></li>
+<li><code>impl&lt;A:&nbsp;<a class='trait' href='../../style/values/trait.HasViewportPercentage.html' title='style::values::HasViewportPercentage'>HasViewportPercentage</a>, B:&nbsp;<a class='trait' href='../../style/values/trait.HasViewportPercentage.html' title='style::values::HasViewportPercentage'>HasViewportPercentage</a>&gt; HasViewportPercentage for <a class='enum' href='../../style/values/enum.Either.html' title='style::values::Either'>Either</a>&lt;A, B&gt;</code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::background_image::single_value::<a class='struct' href='../../style/properties/longhands/background_image/single_value/struct.SpecifiedValue.html' title='style::properties::longhands::background_image::single_value::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::background_image::<a class='struct' href='../../style/properties/longhands/background_image/struct.SpecifiedValue.html' title='style::properties::longhands::background_image::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::background_position_x::<a class='struct' href='../../style/properties/longhands/background_position_x/struct.SpecifiedValue.html' title='style::properties::longhands::background_position_x::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::background_position_y::<a class='struct' href='../../style/properties/longhands/background_position_y/struct.SpecifiedValue.html' title='style::properties::longhands::background_position_y::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::background_repeat::single_value::computed_value::<a class='enum' href='../../style/properties/longhands/background_repeat/single_value/computed_value/enum.T.html' title='style::properties::longhands::background_repeat::single_value::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::background_repeat::<a class='struct' href='../../style/properties/longhands/background_repeat/struct.SpecifiedValue.html' title='style::properties::longhands::background_repeat::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::background_attachment::single_value::computed_value::<a class='enum' href='../../style/properties/longhands/background_attachment/single_value/computed_value/enum.T.html' title='style::properties::longhands::background_attachment::single_value::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::background_attachment::<a class='struct' href='../../style/properties/longhands/background_attachment/struct.SpecifiedValue.html' title='style::properties::longhands::background_attachment::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::background_clip::single_value::computed_value::<a class='enum' href='../../style/properties/longhands/background_clip/single_value/computed_value/enum.T.html' title='style::properties::longhands::background_clip::single_value::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::background_clip::<a class='struct' href='../../style/properties/longhands/background_clip/struct.SpecifiedValue.html' title='style::properties::longhands::background_clip::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::background_origin::single_value::computed_value::<a class='enum' href='../../style/properties/longhands/background_origin/single_value/computed_value/enum.T.html' title='style::properties::longhands::background_origin::single_value::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::background_origin::<a class='struct' href='../../style/properties/longhands/background_origin/struct.SpecifiedValue.html' title='style::properties::longhands::background_origin::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/properties/longhands/background_size/single_value/struct.ExplicitSize.html' title='style::properties::longhands::background_size::single_value::ExplicitSize'>ExplicitSize</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::background_size::single_value::<a class='enum' href='../../style/properties/longhands/background_size/single_value/enum.SpecifiedValue.html' title='style::properties::longhands::background_size::single_value::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::background_size::<a class='struct' href='../../style/properties/longhands/background_size/struct.SpecifiedValue.html' title='style::properties::longhands::background_size::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::background_blend_mode::single_value::computed_value::<a class='enum' href='../../style/properties/longhands/background_blend_mode/single_value/computed_value/enum.T.html' title='style::properties::longhands::background_blend_mode::single_value::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::background_blend_mode::<a class='struct' href='../../style/properties/longhands/background_blend_mode/struct.SpecifiedValue.html' title='style::properties::longhands::background_blend_mode::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::box_decoration_break::computed_value::<a class='enum' href='../../style/properties/longhands/box_decoration_break/computed_value/enum.T.html' title='style::properties::longhands::box_decoration_break::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::_moz_float_edge::computed_value::<a class='enum' href='../../style/properties/longhands/_moz_float_edge/computed_value/enum.T.html' title='style::properties::longhands::_moz_float_edge::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::border_image_source::<a class='struct' href='../../style/properties/longhands/border_image_source/struct.SpecifiedValue.html' title='style::properties::longhands::border_image_source::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::border_image_outset::<a class='struct' href='../../style/properties/longhands/border_image_outset/struct.SpecifiedValue.html' title='style::properties::longhands::border_image_outset::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::border_image_repeat::<a class='struct' href='../../style/properties/longhands/border_image_repeat/struct.SpecifiedValue.html' title='style::properties::longhands::border_image_repeat::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::border_image_width::<a class='struct' href='../../style/properties/longhands/border_image_width/struct.SpecifiedValue.html' title='style::properties::longhands::border_image_width::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::border_image_slice::<a class='struct' href='../../style/properties/longhands/border_image_slice/struct.SpecifiedValue.html' title='style::properties::longhands::border_image_slice::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::display::<a class='enum' href='../../style/properties/longhands/display/enum.SpecifiedValue.html' title='style::properties::longhands::display::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::_moz_top_layer::computed_value::<a class='enum' href='../../style/properties/longhands/_moz_top_layer/computed_value/enum.T.html' title='style::properties::longhands::_moz_top_layer::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::position::computed_value::<a class='enum' href='../../style/properties/longhands/position/computed_value/enum.T.html' title='style::properties::longhands::position::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::float::<a class='enum' href='../../style/properties/longhands/float/enum.SpecifiedValue.html' title='style::properties::longhands::float::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::clear::<a class='enum' href='../../style/properties/longhands/clear/enum.SpecifiedValue.html' title='style::properties::longhands::clear::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::vertical_align::<a class='enum' href='../../style/properties/longhands/vertical_align/enum.SpecifiedValue.html' title='style::properties::longhands::vertical_align::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::overflow_clip_box::computed_value::<a class='enum' href='../../style/properties/longhands/overflow_clip_box/computed_value/enum.T.html' title='style::properties::longhands::overflow_clip_box::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::overflow_x::computed_value::<a class='enum' href='../../style/properties/longhands/overflow_x/computed_value/enum.T.html' title='style::properties::longhands::overflow_x::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::overflow_y::<a class='struct' href='../../style/properties/longhands/overflow_y/struct.SpecifiedValue.html' title='style::properties::longhands::overflow_y::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::values::specified::<a class='struct' href='../../style/values/specified/struct.Time.html' title='style::values::specified::Time'>Time</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::transition_duration::<a class='struct' href='../../style/properties/longhands/transition_duration/struct.SpecifiedValue.html' title='style::properties::longhands::transition_duration::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::transition_timing_function::single_value::<a class='enum' href='../../style/properties/longhands/transition_timing_function/single_value/enum.SpecifiedValue.html' title='style::properties::longhands::transition_timing_function::single_value::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::transition_timing_function::<a class='struct' href='../../style/properties/longhands/transition_timing_function/struct.SpecifiedValue.html' title='style::properties::longhands::transition_timing_function::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::animated_properties::<a class='enum' href='../../style/properties/animated_properties/enum.TransitionProperty.html' title='style::properties::animated_properties::TransitionProperty'>TransitionProperty</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::transition_property::<a class='struct' href='../../style/properties/longhands/transition_property/struct.SpecifiedValue.html' title='style::properties::longhands::transition_property::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::transition_delay::<a class='struct' href='../../style/properties/longhands/transition_delay/struct.SpecifiedValue.html' title='style::properties::longhands::transition_delay::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::animation_name::single_value::<a class='struct' href='../../style/properties/longhands/animation_name/single_value/struct.SpecifiedValue.html' title='style::properties::longhands::animation_name::single_value::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::animation_name::<a class='struct' href='../../style/properties/longhands/animation_name/struct.SpecifiedValue.html' title='style::properties::longhands::animation_name::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::animation_duration::<a class='struct' href='../../style/properties/longhands/animation_duration/struct.SpecifiedValue.html' title='style::properties::longhands::animation_duration::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::animation_timing_function::<a class='struct' href='../../style/properties/longhands/animation_timing_function/struct.SpecifiedValue.html' title='style::properties::longhands::animation_timing_function::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::animation_iteration_count::single_value::<a class='enum' href='../../style/properties/longhands/animation_iteration_count/single_value/enum.SpecifiedValue.html' title='style::properties::longhands::animation_iteration_count::single_value::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::animation_iteration_count::<a class='struct' href='../../style/properties/longhands/animation_iteration_count/struct.SpecifiedValue.html' title='style::properties::longhands::animation_iteration_count::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::animation_direction::single_value::computed_value::<a class='enum' href='../../style/properties/longhands/animation_direction/single_value/computed_value/enum.T.html' title='style::properties::longhands::animation_direction::single_value::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::animation_direction::<a class='struct' href='../../style/properties/longhands/animation_direction/struct.SpecifiedValue.html' title='style::properties::longhands::animation_direction::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::animation_play_state::single_value::computed_value::<a class='enum' href='../../style/properties/longhands/animation_play_state/single_value/computed_value/enum.T.html' title='style::properties::longhands::animation_play_state::single_value::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::animation_play_state::<a class='struct' href='../../style/properties/longhands/animation_play_state/struct.SpecifiedValue.html' title='style::properties::longhands::animation_play_state::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::animation_fill_mode::single_value::computed_value::<a class='enum' href='../../style/properties/longhands/animation_fill_mode/single_value/computed_value/enum.T.html' title='style::properties::longhands::animation_fill_mode::single_value::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::animation_fill_mode::<a class='struct' href='../../style/properties/longhands/animation_fill_mode/struct.SpecifiedValue.html' title='style::properties::longhands::animation_fill_mode::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::animation_delay::<a class='struct' href='../../style/properties/longhands/animation_delay/struct.SpecifiedValue.html' title='style::properties::longhands::animation_delay::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::scroll_snap_points_y::<a class='enum' href='../../style/properties/longhands/scroll_snap_points_y/enum.SpecifiedValue.html' title='style::properties::longhands::scroll_snap_points_y::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::scroll_snap_coordinate::<a class='struct' href='../../style/properties/longhands/scroll_snap_coordinate/struct.SpecifiedValue.html' title='style::properties::longhands::scroll_snap_coordinate::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::transform::<a class='struct' href='../../style/properties/longhands/transform/struct.SpecifiedValue.html' title='style::properties::longhands::transform::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::scroll_behavior::computed_value::<a class='enum' href='../../style/properties/longhands/scroll_behavior/computed_value/enum.T.html' title='style::properties::longhands::scroll_behavior::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::scroll_snap_type_x::computed_value::<a class='enum' href='../../style/properties/longhands/scroll_snap_type_x/computed_value/enum.T.html' title='style::properties::longhands::scroll_snap_type_x::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::isolation::computed_value::<a class='enum' href='../../style/properties/longhands/isolation/computed_value/enum.T.html' title='style::properties::longhands::isolation::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::page_break_after::computed_value::<a class='enum' href='../../style/properties/longhands/page_break_after/computed_value/enum.T.html' title='style::properties::longhands::page_break_after::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::page_break_before::computed_value::<a class='enum' href='../../style/properties/longhands/page_break_before/computed_value/enum.T.html' title='style::properties::longhands::page_break_before::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::page_break_inside::computed_value::<a class='enum' href='../../style/properties/longhands/page_break_inside/computed_value/enum.T.html' title='style::properties::longhands::page_break_inside::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::resize::computed_value::<a class='enum' href='../../style/properties/longhands/resize/computed_value/enum.T.html' title='style::properties::longhands::resize::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::perspective_origin::<a class='struct' href='../../style/properties/longhands/perspective_origin/struct.SpecifiedValue.html' title='style::properties::longhands::perspective_origin::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::backface_visibility::computed_value::<a class='enum' href='../../style/properties/longhands/backface_visibility/computed_value/enum.T.html' title='style::properties::longhands::backface_visibility::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::transform_box::computed_value::<a class='enum' href='../../style/properties/longhands/transform_box/computed_value/enum.T.html' title='style::properties::longhands::transform_box::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::transform_style::computed_value::<a class='enum' href='../../style/properties/longhands/transform_style/computed_value/enum.T.html' title='style::properties::longhands::transform_style::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::transform_origin::<a class='struct' href='../../style/properties/longhands/transform_origin/struct.SpecifiedValue.html' title='style::properties::longhands::transform_origin::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::_moz_appearance::computed_value::<a class='enum' href='../../style/properties/longhands/_moz_appearance/computed_value/enum.T.html' title='style::properties::longhands::_moz_appearance::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::_moz_orient::computed_value::<a class='enum' href='../../style/properties/longhands/_moz_orient/computed_value/enum.T.html' title='style::properties::longhands::_moz_orient::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::column_count::<a class='enum' href='../../style/properties/longhands/column_count/enum.SpecifiedValue.html' title='style::properties::longhands::column_count::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::column_fill::computed_value::<a class='enum' href='../../style/properties/longhands/column_fill/computed_value/enum.T.html' title='style::properties::longhands::column_fill::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::column_rule_style::computed_value::<a class='enum' href='../../style/properties/longhands/column_rule_style/computed_value/enum.T.html' title='style::properties::longhands::column_rule_style::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::content::computed_value::<a class='enum' href='../../style/properties/longhands/content/computed_value/enum.T.html' title='style::properties::longhands::content::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::box_shadow::<a class='struct' href='../../style/properties/longhands/box_shadow/struct.SpecifiedValue.html' title='style::properties::longhands::box_shadow::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::filter::<a class='struct' href='../../style/properties/longhands/filter/struct.SpecifiedValue.html' title='style::properties::longhands::filter::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='enum' href='../../style/properties/longhands/filter/enum.SpecifiedFilter.html' title='style::properties::longhands::filter::SpecifiedFilter'>SpecifiedFilter</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::mix_blend_mode::computed_value::<a class='enum' href='../../style/properties/longhands/mix_blend_mode/computed_value/enum.T.html' title='style::properties::longhands::mix_blend_mode::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::font_family::computed_value::<a class='struct' href='../../style/properties/longhands/font_family/computed_value/struct.T.html' title='style::properties::longhands::font_family::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::font_style::computed_value::<a class='enum' href='../../style/properties/longhands/font_style/computed_value/enum.T.html' title='style::properties::longhands::font_style::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::font_variant::computed_value::<a class='enum' href='../../style/properties/longhands/font_variant/computed_value/enum.T.html' title='style::properties::longhands::font_variant::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::font_variant_caps::computed_value::<a class='enum' href='../../style/properties/longhands/font_variant_caps/computed_value/enum.T.html' title='style::properties::longhands::font_variant_caps::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::font_weight::<a class='enum' href='../../style/properties/longhands/font_weight/enum.SpecifiedValue.html' title='style::properties::longhands::font_weight::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::font_size::<a class='struct' href='../../style/properties/longhands/font_size/struct.SpecifiedValue.html' title='style::properties::longhands::font_size::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::font_size_adjust::<a class='enum' href='../../style/properties/longhands/font_size_adjust/enum.SpecifiedValue.html' title='style::properties::longhands::font_size_adjust::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::font_synthesis::<a class='struct' href='../../style/properties/longhands/font_synthesis/struct.SpecifiedValue.html' title='style::properties::longhands::font_synthesis::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::font_stretch::computed_value::<a class='enum' href='../../style/properties/longhands/font_stretch/computed_value/enum.T.html' title='style::properties::longhands::font_stretch::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::font_kerning::computed_value::<a class='enum' href='../../style/properties/longhands/font_kerning/computed_value/enum.T.html' title='style::properties::longhands::font_kerning::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::font_variant_position::computed_value::<a class='enum' href='../../style/properties/longhands/font_variant_position/computed_value/enum.T.html' title='style::properties::longhands::font_variant_position::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::visibility::computed_value::<a class='enum' href='../../style/properties/longhands/visibility/computed_value/enum.T.html' title='style::properties::longhands::visibility::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::writing_mode::computed_value::<a class='enum' href='../../style/properties/longhands/writing_mode/computed_value/enum.T.html' title='style::properties::longhands::writing_mode::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::direction::computed_value::<a class='enum' href='../../style/properties/longhands/direction/computed_value/enum.T.html' title='style::properties::longhands::direction::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::text_orientation::<a class='enum' href='../../style/properties/longhands/text_orientation/enum.SpecifiedValue.html' title='style::properties::longhands::text_orientation::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::color_adjust::computed_value::<a class='enum' href='../../style/properties/longhands/color_adjust/computed_value/enum.T.html' title='style::properties::longhands::color_adjust::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::image_rendering::computed_value::<a class='enum' href='../../style/properties/longhands/image_rendering/computed_value/enum.T.html' title='style::properties::longhands::image_rendering::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::border_collapse::computed_value::<a class='enum' href='../../style/properties/longhands/border_collapse/computed_value/enum.T.html' title='style::properties::longhands::border_collapse::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::empty_cells::computed_value::<a class='enum' href='../../style/properties/longhands/empty_cells/computed_value/enum.T.html' title='style::properties::longhands::empty_cells::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::caption_side::computed_value::<a class='enum' href='../../style/properties/longhands/caption_side/computed_value/enum.T.html' title='style::properties::longhands::caption_side::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::border_spacing::<a class='struct' href='../../style/properties/longhands/border_spacing/struct.SpecifiedValue.html' title='style::properties::longhands::border_spacing::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::line_height::<a class='enum' href='../../style/properties/longhands/line_height/enum.SpecifiedValue.html' title='style::properties::longhands::line_height::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::text_transform::computed_value::<a class='enum' href='../../style/properties/longhands/text_transform/computed_value/enum.T.html' title='style::properties::longhands::text_transform::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::hyphens::computed_value::<a class='enum' href='../../style/properties/longhands/hyphens/computed_value/enum.T.html' title='style::properties::longhands::hyphens::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::overflow_wrap::computed_value::<a class='enum' href='../../style/properties/longhands/overflow_wrap/computed_value/enum.T.html' title='style::properties::longhands::overflow_wrap::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::word_break::computed_value::<a class='enum' href='../../style/properties/longhands/word_break/computed_value/enum.T.html' title='style::properties::longhands::word_break::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::text_align_last::computed_value::<a class='enum' href='../../style/properties/longhands/text_align_last/computed_value/enum.T.html' title='style::properties::longhands::text_align_last::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::text_align::computed_value::<a class='enum' href='../../style/properties/longhands/text_align/computed_value/enum.T.html' title='style::properties::longhands::text_align::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::letter_spacing::<a class='enum' href='../../style/properties/longhands/letter_spacing/enum.SpecifiedValue.html' title='style::properties::longhands::letter_spacing::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::word_spacing::<a class='enum' href='../../style/properties/longhands/word_spacing/enum.SpecifiedValue.html' title='style::properties::longhands::word_spacing::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::white_space::computed_value::<a class='enum' href='../../style/properties/longhands/white_space/computed_value/enum.T.html' title='style::properties::longhands::white_space::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::text_shadow::<a class='struct' href='../../style/properties/longhands/text_shadow/struct.SpecifiedValue.html' title='style::properties::longhands::text_shadow::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for <a class='struct' href='../../style/properties/longhands/text_shadow/struct.SpecifiedTextShadow.html' title='style::properties::longhands::text_shadow::SpecifiedTextShadow'>SpecifiedTextShadow</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::text_emphasis_style::<a class='enum' href='../../style/properties/longhands/text_emphasis_style/enum.SpecifiedValue.html' title='style::properties::longhands::text_emphasis_style::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::text_emphasis_position::<a class='struct' href='../../style/properties/longhands/text_emphasis_position/struct.SpecifiedValue.html' title='style::properties::longhands::text_emphasis_position::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::ruby_align::computed_value::<a class='enum' href='../../style/properties/longhands/ruby_align/computed_value/enum.T.html' title='style::properties::longhands::ruby_align::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::ruby_position::computed_value::<a class='enum' href='../../style/properties/longhands/ruby_position/computed_value/enum.T.html' title='style::properties::longhands::ruby_position::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::text_combine_upright::computed_value::<a class='enum' href='../../style/properties/longhands/text_combine_upright/computed_value/enum.T.html' title='style::properties::longhands::text_combine_upright::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::text_rendering::computed_value::<a class='enum' href='../../style/properties/longhands/text_rendering/computed_value/enum.T.html' title='style::properties::longhands::text_rendering::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::list_style_position::computed_value::<a class='enum' href='../../style/properties/longhands/list_style_position/computed_value/enum.T.html' title='style::properties::longhands::list_style_position::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::list_style_type::computed_value::<a class='enum' href='../../style/properties/longhands/list_style_type/computed_value/enum.T.html' title='style::properties::longhands::list_style_type::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::quotes::computed_value::<a class='struct' href='../../style/properties/longhands/quotes/computed_value/struct.T.html' title='style::properties::longhands::quotes::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::outline_width::<a class='struct' href='../../style/properties/longhands/outline_width/struct.SpecifiedValue.html' title='style::properties::longhands::outline_width::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::cursor::computed_value::<a class='struct' href='../../style/properties/longhands/cursor/computed_value/struct.T.html' title='style::properties::longhands::cursor::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::pointer_events::computed_value::<a class='enum' href='../../style/properties/longhands/pointer_events/computed_value/enum.T.html' title='style::properties::longhands::pointer_events::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::_moz_user_input::computed_value::<a class='enum' href='../../style/properties/longhands/_moz_user_input/computed_value/enum.T.html' title='style::properties::longhands::_moz_user_input::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::_moz_user_modify::computed_value::<a class='enum' href='../../style/properties/longhands/_moz_user_modify/computed_value/enum.T.html' title='style::properties::longhands::_moz_user_modify::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::_moz_user_focus::computed_value::<a class='enum' href='../../style/properties/longhands/_moz_user_focus/computed_value/enum.T.html' title='style::properties::longhands::_moz_user_focus::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::z_index::<a class='type' href='../../style/properties/longhands/z_index/type.SpecifiedValue.html' title='style::properties::longhands::z_index::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::flex_direction::computed_value::<a class='enum' href='../../style/properties/longhands/flex_direction/computed_value/enum.T.html' title='style::properties::longhands::flex_direction::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::flex_wrap::computed_value::<a class='enum' href='../../style/properties/longhands/flex_wrap/computed_value/enum.T.html' title='style::properties::longhands::flex_wrap::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::align_items::computed_value::<a class='enum' href='../../style/properties/longhands/align_items/computed_value/enum.T.html' title='style::properties::longhands::align_items::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::align_self::computed_value::<a class='enum' href='../../style/properties/longhands/align_self/computed_value/enum.T.html' title='style::properties::longhands::align_self::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::box_sizing::computed_value::<a class='enum' href='../../style/properties/longhands/box_sizing/computed_value/enum.T.html' title='style::properties::longhands::box_sizing::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::object_fit::computed_value::<a class='enum' href='../../style/properties/longhands/object_fit/computed_value/enum.T.html' title='style::properties::longhands::object_fit::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::table_layout::computed_value::<a class='enum' href='../../style/properties/longhands/table_layout/computed_value/enum.T.html' title='style::properties::longhands::table_layout::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::text_overflow::<a class='struct' href='../../style/properties/longhands/text_overflow/struct.SpecifiedValue.html' title='style::properties::longhands::text_overflow::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::unicode_bidi::computed_value::<a class='enum' href='../../style/properties/longhands/unicode_bidi/computed_value/enum.T.html' title='style::properties::longhands::unicode_bidi::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::text_decoration_line::<a class='struct' href='../../style/properties/longhands/text_decoration_line/struct.SpecifiedValue.html' title='style::properties::longhands::text_decoration_line::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::text_decoration_style::computed_value::<a class='enum' href='../../style/properties/longhands/text_decoration_style/computed_value/enum.T.html' title='style::properties::longhands::text_decoration_style::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::ime_mode::computed_value::<a class='enum' href='../../style/properties/longhands/ime_mode/computed_value/enum.T.html' title='style::properties::longhands::ime_mode::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::_moz_user_select::computed_value::<a class='enum' href='../../style/properties/longhands/_moz_user_select/computed_value/enum.T.html' title='style::properties::longhands::_moz_user_select::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::_moz_window_dragging::computed_value::<a class='enum' href='../../style/properties/longhands/_moz_window_dragging/computed_value/enum.T.html' title='style::properties::longhands::_moz_window_dragging::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::text_anchor::computed_value::<a class='enum' href='../../style/properties/longhands/text_anchor/computed_value/enum.T.html' title='style::properties::longhands::text_anchor::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::color_interpolation::computed_value::<a class='enum' href='../../style/properties/longhands/color_interpolation/computed_value/enum.T.html' title='style::properties::longhands::color_interpolation::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::color_interpolation_filters::computed_value::<a class='enum' href='../../style/properties/longhands/color_interpolation_filters/computed_value/enum.T.html' title='style::properties::longhands::color_interpolation_filters::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::fill_rule::computed_value::<a class='enum' href='../../style/properties/longhands/fill_rule/computed_value/enum.T.html' title='style::properties::longhands::fill_rule::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::shape_rendering::computed_value::<a class='enum' href='../../style/properties/longhands/shape_rendering/computed_value/enum.T.html' title='style::properties::longhands::shape_rendering::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::stroke_linecap::computed_value::<a class='enum' href='../../style/properties/longhands/stroke_linecap/computed_value/enum.T.html' title='style::properties::longhands::stroke_linecap::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::stroke_linejoin::computed_value::<a class='enum' href='../../style/properties/longhands/stroke_linejoin/computed_value/enum.T.html' title='style::properties::longhands::stroke_linejoin::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::clip_rule::computed_value::<a class='enum' href='../../style/properties/longhands/clip_rule/computed_value/enum.T.html' title='style::properties::longhands::clip_rule::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::dominant_baseline::computed_value::<a class='enum' href='../../style/properties/longhands/dominant_baseline/computed_value/enum.T.html' title='style::properties::longhands::dominant_baseline::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::vector_effect::computed_value::<a class='enum' href='../../style/properties/longhands/vector_effect/computed_value/enum.T.html' title='style::properties::longhands::vector_effect::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::mask_type::computed_value::<a class='enum' href='../../style/properties/longhands/mask_type/computed_value/enum.T.html' title='style::properties::longhands::mask_type::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::clip_path::<a class='type' href='../../style/properties/longhands/clip_path/type.SpecifiedValue.html' title='style::properties::longhands::clip_path::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::mask_mode::single_value::computed_value::<a class='enum' href='../../style/properties/longhands/mask_mode/single_value/computed_value/enum.T.html' title='style::properties::longhands::mask_mode::single_value::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::mask_mode::<a class='struct' href='../../style/properties/longhands/mask_mode/struct.SpecifiedValue.html' title='style::properties::longhands::mask_mode::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::mask_repeat::single_value::computed_value::<a class='enum' href='../../style/properties/longhands/mask_repeat/single_value/computed_value/enum.T.html' title='style::properties::longhands::mask_repeat::single_value::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::mask_repeat::<a class='struct' href='../../style/properties/longhands/mask_repeat/struct.SpecifiedValue.html' title='style::properties::longhands::mask_repeat::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::mask_position_x::<a class='struct' href='../../style/properties/longhands/mask_position_x/struct.SpecifiedValue.html' title='style::properties::longhands::mask_position_x::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::mask_position_y::<a class='struct' href='../../style/properties/longhands/mask_position_y/struct.SpecifiedValue.html' title='style::properties::longhands::mask_position_y::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::mask_clip::single_value::computed_value::<a class='enum' href='../../style/properties/longhands/mask_clip/single_value/computed_value/enum.T.html' title='style::properties::longhands::mask_clip::single_value::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::mask_clip::<a class='struct' href='../../style/properties/longhands/mask_clip/struct.SpecifiedValue.html' title='style::properties::longhands::mask_clip::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::mask_origin::single_value::computed_value::<a class='enum' href='../../style/properties/longhands/mask_origin/single_value/computed_value/enum.T.html' title='style::properties::longhands::mask_origin::single_value::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::mask_origin::<a class='struct' href='../../style/properties/longhands/mask_origin/struct.SpecifiedValue.html' title='style::properties::longhands::mask_origin::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::mask_composite::single_value::computed_value::<a class='enum' href='../../style/properties/longhands/mask_composite/single_value/computed_value/enum.T.html' title='style::properties::longhands::mask_composite::single_value::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::mask_composite::<a class='struct' href='../../style/properties/longhands/mask_composite/struct.SpecifiedValue.html' title='style::properties::longhands::mask_composite::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::mask_image::single_value::<a class='enum' href='../../style/properties/longhands/mask_image/single_value/enum.SpecifiedValue.html' title='style::properties::longhands::mask_image::single_value::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::mask_image::<a class='struct' href='../../style/properties/longhands/mask_image/struct.SpecifiedValue.html' title='style::properties::longhands::mask_image::SpecifiedValue'>SpecifiedValue</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::_moz_box_align::computed_value::<a class='enum' href='../../style/properties/longhands/_moz_box_align/computed_value/enum.T.html' title='style::properties::longhands::_moz_box_align::computed_value::T'>T</a></code></li>
+<li><code>impl HasViewportPercentage for style::properties::longhands::_moz_stack_sizing::computed_value::<a class='enum' href='../../style/properties/longhands/_moz_stack_sizing/computed_value/enum.T.html' title='style::properties::longhands::_moz_stack_sizing::computed_value::T'>T</a></code></li>
+<li><code>impl&lt;T:&nbsp;<a class='trait' href='../../style/values/trait.HasViewportPercentage.html' title='style::values::HasViewportPercentage'>HasViewportPercentage</a>&gt; HasViewportPercentage for <a class='enum' href='../../style/properties/enum.DeclaredValue.html' title='style::properties::DeclaredValue'>DeclaredValue</a>&lt;T&gt;</code></li>
+<li><code>impl HasViewportPercentage for <a class='enum' href='../../style/properties/enum.PropertyDeclaration.html' title='style::properties::PropertyDeclaration'>PropertyDeclaration</a></code></li>
+</ul><script type="text/javascript" async
+                         src="../../implementors/style/values/trait.HasViewportPercentage.js">
+                 </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

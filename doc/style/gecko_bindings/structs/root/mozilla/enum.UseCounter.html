@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `UseCounter` enum in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, UseCounter">
+
+    <title>style::gecko_bindings::structs::root::mozilla::UseCounter - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../../index.html'>style</a>::<wbr><a href='../../../index.html'>gecko_bindings</a>::<wbr><a href='../../index.html'>structs</a>::<wbr><a href='../index.html'>root</a>::<wbr><a href='index.html'>mozilla</a></p><script>window.sidebarCurrent = {name: 'UseCounter', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../../../../index.html'>style</a>::<wbr><a href='../../../index.html'>gecko_bindings</a>::<wbr><a href='../../index.html'>structs</a>::<wbr><a href='../index.html'>root</a>::<wbr><a href='index.html'>mozilla</a>::<wbr><a class='enum' href=''>UseCounter</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#3875-3948' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'><div class="docblock attributes">#[repr(i16)]
+</div>pub enum UseCounter {
+    eUseCounter_UNKNOWN,
+    eUseCounter_SVGSVGElement_getElementById,
+    eUseCounter_SVGSVGElement_currentScale_getter,
+    eUseCounter_SVGSVGElement_currentScale_setter,
+    eUseCounter_property_Fill,
+    eUseCounter_property_FillOpacity,
+    eUseCounter_PushManager_subscribe,
+    eUseCounter_PushSubscription_unsubscribe,
+    eUseCounter_Window_sidebar_getter,
+    eUseCounter_Window_sidebar_setter,
+    eUseCounter_External_addSearchEngine,
+    eUseCounter_OfflineResourceList_swapCache,
+    eUseCounter_OfflineResourceList_update,
+    eUseCounter_OfflineResourceList_status_getter,
+    eUseCounter_OfflineResourceList_status_setter,
+    eUseCounter_OfflineResourceList_onchecking_getter,
+    eUseCounter_OfflineResourceList_onchecking_setter,
+    eUseCounter_OfflineResourceList_onerror_getter,
+    eUseCounter_OfflineResourceList_onerror_setter,
+    eUseCounter_OfflineResourceList_onnoupdate_getter,
+    eUseCounter_OfflineResourceList_onnoupdate_setter,
+    eUseCounter_OfflineResourceList_ondownloading_getter,
+    eUseCounter_OfflineResourceList_ondownloading_setter,
+    eUseCounter_OfflineResourceList_onprogress_getter,
+    eUseCounter_OfflineResourceList_onprogress_setter,
+    eUseCounter_OfflineResourceList_onupdateready_getter,
+    eUseCounter_OfflineResourceList_onupdateready_setter,
+    eUseCounter_OfflineResourceList_oncached_getter,
+    eUseCounter_OfflineResourceList_oncached_setter,
+    eUseCounter_OfflineResourceList_onobsolete_getter,
+    eUseCounter_OfflineResourceList_onobsolete_setter,
+    eUseCounter_GetAttributeNode,
+    eUseCounter_SetAttributeNode,
+    eUseCounter_GetAttributeNodeNS,
+    eUseCounter_SetAttributeNodeNS,
+    eUseCounter_RemoveAttributeNode,
+    eUseCounter_CreateAttribute,
+    eUseCounter_CreateAttributeNS,
+    eUseCounter_NodeValue,
+    eUseCounter_TextContent,
+    eUseCounter_EnablePrivilege,
+    eUseCounter_DOMExceptionCode,
+    eUseCounter_NoExposedProps,
+    eUseCounter_MutationEvent,
+    eUseCounter_Components,
+    eUseCounter_PrefixedVisibilityAPI,
+    eUseCounter_NodeIteratorDetach,
+    eUseCounter_LenientThis,
+    eUseCounter_GetPreventDefault,
+    eUseCounter_GetSetUserData,
+    eUseCounter_MozGetAsFile,
+    eUseCounter_UseOfCaptureEvents,
+    eUseCounter_UseOfReleaseEvents,
+    eUseCounter_UseOfDOM3LoadMethod,
+    eUseCounter_ChromeUseOfDOM3LoadMethod,
+    eUseCounter_ShowModalDialog,
+    eUseCounter_Window_Content,
+    eUseCounter_SyncXMLHttpRequest,
+    eUseCounter_DataContainerEvent,
+    eUseCounter_Window_Controllers,
+    eUseCounter_ImportXULIntoContent,
+    eUseCounter_PannerNodeDoppler,
+    eUseCounter_NavigatorGetUserMedia,
+    eUseCounter_WebrtcDeprecatedPrefix,
+    eUseCounter_RTCPeerConnectionGetStreams,
+    eUseCounter_AppCache,
+    eUseCounter_PrefixedImageSmoothingEnabled,
+    eUseCounter_PrefixedFullscreenAPI,
+    eUseCounter_LenientSetter,
+    eUseCounter_FileLastModifiedDate,
+    eUseCounter_ImageBitmapRenderingContext_TransferImageBitmap,
+    eUseCounter_Count,
+}</pre><h2 class='variants'>Variants</h2>
+<span id='variant.eUseCounter_UNKNOWN' class='variant'><span id='eUseCounter_UNKNOWN.v' class='invisible'><code>eUseCounter_UNKNOWN</code></span></span><span id='variant.eUseCounter_SVGSVGElement_getElementById' class='variant'><span id='eUseCounter_SVGSVGElement_getElementById.v' class='invisible'><code>eUseCounter_SVGSVGElement_getElementById</code></span></span><span id='variant.eUseCounter_SVGSVGElement_currentScale_getter' class='variant'><span id='eUseCounter_SVGSVGElement_currentScale_getter.v' class='invisible'><code>eUseCounter_SVGSVGElement_currentScale_getter</code></span></span><span id='variant.eUseCounter_SVGSVGElement_currentScale_setter' class='variant'><span id='eUseCounter_SVGSVGElement_currentScale_setter.v' class='invisible'><code>eUseCounter_SVGSVGElement_currentScale_setter</code></span></span><span id='variant.eUseCounter_property_Fill' class='variant'><span id='eUseCounter_property_Fill.v' class='invisible'><code>eUseCounter_property_Fill</code></span></span><span id='variant.eUseCounter_property_FillOpacity' class='variant'><span id='eUseCounter_property_FillOpacity.v' class='invisible'><code>eUseCounter_property_FillOpacity</code></span></span><span id='variant.eUseCounter_PushManager_subscribe' class='variant'><span id='eUseCounter_PushManager_subscribe.v' class='invisible'><code>eUseCounter_PushManager_subscribe</code></span></span><span id='variant.eUseCounter_PushSubscription_unsubscribe' class='variant'><span id='eUseCounter_PushSubscription_unsubscribe.v' class='invisible'><code>eUseCounter_PushSubscription_unsubscribe</code></span></span><span id='variant.eUseCounter_Window_sidebar_getter' class='variant'><span id='eUseCounter_Window_sidebar_getter.v' class='invisible'><code>eUseCounter_Window_sidebar_getter</code></span></span><span id='variant.eUseCounter_Window_sidebar_setter' class='variant'><span id='eUseCounter_Window_sidebar_setter.v' class='invisible'><code>eUseCounter_Window_sidebar_setter</code></span></span><span id='variant.eUseCounter_External_addSearchEngine' class='variant'><span id='eUseCounter_External_addSearchEngine.v' class='invisible'><code>eUseCounter_External_addSearchEngine</code></span></span><span id='variant.eUseCounter_OfflineResourceList_swapCache' class='variant'><span id='eUseCounter_OfflineResourceList_swapCache.v' class='invisible'><code>eUseCounter_OfflineResourceList_swapCache</code></span></span><span id='variant.eUseCounter_OfflineResourceList_update' class='variant'><span id='eUseCounter_OfflineResourceList_update.v' class='invisible'><code>eUseCounter_OfflineResourceList_update</code></span></span><span id='variant.eUseCounter_OfflineResourceList_status_getter' class='variant'><span id='eUseCounter_OfflineResourceList_status_getter.v' class='invisible'><code>eUseCounter_OfflineResourceList_status_getter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_status_setter' class='variant'><span id='eUseCounter_OfflineResourceList_status_setter.v' class='invisible'><code>eUseCounter_OfflineResourceList_status_setter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_onchecking_getter' class='variant'><span id='eUseCounter_OfflineResourceList_onchecking_getter.v' class='invisible'><code>eUseCounter_OfflineResourceList_onchecking_getter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_onchecking_setter' class='variant'><span id='eUseCounter_OfflineResourceList_onchecking_setter.v' class='invisible'><code>eUseCounter_OfflineResourceList_onchecking_setter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_onerror_getter' class='variant'><span id='eUseCounter_OfflineResourceList_onerror_getter.v' class='invisible'><code>eUseCounter_OfflineResourceList_onerror_getter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_onerror_setter' class='variant'><span id='eUseCounter_OfflineResourceList_onerror_setter.v' class='invisible'><code>eUseCounter_OfflineResourceList_onerror_setter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_onnoupdate_getter' class='variant'><span id='eUseCounter_OfflineResourceList_onnoupdate_getter.v' class='invisible'><code>eUseCounter_OfflineResourceList_onnoupdate_getter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_onnoupdate_setter' class='variant'><span id='eUseCounter_OfflineResourceList_onnoupdate_setter.v' class='invisible'><code>eUseCounter_OfflineResourceList_onnoupdate_setter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_ondownloading_getter' class='variant'><span id='eUseCounter_OfflineResourceList_ondownloading_getter.v' class='invisible'><code>eUseCounter_OfflineResourceList_ondownloading_getter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_ondownloading_setter' class='variant'><span id='eUseCounter_OfflineResourceList_ondownloading_setter.v' class='invisible'><code>eUseCounter_OfflineResourceList_ondownloading_setter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_onprogress_getter' class='variant'><span id='eUseCounter_OfflineResourceList_onprogress_getter.v' class='invisible'><code>eUseCounter_OfflineResourceList_onprogress_getter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_onprogress_setter' class='variant'><span id='eUseCounter_OfflineResourceList_onprogress_setter.v' class='invisible'><code>eUseCounter_OfflineResourceList_onprogress_setter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_onupdateready_getter' class='variant'><span id='eUseCounter_OfflineResourceList_onupdateready_getter.v' class='invisible'><code>eUseCounter_OfflineResourceList_onupdateready_getter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_onupdateready_setter' class='variant'><span id='eUseCounter_OfflineResourceList_onupdateready_setter.v' class='invisible'><code>eUseCounter_OfflineResourceList_onupdateready_setter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_oncached_getter' class='variant'><span id='eUseCounter_OfflineResourceList_oncached_getter.v' class='invisible'><code>eUseCounter_OfflineResourceList_oncached_getter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_oncached_setter' class='variant'><span id='eUseCounter_OfflineResourceList_oncached_setter.v' class='invisible'><code>eUseCounter_OfflineResourceList_oncached_setter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_onobsolete_getter' class='variant'><span id='eUseCounter_OfflineResourceList_onobsolete_getter.v' class='invisible'><code>eUseCounter_OfflineResourceList_onobsolete_getter</code></span></span><span id='variant.eUseCounter_OfflineResourceList_onobsolete_setter' class='variant'><span id='eUseCounter_OfflineResourceList_onobsolete_setter.v' class='invisible'><code>eUseCounter_OfflineResourceList_onobsolete_setter</code></span></span><span id='variant.eUseCounter_GetAttributeNode' class='variant'><span id='eUseCounter_GetAttributeNode.v' class='invisible'><code>eUseCounter_GetAttributeNode</code></span></span><span id='variant.eUseCounter_SetAttributeNode' class='variant'><span id='eUseCounter_SetAttributeNode.v' class='invisible'><code>eUseCounter_SetAttributeNode</code></span></span><span id='variant.eUseCounter_GetAttributeNodeNS' class='variant'><span id='eUseCounter_GetAttributeNodeNS.v' class='invisible'><code>eUseCounter_GetAttributeNodeNS</code></span></span><span id='variant.eUseCounter_SetAttributeNodeNS' class='variant'><span id='eUseCounter_SetAttributeNodeNS.v' class='invisible'><code>eUseCounter_SetAttributeNodeNS</code></span></span><span id='variant.eUseCounter_RemoveAttributeNode' class='variant'><span id='eUseCounter_RemoveAttributeNode.v' class='invisible'><code>eUseCounter_RemoveAttributeNode</code></span></span><span id='variant.eUseCounter_CreateAttribute' class='variant'><span id='eUseCounter_CreateAttribute.v' class='invisible'><code>eUseCounter_CreateAttribute</code></span></span><span id='variant.eUseCounter_CreateAttributeNS' class='variant'><span id='eUseCounter_CreateAttributeNS.v' class='invisible'><code>eUseCounter_CreateAttributeNS</code></span></span><span id='variant.eUseCounter_NodeValue' class='variant'><span id='eUseCounter_NodeValue.v' class='invisible'><code>eUseCounter_NodeValue</code></span></span><span id='variant.eUseCounter_TextContent' class='variant'><span id='eUseCounter_TextContent.v' class='invisible'><code>eUseCounter_TextContent</code></span></span><span id='variant.eUseCounter_EnablePrivilege' class='variant'><span id='eUseCounter_EnablePrivilege.v' class='invisible'><code>eUseCounter_EnablePrivilege</code></span></span><span id='variant.eUseCounter_DOMExceptionCode' class='variant'><span id='eUseCounter_DOMExceptionCode.v' class='invisible'><code>eUseCounter_DOMExceptionCode</code></span></span><span id='variant.eUseCounter_NoExposedProps' class='variant'><span id='eUseCounter_NoExposedProps.v' class='invisible'><code>eUseCounter_NoExposedProps</code></span></span><span id='variant.eUseCounter_MutationEvent' class='variant'><span id='eUseCounter_MutationEvent.v' class='invisible'><code>eUseCounter_MutationEvent</code></span></span><span id='variant.eUseCounter_Components' class='variant'><span id='eUseCounter_Components.v' class='invisible'><code>eUseCounter_Components</code></span></span><span id='variant.eUseCounter_PrefixedVisibilityAPI' class='variant'><span id='eUseCounter_PrefixedVisibilityAPI.v' class='invisible'><code>eUseCounter_PrefixedVisibilityAPI</code></span></span><span id='variant.eUseCounter_NodeIteratorDetach' class='variant'><span id='eUseCounter_NodeIteratorDetach.v' class='invisible'><code>eUseCounter_NodeIteratorDetach</code></span></span><span id='variant.eUseCounter_LenientThis' class='variant'><span id='eUseCounter_LenientThis.v' class='invisible'><code>eUseCounter_LenientThis</code></span></span><span id='variant.eUseCounter_GetPreventDefault' class='variant'><span id='eUseCounter_GetPreventDefault.v' class='invisible'><code>eUseCounter_GetPreventDefault</code></span></span><span id='variant.eUseCounter_GetSetUserData' class='variant'><span id='eUseCounter_GetSetUserData.v' class='invisible'><code>eUseCounter_GetSetUserData</code></span></span><span id='variant.eUseCounter_MozGetAsFile' class='variant'><span id='eUseCounter_MozGetAsFile.v' class='invisible'><code>eUseCounter_MozGetAsFile</code></span></span><span id='variant.eUseCounter_UseOfCaptureEvents' class='variant'><span id='eUseCounter_UseOfCaptureEvents.v' class='invisible'><code>eUseCounter_UseOfCaptureEvents</code></span></span><span id='variant.eUseCounter_UseOfReleaseEvents' class='variant'><span id='eUseCounter_UseOfReleaseEvents.v' class='invisible'><code>eUseCounter_UseOfReleaseEvents</code></span></span><span id='variant.eUseCounter_UseOfDOM3LoadMethod' class='variant'><span id='eUseCounter_UseOfDOM3LoadMethod.v' class='invisible'><code>eUseCounter_UseOfDOM3LoadMethod</code></span></span><span id='variant.eUseCounter_ChromeUseOfDOM3LoadMethod' class='variant'><span id='eUseCounter_ChromeUseOfDOM3LoadMethod.v' class='invisible'><code>eUseCounter_ChromeUseOfDOM3LoadMethod</code></span></span><span id='variant.eUseCounter_ShowModalDialog' class='variant'><span id='eUseCounter_ShowModalDialog.v' class='invisible'><code>eUseCounter_ShowModalDialog</code></span></span><span id='variant.eUseCounter_Window_Content' class='variant'><span id='eUseCounter_Window_Content.v' class='invisible'><code>eUseCounter_Window_Content</code></span></span><span id='variant.eUseCounter_SyncXMLHttpRequest' class='variant'><span id='eUseCounter_SyncXMLHttpRequest.v' class='invisible'><code>eUseCounter_SyncXMLHttpRequest</code></span></span><span id='variant.eUseCounter_DataContainerEvent' class='variant'><span id='eUseCounter_DataContainerEvent.v' class='invisible'><code>eUseCounter_DataContainerEvent</code></span></span><span id='variant.eUseCounter_Window_Controllers' class='variant'><span id='eUseCounter_Window_Controllers.v' class='invisible'><code>eUseCounter_Window_Controllers</code></span></span><span id='variant.eUseCounter_ImportXULIntoContent' class='variant'><span id='eUseCounter_ImportXULIntoContent.v' class='invisible'><code>eUseCounter_ImportXULIntoContent</code></span></span><span id='variant.eUseCounter_PannerNodeDoppler' class='variant'><span id='eUseCounter_PannerNodeDoppler.v' class='invisible'><code>eUseCounter_PannerNodeDoppler</code></span></span><span id='variant.eUseCounter_NavigatorGetUserMedia' class='variant'><span id='eUseCounter_NavigatorGetUserMedia.v' class='invisible'><code>eUseCounter_NavigatorGetUserMedia</code></span></span><span id='variant.eUseCounter_WebrtcDeprecatedPrefix' class='variant'><span id='eUseCounter_WebrtcDeprecatedPrefix.v' class='invisible'><code>eUseCounter_WebrtcDeprecatedPrefix</code></span></span><span id='variant.eUseCounter_RTCPeerConnectionGetStreams' class='variant'><span id='eUseCounter_RTCPeerConnectionGetStreams.v' class='invisible'><code>eUseCounter_RTCPeerConnectionGetStreams</code></span></span><span id='variant.eUseCounter_AppCache' class='variant'><span id='eUseCounter_AppCache.v' class='invisible'><code>eUseCounter_AppCache</code></span></span><span id='variant.eUseCounter_PrefixedImageSmoothingEnabled' class='variant'><span id='eUseCounter_PrefixedImageSmoothingEnabled.v' class='invisible'><code>eUseCounter_PrefixedImageSmoothingEnabled</code></span></span><span id='variant.eUseCounter_PrefixedFullscreenAPI' class='variant'><span id='eUseCounter_PrefixedFullscreenAPI.v' class='invisible'><code>eUseCounter_PrefixedFullscreenAPI</code></span></span><span id='variant.eUseCounter_LenientSetter' class='variant'><span id='eUseCounter_LenientSetter.v' class='invisible'><code>eUseCounter_LenientSetter</code></span></span><span id='variant.eUseCounter_FileLastModifiedDate' class='variant'><span id='eUseCounter_FileLastModifiedDate.v' class='invisible'><code>eUseCounter_FileLastModifiedDate</code></span></span><span id='variant.eUseCounter_ImageBitmapRenderingContext_TransferImageBitmap' class='variant'><span id='eUseCounter_ImageBitmapRenderingContext_TransferImageBitmap.v' class='invisible'><code>eUseCounter_ImageBitmapRenderingContext_TransferImageBitmap</code></span></span><span id='variant.eUseCounter_Count' class='variant'><span id='eUseCounter_Count.v' class='invisible'><code>eUseCounter_Count</code></span></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.UseCounter.html' title='style::gecko_bindings::structs::root::mozilla::UseCounter'>UseCounter</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#3874' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.UseCounter.html' title='style::gecko_bindings::structs::root::mozilla::UseCounter'>UseCounter</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#3874' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.UseCounter.html' title='style::gecko_bindings::structs::root::mozilla::UseCounter'>UseCounter</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#3874' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.UseCounter.html' title='style::gecko_bindings::structs::root::mozilla::UseCounter'>UseCounter</a></code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.UseCounter.html' title='style::gecko_bindings::structs::root::mozilla::UseCounter'>UseCounter</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#3874' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.UseCounter.html' title='style::gecko_bindings::structs::root::mozilla::UseCounter'>UseCounter</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.UseCounter.html' title='style::gecko_bindings::structs::root::mozilla::UseCounter'>UseCounter</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#3874' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html' title='core::hash::Hash'>Hash</a> for <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.UseCounter.html' title='style::gecko_bindings::structs::root::mozilla::UseCounter'>UseCounter</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#3874' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.hash' class='method'><span id='hash.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#tymethod.hash' class='fnname'>hash</a>&lt;__H:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a>&gt;(&amp;self, __arg_0: &amp;mut __H)</code></span></h4>
+<div class='docblock'><p>Feeds this value into the state given, updating the hasher as necessary.</p>
+</div><h4 id='method.hash_slice' class='method'><span id='hash_slice.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice' class='fnname'>hash_slice</a>&lt;H&gt;(data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[Self]</a>, state: &amp;mut H) <span class='where fmt-newline'>where H: <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a></span></code><div class='since' title='Stable since Rust version 1.3.0'>1.3.0</div></span></h4>
+<div class='docblock'><p>Feeds a slice of this type into the state provided.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../../../jquery.js"></script>
+    <script src="../../../../../main.js"></script>
+    <script defer src="../../../../../search-index.js"></script>
+</body>
+</html>

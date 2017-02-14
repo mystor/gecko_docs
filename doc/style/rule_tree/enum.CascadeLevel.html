@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `CascadeLevel` enum in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, CascadeLevel">
+
+    <title>style::rule_tree::CascadeLevel - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>style</a>::<wbr><a href='index.html'>rule_tree</a></p><script>window.sidebarCurrent = {name: 'CascadeLevel', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>style</a>::<wbr><a href='index.html'>rule_tree</a>::<wbr><a class='enum' href=''>CascadeLevel</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/style/rule_tree/mod.rs.html#284-307' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'><div class="docblock attributes">#[repr(u8)]
+</div>pub enum CascadeLevel {
+    UANormal,
+    PresHints,
+    UserNormal,
+    AuthorNormal,
+    StyleAttributeNormal,
+    Animations,
+    AuthorImportant,
+    StyleAttributeImportant,
+    UserImportant,
+    UAImportant,
+    Transitions,
+}</pre><div class='docblock'><p>The cascade level these rules are relevant at, as per<a href="https://drafts.csswg.org/css-cascade/#cascade-origin">1</a>.</p>
+
+<p>The order of variants declared here is significant, and must be in
+<em>ascending</em> order of precedence.</p>
+</div><h2 class='variants'>Variants</h2>
+<span id='variant.UANormal' class='variant'><span id='UANormal.v' class='invisible'><code>UANormal</code></span></span><div class='docblock'><p>Normal User-Agent rules.</p>
+</div><span id='variant.PresHints' class='variant'><span id='PresHints.v' class='invisible'><code>PresHints</code></span></span><div class='docblock'><p>Presentational hints.</p>
+</div><span id='variant.UserNormal' class='variant'><span id='UserNormal.v' class='invisible'><code>UserNormal</code></span></span><div class='docblock'><p>User normal rules.</p>
+</div><span id='variant.AuthorNormal' class='variant'><span id='AuthorNormal.v' class='invisible'><code>AuthorNormal</code></span></span><div class='docblock'><p>Author normal rules.</p>
+</div><span id='variant.StyleAttributeNormal' class='variant'><span id='StyleAttributeNormal.v' class='invisible'><code>StyleAttributeNormal</code></span></span><div class='docblock'><p>Style attribute normal rules.</p>
+</div><span id='variant.Animations' class='variant'><span id='Animations.v' class='invisible'><code>Animations</code></span></span><div class='docblock'><p>CSS animations and script-generated animations.</p>
+</div><span id='variant.AuthorImportant' class='variant'><span id='AuthorImportant.v' class='invisible'><code>AuthorImportant</code></span></span><div class='docblock'><p>Author-supplied important rules.</p>
+</div><span id='variant.StyleAttributeImportant' class='variant'><span id='StyleAttributeImportant.v' class='invisible'><code>StyleAttributeImportant</code></span></span><div class='docblock'><p>Style attribute important rules.</p>
+</div><span id='variant.UserImportant' class='variant'><span id='UserImportant.v' class='invisible'><code>UserImportant</code></span></span><div class='docblock'><p>User important rules.</p>
+</div><span id='variant.UAImportant' class='variant'><span id='UAImportant.v' class='invisible'><code>UAImportant</code></span></span><div class='docblock'><p>User-agent important rules.</p>
+</div><span id='variant.Transitions' class='variant'><span id='Transitions.v' class='invisible'><code>Transitions</code></span></span><div class='docblock'><p>Transitions</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='enum' href='../../style/rule_tree/enum.CascadeLevel.html' title='style::rule_tree::CascadeLevel'>CascadeLevel</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/rule_tree/mod.rs.html#309-345' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.is_unique_per_element' class='method'><span id='is_unique_per_element.v' class='invisible'><code>fn <a href='#method.is_unique_per_element' class='fnname'>is_unique_per_element</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this cascade level is unique per element, in which case
+we can replace the path in the cascade without fear.</p>
+</div><h4 id='method.is_important' class='method'><span id='is_important.v' class='invisible'><code>fn <a href='#method.is_important' class='fnname'>is_important</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether this cascade level represents important rules of some
+sort.</p>
+</div><h4 id='method.importance' class='method'><span id='importance.v' class='invisible'><code>fn <a href='#method.importance' class='fnname'>importance</a>(&amp;self) -&gt; <a class='enum' href='../../style/properties/declaration_block/enum.Importance.html' title='style::properties::declaration_block::Importance'>Importance</a></code></span></h4>
+<div class='docblock'><p>Returns the importance relevant for this rule. Pretty similar to
+<code>is_important</code>.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../../style/rule_tree/enum.CascadeLevel.html' title='style::rule_tree::CascadeLevel'>CascadeLevel</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/rule_tree/mod.rs.html#282' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../style/rule_tree/enum.CascadeLevel.html' title='style::rule_tree::CascadeLevel'>CascadeLevel</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/rule_tree/mod.rs.html#282' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../style/rule_tree/enum.CascadeLevel.html' title='style::rule_tree::CascadeLevel'>CascadeLevel</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../../style/rule_tree/enum.CascadeLevel.html' title='style::rule_tree::CascadeLevel'>CascadeLevel</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/rule_tree/mod.rs.html#282' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../style/rule_tree/enum.CascadeLevel.html' title='style::rule_tree::CascadeLevel'>CascadeLevel</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/rule_tree/mod.rs.html#282' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../style/rule_tree/enum.CascadeLevel.html' title='style::rule_tree::CascadeLevel'>CascadeLevel</a></code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../style/rule_tree/enum.CascadeLevel.html' title='style::rule_tree::CascadeLevel'>CascadeLevel</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/rule_tree/mod.rs.html#282' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html' title='core::cmp::PartialOrd'>PartialOrd</a> for <a class='enum' href='../../style/rule_tree/enum.CascadeLevel.html' title='style::rule_tree::CascadeLevel'>CascadeLevel</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/rule_tree/mod.rs.html#282' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.partial_cmp' class='method'><span id='partial_cmp.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#tymethod.partial_cmp' class='fnname'>partial_cmp</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../style/rule_tree/enum.CascadeLevel.html' title='style::rule_tree::CascadeLevel'>CascadeLevel</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/cmp/enum.Ordering.html' title='core::cmp::Ordering'>Ordering</a>&gt;</code></span></h4>
+<div class='docblock'><p>This method returns an ordering between <code>self</code> and <code>other</code> values if one exists. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#tymethod.partial_cmp">Read more</a></p>
+</div><h4 id='method.lt' class='method'><span id='lt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.lt' class='fnname'>lt</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests less than (for <code>self</code> and <code>other</code>) and is used by the <code>&lt;</code> operator. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.lt">Read more</a></p>
+</div><h4 id='method.le' class='method'><span id='le.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.le' class='fnname'>le</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests less than or equal to (for <code>self</code> and <code>other</code>) and is used by the <code>&lt;=</code> operator. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.le">Read more</a></p>
+</div><h4 id='method.gt' class='method'><span id='gt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.gt' class='fnname'>gt</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests greater than (for <code>self</code> and <code>other</code>) and is used by the <code>&gt;</code> operator. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.gt">Read more</a></p>
+</div><h4 id='method.ge' class='method'><span id='ge.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.ge' class='fnname'>ge</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests greater than or equal to (for <code>self</code> and <code>other</code>) and is used by the <code>&gt;=</code> operator. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialOrd.html#method.ge">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

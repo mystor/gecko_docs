@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `data` mod in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, data">
+
+    <title>style::data - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>style</a></p><script>window.sidebarCurrent = {name: 'data', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../index.html'>style</a>::<wbr><a class='mod' href=''>data</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/style/data.rs.html#5-509' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Per-node data used in style calculation.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ComputedStyle.html'
+                                  title='style::data::ComputedStyle'>ComputedStyle</a></td>
+                           <td class='docblock-short'>
+                                <p>The structure that represents the result of style computation. This is
+effectively a tuple of rules and computed values, that is, the rule node,
+and the result of computing that rule node&#39;s rules, the <code>ComputedValues</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ElementData.html'
+                                  title='style::data::ElementData'>ElementData</a></td>
+                           <td class='docblock-short'>
+                                <p>Style system data associated with an Element.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ElementStyles.html'
+                                  title='style::data::ElementStyles'>ElementStyles</a></td>
+                           <td class='docblock-short'>
+                                <p>The styles associated with a node, including the styles for any
+pseudo-elements.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.PseudoStyles.html'
+                                  title='style::data::PseudoStyles'>PseudoStyles</a></td>
+                           <td class='docblock-short'>
+                                <p>A set of styles for a given element&#39;s pseudo-elements.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.RestyleData.html'
+                                  title='style::data::RestyleData'>RestyleData</a></td>
+                           <td class='docblock-short'>
+                                <p>Transient data used by the restyle algorithm. This structure is instantiated
+either before or during restyle traversal, and is cleared at the end of node
+processing.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.SnapshotOption.html'
+                                  title='style::data::SnapshotOption'>SnapshotOption</a></td>
+                           <td class='docblock-short'>
+                                <p>We really want to store an Option<Snapshot> here, but we can&#39;t drop Gecko
+Snapshots off-main-thread. So we make a convenient little wrapper to provide
+the semantics of Option<Snapshot>, while deferring the actual drop.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.StoredRestyleHint.html'
+                                  title='style::data::StoredRestyleHint'>StoredRestyleHint</a></td>
+                           <td class='docblock-short'>
+                                <p>Restyle hint for storing on ElementData. We use a separate representation
+to provide more type safety while propagating restyle hints down the tree.</p>
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.DescendantRestyleHint.html'
+                                  title='style::data::DescendantRestyleHint'>DescendantRestyleHint</a></td>
+                           <td class='docblock-short'>
+                                <p>Enum to describe the different requirements that a restyle hint may impose
+on its descendants.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.RestyleKind.html'
+                                  title='style::data::RestyleKind'>RestyleKind</a></td>
+                           <td class='docblock-short'>
+                                <p>The kind of restyle that a single element should do.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

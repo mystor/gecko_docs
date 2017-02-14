@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `ApiMsg` enum in crate `webrender_traits`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, ApiMsg">
+
+    <title>webrender_traits::ApiMsg - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='index.html'>webrender_traits</a></p><script>window.sidebarCurrent = {name: 'ApiMsg', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='index.html'>webrender_traits</a>::<wbr><a class='enum' href=''>ApiMsg</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/webrender_traits/home/mlayzell/Code/gecko_rustdoc/debug/build/webrender_traits-77ab4aee224fe56b/out/types.rs.html#1251-1295' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum ApiMsg {
+    AddRawFont(<a class='struct' href='../webrender_traits/struct.FontKey.html' title='webrender_traits::FontKey'>FontKey</a>,&nbsp;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;),
+    AddNativeFont(<a class='struct' href='../webrender_traits/struct.FontKey.html' title='webrender_traits::FontKey'>FontKey</a>,&nbsp;<a class='struct' href='../webrender_traits/struct.NativeFontHandle.html' title='webrender_traits::NativeFontHandle'>NativeFontHandle</a>),
+    GetGlyphDimensions(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../webrender_traits/struct.GlyphKey.html' title='webrender_traits::GlyphKey'>GlyphKey</a>&gt;,&nbsp;<a class='struct' href='../webrender_traits/channel/struct.MsgSender.html' title='webrender_traits::channel::MsgSender'>MsgSender</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../webrender_traits/struct.GlyphDimensions.html' title='webrender_traits::GlyphDimensions'>GlyphDimensions</a>&gt;&gt;&gt;),
+    AddImage(<a class='struct' href='../webrender_traits/struct.ImageKey.html' title='webrender_traits::ImageKey'>ImageKey</a>,&nbsp;<a class='struct' href='../webrender_traits/struct.ImageDescriptor.html' title='webrender_traits::ImageDescriptor'>ImageDescriptor</a>,&nbsp;<a class='enum' href='../webrender_traits/enum.ImageData.html' title='webrender_traits::ImageData'>ImageData</a>),
+    UpdateImage(<a class='struct' href='../webrender_traits/struct.ImageKey.html' title='webrender_traits::ImageKey'>ImageKey</a>,&nbsp;<a class='struct' href='../webrender_traits/struct.ImageDescriptor.html' title='webrender_traits::ImageDescriptor'>ImageDescriptor</a>,&nbsp;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;),
+    DeleteImage(<a class='struct' href='../webrender_traits/struct.ImageKey.html' title='webrender_traits::ImageKey'>ImageKey</a>),
+    CloneApi(<a class='struct' href='../webrender_traits/channel/struct.MsgSender.html' title='webrender_traits::channel::MsgSender'>MsgSender</a>&lt;<a class='struct' href='../webrender_traits/struct.IdNamespace.html' title='webrender_traits::IdNamespace'>IdNamespace</a>&gt;),
+    SetRootDisplayList(<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../webrender_traits/struct.ColorF.html' title='webrender_traits::ColorF'>ColorF</a>&gt;,&nbsp;<a class='struct' href='../webrender_traits/struct.Epoch.html' title='webrender_traits::Epoch'>Epoch</a>,&nbsp;<a class='struct' href='../webrender_traits/struct.PipelineId.html' title='webrender_traits::PipelineId'>PipelineId</a>,&nbsp;<a class='type' href='../webrender_traits/type.LayoutSize.html' title='webrender_traits::LayoutSize'>LayoutSize</a>,&nbsp;<a class='struct' href='../webrender_traits/struct.BuiltDisplayListDescriptor.html' title='webrender_traits::BuiltDisplayListDescriptor'>BuiltDisplayListDescriptor</a>,&nbsp;<a class='struct' href='../webrender_traits/struct.AuxiliaryListsDescriptor.html' title='webrender_traits::AuxiliaryListsDescriptor'>AuxiliaryListsDescriptor</a>),
+    SetRootPipeline(<a class='struct' href='../webrender_traits/struct.PipelineId.html' title='webrender_traits::PipelineId'>PipelineId</a>),
+    Scroll(<a class='enum' href='../webrender_traits/enum.ScrollLocation.html' title='webrender_traits::ScrollLocation'>ScrollLocation</a>,&nbsp;<a class='type' href='../webrender_traits/type.WorldPoint.html' title='webrender_traits::WorldPoint'>WorldPoint</a>,&nbsp;<a class='enum' href='../webrender_traits/enum.ScrollEventPhase.html' title='webrender_traits::ScrollEventPhase'>ScrollEventPhase</a>),
+    ScrollLayersWithScrollId(<a class='type' href='../webrender_traits/type.LayoutPoint.html' title='webrender_traits::LayoutPoint'>LayoutPoint</a>,&nbsp;<a class='struct' href='../webrender_traits/struct.PipelineId.html' title='webrender_traits::PipelineId'>PipelineId</a>,&nbsp;<a class='struct' href='../webrender_traits/struct.ServoScrollRootId.html' title='webrender_traits::ServoScrollRootId'>ServoScrollRootId</a>),
+    TickScrollingBounce,
+    TranslatePointToLayerSpace(<a class='type' href='../webrender_traits/type.WorldPoint.html' title='webrender_traits::WorldPoint'>WorldPoint</a>,&nbsp;<a class='struct' href='../webrender_traits/channel/struct.MsgSender.html' title='webrender_traits::channel::MsgSender'>MsgSender</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='type' href='../webrender_traits/type.LayoutPoint.html' title='webrender_traits::LayoutPoint'>LayoutPoint</a>, <a class='struct' href='../webrender_traits/struct.PipelineId.html' title='webrender_traits::PipelineId'>PipelineId</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;),
+    GetScrollLayerState(<a class='struct' href='../webrender_traits/channel/struct.MsgSender.html' title='webrender_traits::channel::MsgSender'>MsgSender</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../webrender_traits/struct.ScrollLayerState.html' title='webrender_traits::ScrollLayerState'>ScrollLayerState</a>&gt;&gt;),
+    RequestWebGLContext(<a class='type' href='../webrender_traits/type.DeviceIntSize.html' title='webrender_traits::DeviceIntSize'>DeviceIntSize</a>,&nbsp;<a class='struct' href='../offscreen_gl_context/gl_context_attributes/struct.GLContextAttributes.html' title='offscreen_gl_context::gl_context_attributes::GLContextAttributes'>GLContextAttributes</a>,&nbsp;<a class='struct' href='../webrender_traits/channel/struct.MsgSender.html' title='webrender_traits::channel::MsgSender'>MsgSender</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='struct' href='../webrender_traits/struct.WebGLContextId.html' title='webrender_traits::WebGLContextId'>WebGLContextId</a>, <a class='struct' href='../offscreen_gl_context/gl_limits/struct.GLLimits.html' title='offscreen_gl_context::gl_limits::GLLimits'>GLLimits</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;),
+    ResizeWebGLContext(<a class='struct' href='../webrender_traits/struct.WebGLContextId.html' title='webrender_traits::WebGLContextId'>WebGLContextId</a>,&nbsp;<a class='type' href='../webrender_traits/type.DeviceIntSize.html' title='webrender_traits::DeviceIntSize'>DeviceIntSize</a>),
+    WebGLCommand(<a class='struct' href='../webrender_traits/struct.WebGLContextId.html' title='webrender_traits::WebGLContextId'>WebGLContextId</a>,&nbsp;<a class='enum' href='../webrender_traits/enum.WebGLCommand.html' title='webrender_traits::WebGLCommand'>WebGLCommand</a>),
+    GenerateFrame,
+    VRCompositorCommand(<a class='struct' href='../webrender_traits/struct.WebGLContextId.html' title='webrender_traits::WebGLContextId'>WebGLContextId</a>,&nbsp;<a class='enum' href='../webrender_traits/enum.VRCompositorCommand.html' title='webrender_traits::VRCompositorCommand'>VRCompositorCommand</a>),
+    ExternalEvent(<a class='struct' href='../webrender_traits/struct.ExternalEvent.html' title='webrender_traits::ExternalEvent'>ExternalEvent</a>),
+    ShutDown,
+}</pre><h2 class='variants'>Variants</h2>
+<span id='variant.AddRawFont' class='variant'><span id='AddRawFont.v' class='invisible'><code>AddRawFont(<a class='struct' href='../webrender_traits/struct.FontKey.html' title='webrender_traits::FontKey'>FontKey</a>,&nbsp;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;)</code></span></span><span id='variant.AddNativeFont' class='variant'><span id='AddNativeFont.v' class='invisible'><code>AddNativeFont(<a class='struct' href='../webrender_traits/struct.FontKey.html' title='webrender_traits::FontKey'>FontKey</a>,&nbsp;<a class='struct' href='../webrender_traits/struct.NativeFontHandle.html' title='webrender_traits::NativeFontHandle'>NativeFontHandle</a>)</code></span></span><span id='variant.GetGlyphDimensions' class='variant'><span id='GetGlyphDimensions.v' class='invisible'><code>GetGlyphDimensions(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../webrender_traits/struct.GlyphKey.html' title='webrender_traits::GlyphKey'>GlyphKey</a>&gt;,&nbsp;<a class='struct' href='../webrender_traits/channel/struct.MsgSender.html' title='webrender_traits::channel::MsgSender'>MsgSender</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../webrender_traits/struct.GlyphDimensions.html' title='webrender_traits::GlyphDimensions'>GlyphDimensions</a>&gt;&gt;&gt;)</code></span></span><div class='docblock'><p>Gets the glyph dimensions</p>
+</div><span id='variant.AddImage' class='variant'><span id='AddImage.v' class='invisible'><code>AddImage(<a class='struct' href='../webrender_traits/struct.ImageKey.html' title='webrender_traits::ImageKey'>ImageKey</a>,&nbsp;<a class='struct' href='../webrender_traits/struct.ImageDescriptor.html' title='webrender_traits::ImageDescriptor'>ImageDescriptor</a>,&nbsp;<a class='enum' href='../webrender_traits/enum.ImageData.html' title='webrender_traits::ImageData'>ImageData</a>)</code></span></span><div class='docblock'><p>Adds an image from the resource cache.</p>
+</div><span id='variant.UpdateImage' class='variant'><span id='UpdateImage.v' class='invisible'><code>UpdateImage(<a class='struct' href='../webrender_traits/struct.ImageKey.html' title='webrender_traits::ImageKey'>ImageKey</a>,&nbsp;<a class='struct' href='../webrender_traits/struct.ImageDescriptor.html' title='webrender_traits::ImageDescriptor'>ImageDescriptor</a>,&nbsp;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>&gt;)</code></span></span><div class='docblock'><p>Updates the the resource cache with the new image data.</p>
+</div><span id='variant.DeleteImage' class='variant'><span id='DeleteImage.v' class='invisible'><code>DeleteImage(<a class='struct' href='../webrender_traits/struct.ImageKey.html' title='webrender_traits::ImageKey'>ImageKey</a>)</code></span></span><div class='docblock'><p>Drops an image from the resource cache.</p>
+</div><span id='variant.CloneApi' class='variant'><span id='CloneApi.v' class='invisible'><code>CloneApi(<a class='struct' href='../webrender_traits/channel/struct.MsgSender.html' title='webrender_traits::channel::MsgSender'>MsgSender</a>&lt;<a class='struct' href='../webrender_traits/struct.IdNamespace.html' title='webrender_traits::IdNamespace'>IdNamespace</a>&gt;)</code></span></span><span id='variant.SetRootDisplayList' class='variant'><span id='SetRootDisplayList.v' class='invisible'><code>SetRootDisplayList(<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../webrender_traits/struct.ColorF.html' title='webrender_traits::ColorF'>ColorF</a>&gt;,&nbsp;<a class='struct' href='../webrender_traits/struct.Epoch.html' title='webrender_traits::Epoch'>Epoch</a>,&nbsp;<a class='struct' href='../webrender_traits/struct.PipelineId.html' title='webrender_traits::PipelineId'>PipelineId</a>,&nbsp;<a class='type' href='../webrender_traits/type.LayoutSize.html' title='webrender_traits::LayoutSize'>LayoutSize</a>,&nbsp;<a class='struct' href='../webrender_traits/struct.BuiltDisplayListDescriptor.html' title='webrender_traits::BuiltDisplayListDescriptor'>BuiltDisplayListDescriptor</a>,&nbsp;<a class='struct' href='../webrender_traits/struct.AuxiliaryListsDescriptor.html' title='webrender_traits::AuxiliaryListsDescriptor'>AuxiliaryListsDescriptor</a>)</code></span></span><div class='docblock'><p>Supplies a new frame to WebRender.</p>
+
+<p>After receiving this message, WebRender will read the display list, followed by the
+auxiliary lists, from the payload channel.</p>
+</div><span id='variant.SetRootPipeline' class='variant'><span id='SetRootPipeline.v' class='invisible'><code>SetRootPipeline(<a class='struct' href='../webrender_traits/struct.PipelineId.html' title='webrender_traits::PipelineId'>PipelineId</a>)</code></span></span><span id='variant.Scroll' class='variant'><span id='Scroll.v' class='invisible'><code>Scroll(<a class='enum' href='../webrender_traits/enum.ScrollLocation.html' title='webrender_traits::ScrollLocation'>ScrollLocation</a>,&nbsp;<a class='type' href='../webrender_traits/type.WorldPoint.html' title='webrender_traits::WorldPoint'>WorldPoint</a>,&nbsp;<a class='enum' href='../webrender_traits/enum.ScrollEventPhase.html' title='webrender_traits::ScrollEventPhase'>ScrollEventPhase</a>)</code></span></span><span id='variant.ScrollLayersWithScrollId' class='variant'><span id='ScrollLayersWithScrollId.v' class='invisible'><code>ScrollLayersWithScrollId(<a class='type' href='../webrender_traits/type.LayoutPoint.html' title='webrender_traits::LayoutPoint'>LayoutPoint</a>,&nbsp;<a class='struct' href='../webrender_traits/struct.PipelineId.html' title='webrender_traits::PipelineId'>PipelineId</a>,&nbsp;<a class='struct' href='../webrender_traits/struct.ServoScrollRootId.html' title='webrender_traits::ServoScrollRootId'>ServoScrollRootId</a>)</code></span></span><span id='variant.TickScrollingBounce' class='variant'><span id='TickScrollingBounce.v' class='invisible'><code>TickScrollingBounce</code></span></span><span id='variant.TranslatePointToLayerSpace' class='variant'><span id='TranslatePointToLayerSpace.v' class='invisible'><code>TranslatePointToLayerSpace(<a class='type' href='../webrender_traits/type.WorldPoint.html' title='webrender_traits::WorldPoint'>WorldPoint</a>,&nbsp;<a class='struct' href='../webrender_traits/channel/struct.MsgSender.html' title='webrender_traits::channel::MsgSender'>MsgSender</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='type' href='../webrender_traits/type.LayoutPoint.html' title='webrender_traits::LayoutPoint'>LayoutPoint</a>, <a class='struct' href='../webrender_traits/struct.PipelineId.html' title='webrender_traits::PipelineId'>PipelineId</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;)</code></span></span><span id='variant.GetScrollLayerState' class='variant'><span id='GetScrollLayerState.v' class='invisible'><code>GetScrollLayerState(<a class='struct' href='../webrender_traits/channel/struct.MsgSender.html' title='webrender_traits::channel::MsgSender'>MsgSender</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../webrender_traits/struct.ScrollLayerState.html' title='webrender_traits::ScrollLayerState'>ScrollLayerState</a>&gt;&gt;)</code></span></span><span id='variant.RequestWebGLContext' class='variant'><span id='RequestWebGLContext.v' class='invisible'><code>RequestWebGLContext(<a class='type' href='../webrender_traits/type.DeviceIntSize.html' title='webrender_traits::DeviceIntSize'>DeviceIntSize</a>,&nbsp;<a class='struct' href='../offscreen_gl_context/gl_context_attributes/struct.GLContextAttributes.html' title='offscreen_gl_context::gl_context_attributes::GLContextAttributes'>GLContextAttributes</a>,&nbsp;<a class='struct' href='../webrender_traits/channel/struct.MsgSender.html' title='webrender_traits::channel::MsgSender'>MsgSender</a>&lt;<a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='struct' href='../webrender_traits/struct.WebGLContextId.html' title='webrender_traits::WebGLContextId'>WebGLContextId</a>, <a class='struct' href='../offscreen_gl_context/gl_limits/struct.GLLimits.html' title='offscreen_gl_context::gl_limits::GLLimits'>GLLimits</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;)</code></span></span><span id='variant.ResizeWebGLContext' class='variant'><span id='ResizeWebGLContext.v' class='invisible'><code>ResizeWebGLContext(<a class='struct' href='../webrender_traits/struct.WebGLContextId.html' title='webrender_traits::WebGLContextId'>WebGLContextId</a>,&nbsp;<a class='type' href='../webrender_traits/type.DeviceIntSize.html' title='webrender_traits::DeviceIntSize'>DeviceIntSize</a>)</code></span></span><span id='variant.WebGLCommand' class='variant'><span id='WebGLCommand.v' class='invisible'><code>WebGLCommand(<a class='struct' href='../webrender_traits/struct.WebGLContextId.html' title='webrender_traits::WebGLContextId'>WebGLContextId</a>,&nbsp;<a class='enum' href='../webrender_traits/enum.WebGLCommand.html' title='webrender_traits::WebGLCommand'>WebGLCommand</a>)</code></span></span><span id='variant.GenerateFrame' class='variant'><span id='GenerateFrame.v' class='invisible'><code>GenerateFrame</code></span></span><span id='variant.VRCompositorCommand' class='variant'><span id='VRCompositorCommand.v' class='invisible'><code>VRCompositorCommand(<a class='struct' href='../webrender_traits/struct.WebGLContextId.html' title='webrender_traits::WebGLContextId'>WebGLContextId</a>,&nbsp;<a class='enum' href='../webrender_traits/enum.VRCompositorCommand.html' title='webrender_traits::VRCompositorCommand'>VRCompositorCommand</a>)</code></span></span><span id='variant.ExternalEvent' class='variant'><span id='ExternalEvent.v' class='invisible'><code>ExternalEvent(<a class='struct' href='../webrender_traits/struct.ExternalEvent.html' title='webrender_traits::ExternalEvent'>ExternalEvent</a>)</code></span></span><div class='docblock'><p>An opaque handle that must be passed to the render notifier. It is used by Gecko
+to forward gecko-specific messages to the render thread preserving the ordering
+within the other messages.</p>
+</div><span id='variant.ShutDown' class='variant'><span id='ShutDown.v' class='invisible'><code>ShutDown</code></span></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../webrender_traits/enum.ApiMsg.html' title='webrender_traits::ApiMsg'>ApiMsg</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/webrender_traits/home/mlayzell/Code/gecko_rustdoc/debug/build/webrender_traits-77ab4aee224fe56b/out/types.rs.html#1250' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../webrender_traits/enum.ApiMsg.html' title='webrender_traits::ApiMsg'>ApiMsg</a></code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "webrender_traits";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

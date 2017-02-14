@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsCSSValue__bindgen_ty_1` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsCSSValue__bindgen_ty_1">
+
+    <title>style::gecko_bindings::structs::root::nsCSSValue__bindgen_ty_1 - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>structs</a>::<wbr><a href='index.html'>root</a></p><script>window.sidebarCurrent = {name: 'nsCSSValue__bindgen_ty_1', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>structs</a>::<wbr><a href='index.html'>root</a>::<wbr><a class='struct' href=''>nsCSSValue__bindgen_ty_1</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#15628-15651' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsCSSValue__bindgen_ty_1 {
+    pub mInt: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>&gt;,
+    pub mFloat: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>&gt;,
+    pub mString: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStringBuffer.html' title='style::gecko_bindings::structs::root::nsStringBuffer'>nsStringBuffer</a>&gt;,
+    pub mColor: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='type' href='../../../../style/gecko_bindings/structs/root/type.nscolor.html' title='style::gecko_bindings::structs::root::nscolor'>nscolor</a>&gt;,
+    pub mArray: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValue_Array.html' title='style::gecko_bindings::structs::root::nsCSSValue_Array'>nsCSSValue_Array</a>&gt;,
+    pub mURL: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.URLValue.html' title='style::gecko_bindings::structs::root::mozilla::css::URLValue'>URLValue</a>&gt;,
+    pub mImage: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.ImageValue.html' title='style::gecko_bindings::structs::root::mozilla::css::ImageValue'>ImageValue</a>&gt;,
+    pub mGridTemplateAreas: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.GridTemplateAreasValue.html' title='style::gecko_bindings::structs::root::mozilla::css::GridTemplateAreasValue'>GridTemplateAreasValue</a>&gt;,
+    pub mGradient: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValueGradient.html' title='style::gecko_bindings::structs::root::nsCSSValueGradient'>nsCSSValueGradient</a>&gt;,
+    pub mTokenStream: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValueTokenStream.html' title='style::gecko_bindings::structs::root::nsCSSValueTokenStream'>nsCSSValueTokenStream</a>&gt;,
+    pub mPair: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValuePair_heap.html' title='style::gecko_bindings::structs::root::nsCSSValuePair_heap'>nsCSSValuePair_heap</a>&gt;,
+    pub mRect: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSRect_heap.html' title='style::gecko_bindings::structs::root::nsCSSRect_heap'>nsCSSRect_heap</a>&gt;,
+    pub mTriplet: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValueTriplet_heap.html' title='style::gecko_bindings::structs::root::nsCSSValueTriplet_heap'>nsCSSValueTriplet_heap</a>&gt;,
+    pub mList: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValueList_heap.html' title='style::gecko_bindings::structs::root::nsCSSValueList_heap'>nsCSSValueList_heap</a>&gt;,
+    pub mListDependent: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValueList.html' title='style::gecko_bindings::structs::root::nsCSSValueList'>nsCSSValueList</a>&gt;,
+    pub mSharedList: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValueSharedList.html' title='style::gecko_bindings::structs::root::nsCSSValueSharedList'>nsCSSValueSharedList</a>&gt;,
+    pub mPairList: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValuePairList_heap.html' title='style::gecko_bindings::structs::root::nsCSSValuePairList_heap'>nsCSSValuePairList_heap</a>&gt;,
+    pub mPairListDependent: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValuePairList.html' title='style::gecko_bindings::structs::root::nsCSSValuePairList'>nsCSSValuePairList</a>&gt;,
+    pub mFloatColor: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValueFloatColor.html' title='style::gecko_bindings::structs::root::nsCSSValueFloatColor'>nsCSSValueFloatColor</a>&gt;,
+    pub mFontFamilyList: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.FontFamilyListRefCnt.html' title='style::gecko_bindings::structs::root::mozilla::css::FontFamilyListRefCnt'>FontFamilyListRefCnt</a>&gt;,
+    pub mComplexColor: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.ComplexColorValue.html' title='style::gecko_bindings::structs::root::mozilla::css::ComplexColorValue'>ComplexColorValue</a>&gt;,
+    pub bindgen_union_field: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+}</pre><h2 class='fields'>Fields</h2><span id='structfield.mInt' class='structfield'>
+                           <span id='mInt.v' class='invisible'>
+                           <code>mInt: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mFloat' class='structfield'>
+                           <span id='mFloat.v' class='invisible'>
+                           <code>mFloat: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mString' class='structfield'>
+                           <span id='mString.v' class='invisible'>
+                           <code>mString: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStringBuffer.html' title='style::gecko_bindings::structs::root::nsStringBuffer'>nsStringBuffer</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mColor' class='structfield'>
+                           <span id='mColor.v' class='invisible'>
+                           <code>mColor: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='type' href='../../../../style/gecko_bindings/structs/root/type.nscolor.html' title='style::gecko_bindings::structs::root::nscolor'>nscolor</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mArray' class='structfield'>
+                           <span id='mArray.v' class='invisible'>
+                           <code>mArray: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValue_Array.html' title='style::gecko_bindings::structs::root::nsCSSValue_Array'>nsCSSValue_Array</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mURL' class='structfield'>
+                           <span id='mURL.v' class='invisible'>
+                           <code>mURL: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.URLValue.html' title='style::gecko_bindings::structs::root::mozilla::css::URLValue'>URLValue</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mImage' class='structfield'>
+                           <span id='mImage.v' class='invisible'>
+                           <code>mImage: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.ImageValue.html' title='style::gecko_bindings::structs::root::mozilla::css::ImageValue'>ImageValue</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mGridTemplateAreas' class='structfield'>
+                           <span id='mGridTemplateAreas.v' class='invisible'>
+                           <code>mGridTemplateAreas: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.GridTemplateAreasValue.html' title='style::gecko_bindings::structs::root::mozilla::css::GridTemplateAreasValue'>GridTemplateAreasValue</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mGradient' class='structfield'>
+                           <span id='mGradient.v' class='invisible'>
+                           <code>mGradient: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValueGradient.html' title='style::gecko_bindings::structs::root::nsCSSValueGradient'>nsCSSValueGradient</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mTokenStream' class='structfield'>
+                           <span id='mTokenStream.v' class='invisible'>
+                           <code>mTokenStream: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValueTokenStream.html' title='style::gecko_bindings::structs::root::nsCSSValueTokenStream'>nsCSSValueTokenStream</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mPair' class='structfield'>
+                           <span id='mPair.v' class='invisible'>
+                           <code>mPair: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValuePair_heap.html' title='style::gecko_bindings::structs::root::nsCSSValuePair_heap'>nsCSSValuePair_heap</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mRect' class='structfield'>
+                           <span id='mRect.v' class='invisible'>
+                           <code>mRect: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSRect_heap.html' title='style::gecko_bindings::structs::root::nsCSSRect_heap'>nsCSSRect_heap</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mTriplet' class='structfield'>
+                           <span id='mTriplet.v' class='invisible'>
+                           <code>mTriplet: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValueTriplet_heap.html' title='style::gecko_bindings::structs::root::nsCSSValueTriplet_heap'>nsCSSValueTriplet_heap</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mList' class='structfield'>
+                           <span id='mList.v' class='invisible'>
+                           <code>mList: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValueList_heap.html' title='style::gecko_bindings::structs::root::nsCSSValueList_heap'>nsCSSValueList_heap</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mListDependent' class='structfield'>
+                           <span id='mListDependent.v' class='invisible'>
+                           <code>mListDependent: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValueList.html' title='style::gecko_bindings::structs::root::nsCSSValueList'>nsCSSValueList</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mSharedList' class='structfield'>
+                           <span id='mSharedList.v' class='invisible'>
+                           <code>mSharedList: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValueSharedList.html' title='style::gecko_bindings::structs::root::nsCSSValueSharedList'>nsCSSValueSharedList</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mPairList' class='structfield'>
+                           <span id='mPairList.v' class='invisible'>
+                           <code>mPairList: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValuePairList_heap.html' title='style::gecko_bindings::structs::root::nsCSSValuePairList_heap'>nsCSSValuePairList_heap</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mPairListDependent' class='structfield'>
+                           <span id='mPairListDependent.v' class='invisible'>
+                           <code>mPairListDependent: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValuePairList.html' title='style::gecko_bindings::structs::root::nsCSSValuePairList'>nsCSSValuePairList</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mFloatColor' class='structfield'>
+                           <span id='mFloatColor.v' class='invisible'>
+                           <code>mFloatColor: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValueFloatColor.html' title='style::gecko_bindings::structs::root::nsCSSValueFloatColor'>nsCSSValueFloatColor</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mFontFamilyList' class='structfield'>
+                           <span id='mFontFamilyList.v' class='invisible'>
+                           <code>mFontFamilyList: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.FontFamilyListRefCnt.html' title='style::gecko_bindings::structs::root::mozilla::css::FontFamilyListRefCnt'>FontFamilyListRefCnt</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mComplexColor' class='structfield'>
+                           <span id='mComplexColor.v' class='invisible'>
+                           <code>mComplexColor: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.__BindgenUnionField.html' title='style::gecko_bindings::structs::root::__BindgenUnionField'>__BindgenUnionField</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.ComplexColorValue.html' title='style::gecko_bindings::structs::root::mozilla::css::ComplexColorValue'>ComplexColorValue</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.bindgen_union_field' class='structfield'>
+                           <span id='bindgen_union_field.v' class='invisible'>
+                           <code>bindgen_union_field: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a></code>
+                           </span></span><span class='stab '></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValue__bindgen_ty_1.html' title='style::gecko_bindings::structs::root::nsCSSValue__bindgen_ty_1'>nsCSSValue__bindgen_ty_1</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#15627' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValue__bindgen_ty_1.html' title='style::gecko_bindings::structs::root::nsCSSValue__bindgen_ty_1'>nsCSSValue__bindgen_ty_1</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#15627' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValue__bindgen_ty_1.html' title='style::gecko_bindings::structs::root::nsCSSValue__bindgen_ty_1'>nsCSSValue__bindgen_ty_1</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#15659-15661' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; Self</code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

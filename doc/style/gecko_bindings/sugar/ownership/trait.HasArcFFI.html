@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `HasArcFFI` trait in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, HasArcFFI">
+
+    <title>style::gecko_bindings::sugar::ownership::HasArcFFI - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>sugar</a>::<wbr><a href='index.html'>ownership</a></p><script>window.sidebarCurrent = {name: 'HasArcFFI', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'><span class='in-band'>Trait <a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>sugar</a>::<wbr><a href='index.html'>ownership</a>::<wbr><a class='trait' href=''>HasArcFFI</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../src/style/gecko_bindings/sugar/ownership.rs.html#76-141' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub unsafe trait HasArcFFI: <a class='trait' href='../../../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>HasFFI</a> {
+    unsafe fn <a href='#method.addref_opt' class='fnname'>addref_opt</a>(ptr: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;Self::<a class='trait' href='../../../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>&gt;) { ... }
+    unsafe fn <a href='#method.release_opt' class='fnname'>release_opt</a>(ptr: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;Self::<a class='trait' href='../../../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>&gt;) { ... }
+    unsafe fn <a href='#method.addref' class='fnname'>addref</a>(ptr: &amp;Self::<a class='trait' href='../../../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>) { ... }
+    unsafe fn <a href='#method.release' class='fnname'>release</a>(ptr: &amp;Self::<a class='trait' href='../../../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>) { ... }
+    fn <a href='#method.as_arc' class='fnname'>as_arc</a>&lt;'a&gt;(ptr: &amp;'a &amp;Self::<a class='trait' href='../../../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>) -&gt; &amp;'a <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;Self&gt; { ... }
+    fn <a href='#method.arc_as_borrowed' class='fnname'>arc_as_borrowed</a>&lt;'a&gt;(arc: &amp;'a <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;Self&gt;) -&gt; &amp;'a &amp;Self::<a class='trait' href='../../../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a> { ... }
+    fn <a href='#method.arc_from_borrowed' class='fnname'>arc_from_borrowed</a>&lt;'a&gt;(ptr: &amp;'a <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;Self::<a class='trait' href='../../../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;'a <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;Self&gt;&gt; { ... }
+}</pre><div class='docblock'><p>Helper trait for conversions between FFI Strong/Borrowed types and Arcs</p>
+
+<p>Should be implemented by types which are passed over FFI as Arcs via Strong
+and Borrowed.</p>
+
+<p>In this case, the FFIType is the rough equivalent of ArcInner<Self>.</p>
+</div>
+            <h2 id='provided-methods'>Provided Methods</h2>
+            <div class='methods'>
+        <h3 id='method.addref_opt' class='method'><span id='addref_opt.v' class='invisible'><code>unsafe fn <a href='#method.addref_opt' class='fnname'>addref_opt</a>(ptr: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;Self::<a class='trait' href='../../../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>&gt;)</code></span></h3><div class='docblock'><p>Artificially increments the refcount of a (possibly null) borrowed Arc
+over FFI.</p>
+</div><h3 id='method.release_opt' class='method'><span id='release_opt.v' class='invisible'><code>unsafe fn <a href='#method.release_opt' class='fnname'>release_opt</a>(ptr: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;Self::<a class='trait' href='../../../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>&gt;)</code></span></h3><div class='docblock'><p>Given a (possibly null) borrowed FFI reference, decrements the refcount.
+Unsafe since it doesn&#39;t consume the backing Arc. Run it only when you
+know that a strong reference to the backing Arc is disappearing
+(usually on the C++ side) without running the Arc destructor.</p>
+</div><h3 id='method.addref' class='method'><span id='addref.v' class='invisible'><code>unsafe fn <a href='#method.addref' class='fnname'>addref</a>(ptr: &amp;Self::<a class='trait' href='../../../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>)</code></span></h3><div class='docblock'><p>Artificially increments the refcount of a borrowed Arc over FFI.</p>
+</div><h3 id='method.release' class='method'><span id='release.v' class='invisible'><code>unsafe fn <a href='#method.release' class='fnname'>release</a>(ptr: &amp;Self::<a class='trait' href='../../../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>)</code></span></h3><div class='docblock'><p>Given a non-null borrowed FFI reference, decrements the refcount.
+Unsafe since it doesn&#39;t consume the backing Arc. Run it only when you
+know that a strong reference to the backing Arc is disappearing
+(usually on the C++ side) without running the Arc destructor.</p>
+</div><h3 id='method.as_arc' class='method'><span id='as_arc.v' class='invisible'><code>fn <a href='#method.as_arc' class='fnname'>as_arc</a>&lt;'a&gt;(ptr: &amp;'a &amp;Self::<a class='trait' href='../../../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>) -&gt; &amp;'a <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;Self&gt;</code></span></h3><div class='docblock'><p>Converts a borrowed FFI reference to a borrowed Arc.</p>
+
+<p>&amp;GeckoType -&gt; &amp;Arc<ServoType></p>
+</div><h3 id='method.arc_as_borrowed' class='method'><span id='arc_as_borrowed.v' class='invisible'><code>fn <a href='#method.arc_as_borrowed' class='fnname'>arc_as_borrowed</a>&lt;'a&gt;(arc: &amp;'a <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;Self&gt;) -&gt; &amp;'a &amp;Self::<a class='trait' href='../../../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a></code></span></h3><div class='docblock'><p>Converts a borrowed Arc to a borrowed FFI reference.</p>
+
+<p>&amp;Arc<ServoType> -&gt; &amp;GeckoType</p>
+</div><h3 id='method.arc_from_borrowed' class='method'><span id='arc_from_borrowed.v' class='invisible'><code>fn <a href='#method.arc_from_borrowed' class='fnname'>arc_from_borrowed</a>&lt;'a&gt;(ptr: &amp;'a <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;Self::<a class='trait' href='../../../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;'a <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;Self&gt;&gt;</code></span></h3><div class='docblock'><p>Converts a borrowed nullable FFI reference to a borrowed Arc.</p>
+
+<p>&amp;GeckoType -&gt; &amp;Arc<ServoType></p>
+</div></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><code>impl HasArcFFI for <a class='struct' href='../../../../style/stylesheets/struct.Stylesheet.html' title='style::stylesheets::Stylesheet'>Stylesheet</a></code></li>
+<li><code>impl HasArcFFI for <a class='struct' href='../../../../style/gecko_properties/struct.ComputedValues.html' title='style::gecko_properties::ComputedValues'>ComputedValues</a></code></li>
+<li><code>impl HasArcFFI for parking_lot::rwlock::<a class='struct' href='../../../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='../../../../style/properties/declaration_block/struct.PropertyDeclarationBlock.html' title='style::properties::declaration_block::PropertyDeclarationBlock'>PropertyDeclarationBlock</a>&gt;</code></li>
+<li><code>impl HasArcFFI for parking_lot::rwlock::<a class='struct' href='../../../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='../../../../style/stylesheets/struct.CssRules.html' title='style::stylesheets::CssRules'>CssRules</a>&gt;</code></li>
+<li><code>impl HasArcFFI for parking_lot::rwlock::<a class='struct' href='../../../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='../../../../style/stylesheets/struct.StyleRule.html' title='style::stylesheets::StyleRule'>StyleRule</a>&gt;</code></li>
+<li><code>impl HasArcFFI for parking_lot::rwlock::<a class='struct' href='../../../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='../../../../style/stylesheets/struct.ImportRule.html' title='style::stylesheets::ImportRule'>ImportRule</a>&gt;</code></li>
+<li><code>impl HasArcFFI for <a class='enum' href='../../../../style/properties/animated_properties/enum.AnimationValue.html' title='style::properties::animated_properties::AnimationValue'>AnimationValue</a></code></li>
+</ul><script type="text/javascript" async
+                         src="../../../../implementors/style/gecko_bindings/sugar/ownership/trait.HasArcFFI.js">
+                 </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

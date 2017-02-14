@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["SpecifiedValue",""]],"fn":[["cascade_property",""],["get_initial_value",""],["parse","normal | <number> | <length> | <percentage>"],["parse_declared",""],["parse_specified",""]],"mod":[["computed_value",""]]});

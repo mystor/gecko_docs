@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `PropertyDeclarationBlock` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, PropertyDeclarationBlock">
+
+    <title>style::properties::declaration_block::PropertyDeclarationBlock - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../index.html'>style</a>::<wbr><a href='../index.html'>properties</a>::<wbr><a href='index.html'>declaration_block</a></p><script>window.sidebarCurrent = {name: 'PropertyDeclarationBlock', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../index.html'>style</a>::<wbr><a href='../index.html'>properties</a>::<wbr><a href='index.html'>declaration_block</a>::<wbr><a class='struct' href=''>PropertyDeclarationBlock</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../src/style/properties/declaration_block.rs.html#46-55' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct PropertyDeclarationBlock {
+    pub declarations: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='enum' href='../../../style/properties/enum.PropertyDeclaration.html' title='style::properties::PropertyDeclaration'>PropertyDeclaration</a>, <a class='enum' href='../../../style/properties/declaration_block/enum.Importance.html' title='style::properties::declaration_block::Importance'>Importance</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;,
+    pub important_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+}</pre><div class='docblock'><p>Overridden declarations are skipped.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.declarations' class='structfield'>
+                           <span id='declarations.v' class='invisible'>
+                           <code>declarations: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='enum' href='../../../style/properties/enum.PropertyDeclaration.html' title='style::properties::PropertyDeclaration'>PropertyDeclaration</a>, <a class='enum' href='../../../style/properties/declaration_block/enum.Importance.html' title='style::properties::declaration_block::Importance'>Importance</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The group of declarations, along with their importance.</p>
+
+<p>Only deduplicated declarations appear here.</p>
+</div><span id='structfield.important_count' class='structfield'>
+                           <span id='important_count.v' class='invisible'>
+                           <code>important_count: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The number of entries in <code>self.declaration</code> with <code>Importance::Important</code></p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../../style/properties/declaration_block/struct.PropertyDeclarationBlock.html' title='style::properties::declaration_block::PropertyDeclarationBlock'>PropertyDeclarationBlock</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/style/properties/declaration_block.rs.html#57-271' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.any_important' class='method'><span id='any_important.v' class='invisible'><code>fn <a href='#method.any_important' class='fnname'>any_important</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns wheather this block contains any declaration with <code>!important</code>.</p>
+
+<p>This is based on the <code>important_count</code> counter,
+which should be maintained whenever <code>declarations</code> is changed.</p>
+</div><h4 id='method.any_normal' class='method'><span id='any_normal.v' class='invisible'><code>fn <a href='#method.any_normal' class='fnname'>any_normal</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns wheather this block contains any declaration without <code>!important</code>.</p>
+
+<p>This is based on the <code>important_count</code> counter,
+which should be maintained whenever <code>declarations</code> is changed.</p>
+</div><h4 id='method.get' class='method'><span id='get.v' class='invisible'><code>fn <a href='#method.get' class='fnname'>get</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property: <a class='enum' href='../../../style/properties/enum.PropertyDeclarationId.html' title='style::properties::PropertyDeclarationId'>PropertyDeclarationId</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='enum' href='../../../style/properties/enum.PropertyDeclaration.html' title='style::properties::PropertyDeclaration'>PropertyDeclaration</a>, <a class='enum' href='../../../style/properties/declaration_block/enum.Importance.html' title='style::properties::declaration_block::Importance'>Importance</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>&gt;</code></span></h4>
+<div class='docblock'><p>Get a declaration for a given property.</p>
+
+<p>NOTE: This is linear time.</p>
+</div><h4 id='method.property_value_to_css' class='method'><span id='property_value_to_css.v' class='invisible'><code>fn <a href='#method.property_value_to_css' class='fnname'>property_value_to_css</a>&lt;W&gt;(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property: &amp;<a class='enum' href='../../../style/properties/enum.PropertyId.html' title='style::properties::PropertyId'>PropertyId</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dest: &amp;mut W)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a> <span class='where fmt-newline'>where W: <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Write.html' title='core::fmt::Write'>Write</a></span></code></span></h4>
+<div class='docblock'><p>Find the value of the given property in this block and serialize it</p>
+
+<p><a href="https://dev.w3.org/csswg/cssom/#dom-cssstyledeclaration-getpropertyvalue">https://dev.w3.org/csswg/cssom/#dom-cssstyledeclaration-getpropertyvalue</a></p>
+</div><h4 id='method.property_priority' class='method'><span id='property_priority.v' class='invisible'><code>fn <a href='#method.property_priority' class='fnname'>property_priority</a>(&amp;self, property: &amp;<a class='enum' href='../../../style/properties/enum.PropertyId.html' title='style::properties::PropertyId'>PropertyId</a>) -&gt; <a class='enum' href='../../../style/properties/declaration_block/enum.Importance.html' title='style::properties::declaration_block::Importance'>Importance</a></code></span></h4>
+<div class='docblock'><p><a href="https://dev.w3.org/csswg/cssom/#dom-cssstyledeclaration-getpropertypriority">https://dev.w3.org/csswg/cssom/#dom-cssstyledeclaration-getpropertypriority</a></p>
+</div><h4 id='method.set_parsed_declaration' class='method'><span id='set_parsed_declaration.v' class='invisible'><code>fn <a href='#method.set_parsed_declaration' class='fnname'>set_parsed_declaration</a>(&amp;mut self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; declaration: <a class='enum' href='../../../style/properties/enum.PropertyDeclaration.html' title='style::properties::PropertyDeclaration'>PropertyDeclaration</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; importance: <a class='enum' href='../../../style/properties/declaration_block/enum.Importance.html' title='style::properties::declaration_block::Importance'>Importance</a>)</code></span></h4>
+<div class='docblock'><p>Adds or overrides the declaration for a given property in this block,
+without taking into account any kind of priority.</p>
+</div><h4 id='method.set_importance' class='method'><span id='set_importance.v' class='invisible'><code>fn <a href='#method.set_importance' class='fnname'>set_importance</a>(&amp;mut self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; property: &amp;<a class='enum' href='../../../style/properties/enum.PropertyId.html' title='style::properties::PropertyId'>PropertyId</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new_importance: <a class='enum' href='../../../style/properties/declaration_block/enum.Importance.html' title='style::properties::declaration_block::Importance'>Importance</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Set the declaration importance for a given property, if found.</p>
+
+<p>Returns whether any declaration was updated.</p>
+</div><h4 id='method.remove_property' class='method'><span id='remove_property.v' class='invisible'><code>fn <a href='#method.remove_property' class='fnname'>remove_property</a>(&amp;mut self, property: &amp;<a class='enum' href='../../../style/properties/enum.PropertyId.html' title='style::properties::PropertyId'>PropertyId</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p><a href="https://dev.w3.org/csswg/cssom/#dom-cssstyledeclaration-removeproperty">https://dev.w3.org/csswg/cssom/#dom-cssstyledeclaration-removeproperty</a></p>
+
+<p>Returns whether any declaration was actually removed.</p>
+</div><h4 id='method.single_value_to_css' class='method'><span id='single_value_to_css.v' class='invisible'><code>fn <a href='#method.single_value_to_css' class='fnname'>single_value_to_css</a>&lt;W&gt;(&amp;self, property: &amp;<a class='enum' href='../../../style/properties/enum.PropertyId.html' title='style::properties::PropertyId'>PropertyId</a>, dest: &amp;mut W) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a> <span class='where fmt-newline'>where W: <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Write.html' title='core::fmt::Write'>Write</a></span></code></span></h4>
+<div class='docblock'><p>Take a declaration block known to contain a single property and serialize it.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../../style/properties/declaration_block/struct.PropertyDeclarationBlock.html' title='style::properties::declaration_block::PropertyDeclarationBlock'>PropertyDeclarationBlock</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/style/properties/declaration_block.rs.html#44' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='struct' href='../../../style/properties/declaration_block/struct.PropertyDeclarationBlock.html' title='style::properties::declaration_block::PropertyDeclarationBlock'>PropertyDeclarationBlock</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/style/properties/declaration_block.rs.html#44' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../../style/properties/declaration_block/struct.PropertyDeclarationBlock.html' title='style::properties::declaration_block::PropertyDeclarationBlock'>PropertyDeclarationBlock</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, __arg_0: &amp;<a class='struct' href='../../../style/properties/declaration_block/struct.PropertyDeclarationBlock.html' title='style::properties::declaration_block::PropertyDeclarationBlock'>PropertyDeclarationBlock</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../../../style/properties/declaration_block/struct.PropertyDeclarationBlock.html' title='style::properties::declaration_block::PropertyDeclarationBlock'>PropertyDeclarationBlock</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/style/properties/declaration_block.rs.html#44' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='struct' href='../../../style/properties/declaration_block/struct.PropertyDeclarationBlock.html' title='style::properties::declaration_block::PropertyDeclarationBlock'>PropertyDeclarationBlock</a></code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../../../style_traits/values/trait.ToCss.html' title='style_traits::values::ToCss'>ToCss</a> for <a class='struct' href='../../../style/properties/declaration_block/struct.PropertyDeclarationBlock.html' title='style::properties::declaration_block::PropertyDeclarationBlock'>PropertyDeclarationBlock</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/style/properties/declaration_block.rs.html#273-395' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.to_css' class='method'><span id='to_css.v' class='invisible'><code>fn <a href='../../../style_traits/values/trait.ToCss.html#tymethod.to_css' class='fnname'>to_css</a>&lt;W&gt;(&amp;self, dest: &amp;mut W) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a> <span class='where fmt-newline'>where W: <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Write.html' title='core::fmt::Write'>Write</a></span></code></span></h4>
+<div class='docblock'><p>Serialize <code>self</code> in CSS syntax, writing to <code>dest</code>.</p>
+</div><h4 id='method.to_css_string' class='method'><span id='to_css_string.v' class='invisible'><code>fn <a href='../../../style_traits/values/trait.ToCss.html#method.to_css_string' class='fnname'>to_css_string</a>(&amp;self) -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a></code></span></h4>
+<div class='docblock'><p>Serialize <code>self</code> in CSS syntax and return a string. <a href="../../../style_traits/values/trait.ToCss.html#method.to_css_string">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../jquery.js"></script>
+    <script src="../../../main.js"></script>
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>

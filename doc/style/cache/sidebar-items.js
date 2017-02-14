@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["LRUCache","A LRU cache used to store a set of at most `n` elements at the same time."]]});

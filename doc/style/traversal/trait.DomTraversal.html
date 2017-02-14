@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `DomTraversal` trait in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, DomTraversal">
+
+    <title>style::traversal::DomTraversal - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>style</a>::<wbr><a href='index.html'>traversal</a></p><script>window.sidebarCurrent = {name: 'DomTraversal', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'><span class='in-band'>Trait <a href='../index.html'>style</a>::<wbr><a href='index.html'>traversal</a>::<wbr><a class='trait' href=''>DomTraversal</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/style/traversal.rs.html#84-312' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait DomTraversal&lt;E:&nbsp;<a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>TElement</a>&gt;: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html' title='core::marker::Sync'>Sync</a> {
+    type <a href='#associatedtype.ThreadLocalContext' class='type'>ThreadLocalContext</a>: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/borrow/trait.BorrowMut.html' title='core::borrow::BorrowMut'>BorrowMut</a>&lt;<a class='struct' href='../../style/context/struct.ThreadLocalStyleContext.html' title='style::context::ThreadLocalStyleContext'>ThreadLocalStyleContext</a>&lt;E&gt;&gt;;
+    fn <a href='#tymethod.process_preorder' class='fnname'>process_preorder</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data: &amp;mut <a class='struct' href='../../style/traversal/struct.PerLevelTraversalData.html' title='style::traversal::PerLevelTraversalData'>PerLevelTraversalData</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thread_local: &amp;mut Self::<a class='trait' href='../../style/traversal/trait.DomTraversal.html' title='style::traversal::DomTraversal'>ThreadLocalContext</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; node: E::<a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>ConcreteNode</a>);
+    fn <a href='#tymethod.process_postorder' class='fnname'>process_postorder</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thread_local: &amp;mut Self::<a class='trait' href='../../style/traversal/trait.DomTraversal.html' title='style::traversal::DomTraversal'>ThreadLocalContext</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; node: E::<a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>ConcreteNode</a>);
+    unsafe fn <a href='#tymethod.ensure_element_data' class='fnname'>ensure_element_data</a>(element: &amp;E) -&gt; &amp;<a class='struct' href='../../atomic_refcell/struct.AtomicRefCell.html' title='atomic_refcell::AtomicRefCell'>AtomicRefCell</a>&lt;<a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>&gt;;
+    unsafe fn <a href='#tymethod.clear_element_data' class='fnname'>clear_element_data</a>(element: &amp;E);
+    fn <a href='#tymethod.shared_context' class='fnname'>shared_context</a>(&amp;self) -&gt; &amp;<a class='struct' href='../../style/context/struct.SharedStyleContext.html' title='style::context::SharedStyleContext'>SharedStyleContext</a>;
+    fn <a href='#tymethod.create_thread_local_context' class='fnname'>create_thread_local_context</a>(&amp;self) -&gt; Self::<a class='trait' href='../../style/traversal/trait.DomTraversal.html' title='style::traversal::DomTraversal'>ThreadLocalContext</a>;
+    fn <a href='#tymethod.is_parallel' class='fnname'>is_parallel</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+
+    fn <a href='#method.needs_postorder_traversal' class='fnname'>needs_postorder_traversal</a>() -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a> { ... }
+    fn <a href='#method.pre_traverse' class='fnname'>pre_traverse</a>(root: E,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stylist: &amp;<a class='struct' href='../../style/stylist/struct.Stylist.html' title='style::stylist::Stylist'>Stylist</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; unstyled_children_only: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='struct' href='../../style/traversal/struct.PreTraverseToken.html' title='style::traversal::PreTraverseToken'>PreTraverseToken</a> { ... }
+    fn <a href='#method.text_node_needs_traversal' class='fnname'>text_node_needs_traversal</a>(node: E::<a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>ConcreteNode</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a> { ... }
+    fn <a href='#method.node_needs_traversal' class='fnname'>node_needs_traversal</a>(node: E::<a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>ConcreteNode</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a> { ... }
+    fn <a href='#method.should_traverse_children' class='fnname'>should_traverse_children</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thread_local: &amp;mut <a class='struct' href='../../style/context/struct.ThreadLocalStyleContext.html' title='style::context::ThreadLocalStyleContext'>ThreadLocalStyleContext</a>&lt;E&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; parent: E,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; parent_data: &amp;<a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; log: <a class='enum' href='../../style/traversal/enum.LogBehavior.html' title='style::traversal::LogBehavior'>LogBehavior</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a> { ... }
+    fn <a href='#method.traverse_children' class='fnname'>traverse_children</a>&lt;F&gt;(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thread_local: &amp;mut Self::<a class='trait' href='../../style/traversal/trait.DomTraversal.html' title='style::traversal::DomTraversal'>ThreadLocalContext</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; parent: E,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; f: F) <span class='where fmt-newline'>where F: <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;mut Self::<a class='trait' href='../../style/traversal/trait.DomTraversal.html' title='style::traversal::DomTraversal'>ThreadLocalContext</a>, E::<a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>ConcreteNode</a>)</span> { ... }
+}</pre><div class='docblock'><p>A DOM Traversal trait, that is used to generically implement styling for
+Gecko and Servo.</p>
+</div>
+            <h2 id='associated-types'>Associated Types</h2>
+            <div class='methods'>
+        <h3 id='associatedtype.ThreadLocalContext' class='method'><span id='ThreadLocalContext.t' class='invisible'><code>type <a href='#associatedtype.ThreadLocalContext' class='type'>ThreadLocalContext</a>: <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/borrow/trait.BorrowMut.html' title='core::borrow::BorrowMut'>BorrowMut</a>&lt;<a class='struct' href='../../style/context/struct.ThreadLocalStyleContext.html' title='style::context::ThreadLocalStyleContext'>ThreadLocalStyleContext</a>&lt;E&gt;&gt;</code></span></h3><div class='docblock'><p>The thread-local context, used to store non-thread-safe stuff that needs
+to be used in the traversal, and of which we use one per worker, like
+the bloom filter, for example.</p>
+</div></div>
+            <h2 id='required-methods'>Required Methods</h2>
+            <div class='methods'>
+        <h3 id='tymethod.process_preorder' class='method'><span id='process_preorder.v' class='invisible'><code>fn <a href='#tymethod.process_preorder' class='fnname'>process_preorder</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data: &amp;mut <a class='struct' href='../../style/traversal/struct.PerLevelTraversalData.html' title='style::traversal::PerLevelTraversalData'>PerLevelTraversalData</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thread_local: &amp;mut Self::<a class='trait' href='../../style/traversal/trait.DomTraversal.html' title='style::traversal::DomTraversal'>ThreadLocalContext</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; node: E::<a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>ConcreteNode</a>)</code></span></h3><div class='docblock'><p>Process <code>node</code> on the way down, before its children have been processed.</p>
+</div><h3 id='tymethod.process_postorder' class='method'><span id='process_postorder.v' class='invisible'><code>fn <a href='#tymethod.process_postorder' class='fnname'>process_postorder</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thread_local: &amp;mut Self::<a class='trait' href='../../style/traversal/trait.DomTraversal.html' title='style::traversal::DomTraversal'>ThreadLocalContext</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; node: E::<a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>ConcreteNode</a>)</code></span></h3><div class='docblock'><p>Process <code>node</code> on the way up, after its children have been processed.</p>
+
+<p>This is only executed if <code>needs_postorder_traversal</code> returns true.</p>
+</div><h3 id='tymethod.ensure_element_data' class='method'><span id='ensure_element_data.v' class='invisible'><code>unsafe fn <a href='#tymethod.ensure_element_data' class='fnname'>ensure_element_data</a>(element: &amp;E) -&gt; &amp;<a class='struct' href='../../atomic_refcell/struct.AtomicRefCell.html' title='atomic_refcell::AtomicRefCell'>AtomicRefCell</a>&lt;<a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>&gt;</code></span></h3><div class='docblock'><p>Ensures the existence of the ElementData, and returns it. This can&#39;t live
+on TNode because of the trait-based separation between Servo&#39;s script
+and layout crates.</p>
+
+<p>This is only safe to call in top-down traversal before processing the
+children of |element|.</p>
+</div><h3 id='tymethod.clear_element_data' class='method'><span id='clear_element_data.v' class='invisible'><code>unsafe fn <a href='#tymethod.clear_element_data' class='fnname'>clear_element_data</a>(element: &amp;E)</code></span></h3><div class='docblock'><p>Clears the ElementData attached to this element, if any.</p>
+
+<p>This is only safe to call in top-down traversal before processing the
+children of |element|.</p>
+</div><h3 id='tymethod.shared_context' class='method'><span id='shared_context.v' class='invisible'><code>fn <a href='#tymethod.shared_context' class='fnname'>shared_context</a>(&amp;self) -&gt; &amp;<a class='struct' href='../../style/context/struct.SharedStyleContext.html' title='style::context::SharedStyleContext'>SharedStyleContext</a></code></span></h3><div class='docblock'><p>Return the shared style context common to all worker threads.</p>
+</div><h3 id='tymethod.create_thread_local_context' class='method'><span id='create_thread_local_context.v' class='invisible'><code>fn <a href='#tymethod.create_thread_local_context' class='fnname'>create_thread_local_context</a>(&amp;self) -&gt; Self::<a class='trait' href='../../style/traversal/trait.DomTraversal.html' title='style::traversal::DomTraversal'>ThreadLocalContext</a></code></span></h3><div class='docblock'><p>Creates a thread-local context.</p>
+</div><h3 id='tymethod.is_parallel' class='method'><span id='is_parallel.v' class='invisible'><code>fn <a href='#tymethod.is_parallel' class='fnname'>is_parallel</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h3><div class='docblock'><p>Whether we&#39;re performing a parallel traversal.</p>
+
+<p>NB: We do this check on runtime. We could guarantee correctness in this
+regard via the type system via a <code>TraversalDriver</code> trait for this trait,
+that could be one of two concrete types. It&#39;s not clear whether the
+potential code size impact of that is worth it.</p>
+</div></div>
+            <h2 id='provided-methods'>Provided Methods</h2>
+            <div class='methods'>
+        <h3 id='method.needs_postorder_traversal' class='method'><span id='needs_postorder_traversal.v' class='invisible'><code>fn <a href='#method.needs_postorder_traversal' class='fnname'>needs_postorder_traversal</a>() -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h3><div class='docblock'><p>Boolean that specifies whether a bottom up traversal should be
+performed.</p>
+
+<p>If it&#39;s false, then process_postorder has no effect at all.</p>
+</div><h3 id='method.pre_traverse' class='method'><span id='pre_traverse.v' class='invisible'><code>fn <a href='#method.pre_traverse' class='fnname'>pre_traverse</a>(root: E,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stylist: &amp;<a class='struct' href='../../style/stylist/struct.Stylist.html' title='style::stylist::Stylist'>Stylist</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; unstyled_children_only: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='struct' href='../../style/traversal/struct.PreTraverseToken.html' title='style::traversal::PreTraverseToken'>PreTraverseToken</a></code></span></h3><div class='docblock'><p>Must be invoked before traversing the root element to determine whether
+a traversal is needed. Returns a token that allows the caller to prove
+that the call happened.</p>
+
+<p>The unstyled_children_only parameter is used in Gecko to style newly-
+appended children without restyling the parent.</p>
+</div><h3 id='method.text_node_needs_traversal' class='method'><span id='text_node_needs_traversal.v' class='invisible'><code>fn <a href='#method.text_node_needs_traversal' class='fnname'>text_node_needs_traversal</a>(node: E::<a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>ConcreteNode</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h3><div class='docblock'><p>Returns true if traversal should visit a text node. The style system never
+processes text nodes, but Servo overrides this to visit them for flow
+construction when necessary.</p>
+</div><h3 id='method.node_needs_traversal' class='method'><span id='node_needs_traversal.v' class='invisible'><code>fn <a href='#method.node_needs_traversal' class='fnname'>node_needs_traversal</a>(node: E::<a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>ConcreteNode</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h3><div class='docblock'><p>Returns true if traversal is needed for the given node and subtree.</p>
+</div><h3 id='method.should_traverse_children' class='method'><span id='should_traverse_children.v' class='invisible'><code>fn <a href='#method.should_traverse_children' class='fnname'>should_traverse_children</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thread_local: &amp;mut <a class='struct' href='../../style/context/struct.ThreadLocalStyleContext.html' title='style::context::ThreadLocalStyleContext'>ThreadLocalStyleContext</a>&lt;E&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; parent: E,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; parent_data: &amp;<a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; log: <a class='enum' href='../../style/traversal/enum.LogBehavior.html' title='style::traversal::LogBehavior'>LogBehavior</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h3><div class='docblock'><p>Returns true if traversal of this element&#39;s children is allowed. We use
+this to cull traversal of various subtrees.</p>
+
+<p>This may be called multiple times when processing an element, so we pass
+a parameter to keep the logs tidy.</p>
+</div><h3 id='method.traverse_children' class='method'><span id='traverse_children.v' class='invisible'><code>fn <a href='#method.traverse_children' class='fnname'>traverse_children</a>&lt;F&gt;(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; thread_local: &amp;mut Self::<a class='trait' href='../../style/traversal/trait.DomTraversal.html' title='style::traversal::DomTraversal'>ThreadLocalContext</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; parent: E,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; f: F) <span class='where fmt-newline'>where F: <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;mut Self::<a class='trait' href='../../style/traversal/trait.DomTraversal.html' title='style::traversal::DomTraversal'>ThreadLocalContext</a>, E::<a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>ConcreteNode</a>)</span></code></span></h3><div class='docblock'><p>Helper for the traversal implementations to select the children that
+should be enqueued for processing.</p>
+</div></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><code>impl&lt;'le&gt; DomTraversal&lt;<a class='struct' href='../../style/gecko/wrapper/struct.GeckoElement.html' title='style::gecko::wrapper::GeckoElement'>GeckoElement</a>&lt;'le&gt;&gt; for <a class='struct' href='../../style/gecko/traversal/struct.RecalcStyleOnly.html' title='style::gecko::traversal::RecalcStyleOnly'>RecalcStyleOnly</a></code></li>
+</ul><script type="text/javascript" async
+                         src="../../implementors/style/traversal/trait.DomTraversal.js">
+                 </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

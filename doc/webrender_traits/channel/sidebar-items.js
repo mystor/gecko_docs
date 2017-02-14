@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["msg_channel",""],["payload_channel",""]],"struct":[["MsgReceiver",""],["MsgSender",""]],"trait":[["PayloadHelperMethods",""]],"type":[["PayloadReceiver",""],["PayloadSender",""]]});

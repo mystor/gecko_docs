@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `RestyleData` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, RestyleData">
+
+    <title>style::data::RestyleData - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>style</a>::<wbr><a href='index.html'>data</a></p><script>window.sidebarCurrent = {name: 'RestyleData', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>style</a>::<wbr><a href='index.html'>data</a>::<wbr><a class='struct' href=''>RestyleData</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/style/data.rs.html#296-312' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct RestyleData {
+    pub hint: <a class='struct' href='../../style/data/struct.StoredRestyleHint.html' title='style::data::StoredRestyleHint'>StoredRestyleHint</a>,
+    pub recascade: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub damage: <a class='struct' href='../../style/gecko/restyle_damage/struct.GeckoRestyleDamage.html' title='style::gecko::restyle_damage::GeckoRestyleDamage'>RestyleDamage</a>,
+    pub snapshot: <a class='struct' href='../../style/data/struct.SnapshotOption.html' title='style::data::SnapshotOption'>SnapshotOption</a>,
+}</pre><div class='docblock'><p>Transient data used by the restyle algorithm. This structure is instantiated
+either before or during restyle traversal, and is cleared at the end of node
+processing.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.hint' class='structfield'>
+                           <span id='hint.v' class='invisible'>
+                           <code>hint: <a class='struct' href='../../style/data/struct.StoredRestyleHint.html' title='style::data::StoredRestyleHint'>StoredRestyleHint</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The restyle hint, which indicates whether selectors need to be rematched
+for this element, its children, and its descendants.</p>
+</div><span id='structfield.recascade' class='structfield'>
+                           <span id='recascade.v' class='invisible'>
+                           <code>recascade: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Whether we need to recascade.
+FIXME(bholley): This should eventually become more fine-grained.</p>
+</div><span id='structfield.damage' class='structfield'>
+                           <span id='damage.v' class='invisible'>
+                           <code>damage: <a class='struct' href='../../style/gecko/restyle_damage/struct.GeckoRestyleDamage.html' title='style::gecko::restyle_damage::GeckoRestyleDamage'>RestyleDamage</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The restyle damage, indicating what kind of layout changes are required
+afte restyling.</p>
+</div><span id='structfield.snapshot' class='structfield'>
+                           <span id='snapshot.v' class='invisible'>
+                           <code>snapshot: <a class='struct' href='../../style/data/struct.SnapshotOption.html' title='style::data::SnapshotOption'>SnapshotOption</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>An optional snapshot of the original state and attributes of the element,
+from which we may compute additional restyle hints at traversal time.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../style/data/struct.RestyleData.html' title='style::data::RestyleData'>RestyleData</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/data.rs.html#325-357' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.expand_snapshot' class='method'><span id='expand_snapshot.v' class='invisible'><code>fn <a href='#method.expand_snapshot' class='fnname'>expand_snapshot</a>&lt;E:&nbsp;<a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>TElement</a>&gt;(&amp;mut self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; element: E,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stylist: &amp;<a class='struct' href='../../style/stylist/struct.Stylist.html' title='style::stylist::Stylist'>Stylist</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Expands the snapshot (if any) into a restyle hint. Returns true if later
+siblings must be restyled.</p>
+</div><h4 id='method.has_invalidations' class='method'><span id='has_invalidations.v' class='invisible'><code>fn <a href='#method.has_invalidations' class='fnname'>has_invalidations</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns true if this RestyleData might invalidate the current style.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../style/data/struct.RestyleData.html' title='style::data::RestyleData'>RestyleData</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/data.rs.html#295' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../style/data/struct.RestyleData.html' title='style::data::RestyleData'>RestyleData</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/data.rs.html#314-323' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><span id='default.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; Self</code></span></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

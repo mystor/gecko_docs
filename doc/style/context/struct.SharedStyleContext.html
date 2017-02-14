@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `SharedStyleContext` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, SharedStyleContext">
+
+    <title>style::context::SharedStyleContext - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>style</a>::<wbr><a href='index.html'>context</a></p><script>window.sidebarCurrent = {name: 'SharedStyleContext', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>style</a>::<wbr><a href='index.html'>context</a>::<wbr><a class='struct' href=''>SharedStyleContext</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/style/context.rs.html#62-97' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct SharedStyleContext {
+    pub viewport_size: <a class='type' href='../../euclid/size/type.Size2D.html' title='euclid::size::Size2D'>Size2D</a>&lt;<a class='struct' href='../../app_units/app_unit/struct.Au.html' title='app_units::app_unit::Au'>Au</a>&gt;,
+    pub screen_size_changed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub stylist: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/stylist/struct.Stylist.html' title='style::stylist::Stylist'>Stylist</a>&gt;,
+    pub goal: <a class='enum' href='../../style/context/enum.ReflowGoal.html' title='style::context::ReflowGoal'>ReflowGoal</a>,
+    pub running_animations: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;<a class='struct' href='../../style/dom/struct.OpaqueNode.html' title='style::dom::OpaqueNode'>OpaqueNode</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='enum' href='../../style/animation/enum.Animation.html' title='style::animation::Animation'>Animation</a>&gt;&gt;&gt;&gt;,
+    pub expired_animations: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;<a class='struct' href='../../style/dom/struct.OpaqueNode.html' title='style::dom::OpaqueNode'>OpaqueNode</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='enum' href='../../style/animation/enum.Animation.html' title='style::animation::Animation'>Animation</a>&gt;&gt;&gt;&gt;,
+    pub error_reporter: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='../../style/error_reporting/trait.ParseErrorReporter.html' title='style::error_reporting::ParseErrorReporter'>ParseErrorReporter</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html' title='core::marker::Sync'>Sync</a>&gt;,
+    pub local_context_creation_data: <a class='struct' href='https://doc.rust-lang.org/nightly/std/sync/mutex/struct.Mutex.html' title='std::sync::mutex::Mutex'>Mutex</a>&lt;<a class='struct' href='../../style/context/struct.ThreadLocalStyleContextCreationInfo.html' title='style::context::ThreadLocalStyleContextCreationInfo'>ThreadLocalStyleContextCreationInfo</a>&gt;,
+    pub timer: <a class='struct' href='../../style/timer/struct.Timer.html' title='style::timer::Timer'>Timer</a>,
+    pub quirks_mode: <a class='enum' href='../../style/context/enum.QuirksMode.html' title='style::context::QuirksMode'>QuirksMode</a>,
+    pub default_computed_values: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/gecko_properties/struct.ComputedValues.html' title='style::gecko_properties::ComputedValues'>ComputedValues</a>&gt;,
+}</pre><div class='docblock'><p>A shared style context.</p>
+
+<p>There&#39;s exactly one of these during a given restyle traversal, and it&#39;s
+shared among the worker threads.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.viewport_size' class='structfield'>
+                           <span id='viewport_size.v' class='invisible'>
+                           <code>viewport_size: <a class='type' href='../../euclid/size/type.Size2D.html' title='euclid::size::Size2D'>Size2D</a>&lt;<a class='struct' href='../../app_units/app_unit/struct.Au.html' title='app_units::app_unit::Au'>Au</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The current viewport size.</p>
+</div><span id='structfield.screen_size_changed' class='structfield'>
+                           <span id='screen_size_changed.v' class='invisible'>
+                           <code>screen_size_changed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Screen sized changed?</p>
+</div><span id='structfield.stylist' class='structfield'>
+                           <span id='stylist.v' class='invisible'>
+                           <code>stylist: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/stylist/struct.Stylist.html' title='style::stylist::Stylist'>Stylist</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The CSS selector stylist.</p>
+</div><span id='structfield.goal' class='structfield'>
+                           <span id='goal.v' class='invisible'>
+                           <code>goal: <a class='enum' href='../../style/context/enum.ReflowGoal.html' title='style::context::ReflowGoal'>ReflowGoal</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Why is this reflow occurring</p>
+</div><span id='structfield.running_animations' class='structfield'>
+                           <span id='running_animations.v' class='invisible'>
+                           <code>running_animations: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;<a class='struct' href='../../style/dom/struct.OpaqueNode.html' title='style::dom::OpaqueNode'>OpaqueNode</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='enum' href='../../style/animation/enum.Animation.html' title='style::animation::Animation'>Animation</a>&gt;&gt;&gt;&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The animations that are currently running.</p>
+</div><span id='structfield.expired_animations' class='structfield'>
+                           <span id='expired_animations.v' class='invisible'>
+                           <code>expired_animations: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;<a class='struct' href='../../style/dom/struct.OpaqueNode.html' title='style::dom::OpaqueNode'>OpaqueNode</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='enum' href='../../style/animation/enum.Animation.html' title='style::animation::Animation'>Animation</a>&gt;&gt;&gt;&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The list of animations that have expired since the last style recalculation.</p>
+</div><span id='structfield.error_reporter' class='structfield'>
+                           <span id='error_reporter.v' class='invisible'>
+                           <code>error_reporter: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='../../style/error_reporting/trait.ParseErrorReporter.html' title='style::error_reporting::ParseErrorReporter'>ParseErrorReporter</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html' title='core::marker::Sync'>Sync</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The CSS error reporter for all CSS loaded in this layout thread</p>
+</div><span id='structfield.local_context_creation_data' class='structfield'>
+                           <span id='local_context_creation_data.v' class='invisible'>
+                           <code>local_context_creation_data: <a class='struct' href='https://doc.rust-lang.org/nightly/std/sync/mutex/struct.Mutex.html' title='std::sync::mutex::Mutex'>Mutex</a>&lt;<a class='struct' href='../../style/context/struct.ThreadLocalStyleContextCreationInfo.html' title='style::context::ThreadLocalStyleContextCreationInfo'>ThreadLocalStyleContextCreationInfo</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Data needed to create the thread-local style context from the shared one.</p>
+</div><span id='structfield.timer' class='structfield'>
+                           <span id='timer.v' class='invisible'>
+                           <code>timer: <a class='struct' href='../../style/timer/struct.Timer.html' title='style::timer::Timer'>Timer</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The current timer for transitions and animations. This is needed to test
+them.</p>
+</div><span id='structfield.quirks_mode' class='structfield'>
+                           <span id='quirks_mode.v' class='invisible'>
+                           <code>quirks_mode: <a class='enum' href='../../style/context/enum.QuirksMode.html' title='style::context::QuirksMode'>QuirksMode</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The QuirksMode state which the document needs to be rendered with</p>
+</div><span id='structfield.default_computed_values' class='structfield'>
+                           <span id='default_computed_values.v' class='invisible'>
+                           <code>default_computed_values: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/gecko_properties/struct.ComputedValues.html' title='style::gecko_properties::ComputedValues'>ComputedValues</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The default computed values to use for elements with no rules
+applying to them.</p>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

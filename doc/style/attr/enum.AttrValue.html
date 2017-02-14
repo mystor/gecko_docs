@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `AttrValue` enum in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, AttrValue">
+
+    <title>style::attr::AttrValue - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>style</a>::<wbr><a href='index.html'>attr</a></p><script>window.sidebarCurrent = {name: 'AttrValue', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../index.html'>style</a>::<wbr><a href='index.html'>attr</a>::<wbr><a class='enum' href=''>AttrValue</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/style/attr.rs.html#38-65' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'>pub enum AttrValue {
+    String(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>),
+    TokenList(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>&gt;),
+    UInt(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>),
+    Int(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>),
+    Double(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>),
+    Atom(<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>),
+    Length(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../../style/values/specified/length/enum.Length.html' title='style::values::specified::length::Length'>Length</a>&gt;),
+    Color(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../style/values/struct.RGBA.html' title='style::values::RGBA'>RGBA</a>&gt;),
+    Dimension(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='enum' href='../../style/attr/enum.LengthOrPercentageOrAuto.html' title='style::attr::LengthOrPercentageOrAuto'>LengthOrPercentageOrAuto</a>),
+    Url(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../servo_url/struct.ServoUrl.html' title='servo_url::ServoUrl'>ServoUrl</a>&gt;),
+    Declaration(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='../../style/properties/declaration_block/struct.PropertyDeclarationBlock.html' title='style::properties::declaration_block::PropertyDeclarationBlock'>PropertyDeclarationBlock</a>&gt;&gt;),
+}</pre><h2 class='variants'>Variants</h2>
+<span id='variant.String' class='variant'><span id='String.v' class='invisible'><code>String(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>)</code></span></span><span id='variant.TokenList' class='variant'><span id='TokenList.v' class='invisible'><code>TokenList(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>&gt;)</code></span></span><span id='variant.UInt' class='variant'><span id='UInt.v' class='invisible'><code>UInt(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>)</code></span></span><span id='variant.Int' class='variant'><span id='Int.v' class='invisible'><code>Int(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>)</code></span></span><span id='variant.Double' class='variant'><span id='Double.v' class='invisible'><code>Double(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>)</code></span></span><span id='variant.Atom' class='variant'><span id='Atom.v' class='invisible'><code>Atom(<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>)</code></span></span><span id='variant.Length' class='variant'><span id='Length.v' class='invisible'><code>Length(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='enum' href='../../style/values/specified/length/enum.Length.html' title='style::values::specified::length::Length'>Length</a>&gt;)</code></span></span><span id='variant.Color' class='variant'><span id='Color.v' class='invisible'><code>Color(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../style/values/struct.RGBA.html' title='style::values::RGBA'>RGBA</a>&gt;)</code></span></span><span id='variant.Dimension' class='variant'><span id='Dimension.v' class='invisible'><code>Dimension(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='enum' href='../../style/attr/enum.LengthOrPercentageOrAuto.html' title='style::attr::LengthOrPercentageOrAuto'>LengthOrPercentageOrAuto</a>)</code></span></span><span id='variant.Url' class='variant'><span id='Url.v' class='invisible'><code>Url(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../servo_url/struct.ServoUrl.html' title='servo_url::ServoUrl'>ServoUrl</a>&gt;)</code></span></span><span id='variant.Declaration' class='variant'><span id='Declaration.v' class='invisible'><code>Declaration(<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>,&nbsp;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='../../style/properties/declaration_block/struct.PropertyDeclarationBlock.html' title='style::properties::declaration_block::PropertyDeclarationBlock'>PropertyDeclarationBlock</a>&gt;&gt;)</code></span></span><div class='docblock'><p>Note that this variant is only used transitively as a fast path to set
+the property declaration block relevant to the style of an element when
+set from the inline declaration of that element (that is,
+<code>element.style</code>).</p>
+
+<p>This can, as of this writing, only correspond to the value of the
+<code>style</code> element, and is set from its relevant CSSInlineStyleDeclaration,
+and then converted to a string in Element::attribute_mutated.</p>
+
+<p>Note that we don&#39;t necessarily need to do that (we could just clone the
+declaration block), but that avoids keeping a refcounted
+declarationblock for longer than needed.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='enum' href='../../style/attr/enum.AttrValue.html' title='style::attr::AttrValue'>AttrValue</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/attr.rs.html#148-336' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from_serialized_tokenlist' class='method'><span id='from_serialized_tokenlist.v' class='invisible'><code>fn <a href='#method.from_serialized_tokenlist' class='fnname'>from_serialized_tokenlist</a>(tokens: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='enum' href='../../style/attr/enum.AttrValue.html' title='style::attr::AttrValue'>AttrValue</a></code></span></h4>
+<h4 id='method.from_comma_separated_tokenlist' class='method'><span id='from_comma_separated_tokenlist.v' class='invisible'><code>fn <a href='#method.from_comma_separated_tokenlist' class='fnname'>from_comma_separated_tokenlist</a>(tokens: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='enum' href='../../style/attr/enum.AttrValue.html' title='style::attr::AttrValue'>AttrValue</a></code></span></h4>
+<h4 id='method.from_u32' class='method'><span id='from_u32.v' class='invisible'><code>fn <a href='#method.from_u32' class='fnname'>from_u32</a>(string: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, default: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='enum' href='../../style/attr/enum.AttrValue.html' title='style::attr::AttrValue'>AttrValue</a></code></span></h4>
+<h4 id='method.from_i32' class='method'><span id='from_i32.v' class='invisible'><code>fn <a href='#method.from_i32' class='fnname'>from_i32</a>(string: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, default: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>) -&gt; <a class='enum' href='../../style/attr/enum.AttrValue.html' title='style::attr::AttrValue'>AttrValue</a></code></span></h4>
+<h4 id='method.from_double' class='method'><span id='from_double.v' class='invisible'><code>fn <a href='#method.from_double' class='fnname'>from_double</a>(string: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, default: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f64.html'>f64</a>) -&gt; <a class='enum' href='../../style/attr/enum.AttrValue.html' title='style::attr::AttrValue'>AttrValue</a></code></span></h4>
+<h4 id='method.from_limited_i32' class='method'><span id='from_limited_i32.v' class='invisible'><code>fn <a href='#method.from_limited_i32' class='fnname'>from_limited_i32</a>(string: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, default: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>) -&gt; <a class='enum' href='../../style/attr/enum.AttrValue.html' title='style::attr::AttrValue'>AttrValue</a></code></span></h4>
+<h4 id='method.from_limited_u32' class='method'><span id='from_limited_u32.v' class='invisible'><code>fn <a href='#method.from_limited_u32' class='fnname'>from_limited_u32</a>(string: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>, default: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>) -&gt; <a class='enum' href='../../style/attr/enum.AttrValue.html' title='style::attr::AttrValue'>AttrValue</a></code></span></h4>
+<h4 id='method.from_atomic' class='method'><span id='from_atomic.v' class='invisible'><code>fn <a href='#method.from_atomic' class='fnname'>from_atomic</a>(string: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='enum' href='../../style/attr/enum.AttrValue.html' title='style::attr::AttrValue'>AttrValue</a></code></span></h4>
+<h4 id='method.from_url' class='method'><span id='from_url.v' class='invisible'><code>fn <a href='#method.from_url' class='fnname'>from_url</a>(base: <a class='struct' href='../../servo_url/struct.ServoUrl.html' title='servo_url::ServoUrl'>ServoUrl</a>, url: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='enum' href='../../style/attr/enum.AttrValue.html' title='style::attr::AttrValue'>AttrValue</a></code></span></h4>
+<h4 id='method.from_legacy_color' class='method'><span id='from_legacy_color.v' class='invisible'><code>fn <a href='#method.from_legacy_color' class='fnname'>from_legacy_color</a>(string: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='enum' href='../../style/attr/enum.AttrValue.html' title='style::attr::AttrValue'>AttrValue</a></code></span></h4>
+<h4 id='method.from_dimension' class='method'><span id='from_dimension.v' class='invisible'><code>fn <a href='#method.from_dimension' class='fnname'>from_dimension</a>(string: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='enum' href='../../style/attr/enum.AttrValue.html' title='style::attr::AttrValue'>AttrValue</a></code></span></h4>
+<h4 id='method.from_nonzero_dimension' class='method'><span id='from_nonzero_dimension.v' class='invisible'><code>fn <a href='#method.from_nonzero_dimension' class='fnname'>from_nonzero_dimension</a>(string: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='enum' href='../../style/attr/enum.AttrValue.html' title='style::attr::AttrValue'>AttrValue</a></code></span></h4>
+<h4 id='method.as_tokens' class='method'><span id='as_tokens.v' class='invisible'><code>fn <a href='#method.as_tokens' class='fnname'>as_tokens</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a></code></span></h4>
+<div class='docblock'><p>Assumes the <code>AttrValue</code> is a <code>TokenList</code> and returns its tokens</p>
+
+<h2 id='panics' class='section-header'><a href='#panics'>Panics</a></h2>
+<p>Panics if the <code>AttrValue</code> is not a <code>TokenList</code></p>
+</div><h4 id='method.as_atom' class='method'><span id='as_atom.v' class='invisible'><code>fn <a href='#method.as_atom' class='fnname'>as_atom</a>(&amp;self) -&gt; &amp;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a></code></span></h4>
+<div class='docblock'><p>Assumes the <code>AttrValue</code> is an <code>Atom</code> and returns its value</p>
+
+<h2 id='panics-1' class='section-header'><a href='#panics-1'>Panics</a></h2>
+<p>Panics if the <code>AttrValue</code> is not an <code>Atom</code></p>
+</div><h4 id='method.as_color' class='method'><span id='as_color.v' class='invisible'><code>fn <a href='#method.as_color' class='fnname'>as_color</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../style/values/struct.RGBA.html' title='style::values::RGBA'>RGBA</a>&gt;</code></span></h4>
+<div class='docblock'><p>Assumes the <code>AttrValue</code> is a <code>Color</code> and returns its value</p>
+
+<h2 id='panics-2' class='section-header'><a href='#panics-2'>Panics</a></h2>
+<p>Panics if the <code>AttrValue</code> is not a <code>Color</code></p>
+</div><h4 id='method.as_length' class='method'><span id='as_length.v' class='invisible'><code>fn <a href='#method.as_length' class='fnname'>as_length</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='enum' href='../../style/values/specified/length/enum.Length.html' title='style::values::specified::length::Length'>Length</a>&gt;</code></span></h4>
+<div class='docblock'><p>Assumes the <code>AttrValue</code> is a <code>Length</code> and returns its value</p>
+
+<h2 id='panics-3' class='section-header'><a href='#panics-3'>Panics</a></h2>
+<p>Panics if the <code>AttrValue</code> is not a <code>Length</code></p>
+</div><h4 id='method.as_dimension' class='method'><span id='as_dimension.v' class='invisible'><code>fn <a href='#method.as_dimension' class='fnname'>as_dimension</a>(&amp;self) -&gt; &amp;<a class='enum' href='../../style/attr/enum.LengthOrPercentageOrAuto.html' title='style::attr::LengthOrPercentageOrAuto'>LengthOrPercentageOrAuto</a></code></span></h4>
+<div class='docblock'><p>Assumes the <code>AttrValue</code> is a <code>Dimension</code> and returns its value</p>
+
+<h2 id='panics-4' class='section-header'><a href='#panics-4'>Panics</a></h2>
+<p>Panics if the <code>AttrValue</code> is not a <code>Dimension</code></p>
+</div><h4 id='method.as_url' class='method'><span id='as_url.v' class='invisible'><code>fn <a href='#method.as_url' class='fnname'>as_url</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../servo_url/struct.ServoUrl.html' title='servo_url::ServoUrl'>ServoUrl</a>&gt;</code></span></h4>
+<div class='docblock'><p>Assumes the <code>AttrValue</code> is a <code>Url</code> and returns its value</p>
+
+<h2 id='panics-5' class='section-header'><a href='#panics-5'>Panics</a></h2>
+<p>Panics if the <code>AttrValue</code> is not a <code>Url</code></p>
+</div><h4 id='method.as_uint' class='method'><span id='as_uint.v' class='invisible'><code>fn <a href='#method.as_uint' class='fnname'>as_uint</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code></span></h4>
+<div class='docblock'><p>Return the AttrValue as its integer representation, if any.
+This corresponds to attribute values returned as <code>AttrValue::UInt(_)</code>
+by <code>VirtualMethods::parse_plain_attribute()</code>.</p>
+
+<h2 id='panics-6' class='section-header'><a href='#panics-6'>Panics</a></h2>
+<p>Panics if the <code>AttrValue</code> is not a <code>UInt</code></p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../style/attr/enum.AttrValue.html' title='style::attr::AttrValue'>AttrValue</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/attr.rs.html#36' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../style/attr/enum.AttrValue.html' title='style::attr::AttrValue'>AttrValue</a></code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../style/attr/enum.AttrValue.html' title='style::attr::AttrValue'>AttrValue</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/attr.rs.html#36' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["CHUNK_SIZE","The chunk size used to split the parallel traversal nodes."]],"fn":[["traverse_dom","A parallel top down traversal, generic over `D`."]]});

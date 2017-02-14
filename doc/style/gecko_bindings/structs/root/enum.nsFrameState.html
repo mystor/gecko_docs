@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsFrameState` enum in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsFrameState">
+
+    <title>style::gecko_bindings::structs::root::nsFrameState - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>structs</a>::<wbr><a href='index.html'>root</a></p><script>window.sidebarCurrent = {name: 'nsFrameState', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>structs</a>::<wbr><a href='index.html'>root</a>::<wbr><a class='enum' href=''>nsFrameState</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#16588-16650' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'><div class="docblock attributes">#[repr(u64)]
+</div>pub enum nsFrameState {
+    NS_FRAME_IN_REFLOW,
+    NS_FRAME_FIRST_REFLOW,
+    NS_FRAME_IS_FLUID_CONTINUATION,
+    NS_FRAME_ANONYMOUSCONTENTCREATOR_CONTENT,
+    NS_FRAME_EXTERNAL_REFERENCE,
+    NS_FRAME_CONTAINS_RELATIVE_BSIZE,
+    NS_FRAME_GENERATED_CONTENT,
+    NS_FRAME_IS_OVERFLOW_CONTAINER,
+    NS_FRAME_OUT_OF_FLOW,
+    NS_FRAME_CAN_HAVE_ABSPOS_CHILDREN,
+    NS_FRAME_IS_DIRTY,
+    NS_FRAME_TOO_DEEP_IN_FRAME_TREE,
+    NS_FRAME_HAS_DIRTY_CHILDREN,
+    NS_FRAME_HAS_VIEW,
+    NS_FRAME_INDEPENDENT_SELECTION,
+    NS_FRAME_PART_OF_IBSPLIT,
+    NS_FRAME_MAY_BE_TRANSFORMED,
+    NS_FRAME_IS_BIDI,
+    NS_FRAME_HAS_CHILD_WITH_VIEW,
+    NS_FRAME_REFLOW_ROOT,
+    NS_FRAME_IS_PUSHED_FLOAT,
+    NS_FRAME_DRAWING_AS_PAINTSERVER,
+    NS_FRAME_DESCENDANT_INTRINSIC_ISIZE_DEPENDS_ON_BSIZE,
+    NS_FRAME_SIMPLE_EVENT_REGIONS,
+    NS_FRAME_UPDATE_LAYER_TREE,
+    NS_FRAME_HAS_ABSPOS_CHILDREN,
+    NS_FRAME_PAINTED_THEBES,
+    NS_FRAME_IN_CONSTRAINED_BSIZE,
+    NS_FRAME_FORCE_DISPLAY_LIST_DESCEND_INTO,
+    NS_FRAME_FONT_INFLATION_CONTAINER,
+    NS_FRAME_FONT_INFLATION_FLOW_ROOT,
+    NS_FRAME_SVG_LAYOUT,
+    NS_FRAME_MAY_HAVE_GENERATED_CONTENT,
+    NS_FRAME_NO_COMPONENT_ALPHA,
+    NS_FRAME_VISIBILITY_IS_TRACKED,
+    NS_FRAME_IS_SVG_TEXT,
+    NS_FRAME_NEEDS_PAINT,
+    NS_FRAME_DESCENDANT_NEEDS_PAINT,
+    NS_FRAME_IN_POPUP,
+    NS_FRAME_ALL_DESCENDANTS_NEED_PAINT,
+    NS_FRAME_HAS_INVALID_RECT,
+    NS_FRAME_IS_NONDISPLAY,
+    NS_FRAME_HAS_LAYER_ACTIVITY_PROPERTY,
+    NS_FRAME_MATHML_SCRIPT_DESCENDANT,
+    NS_FRAME_IS_IN_SINGLE_CHAR_MI,
+    NS_STATE_BOX_CHILD_RESERVED,
+    NS_STATE_STACK_NOT_POSITIONED,
+    NS_STATE_IS_HORIZONTAL,
+    NS_STATE_AUTO_STRETCH,
+    NS_STATE_IS_ROOT,
+    NS_STATE_CURRENTLY_IN_DEBUG,
+    NS_STATE_SET_TO_DEBUG,
+    NS_STATE_DEBUG_WAS_SET,
+    NS_STATE_MENU_HAS_POPUP_LIST,
+    NS_STATE_BOX_WRAPS_KIDS_IN_BLOCK,
+    NS_STATE_EQUAL_SIZE,
+    NS_STATE_IS_DIRECTION_NORMAL,
+    NS_FRAME_MOUSE_THROUGH_ALWAYS,
+    NS_FRAME_MOUSE_THROUGH_NEVER,
+    TEXT_NO_RENDERED_GLYPHS,
+    TEXT_IN_OFFSET_CACHE,
+}</pre><h2 class='variants'>Variants</h2>
+<span id='variant.NS_FRAME_IN_REFLOW' class='variant'><span id='NS_FRAME_IN_REFLOW.v' class='invisible'><code>NS_FRAME_IN_REFLOW</code></span></span><span id='variant.NS_FRAME_FIRST_REFLOW' class='variant'><span id='NS_FRAME_FIRST_REFLOW.v' class='invisible'><code>NS_FRAME_FIRST_REFLOW</code></span></span><span id='variant.NS_FRAME_IS_FLUID_CONTINUATION' class='variant'><span id='NS_FRAME_IS_FLUID_CONTINUATION.v' class='invisible'><code>NS_FRAME_IS_FLUID_CONTINUATION</code></span></span><span id='variant.NS_FRAME_ANONYMOUSCONTENTCREATOR_CONTENT' class='variant'><span id='NS_FRAME_ANONYMOUSCONTENTCREATOR_CONTENT.v' class='invisible'><code>NS_FRAME_ANONYMOUSCONTENTCREATOR_CONTENT</code></span></span><span id='variant.NS_FRAME_EXTERNAL_REFERENCE' class='variant'><span id='NS_FRAME_EXTERNAL_REFERENCE.v' class='invisible'><code>NS_FRAME_EXTERNAL_REFERENCE</code></span></span><span id='variant.NS_FRAME_CONTAINS_RELATIVE_BSIZE' class='variant'><span id='NS_FRAME_CONTAINS_RELATIVE_BSIZE.v' class='invisible'><code>NS_FRAME_CONTAINS_RELATIVE_BSIZE</code></span></span><span id='variant.NS_FRAME_GENERATED_CONTENT' class='variant'><span id='NS_FRAME_GENERATED_CONTENT.v' class='invisible'><code>NS_FRAME_GENERATED_CONTENT</code></span></span><span id='variant.NS_FRAME_IS_OVERFLOW_CONTAINER' class='variant'><span id='NS_FRAME_IS_OVERFLOW_CONTAINER.v' class='invisible'><code>NS_FRAME_IS_OVERFLOW_CONTAINER</code></span></span><span id='variant.NS_FRAME_OUT_OF_FLOW' class='variant'><span id='NS_FRAME_OUT_OF_FLOW.v' class='invisible'><code>NS_FRAME_OUT_OF_FLOW</code></span></span><span id='variant.NS_FRAME_CAN_HAVE_ABSPOS_CHILDREN' class='variant'><span id='NS_FRAME_CAN_HAVE_ABSPOS_CHILDREN.v' class='invisible'><code>NS_FRAME_CAN_HAVE_ABSPOS_CHILDREN</code></span></span><span id='variant.NS_FRAME_IS_DIRTY' class='variant'><span id='NS_FRAME_IS_DIRTY.v' class='invisible'><code>NS_FRAME_IS_DIRTY</code></span></span><span id='variant.NS_FRAME_TOO_DEEP_IN_FRAME_TREE' class='variant'><span id='NS_FRAME_TOO_DEEP_IN_FRAME_TREE.v' class='invisible'><code>NS_FRAME_TOO_DEEP_IN_FRAME_TREE</code></span></span><span id='variant.NS_FRAME_HAS_DIRTY_CHILDREN' class='variant'><span id='NS_FRAME_HAS_DIRTY_CHILDREN.v' class='invisible'><code>NS_FRAME_HAS_DIRTY_CHILDREN</code></span></span><span id='variant.NS_FRAME_HAS_VIEW' class='variant'><span id='NS_FRAME_HAS_VIEW.v' class='invisible'><code>NS_FRAME_HAS_VIEW</code></span></span><span id='variant.NS_FRAME_INDEPENDENT_SELECTION' class='variant'><span id='NS_FRAME_INDEPENDENT_SELECTION.v' class='invisible'><code>NS_FRAME_INDEPENDENT_SELECTION</code></span></span><span id='variant.NS_FRAME_PART_OF_IBSPLIT' class='variant'><span id='NS_FRAME_PART_OF_IBSPLIT.v' class='invisible'><code>NS_FRAME_PART_OF_IBSPLIT</code></span></span><span id='variant.NS_FRAME_MAY_BE_TRANSFORMED' class='variant'><span id='NS_FRAME_MAY_BE_TRANSFORMED.v' class='invisible'><code>NS_FRAME_MAY_BE_TRANSFORMED</code></span></span><span id='variant.NS_FRAME_IS_BIDI' class='variant'><span id='NS_FRAME_IS_BIDI.v' class='invisible'><code>NS_FRAME_IS_BIDI</code></span></span><span id='variant.NS_FRAME_HAS_CHILD_WITH_VIEW' class='variant'><span id='NS_FRAME_HAS_CHILD_WITH_VIEW.v' class='invisible'><code>NS_FRAME_HAS_CHILD_WITH_VIEW</code></span></span><span id='variant.NS_FRAME_REFLOW_ROOT' class='variant'><span id='NS_FRAME_REFLOW_ROOT.v' class='invisible'><code>NS_FRAME_REFLOW_ROOT</code></span></span><span id='variant.NS_FRAME_IS_PUSHED_FLOAT' class='variant'><span id='NS_FRAME_IS_PUSHED_FLOAT.v' class='invisible'><code>NS_FRAME_IS_PUSHED_FLOAT</code></span></span><span id='variant.NS_FRAME_DRAWING_AS_PAINTSERVER' class='variant'><span id='NS_FRAME_DRAWING_AS_PAINTSERVER.v' class='invisible'><code>NS_FRAME_DRAWING_AS_PAINTSERVER</code></span></span><span id='variant.NS_FRAME_DESCENDANT_INTRINSIC_ISIZE_DEPENDS_ON_BSIZE' class='variant'><span id='NS_FRAME_DESCENDANT_INTRINSIC_ISIZE_DEPENDS_ON_BSIZE.v' class='invisible'><code>NS_FRAME_DESCENDANT_INTRINSIC_ISIZE_DEPENDS_ON_BSIZE</code></span></span><span id='variant.NS_FRAME_SIMPLE_EVENT_REGIONS' class='variant'><span id='NS_FRAME_SIMPLE_EVENT_REGIONS.v' class='invisible'><code>NS_FRAME_SIMPLE_EVENT_REGIONS</code></span></span><span id='variant.NS_FRAME_UPDATE_LAYER_TREE' class='variant'><span id='NS_FRAME_UPDATE_LAYER_TREE.v' class='invisible'><code>NS_FRAME_UPDATE_LAYER_TREE</code></span></span><span id='variant.NS_FRAME_HAS_ABSPOS_CHILDREN' class='variant'><span id='NS_FRAME_HAS_ABSPOS_CHILDREN.v' class='invisible'><code>NS_FRAME_HAS_ABSPOS_CHILDREN</code></span></span><span id='variant.NS_FRAME_PAINTED_THEBES' class='variant'><span id='NS_FRAME_PAINTED_THEBES.v' class='invisible'><code>NS_FRAME_PAINTED_THEBES</code></span></span><span id='variant.NS_FRAME_IN_CONSTRAINED_BSIZE' class='variant'><span id='NS_FRAME_IN_CONSTRAINED_BSIZE.v' class='invisible'><code>NS_FRAME_IN_CONSTRAINED_BSIZE</code></span></span><span id='variant.NS_FRAME_FORCE_DISPLAY_LIST_DESCEND_INTO' class='variant'><span id='NS_FRAME_FORCE_DISPLAY_LIST_DESCEND_INTO.v' class='invisible'><code>NS_FRAME_FORCE_DISPLAY_LIST_DESCEND_INTO</code></span></span><span id='variant.NS_FRAME_FONT_INFLATION_CONTAINER' class='variant'><span id='NS_FRAME_FONT_INFLATION_CONTAINER.v' class='invisible'><code>NS_FRAME_FONT_INFLATION_CONTAINER</code></span></span><span id='variant.NS_FRAME_FONT_INFLATION_FLOW_ROOT' class='variant'><span id='NS_FRAME_FONT_INFLATION_FLOW_ROOT.v' class='invisible'><code>NS_FRAME_FONT_INFLATION_FLOW_ROOT</code></span></span><span id='variant.NS_FRAME_SVG_LAYOUT' class='variant'><span id='NS_FRAME_SVG_LAYOUT.v' class='invisible'><code>NS_FRAME_SVG_LAYOUT</code></span></span><span id='variant.NS_FRAME_MAY_HAVE_GENERATED_CONTENT' class='variant'><span id='NS_FRAME_MAY_HAVE_GENERATED_CONTENT.v' class='invisible'><code>NS_FRAME_MAY_HAVE_GENERATED_CONTENT</code></span></span><span id='variant.NS_FRAME_NO_COMPONENT_ALPHA' class='variant'><span id='NS_FRAME_NO_COMPONENT_ALPHA.v' class='invisible'><code>NS_FRAME_NO_COMPONENT_ALPHA</code></span></span><span id='variant.NS_FRAME_VISIBILITY_IS_TRACKED' class='variant'><span id='NS_FRAME_VISIBILITY_IS_TRACKED.v' class='invisible'><code>NS_FRAME_VISIBILITY_IS_TRACKED</code></span></span><span id='variant.NS_FRAME_IS_SVG_TEXT' class='variant'><span id='NS_FRAME_IS_SVG_TEXT.v' class='invisible'><code>NS_FRAME_IS_SVG_TEXT</code></span></span><span id='variant.NS_FRAME_NEEDS_PAINT' class='variant'><span id='NS_FRAME_NEEDS_PAINT.v' class='invisible'><code>NS_FRAME_NEEDS_PAINT</code></span></span><span id='variant.NS_FRAME_DESCENDANT_NEEDS_PAINT' class='variant'><span id='NS_FRAME_DESCENDANT_NEEDS_PAINT.v' class='invisible'><code>NS_FRAME_DESCENDANT_NEEDS_PAINT</code></span></span><span id='variant.NS_FRAME_IN_POPUP' class='variant'><span id='NS_FRAME_IN_POPUP.v' class='invisible'><code>NS_FRAME_IN_POPUP</code></span></span><span id='variant.NS_FRAME_ALL_DESCENDANTS_NEED_PAINT' class='variant'><span id='NS_FRAME_ALL_DESCENDANTS_NEED_PAINT.v' class='invisible'><code>NS_FRAME_ALL_DESCENDANTS_NEED_PAINT</code></span></span><span id='variant.NS_FRAME_HAS_INVALID_RECT' class='variant'><span id='NS_FRAME_HAS_INVALID_RECT.v' class='invisible'><code>NS_FRAME_HAS_INVALID_RECT</code></span></span><span id='variant.NS_FRAME_IS_NONDISPLAY' class='variant'><span id='NS_FRAME_IS_NONDISPLAY.v' class='invisible'><code>NS_FRAME_IS_NONDISPLAY</code></span></span><span id='variant.NS_FRAME_HAS_LAYER_ACTIVITY_PROPERTY' class='variant'><span id='NS_FRAME_HAS_LAYER_ACTIVITY_PROPERTY.v' class='invisible'><code>NS_FRAME_HAS_LAYER_ACTIVITY_PROPERTY</code></span></span><span id='variant.NS_FRAME_MATHML_SCRIPT_DESCENDANT' class='variant'><span id='NS_FRAME_MATHML_SCRIPT_DESCENDANT.v' class='invisible'><code>NS_FRAME_MATHML_SCRIPT_DESCENDANT</code></span></span><span id='variant.NS_FRAME_IS_IN_SINGLE_CHAR_MI' class='variant'><span id='NS_FRAME_IS_IN_SINGLE_CHAR_MI.v' class='invisible'><code>NS_FRAME_IS_IN_SINGLE_CHAR_MI</code></span></span><span id='variant.NS_STATE_BOX_CHILD_RESERVED' class='variant'><span id='NS_STATE_BOX_CHILD_RESERVED.v' class='invisible'><code>NS_STATE_BOX_CHILD_RESERVED</code></span></span><span id='variant.NS_STATE_STACK_NOT_POSITIONED' class='variant'><span id='NS_STATE_STACK_NOT_POSITIONED.v' class='invisible'><code>NS_STATE_STACK_NOT_POSITIONED</code></span></span><span id='variant.NS_STATE_IS_HORIZONTAL' class='variant'><span id='NS_STATE_IS_HORIZONTAL.v' class='invisible'><code>NS_STATE_IS_HORIZONTAL</code></span></span><span id='variant.NS_STATE_AUTO_STRETCH' class='variant'><span id='NS_STATE_AUTO_STRETCH.v' class='invisible'><code>NS_STATE_AUTO_STRETCH</code></span></span><span id='variant.NS_STATE_IS_ROOT' class='variant'><span id='NS_STATE_IS_ROOT.v' class='invisible'><code>NS_STATE_IS_ROOT</code></span></span><span id='variant.NS_STATE_CURRENTLY_IN_DEBUG' class='variant'><span id='NS_STATE_CURRENTLY_IN_DEBUG.v' class='invisible'><code>NS_STATE_CURRENTLY_IN_DEBUG</code></span></span><span id='variant.NS_STATE_SET_TO_DEBUG' class='variant'><span id='NS_STATE_SET_TO_DEBUG.v' class='invisible'><code>NS_STATE_SET_TO_DEBUG</code></span></span><span id='variant.NS_STATE_DEBUG_WAS_SET' class='variant'><span id='NS_STATE_DEBUG_WAS_SET.v' class='invisible'><code>NS_STATE_DEBUG_WAS_SET</code></span></span><span id='variant.NS_STATE_MENU_HAS_POPUP_LIST' class='variant'><span id='NS_STATE_MENU_HAS_POPUP_LIST.v' class='invisible'><code>NS_STATE_MENU_HAS_POPUP_LIST</code></span></span><span id='variant.NS_STATE_BOX_WRAPS_KIDS_IN_BLOCK' class='variant'><span id='NS_STATE_BOX_WRAPS_KIDS_IN_BLOCK.v' class='invisible'><code>NS_STATE_BOX_WRAPS_KIDS_IN_BLOCK</code></span></span><span id='variant.NS_STATE_EQUAL_SIZE' class='variant'><span id='NS_STATE_EQUAL_SIZE.v' class='invisible'><code>NS_STATE_EQUAL_SIZE</code></span></span><span id='variant.NS_STATE_IS_DIRECTION_NORMAL' class='variant'><span id='NS_STATE_IS_DIRECTION_NORMAL.v' class='invisible'><code>NS_STATE_IS_DIRECTION_NORMAL</code></span></span><span id='variant.NS_FRAME_MOUSE_THROUGH_ALWAYS' class='variant'><span id='NS_FRAME_MOUSE_THROUGH_ALWAYS.v' class='invisible'><code>NS_FRAME_MOUSE_THROUGH_ALWAYS</code></span></span><span id='variant.NS_FRAME_MOUSE_THROUGH_NEVER' class='variant'><span id='NS_FRAME_MOUSE_THROUGH_NEVER.v' class='invisible'><code>NS_FRAME_MOUSE_THROUGH_NEVER</code></span></span><span id='variant.TEXT_NO_RENDERED_GLYPHS' class='variant'><span id='TEXT_NO_RENDERED_GLYPHS.v' class='invisible'><code>TEXT_NO_RENDERED_GLYPHS</code></span></span><span id='variant.TEXT_IN_OFFSET_CACHE' class='variant'><span id='TEXT_IN_OFFSET_CACHE.v' class='invisible'><code>TEXT_IN_OFFSET_CACHE</code></span></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsFrameState.html' title='style::gecko_bindings::structs::root::nsFrameState'>nsFrameState</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#16587' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsFrameState.html' title='style::gecko_bindings::structs::root::nsFrameState'>nsFrameState</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#16587' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsFrameState.html' title='style::gecko_bindings::structs::root::nsFrameState'>nsFrameState</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#16587' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsFrameState.html' title='style::gecko_bindings::structs::root::nsFrameState'>nsFrameState</a></code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsFrameState.html' title='style::gecko_bindings::structs::root::nsFrameState'>nsFrameState</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#16587' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsFrameState.html' title='style::gecko_bindings::structs::root::nsFrameState'>nsFrameState</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsFrameState.html' title='style::gecko_bindings::structs::root::nsFrameState'>nsFrameState</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#16587' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html' title='core::hash::Hash'>Hash</a> for <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsFrameState.html' title='style::gecko_bindings::structs::root::nsFrameState'>nsFrameState</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#16587' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.hash' class='method'><span id='hash.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#tymethod.hash' class='fnname'>hash</a>&lt;__H:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a>&gt;(&amp;self, __arg_0: &amp;mut __H)</code></span></h4>
+<div class='docblock'><p>Feeds this value into the state given, updating the hasher as necessary.</p>
+</div><h4 id='method.hash_slice' class='method'><span id='hash_slice.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice' class='fnname'>hash_slice</a>&lt;H&gt;(data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[Self]</a>, state: &amp;mut H) <span class='where fmt-newline'>where H: <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a></span></code><div class='since' title='Stable since Rust version 1.3.0'>1.3.0</div></span></h4>
+<div class='docblock'><p>Feeds a slice of this type into the state provided.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["size2","Shorthand for TypedSize2D::new(w, h)."]],"struct":[["TypedSize2D",""]],"type":[["Size2D","Default 2d size type with no unit."]]});

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIDocument` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIDocument">
+
+    <title>style::gecko_bindings::structs::root::nsIDocument - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>structs</a>::<wbr><a href='index.html'>root</a></p><script>window.sidebarCurrent = {name: 'nsIDocument', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>structs</a>::<wbr><a href='index.html'>root</a>::<wbr><a class='struct' href=''>nsIDocument</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#8003-8105' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIDocument {
+    pub _base: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsINode.html' title='style::gecko_bindings::structs::root::nsINode'>nsINode</a>,
+    pub _base_1: <a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.DispatcherTrait.html' title='style::gecko_bindings::structs::root::mozilla::dom::DispatcherTrait'>DispatcherTrait</a>,
+    pub mDeprecationWarnedAbout: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub mDocWarningWarnedAbout: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub mSelectorCache: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIDocument_SelectorCache.html' title='style::gecko_bindings::structs::root::nsIDocument_SelectorCache'>nsIDocument_SelectorCache</a>,
+    pub mReferrer: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCString.html' title='style::gecko_bindings::structs::root::nsCString'>nsCString</a>,
+    pub mLastModified: <a class='struct' href='../../../../nsstring_vendor/struct.nsStringRepr.html' title='nsstring_vendor::nsStringRepr'>nsStringRepr</a>,
+    pub mDocumentURI: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIURI.html' title='style::gecko_bindings::structs::root::nsIURI'>nsIURI</a>&gt;,
+    pub mOriginalURI: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIURI.html' title='style::gecko_bindings::structs::root::nsIURI'>nsIURI</a>&gt;,
+    pub mChromeXHRDocURI: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIURI.html' title='style::gecko_bindings::structs::root::nsIURI'>nsIURI</a>&gt;,
+    pub mDocumentBaseURI: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIURI.html' title='style::gecko_bindings::structs::root::nsIURI'>nsIURI</a>&gt;,
+    pub mChromeXHRDocBaseURI: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIURI.html' title='style::gecko_bindings::structs::root::nsIURI'>nsIURI</a>&gt;,
+    pub mDocumentLoadGroup: <a class='type' href='../../../../style/gecko_bindings/structs/root/type.nsWeakPtr.html' title='style::gecko_bindings::structs::root::nsWeakPtr'>nsWeakPtr</a>,
+    pub mReferrerPolicySet: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub mReferrerPolicy: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/net/enum.ReferrerPolicy.html' title='style::gecko_bindings::structs::root::mozilla::net::ReferrerPolicy'>nsIDocument_ReferrerPolicyEnum</a>,
+    pub mBlockAllMixedContent: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub mBlockAllMixedContentPreloads: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub mUpgradeInsecureRequests: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub mUpgradeInsecurePreloads: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub mHSTSPrimingURIList: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 6]</a>,
+    pub mDocumentContainer: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub mCharacterSet: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCString.html' title='style::gecko_bindings::structs::root::nsCString'>nsCString</a>,
+    pub mCharacterSetSource: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    pub mParentDocument: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIDocument.html' title='style::gecko_bindings::structs::root::nsIDocument'>nsIDocument</a>,
+    pub mCachedRootElement: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.Element.html' title='style::gecko_bindings::structs::root::mozilla::dom::Element'>Element</a>,
+    pub mNodeInfoManager: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsNodeInfoManager.html' title='style::gecko_bindings::structs::root::nsNodeInfoManager'>nsNodeInfoManager</a>,
+    pub mCSSLoader: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.Loader.html' title='style::gecko_bindings::structs::root::mozilla::css::Loader'>Loader</a>&gt;,
+    pub mStyleImageLoader: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.ImageLoader.html' title='style::gecko_bindings::structs::root::mozilla::css::ImageLoader'>ImageLoader</a>&gt;,
+    pub mAttrStyleSheet: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsHTMLStyleSheet.html' title='style::gecko_bindings::structs::root::nsHTMLStyleSheet'>nsHTMLStyleSheet</a>&gt;,
+    pub mStyleAttrStyleSheet: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsHTMLCSSStyleSheet.html' title='style::gecko_bindings::structs::root::nsHTMLCSSStyleSheet'>nsHTMLCSSStyleSheet</a>&gt;,
+    pub mSVGAttrAnimationRuleProcessor: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.SVGAttrAnimationRuleProcessor.html' title='style::gecko_bindings::structs::root::mozilla::SVGAttrAnimationRuleProcessor'>SVGAttrAnimationRuleProcessor</a>&gt;,
+    pub mImageTracker: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.ImageTracker.html' title='style::gecko_bindings::structs::root::mozilla::dom::ImageTracker'>ImageTracker</a>&gt;,
+    pub mActivityObservers: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsAutoPtr.html' title='style::gecko_bindings::structs::root::nsAutoPtr'>nsAutoPtr</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;,
+    pub mLinksToUpdate: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 6]</a>,
+    pub mAnimationController: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsSMILAnimationController.html' title='style::gecko_bindings::structs::root::nsSMILAnimationController'>nsSMILAnimationController</a>&gt;,
+    pub mPropertyTable: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsPropertyTable.html' title='style::gecko_bindings::structs::root::nsPropertyTable'>nsPropertyTable</a>,
+    pub mExtraPropertyTables: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsTArray.html' title='style::gecko_bindings::structs::root::nsTArray'>nsTArray</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsAutoPtr.html' title='style::gecko_bindings::structs::root::nsAutoPtr'>nsAutoPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsPropertyTable.html' title='style::gecko_bindings::structs::root::nsPropertyTable'>nsPropertyTable</a>&gt;&gt;,
+    pub mChildrenCollection: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIHTMLCollection.html' title='style::gecko_bindings::structs::root::nsIHTMLCollection'>nsIHTMLCollection</a>&gt;,
+    pub mFontFaceSet: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.FontFaceSet.html' title='style::gecko_bindings::structs::root::mozilla::dom::FontFaceSet'>FontFaceSet</a>&gt;,
+    pub _bitfield_1: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a>,
+    pub mCompatMode: <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsCompatibility.html' title='style::gecko_bindings::structs::root::nsCompatibility'>nsCompatibility</a>,
+    pub mReadyState: <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsIDocument_ReadyState.html' title='style::gecko_bindings::structs::root::nsIDocument_ReadyState'>nsIDocument_ReadyState</a>,
+    pub mStyleBackendType: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleBackendType.html' title='style::gecko_bindings::structs::root::mozilla::StyleBackendType'>StyleBackendType</a>,
+    pub mVisibilityState: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/dom/enum.VisibilityState.html' title='style::gecko_bindings::structs::root::mozilla::dom::VisibilityState'>VisibilityState</a>,
+    pub mType: <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsIDocument_Type.html' title='style::gecko_bindings::structs::root::nsIDocument_Type'>nsIDocument_Type</a>,
+    pub mDefaultElementType: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mAllowXULXBL: <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsIDocument_Tri.html' title='style::gecko_bindings::structs::root::nsIDocument_Tri'>nsIDocument_Tri</a>,
+    pub mIsLinkUpdateRegistrationsForbidden: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub mScriptGlobalObject: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIScriptGlobalObject.html' title='style::gecko_bindings::structs::root::nsIScriptGlobalObject'>nsIScriptGlobalObject</a>&gt;,
+    pub mOriginalDocument: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIDocument.html' title='style::gecko_bindings::structs::root::nsIDocument'>nsIDocument</a>&gt;,
+    pub mBidiOptions: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mSandboxFlags: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mContentLanguage: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCString.html' title='style::gecko_bindings::structs::root::nsCString'>nsCString</a>,
+    pub mChannel: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIChannel.html' title='style::gecko_bindings::structs::root::nsIChannel'>nsIChannel</a>&gt;,
+    pub mContentType: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCString.html' title='style::gecko_bindings::structs::root::nsCString'>nsCString</a>,
+    pub mId: <a class='struct' href='../../../../nsstring_vendor/struct.nsStringRepr.html' title='nsstring_vendor::nsStringRepr'>nsStringRepr</a>,
+    pub mSecurityInfo: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsISupports.html' title='style::gecko_bindings::structs::root::nsISupports'>nsISupports</a>&gt;,
+    pub mFailedChannel: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIChannel.html' title='style::gecko_bindings::structs::root::nsIChannel'>nsIChannel</a>&gt;,
+    pub mPartID: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mMarkedCCGeneration: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mPresShell: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIPresShell.html' title='style::gecko_bindings::structs::root::nsIPresShell'>nsIPresShell</a>,
+    pub mSubtreeModifiedTargets: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMArray.html' title='style::gecko_bindings::structs::root::nsCOMArray'>nsCOMArray</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsINode.html' title='style::gecko_bindings::structs::root::nsINode'>nsINode</a>&gt;,
+    pub mSubtreeModifiedDepth: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mDisplayDocument: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIDocument.html' title='style::gecko_bindings::structs::root::nsIDocument'>nsIDocument</a>&gt;,
+    pub mEventsSuppressed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mAnimationsPaused: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mExternalScriptsBeingEvaluated: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mFrameRequestCallbackCounter: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    pub mStaticCloneCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mBlockedTrackingNodes: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsTArray.html' title='style::gecko_bindings::structs::root::nsTArray'>nsTArray</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIWeakReference.html' title='style::gecko_bindings::structs::root::nsIWeakReference'>nsIWeakReference</a>&gt;&gt;,
+    pub mWindow: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsPIDOMWindowInner.html' title='style::gecko_bindings::structs::root::nsPIDOMWindowInner'>nsPIDOMWindowInner</a>,
+    pub mCachedEncoder: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIDocumentEncoder.html' title='style::gecko_bindings::structs::root::nsIDocumentEncoder'>nsIDocumentEncoder</a>&gt;,
+    pub mFrameRequestCallbacks: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsTArray.html' title='style::gecko_bindings::structs::root::nsTArray'>nsTArray</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIDocument_FrameRequest.html' title='style::gecko_bindings::structs::root::nsIDocument_FrameRequest'>nsIDocument_FrameRequest</a>&gt;,
+    pub mBFCacheEntry: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIBFCacheEntry.html' title='style::gecko_bindings::structs::root::nsIBFCacheEntry'>nsIBFCacheEntry</a>,
+    pub mBaseTarget: <a class='struct' href='../../../../nsstring_vendor/struct.nsStringRepr.html' title='nsstring_vendor::nsStringRepr'>nsStringRepr</a>,
+    pub mStateObjectContainer: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIStructuredCloneContainer.html' title='style::gecko_bindings::structs::root::nsIStructuredCloneContainer'>nsIStructuredCloneContainer</a>&gt;,
+    pub mStateObjectCached: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIVariant.html' title='style::gecko_bindings::structs::root::nsIVariant'>nsIVariant</a>&gt;,
+    pub mInSyncOperationCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mXPathEvaluator: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.XPathEvaluator.html' title='style::gecko_bindings::structs::root::mozilla::dom::XPathEvaluator'>XPathEvaluator</a>&gt;,
+    pub mAnonymousContents: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsTArray.html' title='style::gecko_bindings::structs::root::nsTArray'>nsTArray</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.AnonymousContent.html' title='style::gecko_bindings::structs::root::mozilla::dom::AnonymousContent'>AnonymousContent</a>&gt;&gt;,
+    pub mBlockDOMContentLoaded: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub _bitfield_2: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mDOMMediaQueryLists: <a class='type' href='../../../../style/gecko_bindings/structs/root/type.PRCList.html' title='style::gecko_bindings::structs::root::PRCList'>PRCList</a>,
+    pub mUseCounters: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 2]</a>,
+    pub mChildDocumentUseCounters: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 2]</a>,
+    pub mNotifiedPageForUseCounter: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 2]</a>,
+    pub mUserHasInteracted: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub mPageUnloadingEventTimeStamp: <a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.TimeStamp.html' title='style::gecko_bindings::structs::root::mozilla::TimeStamp'>TimeStamp</a>,
+    pub mDocGroup: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.DocGroup.html' title='style::gecko_bindings::structs::root::mozilla::dom::DocGroup'>DocGroup</a>&gt;,
+    pub mTrackingScripts: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 6]</a>,
+}</pre><h2 class='fields'>Fields</h2><span id='structfield._base' class='structfield'>
+                           <span id='_base.v' class='invisible'>
+                           <code>_base: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsINode.html' title='style::gecko_bindings::structs::root::nsINode'>nsINode</a></code>
+                           </span></span><span class='stab '></span><span id='structfield._base_1' class='structfield'>
+                           <span id='_base_1.v' class='invisible'>
+                           <code>_base_1: <a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.DispatcherTrait.html' title='style::gecko_bindings::structs::root::mozilla::dom::DispatcherTrait'>DispatcherTrait</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mDeprecationWarnedAbout' class='structfield'>
+                           <span id='mDeprecationWarnedAbout.v' class='invisible'>
+                           <code>mDeprecationWarnedAbout: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mDocWarningWarnedAbout' class='structfield'>
+                           <span id='mDocWarningWarnedAbout.v' class='invisible'>
+                           <code>mDocWarningWarnedAbout: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mSelectorCache' class='structfield'>
+                           <span id='mSelectorCache.v' class='invisible'>
+                           <code>mSelectorCache: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIDocument_SelectorCache.html' title='style::gecko_bindings::structs::root::nsIDocument_SelectorCache'>nsIDocument_SelectorCache</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mReferrer' class='structfield'>
+                           <span id='mReferrer.v' class='invisible'>
+                           <code>mReferrer: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCString.html' title='style::gecko_bindings::structs::root::nsCString'>nsCString</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mLastModified' class='structfield'>
+                           <span id='mLastModified.v' class='invisible'>
+                           <code>mLastModified: <a class='struct' href='../../../../nsstring_vendor/struct.nsStringRepr.html' title='nsstring_vendor::nsStringRepr'>nsStringRepr</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mDocumentURI' class='structfield'>
+                           <span id='mDocumentURI.v' class='invisible'>
+                           <code>mDocumentURI: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIURI.html' title='style::gecko_bindings::structs::root::nsIURI'>nsIURI</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mOriginalURI' class='structfield'>
+                           <span id='mOriginalURI.v' class='invisible'>
+                           <code>mOriginalURI: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIURI.html' title='style::gecko_bindings::structs::root::nsIURI'>nsIURI</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mChromeXHRDocURI' class='structfield'>
+                           <span id='mChromeXHRDocURI.v' class='invisible'>
+                           <code>mChromeXHRDocURI: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIURI.html' title='style::gecko_bindings::structs::root::nsIURI'>nsIURI</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mDocumentBaseURI' class='structfield'>
+                           <span id='mDocumentBaseURI.v' class='invisible'>
+                           <code>mDocumentBaseURI: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIURI.html' title='style::gecko_bindings::structs::root::nsIURI'>nsIURI</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mChromeXHRDocBaseURI' class='structfield'>
+                           <span id='mChromeXHRDocBaseURI.v' class='invisible'>
+                           <code>mChromeXHRDocBaseURI: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIURI.html' title='style::gecko_bindings::structs::root::nsIURI'>nsIURI</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mDocumentLoadGroup' class='structfield'>
+                           <span id='mDocumentLoadGroup.v' class='invisible'>
+                           <code>mDocumentLoadGroup: <a class='type' href='../../../../style/gecko_bindings/structs/root/type.nsWeakPtr.html' title='style::gecko_bindings::structs::root::nsWeakPtr'>nsWeakPtr</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mReferrerPolicySet' class='structfield'>
+                           <span id='mReferrerPolicySet.v' class='invisible'>
+                           <code>mReferrerPolicySet: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mReferrerPolicy' class='structfield'>
+                           <span id='mReferrerPolicy.v' class='invisible'>
+                           <code>mReferrerPolicy: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/net/enum.ReferrerPolicy.html' title='style::gecko_bindings::structs::root::mozilla::net::ReferrerPolicy'>nsIDocument_ReferrerPolicyEnum</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mBlockAllMixedContent' class='structfield'>
+                           <span id='mBlockAllMixedContent.v' class='invisible'>
+                           <code>mBlockAllMixedContent: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mBlockAllMixedContentPreloads' class='structfield'>
+                           <span id='mBlockAllMixedContentPreloads.v' class='invisible'>
+                           <code>mBlockAllMixedContentPreloads: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mUpgradeInsecureRequests' class='structfield'>
+                           <span id='mUpgradeInsecureRequests.v' class='invisible'>
+                           <code>mUpgradeInsecureRequests: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mUpgradeInsecurePreloads' class='structfield'>
+                           <span id='mUpgradeInsecurePreloads.v' class='invisible'>
+                           <code>mUpgradeInsecurePreloads: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mHSTSPrimingURIList' class='structfield'>
+                           <span id='mHSTSPrimingURIList.v' class='invisible'>
+                           <code>mHSTSPrimingURIList: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 6]</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mDocumentContainer' class='structfield'>
+                           <span id='mDocumentContainer.v' class='invisible'>
+                           <code>mDocumentContainer: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mCharacterSet' class='structfield'>
+                           <span id='mCharacterSet.v' class='invisible'>
+                           <code>mCharacterSet: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCString.html' title='style::gecko_bindings::structs::root::nsCString'>nsCString</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mCharacterSetSource' class='structfield'>
+                           <span id='mCharacterSetSource.v' class='invisible'>
+                           <code>mCharacterSetSource: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mParentDocument' class='structfield'>
+                           <span id='mParentDocument.v' class='invisible'>
+                           <code>mParentDocument: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIDocument.html' title='style::gecko_bindings::structs::root::nsIDocument'>nsIDocument</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mCachedRootElement' class='structfield'>
+                           <span id='mCachedRootElement.v' class='invisible'>
+                           <code>mCachedRootElement: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.Element.html' title='style::gecko_bindings::structs::root::mozilla::dom::Element'>Element</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mNodeInfoManager' class='structfield'>
+                           <span id='mNodeInfoManager.v' class='invisible'>
+                           <code>mNodeInfoManager: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsNodeInfoManager.html' title='style::gecko_bindings::structs::root::nsNodeInfoManager'>nsNodeInfoManager</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mCSSLoader' class='structfield'>
+                           <span id='mCSSLoader.v' class='invisible'>
+                           <code>mCSSLoader: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.Loader.html' title='style::gecko_bindings::structs::root::mozilla::css::Loader'>Loader</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mStyleImageLoader' class='structfield'>
+                           <span id='mStyleImageLoader.v' class='invisible'>
+                           <code>mStyleImageLoader: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.ImageLoader.html' title='style::gecko_bindings::structs::root::mozilla::css::ImageLoader'>ImageLoader</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mAttrStyleSheet' class='structfield'>
+                           <span id='mAttrStyleSheet.v' class='invisible'>
+                           <code>mAttrStyleSheet: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsHTMLStyleSheet.html' title='style::gecko_bindings::structs::root::nsHTMLStyleSheet'>nsHTMLStyleSheet</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mStyleAttrStyleSheet' class='structfield'>
+                           <span id='mStyleAttrStyleSheet.v' class='invisible'>
+                           <code>mStyleAttrStyleSheet: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsHTMLCSSStyleSheet.html' title='style::gecko_bindings::structs::root::nsHTMLCSSStyleSheet'>nsHTMLCSSStyleSheet</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mSVGAttrAnimationRuleProcessor' class='structfield'>
+                           <span id='mSVGAttrAnimationRuleProcessor.v' class='invisible'>
+                           <code>mSVGAttrAnimationRuleProcessor: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.SVGAttrAnimationRuleProcessor.html' title='style::gecko_bindings::structs::root::mozilla::SVGAttrAnimationRuleProcessor'>SVGAttrAnimationRuleProcessor</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mImageTracker' class='structfield'>
+                           <span id='mImageTracker.v' class='invisible'>
+                           <code>mImageTracker: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.ImageTracker.html' title='style::gecko_bindings::structs::root::mozilla::dom::ImageTracker'>ImageTracker</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mActivityObservers' class='structfield'>
+                           <span id='mActivityObservers.v' class='invisible'>
+                           <code>mActivityObservers: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsAutoPtr.html' title='style::gecko_bindings::structs::root::nsAutoPtr'>nsAutoPtr</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mLinksToUpdate' class='structfield'>
+                           <span id='mLinksToUpdate.v' class='invisible'>
+                           <code>mLinksToUpdate: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 6]</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mAnimationController' class='structfield'>
+                           <span id='mAnimationController.v' class='invisible'>
+                           <code>mAnimationController: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsSMILAnimationController.html' title='style::gecko_bindings::structs::root::nsSMILAnimationController'>nsSMILAnimationController</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mPropertyTable' class='structfield'>
+                           <span id='mPropertyTable.v' class='invisible'>
+                           <code>mPropertyTable: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsPropertyTable.html' title='style::gecko_bindings::structs::root::nsPropertyTable'>nsPropertyTable</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mExtraPropertyTables' class='structfield'>
+                           <span id='mExtraPropertyTables.v' class='invisible'>
+                           <code>mExtraPropertyTables: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsTArray.html' title='style::gecko_bindings::structs::root::nsTArray'>nsTArray</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsAutoPtr.html' title='style::gecko_bindings::structs::root::nsAutoPtr'>nsAutoPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsPropertyTable.html' title='style::gecko_bindings::structs::root::nsPropertyTable'>nsPropertyTable</a>&gt;&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mChildrenCollection' class='structfield'>
+                           <span id='mChildrenCollection.v' class='invisible'>
+                           <code>mChildrenCollection: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIHTMLCollection.html' title='style::gecko_bindings::structs::root::nsIHTMLCollection'>nsIHTMLCollection</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mFontFaceSet' class='structfield'>
+                           <span id='mFontFaceSet.v' class='invisible'>
+                           <code>mFontFaceSet: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.FontFaceSet.html' title='style::gecko_bindings::structs::root::mozilla::dom::FontFaceSet'>FontFaceSet</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield._bitfield_1' class='structfield'>
+                           <span id='_bitfield_1.v' class='invisible'>
+                           <code>_bitfield_1: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mCompatMode' class='structfield'>
+                           <span id='mCompatMode.v' class='invisible'>
+                           <code>mCompatMode: <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsCompatibility.html' title='style::gecko_bindings::structs::root::nsCompatibility'>nsCompatibility</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mReadyState' class='structfield'>
+                           <span id='mReadyState.v' class='invisible'>
+                           <code>mReadyState: <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsIDocument_ReadyState.html' title='style::gecko_bindings::structs::root::nsIDocument_ReadyState'>nsIDocument_ReadyState</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mStyleBackendType' class='structfield'>
+                           <span id='mStyleBackendType.v' class='invisible'>
+                           <code>mStyleBackendType: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleBackendType.html' title='style::gecko_bindings::structs::root::mozilla::StyleBackendType'>StyleBackendType</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mVisibilityState' class='structfield'>
+                           <span id='mVisibilityState.v' class='invisible'>
+                           <code>mVisibilityState: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/dom/enum.VisibilityState.html' title='style::gecko_bindings::structs::root::mozilla::dom::VisibilityState'>VisibilityState</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mType' class='structfield'>
+                           <span id='mType.v' class='invisible'>
+                           <code>mType: <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsIDocument_Type.html' title='style::gecko_bindings::structs::root::nsIDocument_Type'>nsIDocument_Type</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mDefaultElementType' class='structfield'>
+                           <span id='mDefaultElementType.v' class='invisible'>
+                           <code>mDefaultElementType: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mAllowXULXBL' class='structfield'>
+                           <span id='mAllowXULXBL.v' class='invisible'>
+                           <code>mAllowXULXBL: <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsIDocument_Tri.html' title='style::gecko_bindings::structs::root::nsIDocument_Tri'>nsIDocument_Tri</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mIsLinkUpdateRegistrationsForbidden' class='structfield'>
+                           <span id='mIsLinkUpdateRegistrationsForbidden.v' class='invisible'>
+                           <code>mIsLinkUpdateRegistrationsForbidden: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>This is true while FlushPendingLinkUpdates executes.  Calls to
+[Un]RegisterPendingLinkUpdate will assert when this is true.</p>
+</div><span id='structfield.mScriptGlobalObject' class='structfield'>
+                           <span id='mScriptGlobalObject.v' class='invisible'>
+                           <code>mScriptGlobalObject: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIScriptGlobalObject.html' title='style::gecko_bindings::structs::root::nsIScriptGlobalObject'>nsIScriptGlobalObject</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mOriginalDocument' class='structfield'>
+                           <span id='mOriginalDocument.v' class='invisible'>
+                           <code>mOriginalDocument: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIDocument.html' title='style::gecko_bindings::structs::root::nsIDocument'>nsIDocument</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mBidiOptions' class='structfield'>
+                           <span id='mBidiOptions.v' class='invisible'>
+                           <code>mBidiOptions: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mSandboxFlags' class='structfield'>
+                           <span id='mSandboxFlags.v' class='invisible'>
+                           <code>mSandboxFlags: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mContentLanguage' class='structfield'>
+                           <span id='mContentLanguage.v' class='invisible'>
+                           <code>mContentLanguage: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCString.html' title='style::gecko_bindings::structs::root::nsCString'>nsCString</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mChannel' class='structfield'>
+                           <span id='mChannel.v' class='invisible'>
+                           <code>mChannel: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIChannel.html' title='style::gecko_bindings::structs::root::nsIChannel'>nsIChannel</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mContentType' class='structfield'>
+                           <span id='mContentType.v' class='invisible'>
+                           <code>mContentType: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCString.html' title='style::gecko_bindings::structs::root::nsCString'>nsCString</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mId' class='structfield'>
+                           <span id='mId.v' class='invisible'>
+                           <code>mId: <a class='struct' href='../../../../nsstring_vendor/struct.nsStringRepr.html' title='nsstring_vendor::nsStringRepr'>nsStringRepr</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mSecurityInfo' class='structfield'>
+                           <span id='mSecurityInfo.v' class='invisible'>
+                           <code>mSecurityInfo: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsISupports.html' title='style::gecko_bindings::structs::root::nsISupports'>nsISupports</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mFailedChannel' class='structfield'>
+                           <span id='mFailedChannel.v' class='invisible'>
+                           <code>mFailedChannel: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIChannel.html' title='style::gecko_bindings::structs::root::nsIChannel'>nsIChannel</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mPartID' class='structfield'>
+                           <span id='mPartID.v' class='invisible'>
+                           <code>mPartID: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mMarkedCCGeneration' class='structfield'>
+                           <span id='mMarkedCCGeneration.v' class='invisible'>
+                           <code>mMarkedCCGeneration: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mPresShell' class='structfield'>
+                           <span id='mPresShell.v' class='invisible'>
+                           <code>mPresShell: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIPresShell.html' title='style::gecko_bindings::structs::root::nsIPresShell'>nsIPresShell</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mSubtreeModifiedTargets' class='structfield'>
+                           <span id='mSubtreeModifiedTargets.v' class='invisible'>
+                           <code>mSubtreeModifiedTargets: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMArray.html' title='style::gecko_bindings::structs::root::nsCOMArray'>nsCOMArray</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsINode.html' title='style::gecko_bindings::structs::root::nsINode'>nsINode</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mSubtreeModifiedDepth' class='structfield'>
+                           <span id='mSubtreeModifiedDepth.v' class='invisible'>
+                           <code>mSubtreeModifiedDepth: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mDisplayDocument' class='structfield'>
+                           <span id='mDisplayDocument.v' class='invisible'>
+                           <code>mDisplayDocument: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIDocument.html' title='style::gecko_bindings::structs::root::nsIDocument'>nsIDocument</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mEventsSuppressed' class='structfield'>
+                           <span id='mEventsSuppressed.v' class='invisible'>
+                           <code>mEventsSuppressed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mAnimationsPaused' class='structfield'>
+                           <span id='mAnimationsPaused.v' class='invisible'>
+                           <code>mAnimationsPaused: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mExternalScriptsBeingEvaluated' class='structfield'>
+                           <span id='mExternalScriptsBeingEvaluated.v' class='invisible'>
+                           <code>mExternalScriptsBeingEvaluated: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The number number of external scripts (ones with the src attribute) that
+have this document as their owner and that are being evaluated right now.</p>
+</div><span id='structfield.mFrameRequestCallbackCounter' class='structfield'>
+                           <span id='mFrameRequestCallbackCounter.v' class='invisible'>
+                           <code>mFrameRequestCallbackCounter: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The current frame request callback handle</p>
+</div><span id='structfield.mStaticCloneCount' class='structfield'>
+                           <span id='mStaticCloneCount.v' class='invisible'>
+                           <code>mStaticCloneCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mBlockedTrackingNodes' class='structfield'>
+                           <span id='mBlockedTrackingNodes.v' class='invisible'>
+                           <code>mBlockedTrackingNodes: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsTArray.html' title='style::gecko_bindings::structs::root::nsTArray'>nsTArray</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIWeakReference.html' title='style::gecko_bindings::structs::root::nsIWeakReference'>nsIWeakReference</a>&gt;&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mWindow' class='structfield'>
+                           <span id='mWindow.v' class='invisible'>
+                           <code>mWindow: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsPIDOMWindowInner.html' title='style::gecko_bindings::structs::root::nsPIDOMWindowInner'>nsPIDOMWindowInner</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mCachedEncoder' class='structfield'>
+                           <span id='mCachedEncoder.v' class='invisible'>
+                           <code>mCachedEncoder: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIDocumentEncoder.html' title='style::gecko_bindings::structs::root::nsIDocumentEncoder'>nsIDocumentEncoder</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mFrameRequestCallbacks' class='structfield'>
+                           <span id='mFrameRequestCallbacks.v' class='invisible'>
+                           <code>mFrameRequestCallbacks: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsTArray.html' title='style::gecko_bindings::structs::root::nsTArray'>nsTArray</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIDocument_FrameRequest.html' title='style::gecko_bindings::structs::root::nsIDocument_FrameRequest'>nsIDocument_FrameRequest</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mBFCacheEntry' class='structfield'>
+                           <span id='mBFCacheEntry.v' class='invisible'>
+                           <code>mBFCacheEntry: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIBFCacheEntry.html' title='style::gecko_bindings::structs::root::nsIBFCacheEntry'>nsIBFCacheEntry</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mBaseTarget' class='structfield'>
+                           <span id='mBaseTarget.v' class='invisible'>
+                           <code>mBaseTarget: <a class='struct' href='../../../../nsstring_vendor/struct.nsStringRepr.html' title='nsstring_vendor::nsStringRepr'>nsStringRepr</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mStateObjectContainer' class='structfield'>
+                           <span id='mStateObjectContainer.v' class='invisible'>
+                           <code>mStateObjectContainer: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIStructuredCloneContainer.html' title='style::gecko_bindings::structs::root::nsIStructuredCloneContainer'>nsIStructuredCloneContainer</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mStateObjectCached' class='structfield'>
+                           <span id='mStateObjectCached.v' class='invisible'>
+                           <code>mStateObjectCached: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIVariant.html' title='style::gecko_bindings::structs::root::nsIVariant'>nsIVariant</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mInSyncOperationCount' class='structfield'>
+                           <span id='mInSyncOperationCount.v' class='invisible'>
+                           <code>mInSyncOperationCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mXPathEvaluator' class='structfield'>
+                           <span id='mXPathEvaluator.v' class='invisible'>
+                           <code>mXPathEvaluator: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.XPathEvaluator.html' title='style::gecko_bindings::structs::root::mozilla::dom::XPathEvaluator'>XPathEvaluator</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mAnonymousContents' class='structfield'>
+                           <span id='mAnonymousContents.v' class='invisible'>
+                           <code>mAnonymousContents: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsTArray.html' title='style::gecko_bindings::structs::root::nsTArray'>nsTArray</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.AnonymousContent.html' title='style::gecko_bindings::structs::root::mozilla::dom::AnonymousContent'>AnonymousContent</a>&gt;&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mBlockDOMContentLoaded' class='structfield'>
+                           <span id='mBlockDOMContentLoaded.v' class='invisible'>
+                           <code>mBlockDOMContentLoaded: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield._bitfield_2' class='structfield'>
+                           <span id='_bitfield_2.v' class='invisible'>
+                           <code>_bitfield_2: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mDOMMediaQueryLists' class='structfield'>
+                           <span id='mDOMMediaQueryLists.v' class='invisible'>
+                           <code>mDOMMediaQueryLists: <a class='type' href='../../../../style/gecko_bindings/structs/root/type.PRCList.html' title='style::gecko_bindings::structs::root::PRCList'>PRCList</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mUseCounters' class='structfield'>
+                           <span id='mUseCounters.v' class='invisible'>
+                           <code>mUseCounters: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 2]</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mChildDocumentUseCounters' class='structfield'>
+                           <span id='mChildDocumentUseCounters.v' class='invisible'>
+                           <code>mChildDocumentUseCounters: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 2]</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mNotifiedPageForUseCounter' class='structfield'>
+                           <span id='mNotifiedPageForUseCounter.v' class='invisible'>
+                           <code>mNotifiedPageForUseCounter: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 2]</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mUserHasInteracted' class='structfield'>
+                           <span id='mUserHasInteracted.v' class='invisible'>
+                           <code>mUserHasInteracted: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mPageUnloadingEventTimeStamp' class='structfield'>
+                           <span id='mPageUnloadingEventTimeStamp.v' class='invisible'>
+                           <code>mPageUnloadingEventTimeStamp: <a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.TimeStamp.html' title='style::gecko_bindings::structs::root::mozilla::TimeStamp'>TimeStamp</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mDocGroup' class='structfield'>
+                           <span id='mDocGroup.v' class='invisible'>
+                           <code>mDocGroup: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.DocGroup.html' title='style::gecko_bindings::structs::root::mozilla::dom::DocGroup'>DocGroup</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mTrackingScripts' class='structfield'>
+                           <span id='mTrackingScripts.v' class='invisible'>
+                           <code>mTrackingScripts: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 6]</a></code>
+                           </span></span><span class='stab '></span><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIDocument.html' title='style::gecko_bindings::structs::root::nsIDocument'>nsIDocument</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#8336-8949' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.mBidiEnabled' class='method'><span id='mBidiEnabled.v' class='invisible'><code>fn <a href='#method.mBidiEnabled' class='fnname'>mBidiEnabled</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mBidiEnabled' class='method'><span id='set_mBidiEnabled.v' class='invisible'><code>fn <a href='#method.set_mBidiEnabled' class='fnname'>set_mBidiEnabled</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mMathMLEnabled' class='method'><span id='mMathMLEnabled.v' class='invisible'><code>fn <a href='#method.mMathMLEnabled' class='fnname'>mMathMLEnabled</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mMathMLEnabled' class='method'><span id='set_mMathMLEnabled.v' class='invisible'><code>fn <a href='#method.set_mMathMLEnabled' class='fnname'>set_mMathMLEnabled</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mIsInitialDocumentInWindow' class='method'><span id='mIsInitialDocumentInWindow.v' class='invisible'><code>fn <a href='#method.mIsInitialDocumentInWindow' class='fnname'>mIsInitialDocumentInWindow</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mIsInitialDocumentInWindow' class='method'><span id='set_mIsInitialDocumentInWindow.v' class='invisible'><code>fn <a href='#method.set_mIsInitialDocumentInWindow' class='fnname'>set_mIsInitialDocumentInWindow</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mLoadedAsData' class='method'><span id='mLoadedAsData.v' class='invisible'><code>fn <a href='#method.mLoadedAsData' class='fnname'>mLoadedAsData</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mLoadedAsData' class='method'><span id='set_mLoadedAsData.v' class='invisible'><code>fn <a href='#method.set_mLoadedAsData' class='fnname'>set_mLoadedAsData</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mLoadedAsInteractiveData' class='method'><span id='mLoadedAsInteractiveData.v' class='invisible'><code>fn <a href='#method.mLoadedAsInteractiveData' class='fnname'>mLoadedAsInteractiveData</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mLoadedAsInteractiveData' class='method'><span id='set_mLoadedAsInteractiveData.v' class='invisible'><code>fn <a href='#method.set_mLoadedAsInteractiveData' class='fnname'>set_mLoadedAsInteractiveData</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mMayStartLayout' class='method'><span id='mMayStartLayout.v' class='invisible'><code>fn <a href='#method.mMayStartLayout' class='fnname'>mMayStartLayout</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mMayStartLayout' class='method'><span id='set_mMayStartLayout.v' class='invisible'><code>fn <a href='#method.set_mMayStartLayout' class='fnname'>set_mMayStartLayout</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHaveFiredTitleChange' class='method'><span id='mHaveFiredTitleChange.v' class='invisible'><code>fn <a href='#method.mHaveFiredTitleChange' class='fnname'>mHaveFiredTitleChange</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHaveFiredTitleChange' class='method'><span id='set_mHaveFiredTitleChange.v' class='invisible'><code>fn <a href='#method.set_mHaveFiredTitleChange' class='fnname'>set_mHaveFiredTitleChange</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mIsShowing' class='method'><span id='mIsShowing.v' class='invisible'><code>fn <a href='#method.mIsShowing' class='fnname'>mIsShowing</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mIsShowing' class='method'><span id='set_mIsShowing.v' class='invisible'><code>fn <a href='#method.set_mIsShowing' class='fnname'>set_mIsShowing</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mVisible' class='method'><span id='mVisible.v' class='invisible'><code>fn <a href='#method.mVisible' class='fnname'>mVisible</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mVisible' class='method'><span id='set_mVisible.v' class='invisible'><code>fn <a href='#method.set_mVisible' class='fnname'>set_mVisible</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHasReferrerPolicyCSP' class='method'><span id='mHasReferrerPolicyCSP.v' class='invisible'><code>fn <a href='#method.mHasReferrerPolicyCSP' class='fnname'>mHasReferrerPolicyCSP</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHasReferrerPolicyCSP' class='method'><span id='set_mHasReferrerPolicyCSP.v' class='invisible'><code>fn <a href='#method.set_mHasReferrerPolicyCSP' class='fnname'>set_mHasReferrerPolicyCSP</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mRemovedFromDocShell' class='method'><span id='mRemovedFromDocShell.v' class='invisible'><code>fn <a href='#method.mRemovedFromDocShell' class='fnname'>mRemovedFromDocShell</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mRemovedFromDocShell' class='method'><span id='set_mRemovedFromDocShell.v' class='invisible'><code>fn <a href='#method.set_mRemovedFromDocShell' class='fnname'>set_mRemovedFromDocShell</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mAllowDNSPrefetch' class='method'><span id='mAllowDNSPrefetch.v' class='invisible'><code>fn <a href='#method.mAllowDNSPrefetch' class='fnname'>mAllowDNSPrefetch</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mAllowDNSPrefetch' class='method'><span id='set_mAllowDNSPrefetch.v' class='invisible'><code>fn <a href='#method.set_mAllowDNSPrefetch' class='fnname'>set_mAllowDNSPrefetch</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mIsStaticDocument' class='method'><span id='mIsStaticDocument.v' class='invisible'><code>fn <a href='#method.mIsStaticDocument' class='fnname'>mIsStaticDocument</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mIsStaticDocument' class='method'><span id='set_mIsStaticDocument.v' class='invisible'><code>fn <a href='#method.set_mIsStaticDocument' class='fnname'>set_mIsStaticDocument</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mCreatingStaticClone' class='method'><span id='mCreatingStaticClone.v' class='invisible'><code>fn <a href='#method.mCreatingStaticClone' class='fnname'>mCreatingStaticClone</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mCreatingStaticClone' class='method'><span id='set_mCreatingStaticClone.v' class='invisible'><code>fn <a href='#method.set_mCreatingStaticClone' class='fnname'>set_mCreatingStaticClone</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mInUnlinkOrDeletion' class='method'><span id='mInUnlinkOrDeletion.v' class='invisible'><code>fn <a href='#method.mInUnlinkOrDeletion' class='fnname'>mInUnlinkOrDeletion</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mInUnlinkOrDeletion' class='method'><span id='set_mInUnlinkOrDeletion.v' class='invisible'><code>fn <a href='#method.set_mInUnlinkOrDeletion' class='fnname'>set_mInUnlinkOrDeletion</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHasHadScriptHandlingObject' class='method'><span id='mHasHadScriptHandlingObject.v' class='invisible'><code>fn <a href='#method.mHasHadScriptHandlingObject' class='fnname'>mHasHadScriptHandlingObject</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHasHadScriptHandlingObject' class='method'><span id='set_mHasHadScriptHandlingObject.v' class='invisible'><code>fn <a href='#method.set_mHasHadScriptHandlingObject' class='fnname'>set_mHasHadScriptHandlingObject</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mIsBeingUsedAsImage' class='method'><span id='mIsBeingUsedAsImage.v' class='invisible'><code>fn <a href='#method.mIsBeingUsedAsImage' class='fnname'>mIsBeingUsedAsImage</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mIsBeingUsedAsImage' class='method'><span id='set_mIsBeingUsedAsImage.v' class='invisible'><code>fn <a href='#method.set_mIsBeingUsedAsImage' class='fnname'>set_mIsBeingUsedAsImage</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mIsSyntheticDocument' class='method'><span id='mIsSyntheticDocument.v' class='invisible'><code>fn <a href='#method.mIsSyntheticDocument' class='fnname'>mIsSyntheticDocument</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mIsSyntheticDocument' class='method'><span id='set_mIsSyntheticDocument.v' class='invisible'><code>fn <a href='#method.set_mIsSyntheticDocument' class='fnname'>set_mIsSyntheticDocument</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHasLinksToUpdate' class='method'><span id='mHasLinksToUpdate.v' class='invisible'><code>fn <a href='#method.mHasLinksToUpdate' class='fnname'>mHasLinksToUpdate</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHasLinksToUpdate' class='method'><span id='set_mHasLinksToUpdate.v' class='invisible'><code>fn <a href='#method.set_mHasLinksToUpdate' class='fnname'>set_mHasLinksToUpdate</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mNeedLayoutFlush' class='method'><span id='mNeedLayoutFlush.v' class='invisible'><code>fn <a href='#method.mNeedLayoutFlush' class='fnname'>mNeedLayoutFlush</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mNeedLayoutFlush' class='method'><span id='set_mNeedLayoutFlush.v' class='invisible'><code>fn <a href='#method.set_mNeedLayoutFlush' class='fnname'>set_mNeedLayoutFlush</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mNeedStyleFlush' class='method'><span id='mNeedStyleFlush.v' class='invisible'><code>fn <a href='#method.mNeedStyleFlush' class='fnname'>mNeedStyleFlush</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mNeedStyleFlush' class='method'><span id='set_mNeedStyleFlush.v' class='invisible'><code>fn <a href='#method.set_mNeedStyleFlush' class='fnname'>set_mNeedStyleFlush</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mMayHaveDOMMutationObservers' class='method'><span id='mMayHaveDOMMutationObservers.v' class='invisible'><code>fn <a href='#method.mMayHaveDOMMutationObservers' class='fnname'>mMayHaveDOMMutationObservers</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mMayHaveDOMMutationObservers' class='method'><span id='set_mMayHaveDOMMutationObservers.v' class='invisible'><code>fn <a href='#method.set_mMayHaveDOMMutationObservers' class='fnname'>set_mMayHaveDOMMutationObservers</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mMayHaveAnimationObservers' class='method'><span id='mMayHaveAnimationObservers.v' class='invisible'><code>fn <a href='#method.mMayHaveAnimationObservers' class='fnname'>mMayHaveAnimationObservers</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mMayHaveAnimationObservers' class='method'><span id='set_mMayHaveAnimationObservers.v' class='invisible'><code>fn <a href='#method.set_mMayHaveAnimationObservers' class='fnname'>set_mMayHaveAnimationObservers</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHasMixedActiveContentLoaded' class='method'><span id='mHasMixedActiveContentLoaded.v' class='invisible'><code>fn <a href='#method.mHasMixedActiveContentLoaded' class='fnname'>mHasMixedActiveContentLoaded</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHasMixedActiveContentLoaded' class='method'><span id='set_mHasMixedActiveContentLoaded.v' class='invisible'><code>fn <a href='#method.set_mHasMixedActiveContentLoaded' class='fnname'>set_mHasMixedActiveContentLoaded</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHasMixedActiveContentBlocked' class='method'><span id='mHasMixedActiveContentBlocked.v' class='invisible'><code>fn <a href='#method.mHasMixedActiveContentBlocked' class='fnname'>mHasMixedActiveContentBlocked</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHasMixedActiveContentBlocked' class='method'><span id='set_mHasMixedActiveContentBlocked.v' class='invisible'><code>fn <a href='#method.set_mHasMixedActiveContentBlocked' class='fnname'>set_mHasMixedActiveContentBlocked</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHasMixedDisplayContentLoaded' class='method'><span id='mHasMixedDisplayContentLoaded.v' class='invisible'><code>fn <a href='#method.mHasMixedDisplayContentLoaded' class='fnname'>mHasMixedDisplayContentLoaded</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHasMixedDisplayContentLoaded' class='method'><span id='set_mHasMixedDisplayContentLoaded.v' class='invisible'><code>fn <a href='#method.set_mHasMixedDisplayContentLoaded' class='fnname'>set_mHasMixedDisplayContentLoaded</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHasMixedDisplayContentBlocked' class='method'><span id='mHasMixedDisplayContentBlocked.v' class='invisible'><code>fn <a href='#method.mHasMixedDisplayContentBlocked' class='fnname'>mHasMixedDisplayContentBlocked</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHasMixedDisplayContentBlocked' class='method'><span id='set_mHasMixedDisplayContentBlocked.v' class='invisible'><code>fn <a href='#method.set_mHasMixedDisplayContentBlocked' class='fnname'>set_mHasMixedDisplayContentBlocked</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHasMixedContentObjectSubrequest' class='method'><span id='mHasMixedContentObjectSubrequest.v' class='invisible'><code>fn <a href='#method.mHasMixedContentObjectSubrequest' class='fnname'>mHasMixedContentObjectSubrequest</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHasMixedContentObjectSubrequest' class='method'><span id='set_mHasMixedContentObjectSubrequest.v' class='invisible'><code>fn <a href='#method.set_mHasMixedContentObjectSubrequest' class='fnname'>set_mHasMixedContentObjectSubrequest</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHasCSP' class='method'><span id='mHasCSP.v' class='invisible'><code>fn <a href='#method.mHasCSP' class='fnname'>mHasCSP</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHasCSP' class='method'><span id='set_mHasCSP.v' class='invisible'><code>fn <a href='#method.set_mHasCSP' class='fnname'>set_mHasCSP</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHasUnsafeEvalCSP' class='method'><span id='mHasUnsafeEvalCSP.v' class='invisible'><code>fn <a href='#method.mHasUnsafeEvalCSP' class='fnname'>mHasUnsafeEvalCSP</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHasUnsafeEvalCSP' class='method'><span id='set_mHasUnsafeEvalCSP.v' class='invisible'><code>fn <a href='#method.set_mHasUnsafeEvalCSP' class='fnname'>set_mHasUnsafeEvalCSP</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHasUnsafeInlineCSP' class='method'><span id='mHasUnsafeInlineCSP.v' class='invisible'><code>fn <a href='#method.mHasUnsafeInlineCSP' class='fnname'>mHasUnsafeInlineCSP</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHasUnsafeInlineCSP' class='method'><span id='set_mHasUnsafeInlineCSP.v' class='invisible'><code>fn <a href='#method.set_mHasUnsafeInlineCSP' class='fnname'>set_mHasUnsafeInlineCSP</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHasTrackingContentBlocked' class='method'><span id='mHasTrackingContentBlocked.v' class='invisible'><code>fn <a href='#method.mHasTrackingContentBlocked' class='fnname'>mHasTrackingContentBlocked</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHasTrackingContentBlocked' class='method'><span id='set_mHasTrackingContentBlocked.v' class='invisible'><code>fn <a href='#method.set_mHasTrackingContentBlocked' class='fnname'>set_mHasTrackingContentBlocked</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHasTrackingContentLoaded' class='method'><span id='mHasTrackingContentLoaded.v' class='invisible'><code>fn <a href='#method.mHasTrackingContentLoaded' class='fnname'>mHasTrackingContentLoaded</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHasTrackingContentLoaded' class='method'><span id='set_mHasTrackingContentLoaded.v' class='invisible'><code>fn <a href='#method.set_mHasTrackingContentLoaded' class='fnname'>set_mHasTrackingContentLoaded</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mBFCacheDisallowed' class='method'><span id='mBFCacheDisallowed.v' class='invisible'><code>fn <a href='#method.mBFCacheDisallowed' class='fnname'>mBFCacheDisallowed</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mBFCacheDisallowed' class='method'><span id='set_mBFCacheDisallowed.v' class='invisible'><code>fn <a href='#method.set_mBFCacheDisallowed' class='fnname'>set_mBFCacheDisallowed</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHasHadDefaultView' class='method'><span id='mHasHadDefaultView.v' class='invisible'><code>fn <a href='#method.mHasHadDefaultView' class='fnname'>mHasHadDefaultView</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHasHadDefaultView' class='method'><span id='set_mHasHadDefaultView.v' class='invisible'><code>fn <a href='#method.set_mHasHadDefaultView' class='fnname'>set_mHasHadDefaultView</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mStyleSheetChangeEventsEnabled' class='method'><span id='mStyleSheetChangeEventsEnabled.v' class='invisible'><code>fn <a href='#method.mStyleSheetChangeEventsEnabled' class='fnname'>mStyleSheetChangeEventsEnabled</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mStyleSheetChangeEventsEnabled' class='method'><span id='set_mStyleSheetChangeEventsEnabled.v' class='invisible'><code>fn <a href='#method.set_mStyleSheetChangeEventsEnabled' class='fnname'>set_mStyleSheetChangeEventsEnabled</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mIsSrcdocDocument' class='method'><span id='mIsSrcdocDocument.v' class='invisible'><code>fn <a href='#method.mIsSrcdocDocument' class='fnname'>mIsSrcdocDocument</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mIsSrcdocDocument' class='method'><span id='set_mIsSrcdocDocument.v' class='invisible'><code>fn <a href='#method.set_mIsSrcdocDocument' class='fnname'>set_mIsSrcdocDocument</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mDidDocumentOpen' class='method'><span id='mDidDocumentOpen.v' class='invisible'><code>fn <a href='#method.mDidDocumentOpen' class='fnname'>mDidDocumentOpen</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mDidDocumentOpen' class='method'><span id='set_mDidDocumentOpen.v' class='invisible'><code>fn <a href='#method.set_mDidDocumentOpen' class='fnname'>set_mDidDocumentOpen</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHasDisplayDocument' class='method'><span id='mHasDisplayDocument.v' class='invisible'><code>fn <a href='#method.mHasDisplayDocument' class='fnname'>mHasDisplayDocument</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHasDisplayDocument' class='method'><span id='set_mHasDisplayDocument.v' class='invisible'><code>fn <a href='#method.set_mHasDisplayDocument' class='fnname'>set_mHasDisplayDocument</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mFontFaceSetDirty' class='method'><span id='mFontFaceSetDirty.v' class='invisible'><code>fn <a href='#method.mFontFaceSetDirty' class='fnname'>mFontFaceSetDirty</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mFontFaceSetDirty' class='method'><span id='set_mFontFaceSetDirty.v' class='invisible'><code>fn <a href='#method.set_mFontFaceSetDirty' class='fnname'>set_mFontFaceSetDirty</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mGetUserFontSetCalled' class='method'><span id='mGetUserFontSetCalled.v' class='invisible'><code>fn <a href='#method.mGetUserFontSetCalled' class='fnname'>mGetUserFontSetCalled</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mGetUserFontSetCalled' class='method'><span id='set_mGetUserFontSetCalled.v' class='invisible'><code>fn <a href='#method.set_mGetUserFontSetCalled' class='fnname'>set_mGetUserFontSetCalled</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mPostedFlushUserFontSet' class='method'><span id='mPostedFlushUserFontSet.v' class='invisible'><code>fn <a href='#method.mPostedFlushUserFontSet' class='fnname'>mPostedFlushUserFontSet</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mPostedFlushUserFontSet' class='method'><span id='set_mPostedFlushUserFontSet.v' class='invisible'><code>fn <a href='#method.set_mPostedFlushUserFontSet' class='fnname'>set_mPostedFlushUserFontSet</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mEverInForeground' class='method'><span id='mEverInForeground.v' class='invisible'><code>fn <a href='#method.mEverInForeground' class='fnname'>mEverInForeground</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mEverInForeground' class='method'><span id='set_mEverInForeground.v' class='invisible'><code>fn <a href='#method.set_mEverInForeground' class='fnname'>set_mEverInForeground</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mDidFireDOMContentLoaded' class='method'><span id='mDidFireDOMContentLoaded.v' class='invisible'><code>fn <a href='#method.mDidFireDOMContentLoaded' class='fnname'>mDidFireDOMContentLoaded</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mDidFireDOMContentLoaded' class='method'><span id='set_mDidFireDOMContentLoaded.v' class='invisible'><code>fn <a href='#method.set_mDidFireDOMContentLoaded' class='fnname'>set_mDidFireDOMContentLoaded</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mHasScrollLinkedEffect' class='method'><span id='mHasScrollLinkedEffect.v' class='invisible'><code>fn <a href='#method.mHasScrollLinkedEffect' class='fnname'>mHasScrollLinkedEffect</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mHasScrollLinkedEffect' class='method'><span id='set_mHasScrollLinkedEffect.v' class='invisible'><code>fn <a href='#method.set_mHasScrollLinkedEffect' class='fnname'>set_mHasScrollLinkedEffect</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsIDocument.html' title='style::gecko_bindings::structs::root::nsIDocument'>nsIDocument</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#8002' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

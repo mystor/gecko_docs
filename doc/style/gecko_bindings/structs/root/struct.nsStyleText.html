@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsStyleText` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsStyleText">
+
+    <title>style::gecko_bindings::structs::root::nsStyleText - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>structs</a>::<wbr><a href='index.html'>root</a></p><script>window.sidebarCurrent = {name: 'nsStyleText', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>structs</a>::<wbr><a href='index.html'>root</a>::<wbr><a class='struct' href=''>nsStyleText</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#18060-18088' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsStyleText {
+    pub mTextAlign: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mTextAlignLast: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub _bitfield_1: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mTextTransform: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mWhiteSpace: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mWordBreak: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mOverflowWrap: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mHyphens: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleHyphens.html' title='style::gecko_bindings::structs::root::mozilla::StyleHyphens'>StyleHyphens</a>,
+    pub mRubyAlign: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mRubyPosition: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mTextSizeAdjust: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mTextCombineUpright: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mControlCharacterVisibility: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mTextEmphasisPosition: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mTextEmphasisStyle: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mTextRendering: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mTextEmphasisColor: <a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.StyleComplexColor.html' title='style::gecko_bindings::structs::root::mozilla::StyleComplexColor'>StyleComplexColor</a>,
+    pub mWebkitTextFillColor: <a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.StyleComplexColor.html' title='style::gecko_bindings::structs::root::mozilla::StyleComplexColor'>StyleComplexColor</a>,
+    pub mWebkitTextStrokeColor: <a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.StyleComplexColor.html' title='style::gecko_bindings::structs::root::mozilla::StyleComplexColor'>StyleComplexColor</a>,
+    pub mTabSize: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mWordSpacing: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mLetterSpacing: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mLineHeight: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mTextIndent: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mWebkitTextStrokeWidth: <a class='type' href='../../../../style/gecko_bindings/structs/root/type.nscoord.html' title='style::gecko_bindings::structs::root::nscoord'>nscoord</a>,
+    pub mTextShadow: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSShadowArray.html' title='style::gecko_bindings::structs::root::nsCSSShadowArray'>nsCSSShadowArray</a>&gt;,
+    pub mTextEmphasisStyleString: <a class='struct' href='../../../../nsstring_vendor/struct.nsStringRepr.html' title='nsstring_vendor::nsStringRepr'>nsStringRepr</a>,
+}</pre><h2 class='fields'>Fields</h2><span id='structfield.mTextAlign' class='structfield'>
+                           <span id='mTextAlign.v' class='invisible'>
+                           <code>mTextAlign: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTextAlignLast' class='structfield'>
+                           <span id='mTextAlignLast.v' class='invisible'>
+                           <code>mTextAlignLast: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield._bitfield_1' class='structfield'>
+                           <span id='_bitfield_1.v' class='invisible'>
+                           <code>_bitfield_1: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTextTransform' class='structfield'>
+                           <span id='mTextTransform.v' class='invisible'>
+                           <code>mTextTransform: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mWhiteSpace' class='structfield'>
+                           <span id='mWhiteSpace.v' class='invisible'>
+                           <code>mWhiteSpace: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mWordBreak' class='structfield'>
+                           <span id='mWordBreak.v' class='invisible'>
+                           <code>mWordBreak: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mOverflowWrap' class='structfield'>
+                           <span id='mOverflowWrap.v' class='invisible'>
+                           <code>mOverflowWrap: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mHyphens' class='structfield'>
+                           <span id='mHyphens.v' class='invisible'>
+                           <code>mHyphens: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleHyphens.html' title='style::gecko_bindings::structs::root::mozilla::StyleHyphens'>StyleHyphens</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mRubyAlign' class='structfield'>
+                           <span id='mRubyAlign.v' class='invisible'>
+                           <code>mRubyAlign: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mRubyPosition' class='structfield'>
+                           <span id='mRubyPosition.v' class='invisible'>
+                           <code>mRubyPosition: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTextSizeAdjust' class='structfield'>
+                           <span id='mTextSizeAdjust.v' class='invisible'>
+                           <code>mTextSizeAdjust: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTextCombineUpright' class='structfield'>
+                           <span id='mTextCombineUpright.v' class='invisible'>
+                           <code>mTextCombineUpright: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mControlCharacterVisibility' class='structfield'>
+                           <span id='mControlCharacterVisibility.v' class='invisible'>
+                           <code>mControlCharacterVisibility: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTextEmphasisPosition' class='structfield'>
+                           <span id='mTextEmphasisPosition.v' class='invisible'>
+                           <code>mTextEmphasisPosition: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTextEmphasisStyle' class='structfield'>
+                           <span id='mTextEmphasisStyle.v' class='invisible'>
+                           <code>mTextEmphasisStyle: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTextRendering' class='structfield'>
+                           <span id='mTextRendering.v' class='invisible'>
+                           <code>mTextRendering: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTextEmphasisColor' class='structfield'>
+                           <span id='mTextEmphasisColor.v' class='invisible'>
+                           <code>mTextEmphasisColor: <a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.StyleComplexColor.html' title='style::gecko_bindings::structs::root::mozilla::StyleComplexColor'>StyleComplexColor</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mWebkitTextFillColor' class='structfield'>
+                           <span id='mWebkitTextFillColor.v' class='invisible'>
+                           <code>mWebkitTextFillColor: <a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.StyleComplexColor.html' title='style::gecko_bindings::structs::root::mozilla::StyleComplexColor'>StyleComplexColor</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mWebkitTextStrokeColor' class='structfield'>
+                           <span id='mWebkitTextStrokeColor.v' class='invisible'>
+                           <code>mWebkitTextStrokeColor: <a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.StyleComplexColor.html' title='style::gecko_bindings::structs::root::mozilla::StyleComplexColor'>StyleComplexColor</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTabSize' class='structfield'>
+                           <span id='mTabSize.v' class='invisible'>
+                           <code>mTabSize: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mWordSpacing' class='structfield'>
+                           <span id='mWordSpacing.v' class='invisible'>
+                           <code>mWordSpacing: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mLetterSpacing' class='structfield'>
+                           <span id='mLetterSpacing.v' class='invisible'>
+                           <code>mLetterSpacing: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mLineHeight' class='structfield'>
+                           <span id='mLineHeight.v' class='invisible'>
+                           <code>mLineHeight: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTextIndent' class='structfield'>
+                           <span id='mTextIndent.v' class='invisible'>
+                           <code>mTextIndent: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mWebkitTextStrokeWidth' class='structfield'>
+                           <span id='mWebkitTextStrokeWidth.v' class='invisible'>
+                           <code>mWebkitTextStrokeWidth: <a class='type' href='../../../../style/gecko_bindings/structs/root/type.nscoord.html' title='style::gecko_bindings::structs::root::nscoord'>nscoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTextShadow' class='structfield'>
+                           <span id='mTextShadow.v' class='invisible'>
+                           <code>mTextShadow: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSShadowArray.html' title='style::gecko_bindings::structs::root::nsCSSShadowArray'>nsCSSShadowArray</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mTextEmphasisStyleString' class='structfield'>
+                           <span id='mTextEmphasisStyleString.v' class='invisible'>
+                           <code>mTextEmphasisStyleString: <a class='struct' href='../../../../nsstring_vendor/struct.nsStringRepr.html' title='nsstring_vendor::nsStringRepr'>nsStringRepr</a></code>
+                           </span></span><span class='stab '></span><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleText.html' title='style::gecko_bindings::structs::root::nsStyleText'>nsStyleText</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#18094-18119' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.mTextAlignTrue' class='method'><span id='mTextAlignTrue.v' class='invisible'><code>fn <a href='#method.mTextAlignTrue' class='fnname'>mTextAlignTrue</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mTextAlignTrue' class='method'><span id='set_mTextAlignTrue.v' class='invisible'><code>fn <a href='#method.set_mTextAlignTrue' class='fnname'>set_mTextAlignTrue</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mTextAlignLastTrue' class='method'><span id='mTextAlignLastTrue.v' class='invisible'><code>fn <a href='#method.mTextAlignLastTrue' class='fnname'>mTextAlignLastTrue</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mTextAlignLastTrue' class='method'><span id='set_mTextAlignLastTrue.v' class='invisible'><code>fn <a href='#method.set_mTextAlignLastTrue' class='fnname'>set_mTextAlignLastTrue</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a> for <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleText.html' title='style::gecko_bindings::structs::root::nsStyleText'>nsStyleText</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/bindings.rs.html#126' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html' title='core::marker::Sync'>Sync</a> for <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleText.html' title='style::gecko_bindings::structs::root::nsStyleText'>nsStyleText</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/bindings.rs.html#127' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleText.html' title='style::gecko_bindings::structs::root::nsStyleText'>nsStyleText</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#18059' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

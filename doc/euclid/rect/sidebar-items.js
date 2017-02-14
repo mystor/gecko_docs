@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["max",""],["min",""],["rect","Shorthand for TypedRect::new(TypedPoint2D::new(x, y), TypedSize2D::new(w, h))."]],"struct":[["TypedRect","A 2d Rectangle optionally tagged with a unit."]],"type":[["Rect","The default rectangle type with no unit."]]});

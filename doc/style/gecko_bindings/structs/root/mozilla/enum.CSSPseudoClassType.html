@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `CSSPseudoClassType` enum in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, CSSPseudoClassType">
+
+    <title>style::gecko_bindings::structs::root::mozilla::CSSPseudoClassType - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../../index.html'>style</a>::<wbr><a href='../../../index.html'>gecko_bindings</a>::<wbr><a href='../../index.html'>structs</a>::<wbr><a href='../index.html'>root</a>::<wbr><a href='index.html'>mozilla</a></p><script>window.sidebarCurrent = {name: 'CSSPseudoClassType', ty: 'enum', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content enum">
+<h1 class='fqn'><span class='in-band'>Enum <a href='../../../../index.html'>style</a>::<wbr><a href='../../../index.html'>gecko_bindings</a>::<wbr><a href='../../index.html'>structs</a>::<wbr><a href='../index.html'>root</a>::<wbr><a href='index.html'>mozilla</a>::<wbr><a class='enum' href=''>CSSPseudoClassType</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#5297-5381' title='goto source code'>[src]</a></span></h1>
+<pre class='rust enum'><div class="docblock attributes">#[repr(u8)]
+</div>pub enum CSSPseudoClassType {
+    empty,
+    mozOnlyWhitespace,
+    mozEmptyExceptChildrenWithLocalname,
+    lang,
+    mozBoundElement,
+    root,
+    any,
+    firstChild,
+    firstNode,
+    lastChild,
+    lastNode,
+    onlyChild,
+    firstOfType,
+    lastOfType,
+    onlyOfType,
+    nthChild,
+    nthLastChild,
+    nthOfType,
+    nthLastOfType,
+    mozIsHTML,
+    unresolved,
+    mozNativeAnonymous,
+    mozSystemMetric,
+    mozLocaleDir,
+    mozLWTheme,
+    mozLWThemeBrightText,
+    mozLWThemeDarkText,
+    mozWindowInactive,
+    mozTableBorderNonzero,
+    mozBrowserFrame,
+    scope,
+    negation,
+    dir,
+    link,
+    mozAnyLink,
+    anyLink,
+    visited,
+    active,
+    checked,
+    disabled,
+    enabled,
+    focus,
+    focusWithin,
+    hover,
+    mozDragOver,
+    target,
+    indeterminate,
+    mozDevtoolsHighlighted,
+    mozStyleeditorTransitioning,
+    fullscreen,
+    mozFullScreen,
+    mozFocusRing,
+    mozBroken,
+    mozLoading,
+    mozUserDisabled,
+    mozSuppressed,
+    mozHandlerClickToPlay,
+    mozHandlerVulnerableUpdatable,
+    mozHandlerVulnerableNoUpdate,
+    mozHandlerDisabled,
+    mozHandlerBlocked,
+    mozHandlerCrashed,
+    mozMathIncrementScriptLevel,
+    required,
+    optional,
+    valid,
+    invalid,
+    inRange,
+    outOfRange,
+    defaultPseudo,
+    placeholderShown,
+    mozReadOnly,
+    mozReadWrite,
+    mozSubmitInvalid,
+    mozUIInvalid,
+    mozUIValid,
+    mozMeterOptimum,
+    mozMeterSubOptimum,
+    mozMeterSubSubOptimum,
+    mozPlaceholder,
+    Count,
+    NotPseudo,
+    MAX,
+}</pre><h2 class='variants'>Variants</h2>
+<span id='variant.empty' class='variant'><span id='empty.v' class='invisible'><code>empty</code></span></span><span id='variant.mozOnlyWhitespace' class='variant'><span id='mozOnlyWhitespace.v' class='invisible'><code>mozOnlyWhitespace</code></span></span><span id='variant.mozEmptyExceptChildrenWithLocalname' class='variant'><span id='mozEmptyExceptChildrenWithLocalname.v' class='invisible'><code>mozEmptyExceptChildrenWithLocalname</code></span></span><span id='variant.lang' class='variant'><span id='lang.v' class='invisible'><code>lang</code></span></span><span id='variant.mozBoundElement' class='variant'><span id='mozBoundElement.v' class='invisible'><code>mozBoundElement</code></span></span><span id='variant.root' class='variant'><span id='root.v' class='invisible'><code>root</code></span></span><span id='variant.any' class='variant'><span id='any.v' class='invisible'><code>any</code></span></span><span id='variant.firstChild' class='variant'><span id='firstChild.v' class='invisible'><code>firstChild</code></span></span><span id='variant.firstNode' class='variant'><span id='firstNode.v' class='invisible'><code>firstNode</code></span></span><span id='variant.lastChild' class='variant'><span id='lastChild.v' class='invisible'><code>lastChild</code></span></span><span id='variant.lastNode' class='variant'><span id='lastNode.v' class='invisible'><code>lastNode</code></span></span><span id='variant.onlyChild' class='variant'><span id='onlyChild.v' class='invisible'><code>onlyChild</code></span></span><span id='variant.firstOfType' class='variant'><span id='firstOfType.v' class='invisible'><code>firstOfType</code></span></span><span id='variant.lastOfType' class='variant'><span id='lastOfType.v' class='invisible'><code>lastOfType</code></span></span><span id='variant.onlyOfType' class='variant'><span id='onlyOfType.v' class='invisible'><code>onlyOfType</code></span></span><span id='variant.nthChild' class='variant'><span id='nthChild.v' class='invisible'><code>nthChild</code></span></span><span id='variant.nthLastChild' class='variant'><span id='nthLastChild.v' class='invisible'><code>nthLastChild</code></span></span><span id='variant.nthOfType' class='variant'><span id='nthOfType.v' class='invisible'><code>nthOfType</code></span></span><span id='variant.nthLastOfType' class='variant'><span id='nthLastOfType.v' class='invisible'><code>nthLastOfType</code></span></span><span id='variant.mozIsHTML' class='variant'><span id='mozIsHTML.v' class='invisible'><code>mozIsHTML</code></span></span><span id='variant.unresolved' class='variant'><span id='unresolved.v' class='invisible'><code>unresolved</code></span></span><span id='variant.mozNativeAnonymous' class='variant'><span id='mozNativeAnonymous.v' class='invisible'><code>mozNativeAnonymous</code></span></span><span id='variant.mozSystemMetric' class='variant'><span id='mozSystemMetric.v' class='invisible'><code>mozSystemMetric</code></span></span><span id='variant.mozLocaleDir' class='variant'><span id='mozLocaleDir.v' class='invisible'><code>mozLocaleDir</code></span></span><span id='variant.mozLWTheme' class='variant'><span id='mozLWTheme.v' class='invisible'><code>mozLWTheme</code></span></span><span id='variant.mozLWThemeBrightText' class='variant'><span id='mozLWThemeBrightText.v' class='invisible'><code>mozLWThemeBrightText</code></span></span><span id='variant.mozLWThemeDarkText' class='variant'><span id='mozLWThemeDarkText.v' class='invisible'><code>mozLWThemeDarkText</code></span></span><span id='variant.mozWindowInactive' class='variant'><span id='mozWindowInactive.v' class='invisible'><code>mozWindowInactive</code></span></span><span id='variant.mozTableBorderNonzero' class='variant'><span id='mozTableBorderNonzero.v' class='invisible'><code>mozTableBorderNonzero</code></span></span><span id='variant.mozBrowserFrame' class='variant'><span id='mozBrowserFrame.v' class='invisible'><code>mozBrowserFrame</code></span></span><span id='variant.scope' class='variant'><span id='scope.v' class='invisible'><code>scope</code></span></span><span id='variant.negation' class='variant'><span id='negation.v' class='invisible'><code>negation</code></span></span><span id='variant.dir' class='variant'><span id='dir.v' class='invisible'><code>dir</code></span></span><span id='variant.link' class='variant'><span id='link.v' class='invisible'><code>link</code></span></span><span id='variant.mozAnyLink' class='variant'><span id='mozAnyLink.v' class='invisible'><code>mozAnyLink</code></span></span><span id='variant.anyLink' class='variant'><span id='anyLink.v' class='invisible'><code>anyLink</code></span></span><span id='variant.visited' class='variant'><span id='visited.v' class='invisible'><code>visited</code></span></span><span id='variant.active' class='variant'><span id='active.v' class='invisible'><code>active</code></span></span><span id='variant.checked' class='variant'><span id='checked.v' class='invisible'><code>checked</code></span></span><span id='variant.disabled' class='variant'><span id='disabled.v' class='invisible'><code>disabled</code></span></span><span id='variant.enabled' class='variant'><span id='enabled.v' class='invisible'><code>enabled</code></span></span><span id='variant.focus' class='variant'><span id='focus.v' class='invisible'><code>focus</code></span></span><span id='variant.focusWithin' class='variant'><span id='focusWithin.v' class='invisible'><code>focusWithin</code></span></span><span id='variant.hover' class='variant'><span id='hover.v' class='invisible'><code>hover</code></span></span><span id='variant.mozDragOver' class='variant'><span id='mozDragOver.v' class='invisible'><code>mozDragOver</code></span></span><span id='variant.target' class='variant'><span id='target.v' class='invisible'><code>target</code></span></span><span id='variant.indeterminate' class='variant'><span id='indeterminate.v' class='invisible'><code>indeterminate</code></span></span><span id='variant.mozDevtoolsHighlighted' class='variant'><span id='mozDevtoolsHighlighted.v' class='invisible'><code>mozDevtoolsHighlighted</code></span></span><span id='variant.mozStyleeditorTransitioning' class='variant'><span id='mozStyleeditorTransitioning.v' class='invisible'><code>mozStyleeditorTransitioning</code></span></span><span id='variant.fullscreen' class='variant'><span id='fullscreen.v' class='invisible'><code>fullscreen</code></span></span><span id='variant.mozFullScreen' class='variant'><span id='mozFullScreen.v' class='invisible'><code>mozFullScreen</code></span></span><span id='variant.mozFocusRing' class='variant'><span id='mozFocusRing.v' class='invisible'><code>mozFocusRing</code></span></span><span id='variant.mozBroken' class='variant'><span id='mozBroken.v' class='invisible'><code>mozBroken</code></span></span><span id='variant.mozLoading' class='variant'><span id='mozLoading.v' class='invisible'><code>mozLoading</code></span></span><span id='variant.mozUserDisabled' class='variant'><span id='mozUserDisabled.v' class='invisible'><code>mozUserDisabled</code></span></span><span id='variant.mozSuppressed' class='variant'><span id='mozSuppressed.v' class='invisible'><code>mozSuppressed</code></span></span><span id='variant.mozHandlerClickToPlay' class='variant'><span id='mozHandlerClickToPlay.v' class='invisible'><code>mozHandlerClickToPlay</code></span></span><span id='variant.mozHandlerVulnerableUpdatable' class='variant'><span id='mozHandlerVulnerableUpdatable.v' class='invisible'><code>mozHandlerVulnerableUpdatable</code></span></span><span id='variant.mozHandlerVulnerableNoUpdate' class='variant'><span id='mozHandlerVulnerableNoUpdate.v' class='invisible'><code>mozHandlerVulnerableNoUpdate</code></span></span><span id='variant.mozHandlerDisabled' class='variant'><span id='mozHandlerDisabled.v' class='invisible'><code>mozHandlerDisabled</code></span></span><span id='variant.mozHandlerBlocked' class='variant'><span id='mozHandlerBlocked.v' class='invisible'><code>mozHandlerBlocked</code></span></span><span id='variant.mozHandlerCrashed' class='variant'><span id='mozHandlerCrashed.v' class='invisible'><code>mozHandlerCrashed</code></span></span><span id='variant.mozMathIncrementScriptLevel' class='variant'><span id='mozMathIncrementScriptLevel.v' class='invisible'><code>mozMathIncrementScriptLevel</code></span></span><span id='variant.required' class='variant'><span id='required.v' class='invisible'><code>required</code></span></span><span id='variant.optional' class='variant'><span id='optional.v' class='invisible'><code>optional</code></span></span><span id='variant.valid' class='variant'><span id='valid.v' class='invisible'><code>valid</code></span></span><span id='variant.invalid' class='variant'><span id='invalid.v' class='invisible'><code>invalid</code></span></span><span id='variant.inRange' class='variant'><span id='inRange.v' class='invisible'><code>inRange</code></span></span><span id='variant.outOfRange' class='variant'><span id='outOfRange.v' class='invisible'><code>outOfRange</code></span></span><span id='variant.defaultPseudo' class='variant'><span id='defaultPseudo.v' class='invisible'><code>defaultPseudo</code></span></span><span id='variant.placeholderShown' class='variant'><span id='placeholderShown.v' class='invisible'><code>placeholderShown</code></span></span><span id='variant.mozReadOnly' class='variant'><span id='mozReadOnly.v' class='invisible'><code>mozReadOnly</code></span></span><span id='variant.mozReadWrite' class='variant'><span id='mozReadWrite.v' class='invisible'><code>mozReadWrite</code></span></span><span id='variant.mozSubmitInvalid' class='variant'><span id='mozSubmitInvalid.v' class='invisible'><code>mozSubmitInvalid</code></span></span><span id='variant.mozUIInvalid' class='variant'><span id='mozUIInvalid.v' class='invisible'><code>mozUIInvalid</code></span></span><span id='variant.mozUIValid' class='variant'><span id='mozUIValid.v' class='invisible'><code>mozUIValid</code></span></span><span id='variant.mozMeterOptimum' class='variant'><span id='mozMeterOptimum.v' class='invisible'><code>mozMeterOptimum</code></span></span><span id='variant.mozMeterSubOptimum' class='variant'><span id='mozMeterSubOptimum.v' class='invisible'><code>mozMeterSubOptimum</code></span></span><span id='variant.mozMeterSubSubOptimum' class='variant'><span id='mozMeterSubSubOptimum.v' class='invisible'><code>mozMeterSubSubOptimum</code></span></span><span id='variant.mozPlaceholder' class='variant'><span id='mozPlaceholder.v' class='invisible'><code>mozPlaceholder</code></span></span><span id='variant.Count' class='variant'><span id='Count.v' class='invisible'><code>Count</code></span></span><span id='variant.NotPseudo' class='variant'><span id='NotPseudo.v' class='invisible'><code>NotPseudo</code></span></span><span id='variant.MAX' class='variant'><span id='MAX.v' class='invisible'><code>MAX</code></span></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.CSSPseudoClassType.html' title='style::gecko_bindings::structs::root::mozilla::CSSPseudoClassType'>CSSPseudoClassType</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#5296' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.CSSPseudoClassType.html' title='style::gecko_bindings::structs::root::mozilla::CSSPseudoClassType'>CSSPseudoClassType</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#5296' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.CSSPseudoClassType.html' title='style::gecko_bindings::structs::root::mozilla::CSSPseudoClassType'>CSSPseudoClassType</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#5296' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.CSSPseudoClassType.html' title='style::gecko_bindings::structs::root::mozilla::CSSPseudoClassType'>CSSPseudoClassType</a></code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.CSSPseudoClassType.html' title='style::gecko_bindings::structs::root::mozilla::CSSPseudoClassType'>CSSPseudoClassType</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#5296' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, __arg_0: &amp;<a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.CSSPseudoClassType.html' title='style::gecko_bindings::structs::root::mozilla::CSSPseudoClassType'>CSSPseudoClassType</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.CSSPseudoClassType.html' title='style::gecko_bindings::structs::root::mozilla::CSSPseudoClassType'>CSSPseudoClassType</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#5296' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html' title='core::hash::Hash'>Hash</a> for <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.CSSPseudoClassType.html' title='style::gecko_bindings::structs::root::mozilla::CSSPseudoClassType'>CSSPseudoClassType</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#5296' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.hash' class='method'><span id='hash.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#tymethod.hash' class='fnname'>hash</a>&lt;__H:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a>&gt;(&amp;self, __arg_0: &amp;mut __H)</code></span></h4>
+<div class='docblock'><p>Feeds this value into the state given, updating the hasher as necessary.</p>
+</div><h4 id='method.hash_slice' class='method'><span id='hash_slice.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice' class='fnname'>hash_slice</a>&lt;H&gt;(data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[Self]</a>, state: &amp;mut H) <span class='where fmt-newline'>where H: <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a></span></code><div class='since' title='Stable since Rust version 1.3.0'>1.3.0</div></span></h4>
+<div class='docblock'><p>Feeds a slice of this type into the state provided.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../../../jquery.js"></script>
+    <script src="../../../../../main.js"></script>
+    <script defer src="../../../../../search-index.js"></script>
+</body>
+</html>

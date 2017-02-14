@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["GeckoElementSnapshot","A snapshot of a Gecko element."]]});

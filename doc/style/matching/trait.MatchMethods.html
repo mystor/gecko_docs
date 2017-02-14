@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `MatchMethods` trait in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, MatchMethods">
+
+    <title>style::matching::MatchMethods - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>style</a>::<wbr><a href='index.html'>matching</a></p><script>window.sidebarCurrent = {name: 'MatchMethods', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'><span class='in-band'>Trait <a href='../index.html'>style</a>::<wbr><a href='index.html'>matching</a>::<wbr><a class='trait' href=''>MatchMethods</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/style/matching.rs.html#644-981' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait MatchMethods: <a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>TElement</a> {
+    fn <a href='#method.match_element' class='fnname'>match_element</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; context: &amp;mut <a class='struct' href='../../style/context/struct.StyleContext.html' title='style::context::StyleContext'>StyleContext</a>&lt;Self&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data: &amp;mut <a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='struct' href='../../style/matching/struct.MatchResults.html' title='style::matching::MatchResults'>MatchResults</a> { ... }
+    fn <a href='#method.cascade_with_replacements' class='fnname'>cascade_with_replacements</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hint: <a class='struct' href='../../style/restyle_hints/struct.RestyleHint.html' title='style::restyle_hints::RestyleHint'>RestyleHint</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; context: &amp;<a class='struct' href='../../style/context/struct.StyleContext.html' title='style::context::StyleContext'>StyleContext</a>&lt;Self&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data: &amp;mut <a class='struct' href='../../atomic_refcell/struct.AtomicRefMut.html' title='atomic_refcell::AtomicRefMut'>AtomicRefMut</a>&lt;<a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a> { ... }
+    unsafe fn <a href='#method.share_style_if_possible' class='fnname'>share_style_if_possible</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; style_sharing_candidate_cache: &amp;mut <a class='struct' href='../../style/matching/struct.StyleSharingCandidateCache.html' title='style::matching::StyleSharingCandidateCache'>StyleSharingCandidateCache</a>&lt;Self&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shared_context: &amp;<a class='struct' href='../../style/context/struct.SharedStyleContext.html' title='style::context::SharedStyleContext'>SharedStyleContext</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data: &amp;mut <a class='struct' href='../../atomic_refcell/struct.AtomicRefMut.html' title='atomic_refcell::AtomicRefMut'>AtomicRefMut</a>&lt;<a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='../../style/matching/enum.StyleSharingResult.html' title='style::matching::StyleSharingResult'>StyleSharingResult</a> { ... }
+    fn <a href='#method.insert_into_bloom_filter' class='fnname'>insert_into_bloom_filter</a>(&amp;self, bf: &amp;mut <a class='struct' href='../../selectors/bloom/struct.BloomFilter.html' title='selectors::bloom::BloomFilter'>BloomFilter</a>) { ... }
+    fn <a href='#method.remove_from_bloom_filter' class='fnname'>remove_from_bloom_filter</a>(&amp;self, bf: &amp;mut <a class='struct' href='../../selectors/bloom/struct.BloomFilter.html' title='selectors::bloom::BloomFilter'>BloomFilter</a>) { ... }
+    fn <a href='#method.compute_restyle_damage' class='fnname'>compute_restyle_damage</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; old_values: &amp;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/gecko_properties/struct.ComputedValues.html' title='style::gecko_properties::ComputedValues'>ComputedValues</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new_values: &amp;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/gecko_properties/struct.ComputedValues.html' title='style::gecko_properties::ComputedValues'>ComputedValues</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pseudo: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../style/gecko/selector_parser/struct.PseudoElement.html' title='style::gecko::selector_parser::PseudoElement'>PseudoElement</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='struct' href='../../style/gecko/restyle_damage/struct.GeckoRestyleDamage.html' title='style::gecko::restyle_damage::GeckoRestyleDamage'>RestyleDamage</a> { ... }
+    fn <a href='#method.cascade_element' class='fnname'>cascade_element</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; context: &amp;<a class='struct' href='../../style/context/struct.StyleContext.html' title='style::context::StyleContext'>StyleContext</a>&lt;Self&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data: &amp;mut <a class='struct' href='../../atomic_refcell/struct.AtomicRefMut.html' title='atomic_refcell::AtomicRefMut'>AtomicRefMut</a>&lt;<a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; primary_is_shareable: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) { ... }
+}</pre><div class='docblock'><p>The public API that elements expose for selector matching.</p>
+</div>
+            <h2 id='provided-methods'>Provided Methods</h2>
+            <div class='methods'>
+        <h3 id='method.match_element' class='method'><span id='match_element.v' class='invisible'><code>fn <a href='#method.match_element' class='fnname'>match_element</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; context: &amp;mut <a class='struct' href='../../style/context/struct.StyleContext.html' title='style::context::StyleContext'>StyleContext</a>&lt;Self&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data: &amp;mut <a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='struct' href='../../style/matching/struct.MatchResults.html' title='style::matching::MatchResults'>MatchResults</a></code></span></h3><div class='docblock'><p>Runs selector matching to (re)compute rule nodes for this element.</p>
+</div><h3 id='method.cascade_with_replacements' class='method'><span id='cascade_with_replacements.v' class='invisible'><code>fn <a href='#method.cascade_with_replacements' class='fnname'>cascade_with_replacements</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; hint: <a class='struct' href='../../style/restyle_hints/struct.RestyleHint.html' title='style::restyle_hints::RestyleHint'>RestyleHint</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; context: &amp;<a class='struct' href='../../style/context/struct.StyleContext.html' title='style::context::StyleContext'>StyleContext</a>&lt;Self&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data: &amp;mut <a class='struct' href='../../atomic_refcell/struct.AtomicRefMut.html' title='atomic_refcell::AtomicRefMut'>AtomicRefMut</a>&lt;<a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h3><div class='docblock'><p>Updates the rule nodes without re-running selector matching, using just
+the rule tree. Returns true if the rule nodes changed.</p>
+</div><h3 id='method.share_style_if_possible' class='method'><span id='share_style_if_possible.v' class='invisible'><code>unsafe fn <a href='#method.share_style_if_possible' class='fnname'>share_style_if_possible</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; style_sharing_candidate_cache: &amp;mut <a class='struct' href='../../style/matching/struct.StyleSharingCandidateCache.html' title='style::matching::StyleSharingCandidateCache'>StyleSharingCandidateCache</a>&lt;Self&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shared_context: &amp;<a class='struct' href='../../style/context/struct.SharedStyleContext.html' title='style::context::SharedStyleContext'>SharedStyleContext</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data: &amp;mut <a class='struct' href='../../atomic_refcell/struct.AtomicRefMut.html' title='atomic_refcell::AtomicRefMut'>AtomicRefMut</a>&lt;<a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='../../style/matching/enum.StyleSharingResult.html' title='style::matching::StyleSharingResult'>StyleSharingResult</a></code></span></h3><div class='docblock'><p>Attempts to share a style with another node. This method is unsafe
+because it depends on the <code>style_sharing_candidate_cache</code> having only
+live nodes in it, and we have no way to guarantee that at the type
+system level yet.</p>
+</div><h3 id='method.insert_into_bloom_filter' class='method'><span id='insert_into_bloom_filter.v' class='invisible'><code>fn <a href='#method.insert_into_bloom_filter' class='fnname'>insert_into_bloom_filter</a>(&amp;self, bf: &amp;mut <a class='struct' href='../../selectors/bloom/struct.BloomFilter.html' title='selectors::bloom::BloomFilter'>BloomFilter</a>)</code></span></h3><div class='docblock'><p>Inserts and removes the matching <code>Descendant</code> selectors from a bloom
+filter. This is used to speed up CSS selector matching to remove
+unnecessary tree climbs for <code>Descendant</code> queries.</p>
+
+<p>A bloom filter of the local names, namespaces, IDs, and classes is kept.
+Therefore, each node must have its matching selectors inserted <em>after</em>
+its own selector matching and <em>before</em> its children start.</p>
+</div><h3 id='method.remove_from_bloom_filter' class='method'><span id='remove_from_bloom_filter.v' class='invisible'><code>fn <a href='#method.remove_from_bloom_filter' class='fnname'>remove_from_bloom_filter</a>(&amp;self, bf: &amp;mut <a class='struct' href='../../selectors/bloom/struct.BloomFilter.html' title='selectors::bloom::BloomFilter'>BloomFilter</a>)</code></span></h3><div class='docblock'><p>After all the children are done css selector matching, this must be
+called to reset the bloom filter after an <code>insert</code>.</p>
+</div><h3 id='method.compute_restyle_damage' class='method'><span id='compute_restyle_damage.v' class='invisible'><code>fn <a href='#method.compute_restyle_damage' class='fnname'>compute_restyle_damage</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; old_values: &amp;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/gecko_properties/struct.ComputedValues.html' title='style::gecko_properties::ComputedValues'>ComputedValues</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; new_values: &amp;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/gecko_properties/struct.ComputedValues.html' title='style::gecko_properties::ComputedValues'>ComputedValues</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pseudo: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../style/gecko/selector_parser/struct.PseudoElement.html' title='style::gecko::selector_parser::PseudoElement'>PseudoElement</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='struct' href='../../style/gecko/restyle_damage/struct.GeckoRestyleDamage.html' title='style::gecko::restyle_damage::GeckoRestyleDamage'>RestyleDamage</a></code></span></h3><div class='docblock'><p>Given the old and new style of this element, and whether it&#39;s a
+pseudo-element, compute the restyle damage used to determine which
+kind of layout or painting operations we&#39;ll need.</p>
+</div><h3 id='method.cascade_element' class='method'><span id='cascade_element.v' class='invisible'><code>fn <a href='#method.cascade_element' class='fnname'>cascade_element</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; context: &amp;<a class='struct' href='../../style/context/struct.StyleContext.html' title='style::context::StyleContext'>StyleContext</a>&lt;Self&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data: &amp;mut <a class='struct' href='../../atomic_refcell/struct.AtomicRefMut.html' title='atomic_refcell::AtomicRefMut'>AtomicRefMut</a>&lt;<a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; primary_is_shareable: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h3><div class='docblock'><p>Run the CSS cascade and compute values for the element, potentially
+starting any new transitions or animations.</p>
+</div></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><code>impl&lt;E:&nbsp;<a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>TElement</a>&gt; MatchMethods for E</code></li>
+</ul><script type="text/javascript" async
+                         src="../../implementors/style/matching/trait.MatchMethods.js">
+                 </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

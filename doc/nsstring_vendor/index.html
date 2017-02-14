@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsstring_vendor` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsstring_vendor">
+
+    <title>nsstring_vendor - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 'nsstring_vendor', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>nsstring_vendor</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/nsstring_vendor/lib.rs.html#5-752' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>This module provides rust bindings for the XPCOM string types.</p>
+
+<h1 id='tldr-what-types-should-i-use' class='section-header'><a href='#tldr-what-types-should-i-use'>TL;DR (what types should I use)</a></h1>
+<p>Use <code>&amp;{mut,} nsA[C]String</code> for functions in rust which wish to take or
+mutate XPCOM strings. The other string types <code>Deref</code> to this type.</p>
+
+<p>Use <code>ns[C]String&lt;&#39;a&gt;</code> for string struct members which don&#39;t leave rust, and
+as an intermediate between rust string data structures (such as <code>String</code>,
+<code>Vec&lt;u16&gt;</code>, <code>&amp;str</code>, and <code>&amp;[u16]</code>) and <code>&amp;{mut,} nsA[C]String</code> (using
+<code>ns[C]String::from(value)</code>). These conversions, when possible, will not
+perform any allocations.</p>
+
+<p>Use <code>nsFixed[C]String</code> or <code>ns_auto_[c]string!</code> for dynamic stack allocated
+strings which are expected to hold short string values.</p>
+
+<p>Use <code>*{const,mut} nsA[C]String</code> (<code>{const,} nsA[C]String*</code> in C++) for
+function arguments passed across the rust/C++ language boundary.</p>
+
+<p>Use <code>ns[C]StringRepr</code> for string struct members which are shared between
+rust and C++, but be careful, because this type lacks a <code>Drop</code>
+implementation.</p>
+
+<h1 id='string-types' class='section-header'><a href='#string-types'>String Types</a></h1>
+<h2 id='nsacstring' class='section-header'><a href='#nsacstring'><code>nsA[C]String</code></a></h2>
+<p>The core types in this module are <code>nsAString</code> and <code>nsACString</code>. These types
+are zero-sized as far as rust is concerned, and are safe to pass around
+behind both references (in rust code), and pointers (in C++ code). They
+represent a handle to a XPCOM string which holds either <code>u16</code> or <code>u8</code>
+characters respectively. The backing character buffer is guaranteed to live
+as long as the reference to the <code>nsAString</code> or <code>nsACString</code>.</p>
+
+<p>These types in rust are simply used as dummy types. References to them
+represent a pointer to the beginning of a variable-sized <code>#[repr(C)]</code> struct
+which is common between both C++ and Rust implementations. In C++, their
+corresponding types are also named <code>nsAString</code> or <code>nsACString</code>, and they are
+defined within the <code>nsTSubstring.{cpp,h}</code> file.</p>
+
+<h3 id='valid-operations' class='section-header'><a href='#valid-operations'>Valid Operations</a></h3>
+<p>An <code>&amp;nsA[C]String</code> acts like rust&#39;s <code>&amp;str</code>, in that it is a borrowed
+reference to the backing data. When used as an argument to other functions
+on <code>&amp;mut nsA[C]String</code>, optimizations can be performed to avoid copying
+buffers, as information about the backing storage is preserved.</p>
+
+<p>An <code>&amp;mut nsA[C]String</code> acts like rust&#39;s <code>&amp;mut Cow&lt;str&gt;</code>, in that it is a
+mutable reference to a potentially borrowed string, which when modified will
+ensure that it owns its own backing storage. This type can be appended to
+with the methods <code>.append</code>, <code>.append_utf{8,16}</code>, and with the <code>write!</code>
+macro, and can be assigned to with <code>.assign</code>.</p>
+
+<h2 id='nscstringa' class='section-header'><a href='#nscstringa'><code>ns[C]String&lt;&#39;a&gt;</code></a></h2>
+<p>This type is an maybe-owned string type. It acts similarially to a
+<code>Cow&lt;[{u8,u16}]&gt;</code>. This type provides <code>Deref</code> and <code>DerefMut</code> implementations
+to <code>nsA[C]String</code>, which provides the methods for manipulating this type.
+This type&#39;s lifetime parameter, <code>&#39;a</code>, represents the lifetime of the backing
+storage. When modified this type may re-allocate in order to ensure that it
+does not mutate its backing storage.</p>
+
+<p><code>ns[C]String</code>s can be constructed either with <code>ns[C]String::new()</code>, which
+creates an empty <code>ns[C]String&lt;&#39;static&gt;</code>, or through one of the provided
+<code>From</code> implementations. Both string types may be constructed <code>From&lt;&amp;&#39;a str&gt;</code>, with <code>nsCString</code> having a <code>&#39;a</code> lifetime, as the storage is shared
+with the <code>str</code>, while <code>nsString</code> has a <code>&#39;static</code> lifetime, as its storage
+has to be transcoded.</p>
+
+<p>When passing this type by reference, prefer passing a <code>&amp;nsA[C]String</code> or
+<code>&amp;mut nsA[C]String</code>. to passing this type.</p>
+
+<p>This type is <em>not</em> <code>#[repr(C)]</code>, as it has a <code>Drop</code> impl, which in versions
+of <code>rustc &lt; 1.13</code> adds drop flags to the struct, which messes up the layout,
+making it unsafe to pass across the FFI boundary. The rust compiler will
+warn if this type appears in <code>extern &quot;C&quot;</code> function definitions.</p>
+
+<p>When passing this type across the language boundary, pass it as <code>*const nsA[C]String</code> for an immutable reference, or <code>*mut nsA[C]String</code> for a
+mutable reference.</p>
+
+<p>This type is similar to the C++ type of the same name.</p>
+
+<h2 id='nsfixedcstringa' class='section-header'><a href='#nsfixedcstringa'><code>nsFixed[C]String&lt;&#39;a&gt;</code></a></h2>
+<p>This type is a string type with fixed backing storage. It is created with
+<code>nsFixed[C]String::new(buffer)</code>, passing a mutable reference to a buffer as
+the argument. This buffer will be used as backing storage whenever the
+resulting string will fit within it, falling back to heap allocations only
+when the string size exceeds that of the backing buffer.</p>
+
+<p>Like <code>ns[C]String</code>, this type dereferences to <code>nsA[C]String</code> which provides
+the methods for manipulating the type, and is not <code>#[repr(C)]</code>.</p>
+
+<p>When passing this type by reference, prefer passing a <code>&amp;nsA[C]String</code> or
+<code>&amp;mut nsA[C]String</code>. to passing this type.</p>
+
+<p>This type is <em>not</em> <code>#[repr(C)]</code>, as it has a <code>Drop</code> impl, which in versions
+of <code>rustc &lt; 1.13</code> adds drop flags to the struct, which messes up the layout,
+making it unsafe to pass across the FFI boundary. The rust compiler will
+warn if this type appears in <code>extern &quot;C&quot;</code> function definitions.</p>
+
+<p>When passing this type across the language boundary, pass it as <code>*const nsA[C]String</code> for an immutable reference, or <code>*mut nsA[C]String</code> for a
+mutable reference.</p>
+
+<p>This type is similar to the C++ type of the same name.</p>
+
+<h2 id='ns_auto_cstringname' class='section-header'><a href='#ns_auto_cstringname'><code>ns_auto_[c]string!($name)</code></a></h2>
+<p>This is a helper macro which defines a fixed size, (currently 64 character),
+backing array on the stack, and defines a local variable with name <code>$name</code>
+which is a <code>nsFixed[C]String</code> using this buffer as its backing storage.</p>
+
+<p>Usage of this macro is similar to the C++ type <code>nsAuto[C]String</code>, but could
+not be implemented as a basic type due to the differences between rust and
+C++&#39;s move semantics.</p>
+
+<h2 id='nscstringrepr' class='section-header'><a href='#nscstringrepr'><code>ns[C]StringRepr</code></a></h2>
+<p>This type represents a C++ <code>ns[C]String</code>. This type is <code>#[repr(C)]</code> and is
+safe to use in struct definitions which are shared across the language
+boundary. It automatically dereferences to <code>&amp;{mut,} nsA[C]String</code>, and thus
+can be treated similarially to <code>ns[C]String</code>.</p>
+
+<p>If this type is dropped in rust, it will not free its backing storage. This
+is because types implementing <code>Drop</code> have a drop flag added, which messes up
+the layout of this type. When drop flags are removed, which should happen in
+<code>rustc 1.13</code> (see rust-lang/rust#35764), this type will likely be removed,
+and replaced with direct usage of <code>ns[C]String&lt;&#39;a&gt;</code>, as its layout may be
+identical. This module provides rust bindings to our xpcom ns[C]String
+types.</p>
+</div><h2 id='macros' class='section-header'><a href="#macros">Macros</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.ns_auto_cstring.html'
+                                  title='nsstring_vendor::ns_auto_cstring'>ns_auto_cstring</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.ns_auto_string.html'
+                                  title='nsstring_vendor::ns_auto_string'>ns_auto_string</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.nsACString.html'
+                                  title='nsstring_vendor::nsACString'>nsACString</a></td>
+                           <td class='docblock-short'>
+                                <p>This type is the abstract type which is used for interacting with
+strings in rust. Each string type can derefence to an instance of
+this type, which provides the useful operations on strings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.nsAString.html'
+                                  title='nsstring_vendor::nsAString'>nsAString</a></td>
+                           <td class='docblock-short'>
+                                <p>This type is the abstract type which is used for interacting with
+strings in rust. Each string type can derefence to an instance of
+this type, which provides the useful operations on strings.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.nsCString.html'
+                                  title='nsstring_vendor::nsCString'>nsCString</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.nsCStringRepr.html'
+                                  title='nsstring_vendor::nsCStringRepr'>nsCStringRepr</a></td>
+                           <td class='docblock-short'>
+                                <p>The representation of a ns[C]String type in C++. This type is
+used internally by our definition of ns[C]String to ensure layout
+compatibility with the C++ ns[C]String type.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.nsFixedCString.html'
+                                  title='nsstring_vendor::nsFixedCString'>nsFixedCString</a></td>
+                           <td class='docblock-short'>
+                                <p>A nsFixed[C]String is a string which uses a fixed size mutable
+backing buffer for storing strings which will fit within that
+buffer, rather than using heap allocations.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.nsFixedString.html'
+                                  title='nsstring_vendor::nsFixedString'>nsFixedString</a></td>
+                           <td class='docblock-short'>
+                                <p>A nsFixed[C]String is a string which uses a fixed size mutable
+backing buffer for storing strings which will fit within that
+buffer, rather than using heap allocations.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.nsString.html'
+                                  title='nsstring_vendor::nsString'>nsString</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.nsStringRepr.html'
+                                  title='nsstring_vendor::nsStringRepr'>nsStringRepr</a></td>
+                           <td class='docblock-short'>
+                                <p>The representation of a ns[C]String type in C++. This type is
+used internally by our definition of ns[C]String to ensure layout
+compatibility with the C++ ns[C]String type.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "nsstring_vendor";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

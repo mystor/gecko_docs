@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["ns_style_coord","Rust helpers for Gecko's `nsStyleCoord`."],["ownership","Helpers for different FFI pointer kinds that Gecko's FFI layer uses."],["refptr","A rust helper to ease the use of Gecko's refcounted types."]]});

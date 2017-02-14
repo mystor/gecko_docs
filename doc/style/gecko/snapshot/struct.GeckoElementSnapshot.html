@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `GeckoElementSnapshot` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, GeckoElementSnapshot">
+
+    <title>style::gecko::snapshot::GeckoElementSnapshot - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../index.html'>style</a>::<wbr><a href='../index.html'>gecko</a>::<wbr><a href='index.html'>snapshot</a></p><script>window.sidebarCurrent = {name: 'GeckoElementSnapshot', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../index.html'>style</a>::<wbr><a href='../index.html'>gecko</a>::<wbr><a href='index.html'>snapshot</a>::<wbr><a class='struct' href=''>GeckoElementSnapshot</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../src/style/gecko/snapshot.rs.html#25' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct GeckoElementSnapshot(_);</pre><div class='docblock'><p>A snapshot of a Gecko element.</p>
+
+<p>This is really a Gecko type (see <code>ServoElementSnapshot.h</code> in Gecko) we wrap
+here.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../../style/gecko/snapshot/struct.GeckoElementSnapshot.html' title='style::gecko::snapshot::GeckoElementSnapshot'>GeckoElementSnapshot</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/style/gecko/snapshot.rs.html#39-64' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><span id='new.v' class='invisible'><code>fn <a href='#method.new' class='fnname'>new</a>&lt;'le&gt;(el: <a class='struct' href='../../../style/gecko/wrapper/struct.GeckoElement.html' title='style::gecko::wrapper::GeckoElement'>GeckoElement</a>&lt;'le&gt;) -&gt; Self</code></span></h4>
+<div class='docblock'><p>Create a new snapshot of the given element.</p>
+</div><h4 id='method.borrow_mut_raw' class='method'><span id='borrow_mut_raw.v' class='invisible'><code>fn <a href='#method.borrow_mut_raw' class='fnname'>borrow_mut_raw</a>(&amp;mut self) -&gt; <a class='type' href='../../../style/gecko_bindings/bindings/type.ServoElementSnapshotBorrowedMut.html' title='style::gecko_bindings::bindings::ServoElementSnapshotBorrowedMut'>ServoElementSnapshotBorrowedMut</a></code></span></h4>
+<div class='docblock'><p>Get a mutable reference to the snapshot.</p>
+</div><h4 id='method.ptr' class='method'><span id='ptr.v' class='invisible'><code>fn <a href='#method.ptr' class='fnname'>ptr</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*const </a><a class='struct' href='../../../style/gecko_bindings/structs/root/mozilla/struct.ServoElementSnapshot.html' title='style::gecko_bindings::structs::root::mozilla::ServoElementSnapshot'>ServoElementSnapshot</a></code></span></h4>
+<div class='docblock'><p>Get the pointer to the actual snapshot.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../../style/gecko/snapshot/struct.GeckoElementSnapshot.html' title='style::gecko::snapshot::GeckoElementSnapshot'>GeckoElementSnapshot</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/style/gecko/snapshot.rs.html#24' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html' title='core::marker::Sync'>Sync</a> for <a class='struct' href='../../../style/gecko/snapshot/struct.GeckoElementSnapshot.html' title='style::gecko::snapshot::GeckoElementSnapshot'>GeckoElementSnapshot</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/style/gecko/snapshot.rs.html#29' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../../style/gecko/snapshot/struct.GeckoElementSnapshot.html' title='style::gecko::snapshot::GeckoElementSnapshot'>GeckoElementSnapshot</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/style/gecko/snapshot.rs.html#31-37' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.drop' class='method'><span id='drop.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop' class='fnname'>drop</a>(&amp;mut self)</code></span></h4>
+<div class='docblock'><p>A method called when the value goes out of scope. <a href="https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../../../selectors/tree/trait.MatchAttr.html' title='selectors::tree::MatchAttr'>MatchAttr</a> for <a class='struct' href='../../../style/gecko/snapshot/struct.GeckoElementSnapshot.html' title='style::gecko::snapshot::GeckoElementSnapshot'>GeckoElementSnapshot</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/style/gecko/snapshot.rs.html#66-136' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Impl' class='type'><span id='Impl.t' class='invisible'><code>type <a href='../../../selectors/tree/trait.MatchAttr.html#associatedtype.Impl' class='type'>Impl</a> = <a class='struct' href='../../../style/gecko/selector_parser/struct.SelectorImpl.html' title='style::gecko::selector_parser::SelectorImpl'>SelectorImpl</a></code></span></h4>
+<h4 id='method.match_attr_has' class='method'><span id='match_attr_has.v' class='invisible'><code>fn <a href='../../../selectors/tree/trait.MatchAttr.html#tymethod.match_attr_has' class='fnname'>match_attr_has</a>(&amp;self, attr: &amp;<a class='struct' href='../../../selectors/parser/struct.AttrSelector.html' title='selectors::parser::AttrSelector'>AttrSelector</a>&lt;<a class='struct' href='../../../style/gecko/selector_parser/struct.SelectorImpl.html' title='style::gecko::selector_parser::SelectorImpl'>SelectorImpl</a>&gt;) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.match_attr_equals' class='method'><span id='match_attr_equals.v' class='invisible'><code>fn <a href='../../../selectors/tree/trait.MatchAttr.html#tymethod.match_attr_equals' class='fnname'>match_attr_equals</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; attr: &amp;<a class='struct' href='../../../selectors/parser/struct.AttrSelector.html' title='selectors::parser::AttrSelector'>AttrSelector</a>&lt;<a class='struct' href='../../../style/gecko/selector_parser/struct.SelectorImpl.html' title='style::gecko::selector_parser::SelectorImpl'>SelectorImpl</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; value: &amp;<a class='struct' href='../../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.match_attr_equals_ignore_ascii_case' class='method'><span id='match_attr_equals_ignore_ascii_case.v' class='invisible'><code>fn <a href='../../../selectors/tree/trait.MatchAttr.html#tymethod.match_attr_equals_ignore_ascii_case' class='fnname'>match_attr_equals_ignore_ascii_case</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; attr: &amp;<a class='struct' href='../../../selectors/parser/struct.AttrSelector.html' title='selectors::parser::AttrSelector'>AttrSelector</a>&lt;<a class='struct' href='../../../style/gecko/selector_parser/struct.SelectorImpl.html' title='style::gecko::selector_parser::SelectorImpl'>SelectorImpl</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; value: &amp;<a class='struct' href='../../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.match_attr_includes' class='method'><span id='match_attr_includes.v' class='invisible'><code>fn <a href='../../../selectors/tree/trait.MatchAttr.html#tymethod.match_attr_includes' class='fnname'>match_attr_includes</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; attr: &amp;<a class='struct' href='../../../selectors/parser/struct.AttrSelector.html' title='selectors::parser::AttrSelector'>AttrSelector</a>&lt;<a class='struct' href='../../../style/gecko/selector_parser/struct.SelectorImpl.html' title='style::gecko::selector_parser::SelectorImpl'>SelectorImpl</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; value: &amp;<a class='struct' href='../../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.match_attr_dash' class='method'><span id='match_attr_dash.v' class='invisible'><code>fn <a href='../../../selectors/tree/trait.MatchAttr.html#tymethod.match_attr_dash' class='fnname'>match_attr_dash</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; attr: &amp;<a class='struct' href='../../../selectors/parser/struct.AttrSelector.html' title='selectors::parser::AttrSelector'>AttrSelector</a>&lt;<a class='struct' href='../../../style/gecko/selector_parser/struct.SelectorImpl.html' title='style::gecko::selector_parser::SelectorImpl'>SelectorImpl</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; value: &amp;<a class='struct' href='../../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.match_attr_prefix' class='method'><span id='match_attr_prefix.v' class='invisible'><code>fn <a href='../../../selectors/tree/trait.MatchAttr.html#tymethod.match_attr_prefix' class='fnname'>match_attr_prefix</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; attr: &amp;<a class='struct' href='../../../selectors/parser/struct.AttrSelector.html' title='selectors::parser::AttrSelector'>AttrSelector</a>&lt;<a class='struct' href='../../../style/gecko/selector_parser/struct.SelectorImpl.html' title='style::gecko::selector_parser::SelectorImpl'>SelectorImpl</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; value: &amp;<a class='struct' href='../../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.match_attr_substring' class='method'><span id='match_attr_substring.v' class='invisible'><code>fn <a href='../../../selectors/tree/trait.MatchAttr.html#tymethod.match_attr_substring' class='fnname'>match_attr_substring</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; attr: &amp;<a class='struct' href='../../../selectors/parser/struct.AttrSelector.html' title='selectors::parser::AttrSelector'>AttrSelector</a>&lt;<a class='struct' href='../../../style/gecko/selector_parser/struct.SelectorImpl.html' title='style::gecko::selector_parser::SelectorImpl'>SelectorImpl</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; value: &amp;<a class='struct' href='../../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.match_attr_suffix' class='method'><span id='match_attr_suffix.v' class='invisible'><code>fn <a href='../../../selectors/tree/trait.MatchAttr.html#tymethod.match_attr_suffix' class='fnname'>match_attr_suffix</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; attr: &amp;<a class='struct' href='../../../selectors/parser/struct.AttrSelector.html' title='selectors::parser::AttrSelector'>AttrSelector</a>&lt;<a class='struct' href='../../../style/gecko/selector_parser/struct.SelectorImpl.html' title='style::gecko::selector_parser::SelectorImpl'>SelectorImpl</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; value: &amp;<a class='struct' href='../../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+</div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../../../style/restyle_hints/trait.ElementSnapshot.html' title='style::restyle_hints::ElementSnapshot'>ElementSnapshot</a> for <a class='struct' href='../../../style/gecko/snapshot/struct.GeckoElementSnapshot.html' title='style::gecko::snapshot::GeckoElementSnapshot'>GeckoElementSnapshot</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/style/gecko/snapshot.rs.html#138-178' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.state' class='method'><span id='state.v' class='invisible'><code>fn <a href='../../../style/restyle_hints/trait.ElementSnapshot.html#tymethod.state' class='fnname'>state</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../style/element_state/struct.ElementState.html' title='style::element_state::ElementState'>ElementState</a>&gt;</code></span></h4>
+<div class='docblock'><p>The state of the snapshot, if any.</p>
+</div><h4 id='method.has_attrs' class='method'><span id='has_attrs.v' class='invisible'><code>fn <a href='../../../style/restyle_hints/trait.ElementSnapshot.html#tymethod.has_attrs' class='fnname'>has_attrs</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>If this snapshot contains attribute information.</p>
+</div><h4 id='method.id_attr' class='method'><span id='id_attr.v' class='invisible'><code>fn <a href='../../../style/restyle_hints/trait.ElementSnapshot.html#tymethod.id_attr' class='fnname'>id_attr</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>&gt;</code></span></h4>
+<div class='docblock'><p>The ID attribute per this snapshot. Should only be called if <code>has_attrs()</code> returns true. <a href="../../../style/restyle_hints/trait.ElementSnapshot.html#tymethod.id_attr">Read more</a></p>
+</div><h4 id='method.has_class' class='method'><span id='has_class.v' class='invisible'><code>fn <a href='../../../style/restyle_hints/trait.ElementSnapshot.html#tymethod.has_class' class='fnname'>has_class</a>(&amp;self, name: &amp;<a class='struct' href='../../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Whether this snapshot contains the class <code>name</code>. Should only be called if <code>has_attrs()</code> returns true. <a href="../../../style/restyle_hints/trait.ElementSnapshot.html#tymethod.has_class">Read more</a></p>
+</div><h4 id='method.each_class' class='method'><span id='each_class.v' class='invisible'><code>fn <a href='../../../style/restyle_hints/trait.ElementSnapshot.html#tymethod.each_class' class='fnname'>each_class</a>&lt;F&gt;(&amp;self, callback: F) <span class='where fmt-newline'>where F: <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;<a class='struct' href='../../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>)</span></code></span></h4>
+<div class='docblock'><p>A callback that should be called for each class of the snapshot. Should only be called if <code>has_attrs()</code> returns true. <a href="../../../style/restyle_hints/trait.ElementSnapshot.html#tymethod.each_class">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../jquery.js"></script>
+    <script src="../../../main.js"></script>
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `SelectorMap` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, SelectorMap">
+
+    <title>style::stylist::SelectorMap - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>style</a>::<wbr><a href='index.html'>stylist</a></p><script>window.sidebarCurrent = {name: 'SelectorMap', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>style</a>::<wbr><a href='index.html'>stylist</a>::<wbr><a class='struct' href=''>SelectorMap</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/style/stylist.rs.html#840-854' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct SelectorMap {
+    pub id_hash: <a class='type' href='../../style/stylist/type.FnvHashMap.html' title='style::stylist::FnvHashMap'>FnvHashMap</a>&lt;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../style/stylist/struct.Rule.html' title='style::stylist::Rule'>Rule</a>&gt;&gt;,
+    pub class_hash: <a class='type' href='../../style/stylist/type.FnvHashMap.html' title='style::stylist::FnvHashMap'>FnvHashMap</a>&lt;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../style/stylist/struct.Rule.html' title='style::stylist::Rule'>Rule</a>&gt;&gt;,
+    pub local_name_hash: <a class='type' href='../../style/stylist/type.FnvHashMap.html' title='style::stylist::FnvHashMap'>FnvHashMap</a>&lt;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>LocalName</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../style/stylist/struct.Rule.html' title='style::stylist::Rule'>Rule</a>&gt;&gt;,
+    pub lower_local_name_hash: <a class='type' href='../../style/stylist/type.FnvHashMap.html' title='style::stylist::FnvHashMap'>FnvHashMap</a>&lt;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>LocalName</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../style/stylist/struct.Rule.html' title='style::stylist::Rule'>Rule</a>&gt;&gt;,
+    pub other_rules: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../style/stylist/struct.Rule.html' title='style::stylist::Rule'>Rule</a>&gt;,
+    pub empty: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+}</pre><div class='docblock'><p>Map element data to Rules whose last simple selector starts with them.</p>
+
+<p>e.g.,
+&quot;p &gt; img&quot; would go into the set of Rules corresponding to the
+element &quot;img&quot;
+&quot;a .foo .bar.baz&quot; would go into the set of Rules corresponding to
+the class &quot;bar&quot;</p>
+
+<p>Because we match Rules right-to-left (i.e., moving up the tree
+from an element), we need to compare the last simple selector in the
+Rule with the element.</p>
+
+<p>So, if an element has ID &quot;id1&quot; and classes &quot;foo&quot; and &quot;bar&quot;, then all
+the rules it matches will have their last simple selector starting
+either with &quot;#id1&quot; or with &quot;.foo&quot; or with &quot;.bar&quot;.</p>
+
+<p>Hence, the union of the rules keyed on each of element&#39;s classes, ID,
+element name, etc. will contain the Rules that actually match that
+element.</p>
+
+<p>TODO: Tune the initial capacity of the HashMap</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.id_hash' class='structfield'>
+                           <span id='id_hash.v' class='invisible'>
+                           <code>id_hash: <a class='type' href='../../style/stylist/type.FnvHashMap.html' title='style::stylist::FnvHashMap'>FnvHashMap</a>&lt;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../style/stylist/struct.Rule.html' title='style::stylist::Rule'>Rule</a>&gt;&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>A hash from an ID to rules which contain that ID selector.</p>
+</div><span id='structfield.class_hash' class='structfield'>
+                           <span id='class_hash.v' class='invisible'>
+                           <code>class_hash: <a class='type' href='../../style/stylist/type.FnvHashMap.html' title='style::stylist::FnvHashMap'>FnvHashMap</a>&lt;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../style/stylist/struct.Rule.html' title='style::stylist::Rule'>Rule</a>&gt;&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>A hash from a class name to rules which contain that class selector.</p>
+</div><span id='structfield.local_name_hash' class='structfield'>
+                           <span id='local_name_hash.v' class='invisible'>
+                           <code>local_name_hash: <a class='type' href='../../style/stylist/type.FnvHashMap.html' title='style::stylist::FnvHashMap'>FnvHashMap</a>&lt;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>LocalName</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../style/stylist/struct.Rule.html' title='style::stylist::Rule'>Rule</a>&gt;&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>A hash from local name to rules which contain that local name selector.</p>
+</div><span id='structfield.lower_local_name_hash' class='structfield'>
+                           <span id='lower_local_name_hash.v' class='invisible'>
+                           <code>lower_local_name_hash: <a class='type' href='../../style/stylist/type.FnvHashMap.html' title='style::stylist::FnvHashMap'>FnvHashMap</a>&lt;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>LocalName</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../style/stylist/struct.Rule.html' title='style::stylist::Rule'>Rule</a>&gt;&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Same as local_name_hash, but keys are lower-cased.
+For HTML elements in HTML documents.</p>
+</div><span id='structfield.other_rules' class='structfield'>
+                           <span id='other_rules.v' class='invisible'>
+                           <code>other_rules: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../style/stylist/struct.Rule.html' title='style::stylist::Rule'>Rule</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Rules that don&#39;t have ID, class, or element selectors.</p>
+</div><span id='structfield.empty' class='structfield'>
+                           <span id='empty.v' class='invisible'>
+                           <code>empty: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Whether this hash is empty.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../style/stylist/struct.SelectorMap.html' title='style::stylist::SelectorMap'>SelectorMap</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/stylist.rs.html#861-1103' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><span id='new.v' class='invisible'><code>fn <a href='#method.new' class='fnname'>new</a>() -&gt; Self</code></span></h4>
+<div class='docblock'><p>Trivially constructs an empty <code>SelectorMap</code>.</p>
+</div><h4 id='method.get_all_matching_rules' class='method'><span id='get_all_matching_rules.v' class='invisible'><code>fn <a href='#method.get_all_matching_rules' class='fnname'>get_all_matching_rules</a>&lt;E, V&gt;(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; element: &amp;E,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; parent_bf: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../selectors/bloom/struct.BloomFilter.html' title='selectors::bloom::BloomFilter'>BloomFilter</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; matching_rules_list: &amp;mut V,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; relations: &amp;mut <a class='struct' href='../../selectors/matching/struct.StyleRelations.html' title='selectors::matching::StyleRelations'>StyleRelations</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; flags: &amp;mut <a class='struct' href='../../selectors/matching/struct.ElementSelectorFlags.html' title='selectors::matching::ElementSelectorFlags'>ElementSelectorFlags</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cascade_level: <a class='enum' href='../../style/rule_tree/enum.CascadeLevel.html' title='style::rule_tree::CascadeLevel'>CascadeLevel</a>) <span class='where fmt-newline'>where E: <a class='trait' href='../../selectors/tree/trait.Element.html' title='selectors::tree::Element'>Element</a>&lt;Impl=<a class='struct' href='../../style/gecko/selector_parser/struct.SelectorImpl.html' title='style::gecko::selector_parser::SelectorImpl'>SelectorImpl</a>&gt;, V: <a class='trait' href='../../smallvec/trait.VecLike.html' title='smallvec::VecLike'>VecLike</a>&lt;<a class='struct' href='../../style/stylist/struct.ApplicableDeclarationBlock.html' title='style::stylist::ApplicableDeclarationBlock'>ApplicableDeclarationBlock</a>&gt;</span></code></span></h4>
+<div class='docblock'><p>Append to <code>rule_list</code> all Rules in <code>self</code> that match element.</p>
+
+<p>Extract matching rules as per element&#39;s ID, classes, tag name, etc..
+Sort the Rules at the end to maintain cascading order.</p>
+</div><h4 id='method.get_universal_rules' class='method'><span id='get_universal_rules.v' class='invisible'><code>fn <a href='#method.get_universal_rules' class='fnname'>get_universal_rules</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cascade_level: <a class='enum' href='../../style/rule_tree/enum.CascadeLevel.html' title='style::rule_tree::CascadeLevel'>CascadeLevel</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; important_cascade_level: <a class='enum' href='../../style/rule_tree/enum.CascadeLevel.html' title='style::rule_tree::CascadeLevel'>CascadeLevel</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='../../style/stylist/struct.ApplicableDeclarationBlock.html' title='style::stylist::ApplicableDeclarationBlock'>ApplicableDeclarationBlock</a>&gt;</code></span></h4>
+<div class='docblock'><p>Append to <code>rule_list</code> all universal Rules (rules with selector <code>*|*</code>) in
+<code>self</code> sorted by specificity and source order.</p>
+</div><h4 id='method.insert' class='method'><span id='insert.v' class='invisible'><code>fn <a href='#method.insert' class='fnname'>insert</a>(&amp;mut self, rule: <a class='struct' href='../../style/stylist/struct.Rule.html' title='style::stylist::Rule'>Rule</a>)</code></span></h4>
+<div class='docblock'><p>Insert rule into the correct hash.
+Order in which to try: id_hash, class_hash, local_name_hash, other_rules.</p>
+</div><h4 id='method.get_id_name' class='method'><span id='get_id_name.v' class='invisible'><code>fn <a href='#method.get_id_name' class='fnname'>get_id_name</a>(rule: &amp;<a class='struct' href='../../style/stylist/struct.Rule.html' title='style::stylist::Rule'>Rule</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>&gt;</code></span></h4>
+<div class='docblock'><p>Retrieve the first ID name in Rule, or None otherwise.</p>
+</div><h4 id='method.get_class_name' class='method'><span id='get_class_name.v' class='invisible'><code>fn <a href='#method.get_class_name' class='fnname'>get_class_name</a>(rule: &amp;<a class='struct' href='../../style/stylist/struct.Rule.html' title='style::stylist::Rule'>Rule</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>&gt;</code></span></h4>
+<div class='docblock'><p>Retrieve the FIRST class name in Rule, or None otherwise.</p>
+</div><h4 id='method.get_local_name' class='method'><span id='get_local_name.v' class='invisible'><code>fn <a href='#method.get_local_name' class='fnname'>get_local_name</a>(rule: &amp;<a class='struct' href='../../style/stylist/struct.Rule.html' title='style::stylist::Rule'>Rule</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../selectors/parser/struct.LocalName.html' title='selectors::parser::LocalName'>LocalNameSelector</a>&lt;<a class='struct' href='../../style/gecko/selector_parser/struct.SelectorImpl.html' title='style::gecko::selector_parser::SelectorImpl'>SelectorImpl</a>&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Retrieve the name if it is a type selector, or None otherwise.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

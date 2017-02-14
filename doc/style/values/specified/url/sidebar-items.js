@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["SpecifiedUrl","A specified url() value."],["UrlExtraData","A set of data needed in Gecko to represent a URL."]]});

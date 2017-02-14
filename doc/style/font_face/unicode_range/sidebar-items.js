@@ -1,0 +1,1 @@
+initSidebarItems({"constant":[["MAX","Maximum value of the end of a range"]],"struct":[["Range","A single range: https://drafts.csswg.org/css-fonts/#urange-value"]]});

@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["TypedSideOffsets2D",""]],"type":[["SideOffsets2D","The default side offset type with no unit."]]});

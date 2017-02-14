@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `TypedPoint3D` struct in crate `euclid`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, TypedPoint3D">
+
+    <title>euclid::point::TypedPoint3D - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>euclid</a>::<wbr><a href='index.html'>point</a></p><script>window.sidebarCurrent = {name: 'TypedPoint3D', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>euclid</a>::<wbr><a href='index.html'>point</a>::<wbr><a class='struct' href=''>TypedPoint3D</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/euclid/macros.rs.html#18-21' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct TypedPoint3D&lt;T, U&gt; {
+    pub x: T,
+    pub y: T,
+    pub z: T,
+    // some fields omitted
+}</pre><div class='docblock'><p>A 3d Point tagged with a unit.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.x' class='structfield'>
+                           <span id='x.v' class='invisible'>
+                           <code>x: T</code>
+                           </span></span><span class='stab '></span><span id='structfield.y' class='structfield'>
+                           <span id='y.v' class='invisible'>
+                           <code>y: T</code>
+                           </span></span><span class='stab '></span><span id='structfield.z' class='structfield'>
+                           <span id='z.v' class='invisible'>
+                           <code>z: T</code>
+                           </span></span><span class='stab '></span><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> + <a class='trait' href='../../euclid/num/trait.Zero.html' title='euclid::num::Zero'>Zero</a>, U&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/point.rs.html#302-308' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.zero' class='method'><span id='zero.v' class='invisible'><code>fn <a href='#method.zero' class='fnname'>zero</a>() -&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span></h4>
+<div class='docblock'><p>Constructor, setting all copmonents to zero.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a>, U&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/point.rs.html#322-367' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><span id='new.v' class='invisible'><code>fn <a href='#method.new' class='fnname'>new</a>(x: T, y: T, z: T) -&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span></h4>
+<div class='docblock'><p>Constructor taking scalar values directly.</p>
+</div><h4 id='method.from_lengths' class='method'><span id='from_lengths.v' class='invisible'><code>fn <a href='#method.from_lengths' class='fnname'>from_lengths</a>(x: <a class='struct' href='../../euclid/length/struct.Length.html' title='euclid::length::Length'>Length</a>&lt;T, U&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; y: <a class='struct' href='../../euclid/length/struct.Length.html' title='euclid::length::Length'>Length</a>&lt;T, U&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; z: <a class='struct' href='../../euclid/length/struct.Length.html' title='euclid::length::Length'>Length</a>&lt;T, U&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span></h4>
+<div class='docblock'><p>Constructor taking properly typed Lengths instead of scalar values.</p>
+</div><h4 id='method.x_typed' class='method'><span id='x_typed.v' class='invisible'><code>fn <a href='#method.x_typed' class='fnname'>x_typed</a>(&amp;self) -&gt; <a class='struct' href='../../euclid/length/struct.Length.html' title='euclid::length::Length'>Length</a>&lt;T, U&gt;</code></span></h4>
+<div class='docblock'><p>Returns self.x as a Length carrying the unit.</p>
+</div><h4 id='method.y_typed' class='method'><span id='y_typed.v' class='invisible'><code>fn <a href='#method.y_typed' class='fnname'>y_typed</a>(&amp;self) -&gt; <a class='struct' href='../../euclid/length/struct.Length.html' title='euclid::length::Length'>Length</a>&lt;T, U&gt;</code></span></h4>
+<div class='docblock'><p>Returns self.y as a Length carrying the unit.</p>
+</div><h4 id='method.z_typed' class='method'><span id='z_typed.v' class='invisible'><code>fn <a href='#method.z_typed' class='fnname'>z_typed</a>(&amp;self) -&gt; <a class='struct' href='../../euclid/length/struct.Length.html' title='euclid::length::Length'>Length</a>&lt;T, U&gt;</code></span></h4>
+<div class='docblock'><p>Returns self.z as a Length carrying the unit.</p>
+</div><h4 id='method.to_array' class='method'><span id='to_array.v' class='invisible'><code>fn <a href='#method.to_array' class='fnname'>to_array</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a>T<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 3]</a></code></span></h4>
+<h4 id='method.to_untyped' class='method'><span id='to_untyped.v' class='invisible'><code>fn <a href='#method.to_untyped' class='fnname'>to_untyped</a>(&amp;self) -&gt; <a class='type' href='../../euclid/point/type.Point3D.html' title='euclid::point::Point3D'>Point3D</a>&lt;T&gt;</code></span></h4>
+<div class='docblock'><p>Drop the units, preserving only the numeric value.</p>
+</div><h4 id='method.from_untyped' class='method'><span id='from_untyped.v' class='invisible'><code>fn <a href='#method.from_untyped' class='fnname'>from_untyped</a>(p: &amp;<a class='type' href='../../euclid/point/type.Point3D.html' title='euclid::point::Point3D'>Point3D</a>&lt;T&gt;) -&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span></h4>
+<div class='docblock'><p>Tag a unitless value with units.</p>
+</div><h4 id='method.to_2d' class='method'><span id='to_2d.v' class='invisible'><code>fn <a href='#method.to_2d' class='fnname'>to_2d</a>(&amp;self) -&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint2D.html' title='euclid::point::TypedPoint2D'>TypedPoint2D</a>&lt;T, U&gt;</code></span></h4>
+<div class='docblock'><p>Convert into a 2d point.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Mul.html' title='core::ops::Mul'>Mul</a>&lt;T, Output=T&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Add.html' title='core::ops::Add'>Add</a>&lt;T, Output=T&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Sub.html' title='core::ops::Sub'>Sub</a>&lt;T, Output=T&gt; + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a>, U&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/point.rs.html#369-389' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.dot' class='method'><span id='dot.v' class='invisible'><code>fn <a href='#method.dot' class='fnname'>dot</a>(self, other: <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;) -&gt; T</code></span></h4>
+<h4 id='method.cross' class='method'><span id='cross.v' class='invisible'><code>fn <a href='#method.cross' class='fnname'>cross</a>(self, other: <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;) -&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span></h4>
+</div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='../../num_traits/float/trait.Float.html' title='num_traits::float::Float'>Float</a>, U&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/point.rs.html#417-428' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.min' class='method'><span id='min.v' class='invisible'><code>fn <a href='#method.min' class='fnname'>min</a>(self, other: <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;) -&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span></h4>
+<h4 id='method.max' class='method'><span id='max.v' class='invisible'><code>fn <a href='#method.max' class='fnname'>max</a>(self, other: <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;) -&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span></h4>
+</div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='../../euclid/num/trait.Round.html' title='euclid::num::Round'>Round</a>, U&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/point.rs.html#430-437' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.round' class='method'><span id='round.v' class='invisible'><code>fn <a href='#method.round' class='fnname'>round</a>(&amp;self) -&gt; Self</code></span></h4>
+<div class='docblock'><p>Rounds each component to the nearest integer value.</p>
+
+<p>This behavior is preserved for negative values (unlike the basic cast).</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='../../euclid/num/trait.Ceil.html' title='euclid::num::Ceil'>Ceil</a>, U&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/point.rs.html#439-446' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.ceil' class='method'><span id='ceil.v' class='invisible'><code>fn <a href='#method.ceil' class='fnname'>ceil</a>(&amp;self) -&gt; Self</code></span></h4>
+<div class='docblock'><p>Rounds each component to the smallest integer equal or greater than the orginal value.</p>
+
+<p>This behavior is preserved for negative values (unlike the basic cast).</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='../../euclid/num/trait.Floor.html' title='euclid::num::Floor'>Floor</a>, U&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/point.rs.html#448-455' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.floor' class='method'><span id='floor.v' class='invisible'><code>fn <a href='#method.floor' class='fnname'>floor</a>(&amp;self) -&gt; Self</code></span></h4>
+<div class='docblock'><p>Rounds each component to the biggest integer equal or lower than the orginal value.</p>
+
+<p>This behavior is preserved for negative values (unlike the basic cast).</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='../../num_traits/cast/trait.NumCast.html' title='num_traits::cast::NumCast'>NumCast</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a>, U&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/point.rs.html#457-505' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.cast' class='method'><span id='cast.v' class='invisible'><code>fn <a href='#method.cast' class='fnname'>cast</a>&lt;NewT:&nbsp;<a class='trait' href='../../num_traits/cast/trait.NumCast.html' title='num_traits::cast::NumCast'>NumCast</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a>&gt;(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;NewT, U&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Cast from one numeric representation to another, preserving the units.</p>
+
+<p>When casting from floating point to integer coordinates, the decimals are truncated
+as one would expect from a simple cast, but this behavior does not always make sense
+geometrically. Consider using round(), ceil or floor() before casting.</p>
+</div><h4 id='method.to_f32' class='method'><span id='to_f32.v' class='invisible'><code>fn <a href='#method.to_f32' class='fnname'>to_f32</a>(&amp;self) -&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>, U&gt;</code></span></h4>
+<div class='docblock'><p>Cast into an f32 vector.</p>
+</div><h4 id='method.to_uint' class='method'><span id='to_uint.v' class='invisible'><code>fn <a href='#method.to_uint' class='fnname'>to_uint</a>(&amp;self) -&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>, U&gt;</code></span></h4>
+<div class='docblock'><p>Cast into an usize point, truncating decimals if any.</p>
+
+<p>When casting from floating point vectors, it is worth considering whether
+to round(), ceil() or floor() before the cast in order to obtain the desired
+conversion behavior.</p>
+</div><h4 id='method.to_i32' class='method'><span id='to_i32.v' class='invisible'><code>fn <a href='#method.to_i32' class='fnname'>to_i32</a>(&amp;self) -&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>, U&gt;</code></span></h4>
+<div class='docblock'><p>Cast into an i32 point, truncating decimals if any.</p>
+
+<p>When casting from floating point vectors, it is worth considering whether
+to round(), ceil() or floor() before the cast in order to obtain the desired
+conversion behavior.</p>
+</div><h4 id='method.to_i64' class='method'><span id='to_i64.v' class='invisible'><code>fn <a href='#method.to_i64' class='fnname'>to_i64</a>(&amp;self) -&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i64.html'>i64</a>, U&gt;</code></span></h4>
+<div class='docblock'><p>Cast into an i64 point, truncating decimals if any.</p>
+
+<p>When casting from floating point vectors, it is worth considering whether
+to round(), ceil() or floor() before the cast in order to obtain the desired
+conversion behavior.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='../../rustc_serialize/serialize/trait.Decodable.html' title='rustc_serialize::serialize::Decodable'>Decodable</a>, U:&nbsp;<a class='trait' href='../../rustc_serialize/serialize/trait.Decodable.html' title='rustc_serialize::serialize::Decodable'>Decodable</a>&gt; <a class='trait' href='../../rustc_serialize/serialize/trait.Decodable.html' title='rustc_serialize::serialize::Decodable'>Decodable</a> for <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/point.rs.html#289' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.decode' class='method'><span id='decode.v' class='invisible'><code>fn <a href='../../rustc_serialize/serialize/trait.Decodable.html#tymethod.decode' class='fnname'>decode</a>&lt;__DTU:&nbsp;<a class='trait' href='../../rustc_serialize/serialize/trait.Decoder.html' title='rustc_serialize::serialize::Decoder'>Decoder</a>&gt;(__arg_0: &amp;mut __DTU)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;, __DTU::<a class='trait' href='../../rustc_serialize/serialize/trait.Decoder.html' title='rustc_serialize::serialize::Decoder'>Error</a>&gt;</code></span></h4>
+<div class='docblock'><p>Deserialize a value using a <code>Decoder</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='../../rustc_serialize/serialize/trait.Encodable.html' title='rustc_serialize::serialize::Encodable'>Encodable</a>, U:&nbsp;<a class='trait' href='../../rustc_serialize/serialize/trait.Encodable.html' title='rustc_serialize::serialize::Encodable'>Encodable</a>&gt; <a class='trait' href='../../rustc_serialize/serialize/trait.Encodable.html' title='rustc_serialize::serialize::Encodable'>Encodable</a> for <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/point.rs.html#289' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.encode' class='method'><span id='encode.v' class='invisible'><code>fn <a href='../../rustc_serialize/serialize/trait.Encodable.html#tymethod.encode' class='fnname'>encode</a>&lt;__STU:&nbsp;<a class='trait' href='../../rustc_serialize/serialize/trait.Encoder.html' title='rustc_serialize::serialize::Encoder'>Encoder</a>&gt;(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; __arg_0: &amp;mut __STU)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, __STU::<a class='trait' href='../../rustc_serialize/serialize/trait.Encoder.html' title='rustc_serialize::serialize::Encoder'>Error</a>&gt;</code></span></h4>
+<div class='docblock'><p>Serialize a value using an <code>Encoder</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a>, U&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/macros.rs.html#23-30' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; Self</code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a>, U&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/macros.rs.html#32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl&lt;T, U&gt; <a class='trait' href='../../heapsize/trait.HeapSizeOf.html' title='heapsize::HeapSizeOf'>HeapSizeOf</a> for <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt; <span class='where fmt-newline'>where T: <a class='trait' href='../../heapsize/trait.HeapSizeOf.html' title='heapsize::HeapSizeOf'>HeapSizeOf</a></span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/macros.rs.html#34-40' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.heap_size_of_children' class='method'><span id='heap_size_of_children.v' class='invisible'><code>fn <a href='../../heapsize/trait.HeapSizeOf.html#tymethod.heap_size_of_children' class='fnname'>heap_size_of_children</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code></span></h4>
+<div class='docblock'><p>Measure the size of any heap-allocated structures that hang off this value, but not the space taken up by the value itself (i.e. what size_of::<T> measures, more or less); that space is handled by the implementation of HeapSizeOf for Box<T> below. <a href="../../heapsize/trait.HeapSizeOf.html#tymethod.heap_size_of_children">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T, U&gt; <a class='trait' href='../../serde/de/trait.Deserialize.html' title='serde::de::Deserialize'>Deserialize</a> for <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt; <span class='where fmt-newline'>where T: <a class='trait' href='../../serde/de/trait.Deserialize.html' title='serde::de::Deserialize'>Deserialize</a></span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/macros.rs.html#42-55' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.deserialize' class='method'><span id='deserialize.v' class='invisible'><code>fn <a href='../../serde/de/trait.Deserialize.html#tymethod.deserialize' class='fnname'>deserialize</a>&lt;D&gt;(deserializer: &amp;mut D) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;Self, D::<a class='trait' href='../../serde/de/trait.Deserializer.html' title='serde::de::Deserializer'>Error</a>&gt; <span class='where fmt-newline'>where D: <a class='trait' href='../../serde/de/trait.Deserializer.html' title='serde::de::Deserializer'>Deserializer</a></span></code></span></h4>
+<div class='docblock'><p>Deserialize this value given this <code>Deserializer</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T, U&gt; <a class='trait' href='../../serde/ser/trait.Serialize.html' title='serde::ser::Serialize'>Serialize</a> for <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt; <span class='where fmt-newline'>where T: <a class='trait' href='../../serde/ser/trait.Serialize.html' title='serde::ser::Serialize'>Serialize</a></span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/macros.rs.html#57-65' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.serialize' class='method'><span id='serialize.v' class='invisible'><code>fn <a href='../../serde/ser/trait.Serialize.html#tymethod.serialize' class='fnname'>serialize</a>&lt;S&gt;(&amp;self, serializer: &amp;mut S) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, S::<a class='trait' href='../../serde/ser/trait.Serializer.html' title='serde::ser::Serializer'>Error</a>&gt; <span class='where fmt-newline'>where S: <a class='trait' href='../../serde/ser/trait.Serializer.html' title='serde::ser::Serializer'>Serializer</a></span></code></span></h4>
+<div class='docblock'><p>Serializes this value into this serializer.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T, U&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a> for <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt; <span class='where fmt-newline'>where T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.Eq.html' title='core::cmp::Eq'>Eq</a></span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/macros.rs.html#67-68' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl&lt;T, U&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> for <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt; <span class='where fmt-newline'>where T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a></span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/macros.rs.html#70-76' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.eq' class='method'><span id='eq.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq' class='fnname'>eq</a>(&amp;self, other: &amp;Self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>This method tests for <code>self</code> and <code>other</code> values to be equal, and is used by <code>==</code>. <a href="https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#tymethod.eq">Read more</a></p>
+</div><h4 id='method.ne' class='method'><span id='ne.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html#method.ne' class='fnname'>ne</a>(&amp;self, other: &amp;Rhs) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>This method tests for <code>!=</code>.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T, U&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html' title='core::hash::Hash'>Hash</a> for <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt; <span class='where fmt-newline'>where T: <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html' title='core::hash::Hash'>Hash</a></span></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/macros.rs.html#78-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.hash' class='method'><span id='hash.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#tymethod.hash' class='fnname'>hash</a>&lt;H:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a>&gt;(&amp;self, h: &amp;mut H)</code></span></h4>
+<div class='docblock'><p>Feeds this value into the state given, updating the hasher as necessary.</p>
+</div><h4 id='method.hash_slice' class='method'><span id='hash_slice.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/hash/trait.Hash.html#method.hash_slice' class='fnname'>hash_slice</a>&lt;H&gt;(data: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[Self]</a>, state: &amp;mut H) <span class='where fmt-newline'>where H: <a class='trait' href='https://doc.rust-lang.org/nightly/core/hash/trait.Hasher.html' title='core::hash::Hasher'>Hasher</a></span></code><div class='since' title='Stable since Rust version 1.3.0'>1.3.0</div></span></h4>
+<div class='docblock'><p>Feeds a slice of this type into the state provided.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a>, U&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/point.rs.html#310-314' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html' title='core::fmt::Display'>Display</a>, U&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html' title='core::fmt::Display'>Display</a> for <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/point.rs.html#316-320' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt-1' class='method'><span id='fmt.v-1' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Display.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, f: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Add.html' title='core::ops::Add'>Add</a>&lt;T, Output=T&gt;, U&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Add.html' title='core::ops::Add'>Add</a> for <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/point.rs.html#391-398' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Output' class='type'><span id='Output.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Add.html#associatedtype.Output' class='type'>Output</a> = <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span></h4>
+<div class='docblock'><p>The resulting type after applying the <code>+</code> operator</p>
+</div><h4 id='method.add' class='method'><span id='add.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Add.html#tymethod.add' class='fnname'>add</a>(self, other: <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;) -&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span></h4>
+<div class='docblock'><p>The method for the <code>+</code> operator</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Sub.html' title='core::ops::Sub'>Sub</a>&lt;T, Output=T&gt;, U&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Sub.html' title='core::ops::Sub'>Sub</a> for <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/point.rs.html#400-407' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Output-1' class='type'><span id='Output.t-1' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Sub.html#associatedtype.Output' class='type'>Output</a> = <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span></h4>
+<div class='docblock'><p>The resulting type after applying the <code>-</code> operator</p>
+</div><h4 id='method.sub' class='method'><span id='sub.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Sub.html#tymethod.sub' class='fnname'>sub</a>(self, other: <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;) -&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span></h4>
+<div class='docblock'><p>The method for the <code>-</code> operator</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Neg.html' title='core::ops::Neg'>Neg</a>&lt;Output=T&gt;, U&gt; <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Neg.html' title='core::ops::Neg'>Neg</a> for <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/point.rs.html#409-415' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Output-2' class='type'><span id='Output.t-2' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Neg.html#associatedtype.Output' class='type'>Output</a> = <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span></h4>
+<div class='docblock'><p>The resulting type after applying the <code>-</code> operator</p>
+</div><h4 id='method.neg' class='method'><span id='neg.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Neg.html#tymethod.neg' class='fnname'>neg</a>(self) -&gt; <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span></h4>
+<div class='docblock'><p>The method for the unary <code>-</code> operator</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;T:&nbsp;<a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> + <a class='trait' href='../../euclid/approxeq/trait.ApproxEq.html' title='euclid::approxeq::ApproxEq'>ApproxEq</a>&lt;T&gt;, U&gt; <a class='trait' href='../../euclid/approxeq/trait.ApproxEq.html' title='euclid::approxeq::ApproxEq'>ApproxEq</a>&lt;<a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;&gt; for <a class='struct' href='../../euclid/point/struct.TypedPoint3D.html' title='euclid::point::TypedPoint3D'>TypedPoint3D</a>&lt;T, U&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/euclid/point.rs.html#507-526' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.approx_epsilon' class='method'><span id='approx_epsilon.v' class='invisible'><code>fn <a href='../../euclid/approxeq/trait.ApproxEq.html#tymethod.approx_epsilon' class='fnname'>approx_epsilon</a>() -&gt; Self</code></span></h4>
+<h4 id='method.approx_eq' class='method'><span id='approx_eq.v' class='invisible'><code>fn <a href='../../euclid/approxeq/trait.ApproxEq.html#tymethod.approx_eq' class='fnname'>approx_eq</a>(&amp;self, other: &amp;Self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.approx_eq_eps' class='method'><span id='approx_eq_eps.v' class='invisible'><code>fn <a href='../../euclid/approxeq/trait.ApproxEq.html#tymethod.approx_eq_eps' class='fnname'>approx_eq_eps</a>(&amp;self, other: &amp;Self, eps: &amp;Self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "euclid";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

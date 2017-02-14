@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["NUM_THREADS","The number of layout threads, computed statically."],["PerDocumentStyleData","The data itself is an `AtomicRefCell`, which guarantees the proper semantics and unexpected races while trying to mutate it."],["PerDocumentStyleDataImpl","The container for data that a Servo-backed Gecko document needs to style itself."]]});

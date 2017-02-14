@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["GeckoRestyleDamage","The representation of Gecko's restyle damage is just a wrapper over `nsChangeHint`."]]});

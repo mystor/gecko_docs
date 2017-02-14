@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsStyleDisplay` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsStyleDisplay">
+
+    <title>style::gecko_bindings::structs::root::nsStyleDisplay - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>structs</a>::<wbr><a href='index.html'>root</a></p><script>window.sidebarCurrent = {name: 'nsStyleDisplay', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>structs</a>::<wbr><a href='index.html'>root</a>::<wbr><a class='struct' href=''>nsStyleDisplay</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#16842-16895' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsStyleDisplay {
+    pub mBinding: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.URLValue.html' title='style::gecko_bindings::structs::root::mozilla::css::URLValue'>URLValue</a>&gt;,
+    pub mDisplay: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleDisplay.html' title='style::gecko_bindings::structs::root::mozilla::StyleDisplay'>StyleDisplay</a>,
+    pub mOriginalDisplay: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleDisplay.html' title='style::gecko_bindings::structs::root::mozilla::StyleDisplay'>StyleDisplay</a>,
+    pub mContain: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mAppearance: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mPosition: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mFloat: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleFloat.html' title='style::gecko_bindings::structs::root::mozilla::StyleFloat'>StyleFloat</a>,
+    pub mOriginalFloat: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleFloat.html' title='style::gecko_bindings::structs::root::mozilla::StyleFloat'>StyleFloat</a>,
+    pub mBreakType: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleClear.html' title='style::gecko_bindings::structs::root::mozilla::StyleClear'>StyleClear</a>,
+    pub mBreakInside: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mBreakBefore: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub mBreakAfter: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub mOverflowX: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mOverflowY: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mOverflowClipBox: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mResize: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mOrient: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleOrient.html' title='style::gecko_bindings::structs::root::mozilla::StyleOrient'>StyleOrient</a>,
+    pub mIsolation: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mTopLayer: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mWillChangeBitField: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mWillChange: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsTArray.html' title='style::gecko_bindings::structs::root::nsTArray'>nsTArray</a>&lt;<a class='struct' href='../../../../nsstring_vendor/struct.nsStringRepr.html' title='nsstring_vendor::nsStringRepr'>nsStringRepr</a>&gt;,
+    pub mTouchAction: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mScrollBehavior: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mScrollSnapTypeX: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mScrollSnapTypeY: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mScrollSnapPointsX: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mScrollSnapPointsY: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mScrollSnapDestination: <a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.Position.html' title='style::gecko_bindings::structs::root::mozilla::Position'>Position</a>,
+    pub mScrollSnapCoordinate: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsTArray.html' title='style::gecko_bindings::structs::root::nsTArray'>nsTArray</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.Position.html' title='style::gecko_bindings::structs::root::mozilla::Position'>Position</a>&gt;,
+    pub mBackfaceVisibility: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mTransformStyle: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mTransformBox: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mSpecifiedTransform: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValueSharedList.html' title='style::gecko_bindings::structs::root::nsCSSValueSharedList'>nsCSSValueSharedList</a>&gt;,
+    pub mTransformOrigin: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 3]</a>,
+    pub mChildPerspective: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mPerspectiveOrigin: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 2]</a>,
+    pub mVerticalAlign: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mTransitions: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleAutoArray.html' title='style::gecko_bindings::structs::root::nsStyleAutoArray'>nsStyleAutoArray</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.StyleTransition.html' title='style::gecko_bindings::structs::root::mozilla::StyleTransition'>StyleTransition</a>&gt;,
+    pub mTransitionTimingFunctionCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mTransitionDurationCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mTransitionDelayCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mTransitionPropertyCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mAnimations: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleAutoArray.html' title='style::gecko_bindings::structs::root::nsStyleAutoArray'>nsStyleAutoArray</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.StyleAnimation.html' title='style::gecko_bindings::structs::root::mozilla::StyleAnimation'>StyleAnimation</a>&gt;,
+    pub mAnimationTimingFunctionCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mAnimationDurationCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mAnimationDelayCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mAnimationNameCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mAnimationDirectionCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mAnimationFillModeCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mAnimationPlayStateCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mAnimationIterationCountCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mShapeOutside: <a class='type' href='../../../../style/gecko_bindings/structs/root/mozilla/type.StyleShapeOutside.html' title='style::gecko_bindings::structs::root::mozilla::StyleShapeOutside'>StyleShapeOutside</a>,
+}</pre><h2 class='fields'>Fields</h2><span id='structfield.mBinding' class='structfield'>
+                           <span id='mBinding.v' class='invisible'>
+                           <code>mBinding: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.URLValue.html' title='style::gecko_bindings::structs::root::mozilla::css::URLValue'>URLValue</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mDisplay' class='structfield'>
+                           <span id='mDisplay.v' class='invisible'>
+                           <code>mDisplay: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleDisplay.html' title='style::gecko_bindings::structs::root::mozilla::StyleDisplay'>StyleDisplay</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mOriginalDisplay' class='structfield'>
+                           <span id='mOriginalDisplay.v' class='invisible'>
+                           <code>mOriginalDisplay: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleDisplay.html' title='style::gecko_bindings::structs::root::mozilla::StyleDisplay'>StyleDisplay</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mContain' class='structfield'>
+                           <span id='mContain.v' class='invisible'>
+                           <code>mContain: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mAppearance' class='structfield'>
+                           <span id='mAppearance.v' class='invisible'>
+                           <code>mAppearance: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mPosition' class='structfield'>
+                           <span id='mPosition.v' class='invisible'>
+                           <code>mPosition: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mFloat' class='structfield'>
+                           <span id='mFloat.v' class='invisible'>
+                           <code>mFloat: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleFloat.html' title='style::gecko_bindings::structs::root::mozilla::StyleFloat'>StyleFloat</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mOriginalFloat' class='structfield'>
+                           <span id='mOriginalFloat.v' class='invisible'>
+                           <code>mOriginalFloat: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleFloat.html' title='style::gecko_bindings::structs::root::mozilla::StyleFloat'>StyleFloat</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mBreakType' class='structfield'>
+                           <span id='mBreakType.v' class='invisible'>
+                           <code>mBreakType: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleClear.html' title='style::gecko_bindings::structs::root::mozilla::StyleClear'>StyleClear</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mBreakInside' class='structfield'>
+                           <span id='mBreakInside.v' class='invisible'>
+                           <code>mBreakInside: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mBreakBefore' class='structfield'>
+                           <span id='mBreakBefore.v' class='invisible'>
+                           <code>mBreakBefore: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mBreakAfter' class='structfield'>
+                           <span id='mBreakAfter.v' class='invisible'>
+                           <code>mBreakAfter: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mOverflowX' class='structfield'>
+                           <span id='mOverflowX.v' class='invisible'>
+                           <code>mOverflowX: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mOverflowY' class='structfield'>
+                           <span id='mOverflowY.v' class='invisible'>
+                           <code>mOverflowY: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mOverflowClipBox' class='structfield'>
+                           <span id='mOverflowClipBox.v' class='invisible'>
+                           <code>mOverflowClipBox: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mResize' class='structfield'>
+                           <span id='mResize.v' class='invisible'>
+                           <code>mResize: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mOrient' class='structfield'>
+                           <span id='mOrient.v' class='invisible'>
+                           <code>mOrient: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleOrient.html' title='style::gecko_bindings::structs::root::mozilla::StyleOrient'>StyleOrient</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mIsolation' class='structfield'>
+                           <span id='mIsolation.v' class='invisible'>
+                           <code>mIsolation: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTopLayer' class='structfield'>
+                           <span id='mTopLayer.v' class='invisible'>
+                           <code>mTopLayer: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mWillChangeBitField' class='structfield'>
+                           <span id='mWillChangeBitField.v' class='invisible'>
+                           <code>mWillChangeBitField: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mWillChange' class='structfield'>
+                           <span id='mWillChange.v' class='invisible'>
+                           <code>mWillChange: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsTArray.html' title='style::gecko_bindings::structs::root::nsTArray'>nsTArray</a>&lt;<a class='struct' href='../../../../nsstring_vendor/struct.nsStringRepr.html' title='nsstring_vendor::nsStringRepr'>nsStringRepr</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mTouchAction' class='structfield'>
+                           <span id='mTouchAction.v' class='invisible'>
+                           <code>mTouchAction: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mScrollBehavior' class='structfield'>
+                           <span id='mScrollBehavior.v' class='invisible'>
+                           <code>mScrollBehavior: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mScrollSnapTypeX' class='structfield'>
+                           <span id='mScrollSnapTypeX.v' class='invisible'>
+                           <code>mScrollSnapTypeX: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mScrollSnapTypeY' class='structfield'>
+                           <span id='mScrollSnapTypeY.v' class='invisible'>
+                           <code>mScrollSnapTypeY: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mScrollSnapPointsX' class='structfield'>
+                           <span id='mScrollSnapPointsX.v' class='invisible'>
+                           <code>mScrollSnapPointsX: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mScrollSnapPointsY' class='structfield'>
+                           <span id='mScrollSnapPointsY.v' class='invisible'>
+                           <code>mScrollSnapPointsY: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mScrollSnapDestination' class='structfield'>
+                           <span id='mScrollSnapDestination.v' class='invisible'>
+                           <code>mScrollSnapDestination: <a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.Position.html' title='style::gecko_bindings::structs::root::mozilla::Position'>Position</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mScrollSnapCoordinate' class='structfield'>
+                           <span id='mScrollSnapCoordinate.v' class='invisible'>
+                           <code>mScrollSnapCoordinate: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsTArray.html' title='style::gecko_bindings::structs::root::nsTArray'>nsTArray</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.Position.html' title='style::gecko_bindings::structs::root::mozilla::Position'>Position</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mBackfaceVisibility' class='structfield'>
+                           <span id='mBackfaceVisibility.v' class='invisible'>
+                           <code>mBackfaceVisibility: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTransformStyle' class='structfield'>
+                           <span id='mTransformStyle.v' class='invisible'>
+                           <code>mTransformStyle: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTransformBox' class='structfield'>
+                           <span id='mTransformBox.v' class='invisible'>
+                           <code>mTransformBox: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mSpecifiedTransform' class='structfield'>
+                           <span id='mSpecifiedTransform.v' class='invisible'>
+                           <code>mSpecifiedTransform: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsCSSValueSharedList.html' title='style::gecko_bindings::structs::root::nsCSSValueSharedList'>nsCSSValueSharedList</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mTransformOrigin' class='structfield'>
+                           <span id='mTransformOrigin.v' class='invisible'>
+                           <code>mTransformOrigin: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 3]</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mChildPerspective' class='structfield'>
+                           <span id='mChildPerspective.v' class='invisible'>
+                           <code>mChildPerspective: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mPerspectiveOrigin' class='structfield'>
+                           <span id='mPerspectiveOrigin.v' class='invisible'>
+                           <code>mPerspectiveOrigin: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 2]</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mVerticalAlign' class='structfield'>
+                           <span id='mVerticalAlign.v' class='invisible'>
+                           <code>mVerticalAlign: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTransitions' class='structfield'>
+                           <span id='mTransitions.v' class='invisible'>
+                           <code>mTransitions: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleAutoArray.html' title='style::gecko_bindings::structs::root::nsStyleAutoArray'>nsStyleAutoArray</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.StyleTransition.html' title='style::gecko_bindings::structs::root::mozilla::StyleTransition'>StyleTransition</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mTransitionTimingFunctionCount' class='structfield'>
+                           <span id='mTransitionTimingFunctionCount.v' class='invisible'>
+                           <code>mTransitionTimingFunctionCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTransitionDurationCount' class='structfield'>
+                           <span id='mTransitionDurationCount.v' class='invisible'>
+                           <code>mTransitionDurationCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTransitionDelayCount' class='structfield'>
+                           <span id='mTransitionDelayCount.v' class='invisible'>
+                           <code>mTransitionDelayCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTransitionPropertyCount' class='structfield'>
+                           <span id='mTransitionPropertyCount.v' class='invisible'>
+                           <code>mTransitionPropertyCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mAnimations' class='structfield'>
+                           <span id='mAnimations.v' class='invisible'>
+                           <code>mAnimations: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleAutoArray.html' title='style::gecko_bindings::structs::root::nsStyleAutoArray'>nsStyleAutoArray</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.StyleAnimation.html' title='style::gecko_bindings::structs::root::mozilla::StyleAnimation'>StyleAnimation</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mAnimationTimingFunctionCount' class='structfield'>
+                           <span id='mAnimationTimingFunctionCount.v' class='invisible'>
+                           <code>mAnimationTimingFunctionCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mAnimationDurationCount' class='structfield'>
+                           <span id='mAnimationDurationCount.v' class='invisible'>
+                           <code>mAnimationDurationCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mAnimationDelayCount' class='structfield'>
+                           <span id='mAnimationDelayCount.v' class='invisible'>
+                           <code>mAnimationDelayCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mAnimationNameCount' class='structfield'>
+                           <span id='mAnimationNameCount.v' class='invisible'>
+                           <code>mAnimationNameCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mAnimationDirectionCount' class='structfield'>
+                           <span id='mAnimationDirectionCount.v' class='invisible'>
+                           <code>mAnimationDirectionCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mAnimationFillModeCount' class='structfield'>
+                           <span id='mAnimationFillModeCount.v' class='invisible'>
+                           <code>mAnimationFillModeCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mAnimationPlayStateCount' class='structfield'>
+                           <span id='mAnimationPlayStateCount.v' class='invisible'>
+                           <code>mAnimationPlayStateCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mAnimationIterationCountCount' class='structfield'>
+                           <span id='mAnimationIterationCountCount.v' class='invisible'>
+                           <code>mAnimationIterationCountCount: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mShapeOutside' class='structfield'>
+                           <span id='mShapeOutside.v' class='invisible'>
+                           <code>mShapeOutside: <a class='type' href='../../../../style/gecko_bindings/structs/root/mozilla/type.StyleShapeOutside.html' title='style::gecko_bindings::structs::root::mozilla::StyleShapeOutside'>StyleShapeOutside</a></code>
+                           </span></span><span class='stab '></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a> for <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleDisplay.html' title='style::gecko_bindings::structs::root::nsStyleDisplay'>nsStyleDisplay</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/bindings.rs.html#66' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html' title='core::marker::Sync'>Sync</a> for <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleDisplay.html' title='style::gecko_bindings::structs::root::nsStyleDisplay'>nsStyleDisplay</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/bindings.rs.html#67' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleDisplay.html' title='style::gecko_bindings::structs::root::nsStyleDisplay'>nsStyleDisplay</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#16841' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

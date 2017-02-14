@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["gc",""],["gcstats",""]],"struct":[["HandleBase",""],["HeapBase",""],["MutableHandleBase",""],["MutableWrappedPtrOperations",""],["SourceHook","A class of objects that return source code on demand."],["SourceHook__bindgen_vtable",""],["WrappedPtrOperations",""]]});

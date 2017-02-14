@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `TElement` trait in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, TElement">
+
+    <title>style::dom::TElement - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>style</a>::<wbr><a href='index.html'>dom</a></p><script>window.sidebarCurrent = {name: 'TElement', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'><span class='in-band'>Trait <a href='../index.html'>style</a>::<wbr><a href='index.html'>dom</a>::<wbr><a class='trait' href=''>TElement</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/style/dom.rs.html#237-338' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait TElement: <a class='trait' href='https://doc.rust-lang.org/nightly/core/cmp/trait.PartialEq.html' title='core::cmp::PartialEq'>PartialEq</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html' title='core::marker::Sized'>Sized</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> + <a class='trait' href='../../style/selector_parser/trait.ElementExt.html' title='style::selector_parser::ElementExt'>ElementExt</a> + <a class='trait' href='../../style/dom/trait.PresentationalHintsSynthetizer.html' title='style::dom::PresentationalHintsSynthetizer'>PresentationalHintsSynthetizer</a> {
+    type <a href='#associatedtype.ConcreteNode' class='type'>ConcreteNode</a>: <a class='trait' href='../../style/dom/trait.TNode.html' title='style::dom::TNode'>TNode</a>&lt;ConcreteElement=Self&gt;;
+    fn <a href='#tymethod.as_node' class='fnname'>as_node</a>(&amp;self) -&gt; Self::<a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>ConcreteNode</a>;
+    fn <a href='#tymethod.style_attribute' class='fnname'>style_attribute</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='../../style/properties/declaration_block/struct.PropertyDeclarationBlock.html' title='style::properties::declaration_block::PropertyDeclarationBlock'>PropertyDeclarationBlock</a>&gt;&gt;&gt;;
+    fn <a href='#tymethod.get_state' class='fnname'>get_state</a>(&amp;self) -&gt; <a class='struct' href='../../style/element_state/struct.ElementState.html' title='style::element_state::ElementState'>ElementState</a>;
+    fn <a href='#tymethod.has_attr' class='fnname'>has_attr</a>(&amp;self, namespace: &amp;<a class='struct' href='../../style/gecko_string_cache/namespace/struct.Namespace.html' title='style::gecko_string_cache::namespace::Namespace'>Namespace</a>, attr: &amp;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>LocalName</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+    fn <a href='#tymethod.attr_equals' class='fnname'>attr_equals</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; namespace: &amp;<a class='struct' href='../../style/gecko_string_cache/namespace/struct.Namespace.html' title='style::gecko_string_cache::namespace::Namespace'>Namespace</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; attr: &amp;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>LocalName</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; value: &amp;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+    fn <a href='#tymethod.existing_style_for_restyle_damage' class='fnname'>existing_style_for_restyle_damage</a>&lt;'a&gt;(&amp;'a self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; current_computed_values: &amp;'a <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/gecko_properties/struct.ComputedValues.html' title='style::gecko_properties::ComputedValues'>ComputedValues</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pseudo: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../style/gecko/selector_parser/struct.PseudoElement.html' title='style::gecko::selector_parser::PseudoElement'>PseudoElement</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;'a <a class='type' href='../../style/selector_parser/type.PreExistingComputedValues.html' title='style::selector_parser::PreExistingComputedValues'>PreExistingComputedValues</a>&gt;;
+    fn <a href='#tymethod.has_dirty_descendants' class='fnname'>has_dirty_descendants</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+    unsafe fn <a href='#tymethod.set_dirty_descendants' class='fnname'>set_dirty_descendants</a>(&amp;self);
+    unsafe fn <a href='#tymethod.unset_dirty_descendants' class='fnname'>unset_dirty_descendants</a>(&amp;self);
+    fn <a href='#tymethod.store_children_to_process' class='fnname'>store_children_to_process</a>(&amp;self, n: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.isize.html'>isize</a>);
+    fn <a href='#tymethod.did_process_child' class='fnname'>did_process_child</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.isize.html'>isize</a>;
+    fn <a href='#tymethod.get_data' class='fnname'>get_data</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../atomic_refcell/struct.AtomicRefCell.html' title='atomic_refcell::AtomicRefCell'>AtomicRefCell</a>&lt;<a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>&gt;&gt;;
+    fn <a href='#tymethod.skip_root_and_item_based_display_fixup' class='fnname'>skip_root_and_item_based_display_fixup</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+    unsafe fn <a href='#tymethod.set_selector_flags' class='fnname'>set_selector_flags</a>(&amp;self, flags: <a class='struct' href='../../selectors/matching/struct.ElementSelectorFlags.html' title='selectors::matching::ElementSelectorFlags'>ElementSelectorFlags</a>);
+    fn <a href='#tymethod.has_selector_flags' class='fnname'>has_selector_flags</a>(&amp;self, flags: <a class='struct' href='../../selectors/matching/struct.ElementSelectorFlags.html' title='selectors::matching::ElementSelectorFlags'>ElementSelectorFlags</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>;
+
+    fn <a href='#method.layout_parent_element' class='fnname'>layout_parent_element</a>(self, reflow_root: <a class='struct' href='../../style/dom/struct.OpaqueNode.html' title='style::dom::OpaqueNode'>OpaqueNode</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt; { ... }
+    fn <a href='#method.get_animation_rules' class='fnname'>get_animation_rules</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _pseudo: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../style/gecko/selector_parser/struct.PseudoElement.html' title='style::gecko::selector_parser::PseudoElement'>PseudoElement</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='struct' href='../../style/dom/struct.AnimationRules.html' title='style::dom::AnimationRules'>AnimationRules</a> { ... }
+    fn <a href='#method.borrow_data' class='fnname'>borrow_data</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../atomic_refcell/struct.AtomicRef.html' title='atomic_refcell::AtomicRef'>AtomicRef</a>&lt;<a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>&gt;&gt; { ... }
+    fn <a href='#method.mutate_data' class='fnname'>mutate_data</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../atomic_refcell/struct.AtomicRefMut.html' title='atomic_refcell::AtomicRefMut'>AtomicRefMut</a>&lt;<a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>&gt;&gt; { ... }
+}</pre><div class='docblock'><p>The element trait, the main abstraction the style crate acts over.</p>
+</div>
+            <h2 id='associated-types'>Associated Types</h2>
+            <div class='methods'>
+        <h3 id='associatedtype.ConcreteNode' class='method'><span id='ConcreteNode.t' class='invisible'><code>type <a href='#associatedtype.ConcreteNode' class='type'>ConcreteNode</a>: <a class='trait' href='../../style/dom/trait.TNode.html' title='style::dom::TNode'>TNode</a>&lt;ConcreteElement=Self&gt;</code></span></h3><div class='docblock'><p>The concrete node type.</p>
+</div></div>
+            <h2 id='required-methods'>Required Methods</h2>
+            <div class='methods'>
+        <h3 id='tymethod.as_node' class='method'><span id='as_node.v' class='invisible'><code>fn <a href='#tymethod.as_node' class='fnname'>as_node</a>(&amp;self) -&gt; Self::<a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>ConcreteNode</a></code></span></h3><div class='docblock'><p>Get this element as a node.</p>
+</div><h3 id='tymethod.style_attribute' class='method'><span id='style_attribute.v' class='invisible'><code>fn <a href='#tymethod.style_attribute' class='fnname'>style_attribute</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='../../style/properties/declaration_block/struct.PropertyDeclarationBlock.html' title='style::properties::declaration_block::PropertyDeclarationBlock'>PropertyDeclarationBlock</a>&gt;&gt;&gt;</code></span></h3><div class='docblock'><p>Get this element&#39;s style attribute.</p>
+</div><h3 id='tymethod.get_state' class='method'><span id='get_state.v' class='invisible'><code>fn <a href='#tymethod.get_state' class='fnname'>get_state</a>(&amp;self) -&gt; <a class='struct' href='../../style/element_state/struct.ElementState.html' title='style::element_state::ElementState'>ElementState</a></code></span></h3><div class='docblock'><p>Get this element&#39;s state, for non-tree-structural pseudos.</p>
+</div><h3 id='tymethod.has_attr' class='method'><span id='has_attr.v' class='invisible'><code>fn <a href='#tymethod.has_attr' class='fnname'>has_attr</a>(&amp;self, namespace: &amp;<a class='struct' href='../../style/gecko_string_cache/namespace/struct.Namespace.html' title='style::gecko_string_cache::namespace::Namespace'>Namespace</a>, attr: &amp;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>LocalName</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h3><div class='docblock'><p>Whether this element has an attribute with a given namespace.</p>
+</div><h3 id='tymethod.attr_equals' class='method'><span id='attr_equals.v' class='invisible'><code>fn <a href='#tymethod.attr_equals' class='fnname'>attr_equals</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; namespace: &amp;<a class='struct' href='../../style/gecko_string_cache/namespace/struct.Namespace.html' title='style::gecko_string_cache::namespace::Namespace'>Namespace</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; attr: &amp;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>LocalName</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; value: &amp;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h3><div class='docblock'><p>Whether an attribute value equals <code>value</code>.</p>
+</div><h3 id='tymethod.existing_style_for_restyle_damage' class='method'><span id='existing_style_for_restyle_damage.v' class='invisible'><code>fn <a href='#tymethod.existing_style_for_restyle_damage' class='fnname'>existing_style_for_restyle_damage</a>&lt;'a&gt;(&amp;'a self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; current_computed_values: &amp;'a <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/gecko_properties/struct.ComputedValues.html' title='style::gecko_properties::ComputedValues'>ComputedValues</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pseudo: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../style/gecko/selector_parser/struct.PseudoElement.html' title='style::gecko::selector_parser::PseudoElement'>PseudoElement</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;'a <a class='type' href='../../style/selector_parser/type.PreExistingComputedValues.html' title='style::selector_parser::PreExistingComputedValues'>PreExistingComputedValues</a>&gt;</code></span></h3><div class='docblock'><p>Get the pre-existing style to calculate restyle damage (change hints).</p>
+
+<p>This needs to be generic since it varies between Servo and Gecko.</p>
+
+<p>XXX(emilio): It&#39;s a bit unfortunate we need to pass the current computed
+values as an argument here, but otherwise Servo would crash due to
+double borrows to return it.</p>
+</div><h3 id='tymethod.has_dirty_descendants' class='method'><span id='has_dirty_descendants.v' class='invisible'><code>fn <a href='#tymethod.has_dirty_descendants' class='fnname'>has_dirty_descendants</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h3><div class='docblock'><p>Returns true if this element may have a descendant needing style processing.</p>
+
+<p>Note that we cannot guarantee the existence of such an element, because
+it may have been removed from the DOM between marking it for restyle and
+the actual restyle traversal.</p>
+</div><h3 id='tymethod.set_dirty_descendants' class='method'><span id='set_dirty_descendants.v' class='invisible'><code>unsafe fn <a href='#tymethod.set_dirty_descendants' class='fnname'>set_dirty_descendants</a>(&amp;self)</code></span></h3><div class='docblock'><p>Flag that this element has a descendant for style processing.</p>
+
+<p>Only safe to call with exclusive access to the element.</p>
+</div><h3 id='tymethod.unset_dirty_descendants' class='method'><span id='unset_dirty_descendants.v' class='invisible'><code>unsafe fn <a href='#tymethod.unset_dirty_descendants' class='fnname'>unset_dirty_descendants</a>(&amp;self)</code></span></h3><div class='docblock'><p>Flag that this element has no descendant for style processing.</p>
+
+<p>Only safe to call with exclusive access to the element.</p>
+</div><h3 id='tymethod.store_children_to_process' class='method'><span id='store_children_to_process.v' class='invisible'><code>fn <a href='#tymethod.store_children_to_process' class='fnname'>store_children_to_process</a>(&amp;self, n: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.isize.html'>isize</a>)</code></span></h3><div class='docblock'><p>Atomically stores the number of children of this node that we will
+need to process during bottom-up traversal.</p>
+</div><h3 id='tymethod.did_process_child' class='method'><span id='did_process_child.v' class='invisible'><code>fn <a href='#tymethod.did_process_child' class='fnname'>did_process_child</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.isize.html'>isize</a></code></span></h3><div class='docblock'><p>Atomically notes that a child has been processed during bottom-up
+traversal. Returns the number of children left to process.</p>
+</div><h3 id='tymethod.get_data' class='method'><span id='get_data.v' class='invisible'><code>fn <a href='#tymethod.get_data' class='fnname'>get_data</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../atomic_refcell/struct.AtomicRefCell.html' title='atomic_refcell::AtomicRefCell'>AtomicRefCell</a>&lt;<a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>&gt;&gt;</code></span></h3><div class='docblock'><p>Gets a reference to the ElementData container.</p>
+</div><h3 id='tymethod.skip_root_and_item_based_display_fixup' class='method'><span id='skip_root_and_item_based_display_fixup.v' class='invisible'><code>fn <a href='#tymethod.skip_root_and_item_based_display_fixup' class='fnname'>skip_root_and_item_based_display_fixup</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h3><div class='docblock'><p>Whether we should skip any root- or item-based display property
+blockification on this element.  (This function exists so that Gecko
+native anonymous content can opt out of this style fixup.)</p>
+</div><h3 id='tymethod.set_selector_flags' class='method'><span id='set_selector_flags.v' class='invisible'><code>unsafe fn <a href='#tymethod.set_selector_flags' class='fnname'>set_selector_flags</a>(&amp;self, flags: <a class='struct' href='../../selectors/matching/struct.ElementSelectorFlags.html' title='selectors::matching::ElementSelectorFlags'>ElementSelectorFlags</a>)</code></span></h3><div class='docblock'><p>Sets selector flags, which indicate what kinds of selectors may have
+matched on this element and therefore what kind of work may need to
+be performed when DOM state changes.</p>
+
+<p>This is unsafe, like all the flag-setting methods, because it&#39;s only safe
+to call with exclusive access to the element. When setting flags on the
+parent during parallel traversal, we use SequentialTask to queue up the
+set to run after the threads join.</p>
+</div><h3 id='tymethod.has_selector_flags' class='method'><span id='has_selector_flags.v' class='invisible'><code>fn <a href='#tymethod.has_selector_flags' class='fnname'>has_selector_flags</a>(&amp;self, flags: <a class='struct' href='../../selectors/matching/struct.ElementSelectorFlags.html' title='selectors::matching::ElementSelectorFlags'>ElementSelectorFlags</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h3><div class='docblock'><p>Returns true if the element has all the specified selector flags.</p>
+</div></div>
+            <h2 id='provided-methods'>Provided Methods</h2>
+            <div class='methods'>
+        <h3 id='method.layout_parent_element' class='method'><span id='layout_parent_element.v' class='invisible'><code>fn <a href='#method.layout_parent_element' class='fnname'>layout_parent_element</a>(self, reflow_root: <a class='struct' href='../../style/dom/struct.OpaqueNode.html' title='style::dom::OpaqueNode'>OpaqueNode</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;Self&gt;</code></span></h3><div class='docblock'><p>While doing a reflow, the element at the root has no parent, as far as we&#39;re
+concerned. This method returns <code>None</code> at the reflow root.</p>
+</div><h3 id='method.get_animation_rules' class='method'><span id='get_animation_rules.v' class='invisible'><code>fn <a href='#method.get_animation_rules' class='fnname'>get_animation_rules</a>(&amp;self, _pseudo: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../style/gecko/selector_parser/struct.PseudoElement.html' title='style::gecko::selector_parser::PseudoElement'>PseudoElement</a>&gt;) -&gt; <a class='struct' href='../../style/dom/struct.AnimationRules.html' title='style::dom::AnimationRules'>AnimationRules</a></code></span></h3><div class='docblock'><p>Get this element&#39;s animation rules.</p>
+</div><h3 id='method.borrow_data' class='method'><span id='borrow_data.v' class='invisible'><code>fn <a href='#method.borrow_data' class='fnname'>borrow_data</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../atomic_refcell/struct.AtomicRef.html' title='atomic_refcell::AtomicRef'>AtomicRef</a>&lt;<a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>&gt;&gt;</code></span></h3><div class='docblock'><p>Immutably borrows the ElementData.</p>
+</div><h3 id='method.mutate_data' class='method'><span id='mutate_data.v' class='invisible'><code>fn <a href='#method.mutate_data' class='fnname'>mutate_data</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../atomic_refcell/struct.AtomicRefMut.html' title='atomic_refcell::AtomicRefMut'>AtomicRefMut</a>&lt;<a class='struct' href='../../style/data/struct.ElementData.html' title='style::data::ElementData'>ElementData</a>&gt;&gt;</code></span></h3><div class='docblock'><p>Mutably borrows the ElementData.</p>
+</div></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><code>impl&lt;'le&gt; TElement for <a class='struct' href='../../style/gecko/wrapper/struct.GeckoElement.html' title='style::gecko::wrapper::GeckoElement'>GeckoElement</a>&lt;'le&gt;</code></li>
+</ul><script type="text/javascript" async
+                         src="../../implementors/style/dom/trait.TElement.js">
+                 </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

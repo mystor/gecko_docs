@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `FragmentOrElement_nsDOMSlots` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, FragmentOrElement_nsDOMSlots">
+
+    <title>style::gecko_bindings::structs::root::mozilla::dom::FragmentOrElement_nsDOMSlots - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../../../index.html'>style</a>::<wbr><a href='../../../../index.html'>gecko_bindings</a>::<wbr><a href='../../../index.html'>structs</a>::<wbr><a href='../../index.html'>root</a>::<wbr><a href='../index.html'>mozilla</a>::<wbr><a href='index.html'>dom</a></p><script>window.sidebarCurrent = {name: 'FragmentOrElement_nsDOMSlots', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../../../../index.html'>style</a>::<wbr><a href='../../../../index.html'>gecko_bindings</a>::<wbr><a href='../../../index.html'>structs</a>::<wbr><a href='../../index.html'>root</a>::<wbr><a href='../index.html'>mozilla</a>::<wbr><a href='index.html'>dom</a>::<wbr><a class='struct' href=''>FragmentOrElement_nsDOMSlots</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#2884-2949' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct FragmentOrElement_nsDOMSlots {
+    pub _base: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsINode_nsSlots.html' title='style::gecko_bindings::structs::root::nsINode_nsSlots'>nsINode_nsSlots</a>,
+    pub mStyle: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsICSSDeclaration.html' title='style::gecko_bindings::structs::root::nsICSSDeclaration'>nsICSSDeclaration</a>&gt;,
+    pub mDataset: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsDOMStringMap.html' title='style::gecko_bindings::structs::root::nsDOMStringMap'>nsDOMStringMap</a>,
+    pub mSMILOverrideStyle: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsICSSDeclaration.html' title='style::gecko_bindings::structs::root::nsICSSDeclaration'>nsICSSDeclaration</a>&gt;,
+    pub mSMILOverrideStyleDeclaration: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/struct.DeclarationBlock.html' title='style::gecko_bindings::structs::root::mozilla::DeclarationBlock'>DeclarationBlock</a>&gt;,
+    pub mAttributeMap: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsDOMAttributeMap.html' title='style::gecko_bindings::structs::root::nsDOMAttributeMap'>nsDOMAttributeMap</a>&gt;,
+    pub __bindgen_anon_1: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.FragmentOrElement_nsDOMSlots__bindgen_ty_1.html' title='style::gecko_bindings::structs::root::mozilla::dom::FragmentOrElement_nsDOMSlots__bindgen_ty_1'>FragmentOrElement_nsDOMSlots__bindgen_ty_1</a>,
+    pub mChildrenList: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsContentList.html' title='style::gecko_bindings::structs::root::nsContentList'>nsContentList</a>&gt;,
+    pub mClassList: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsDOMTokenList.html' title='style::gecko_bindings::structs::root::nsDOMTokenList'>nsDOMTokenList</a>&gt;,
+    pub mShadowRoot: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.ShadowRoot.html' title='style::gecko_bindings::structs::root::mozilla::dom::ShadowRoot'>ShadowRoot</a>&gt;,
+    pub mContainingShadow: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.ShadowRoot.html' title='style::gecko_bindings::structs::root::mozilla::dom::ShadowRoot'>ShadowRoot</a>&gt;,
+    pub mDestInsertionPoints: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsTArray.html' title='style::gecko_bindings::structs::root::nsTArray'>nsTArray</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsIContent.html' title='style::gecko_bindings::structs::root::nsIContent'>nsIContent</a>&gt;,
+    pub mXBLBinding: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsXBLBinding.html' title='style::gecko_bindings::structs::root::nsXBLBinding'>nsXBLBinding</a>&gt;,
+    pub mXBLInsertionParent: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsIContent.html' title='style::gecko_bindings::structs::root::nsIContent'>nsIContent</a>&gt;,
+    pub mCustomElementData: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.CustomElementData.html' title='style::gecko_bindings::structs::root::mozilla::dom::CustomElementData'>CustomElementData</a>&gt;,
+    pub mRegisteredIntersectionObservers: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 6]</a>,
+}</pre><div class='docblock'><p>There are a set of DOM- and scripting-specific instance variables
+that may only be instantiated when a content object is accessed
+through the DOM. Rather than burn actual slots in the content
+objects for each of these instance variables, we put them off
+in a side structure that&#39;s only allocated when the content is
+accessed through the DOM.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield._base' class='structfield'>
+                           <span id='_base.v' class='invisible'>
+                           <code>_base: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsINode_nsSlots.html' title='style::gecko_bindings::structs::root::nsINode_nsSlots'>nsINode_nsSlots</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mStyle' class='structfield'>
+                           <span id='mStyle.v' class='invisible'>
+                           <code>mStyle: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsICSSDeclaration.html' title='style::gecko_bindings::structs::root::nsICSSDeclaration'>nsICSSDeclaration</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The .style attribute (an interface that forwards to the actual
+style rules)
+@see nsGenericHTMLElement::GetStyle</p>
+</div><span id='structfield.mDataset' class='structfield'>
+                           <span id='mDataset.v' class='invisible'>
+                           <code>mDataset: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsDOMStringMap.html' title='style::gecko_bindings::structs::root::nsDOMStringMap'>nsDOMStringMap</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The .dataset attribute.
+@see nsGenericHTMLElement::GetDataset</p>
+</div><span id='structfield.mSMILOverrideStyle' class='structfield'>
+                           <span id='mSMILOverrideStyle.v' class='invisible'>
+                           <code>mSMILOverrideStyle: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsICSSDeclaration.html' title='style::gecko_bindings::structs::root::nsICSSDeclaration'>nsICSSDeclaration</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>SMIL Overridde style rules (for SMIL animation of CSS properties)
+@see nsIContent::GetSMILOverrideStyle</p>
+</div><span id='structfield.mSMILOverrideStyleDeclaration' class='structfield'>
+                           <span id='mSMILOverrideStyleDeclaration.v' class='invisible'>
+                           <code>mSMILOverrideStyleDeclaration: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/struct.DeclarationBlock.html' title='style::gecko_bindings::structs::root::mozilla::DeclarationBlock'>DeclarationBlock</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Holds any SMIL override style declaration for this element.</p>
+</div><span id='structfield.mAttributeMap' class='structfield'>
+                           <span id='mAttributeMap.v' class='invisible'>
+                           <code>mAttributeMap: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsDOMAttributeMap.html' title='style::gecko_bindings::structs::root::nsDOMAttributeMap'>nsDOMAttributeMap</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>An object implementing nsIDOMMozNamedAttrMap for this content (attributes)
+@see FragmentOrElement::GetAttributes</p>
+</div><span id='structfield.__bindgen_anon_1' class='structfield'>
+                           <span id='__bindgen_anon_1.v' class='invisible'>
+                           <code>__bindgen_anon_1: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.FragmentOrElement_nsDOMSlots__bindgen_ty_1.html' title='style::gecko_bindings::structs::root::mozilla::dom::FragmentOrElement_nsDOMSlots__bindgen_ty_1'>FragmentOrElement_nsDOMSlots__bindgen_ty_1</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mChildrenList' class='structfield'>
+                           <span id='mChildrenList.v' class='invisible'>
+                           <code>mChildrenList: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsContentList.html' title='style::gecko_bindings::structs::root::nsContentList'>nsContentList</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>An object implementing the .children property for this element.</p>
+</div><span id='structfield.mClassList' class='structfield'>
+                           <span id='mClassList.v' class='invisible'>
+                           <code>mClassList: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsDOMTokenList.html' title='style::gecko_bindings::structs::root::nsDOMTokenList'>nsDOMTokenList</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>An object implementing the .classList property for this element.</p>
+</div><span id='structfield.mShadowRoot' class='structfield'>
+                           <span id='mShadowRoot.v' class='invisible'>
+                           <code>mShadowRoot: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.ShadowRoot.html' title='style::gecko_bindings::structs::root::mozilla::dom::ShadowRoot'>ShadowRoot</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>ShadowRoot bound to the element.</p>
+</div><span id='structfield.mContainingShadow' class='structfield'>
+                           <span id='mContainingShadow.v' class='invisible'>
+                           <code>mContainingShadow: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.ShadowRoot.html' title='style::gecko_bindings::structs::root::mozilla::dom::ShadowRoot'>ShadowRoot</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The root ShadowRoot of this element if it is in a shadow tree.</p>
+</div><span id='structfield.mDestInsertionPoints' class='structfield'>
+                           <span id='mDestInsertionPoints.v' class='invisible'>
+                           <code>mDestInsertionPoints: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsTArray.html' title='style::gecko_bindings::structs::root::nsTArray'>nsTArray</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsIContent.html' title='style::gecko_bindings::structs::root::nsIContent'>nsIContent</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>An array of web component insertion points to which this element
+is distributed.</p>
+</div><span id='structfield.mXBLBinding' class='structfield'>
+                           <span id='mXBLBinding.v' class='invisible'>
+                           <code>mXBLBinding: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsXBLBinding.html' title='style::gecko_bindings::structs::root::nsXBLBinding'>nsXBLBinding</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>XBL binding installed on the element.</p>
+</div><span id='structfield.mXBLInsertionParent' class='structfield'>
+                           <span id='mXBLInsertionParent.v' class='invisible'>
+                           <code>mXBLInsertionParent: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsCOMPtr.html' title='style::gecko_bindings::structs::root::nsCOMPtr'>nsCOMPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.nsIContent.html' title='style::gecko_bindings::structs::root::nsIContent'>nsIContent</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>XBL binding installed on the lement.</p>
+</div><span id='structfield.mCustomElementData' class='structfield'>
+                           <span id='mCustomElementData.v' class='invisible'>
+                           <code>mCustomElementData: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.CustomElementData.html' title='style::gecko_bindings::structs::root::mozilla::dom::CustomElementData'>CustomElementData</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Web components custom element data.</p>
+</div><span id='structfield.mRegisteredIntersectionObservers' class='structfield'>
+                           <span id='mRegisteredIntersectionObservers.v' class='invisible'>
+                           <code>mRegisteredIntersectionObservers: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u64.html'>u64</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.array.html'>; 6]</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Registered Intersection Observers on the element.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/dom/struct.FragmentOrElement_nsDOMSlots.html' title='style::gecko_bindings::structs::root::mozilla::dom::FragmentOrElement_nsDOMSlots'>FragmentOrElement_nsDOMSlots</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#2883' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../../../../jquery.js"></script>
+    <script src="../../../../../../main.js"></script>
+    <script defer src="../../../../../../search-index.js"></script>
+</body>
+</html>

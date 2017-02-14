@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["BasicShape",""],["ShapeRadius","https://drafts.csswg.org/css-shapes/#typedef-shape-radius"],["ShapeSource",""]],"struct":[["BorderRadius","https://drafts.csswg.org/css-backgrounds-3/#border-radius"],["Circle",""],["Ellipse",""],["InsetRect",""],["Polygon","https://drafts.csswg.org/css-shapes/#funcdef-polygon"]]});

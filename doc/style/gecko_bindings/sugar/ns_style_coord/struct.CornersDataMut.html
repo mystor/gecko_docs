@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `CornersDataMut` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, CornersDataMut">
+
+    <title>style::gecko_bindings::sugar::ns_style_coord::CornersDataMut - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>sugar</a>::<wbr><a href='index.html'>ns_style_coord</a></p><script>window.sidebarCurrent = {name: 'CornersDataMut', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>sugar</a>::<wbr><a href='index.html'>ns_style_coord</a>::<wbr><a class='struct' href=''>CornersDataMut</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../src/style/gecko_bindings/sugar/ns_style_coord.rs.html#158-161' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct CornersDataMut&lt;'a&gt; { /* fields omitted */ }</pre><div class='docblock'><p>A <code>nsStyleCoord</code>-like struct on top of a mutable <code>nsStyleCorners</code> reference.</p>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordData.html' title='style::gecko_bindings::sugar::ns_style_coord::CoordData'>CoordData</a> for <a class='struct' href='../../../../style/gecko_bindings/sugar/ns_style_coord/struct.CornersDataMut.html' title='style::gecko_bindings::sugar::ns_style_coord::CornersDataMut'>CornersDataMut</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/gecko_bindings/sugar/ns_style_coord.rs.html#175-186' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.unit' class='method'><span id='unit.v' class='invisible'><code>fn <a href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordData.html#tymethod.unit' class='fnname'>unit</a>(&amp;self) -&gt; <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsStyleUnit.html' title='style::gecko_bindings::structs::root::nsStyleUnit'>nsStyleUnit</a></code></span></h4>
+<div class='docblock'><p>Get the unit of this object.</p>
+</div><h4 id='method.union' class='method'><span id='union.v' class='invisible'><code>fn <a href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordData.html#tymethod.union' class='fnname'>union</a>(&amp;self) -&gt; <a class='type' href='../../../../style/gecko_bindings/structs/root/type.nsStyleUnion.html' title='style::gecko_bindings::structs::root::nsStyleUnion'>nsStyleUnion</a></code></span></h4>
+<div class='docblock'><p>Get the <code>nsStyleUnion</code> for this object.</p>
+</div><h4 id='method.as_value' class='method'><span id='as_value.v' class='invisible'><code>fn <a href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordData.html#method.as_value' class='fnname'>as_value</a>(&amp;self) -&gt; <a class='enum' href='../../../../style/gecko_bindings/sugar/ns_style_coord/enum.CoordDataValue.html' title='style::gecko_bindings::sugar::ns_style_coord::CoordDataValue'>CoordDataValue</a></code></span></h4>
+<div class='docblock'><p>Get the appropriate value for this object.</p>
+</div><h4 id='method.get_float' class='method'><span id='get_float.v' class='invisible'><code>unsafe fn <a href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordData.html#method.get_float' class='fnname'>get_float</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a></code></span></h4>
+<div class='docblock'><p>Pretend inner value is a float; obtain it.</p>
+</div><h4 id='method.get_integer' class='method'><span id='get_integer.v' class='invisible'><code>unsafe fn <a href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordData.html#method.get_integer' class='fnname'>get_integer</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code></span></h4>
+<div class='docblock'><p>Pretend inner value is an int; obtain it.</p>
+</div><h4 id='method.get_calc_value' class='method'><span id='get_calc_value.v' class='invisible'><code>unsafe fn <a href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordData.html#method.get_calc_value' class='fnname'>get_calc_value</a>(&amp;self) -&gt; <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord_CalcValue.html' title='style::gecko_bindings::structs::root::nsStyleCoord_CalcValue'>nsStyleCoord_CalcValue</a></code></span></h4>
+<div class='docblock'><p>Pretend inner value is a calc; obtain it. Ensure that the unit is Calc before calling this. <a href="../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordData.html#method.get_calc_value">Read more</a></p>
+</div><h4 id='method.as_calc' class='method'><span id='as_calc.v' class='invisible'><code>unsafe fn <a href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordData.html#method.as_calc' class='fnname'>as_calc</a>(&amp;self) -&gt; &amp;<a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord_Calc.html' title='style::gecko_bindings::structs::root::nsStyleCoord_Calc'>nsStyleCoord_Calc</a></code></span></h4>
+<div class='docblock'><p>Pretend the inner value is a calc expression, and obtain it.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl&lt;'a&gt; <a class='trait' href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordDataMut.html' title='style::gecko_bindings::sugar::ns_style_coord::CoordDataMut'>CoordDataMut</a> for <a class='struct' href='../../../../style/gecko_bindings/sugar/ns_style_coord/struct.CornersDataMut.html' title='style::gecko_bindings::sugar::ns_style_coord::CornersDataMut'>CornersDataMut</a>&lt;'a&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/gecko_bindings/sugar/ns_style_coord.rs.html#187-193' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.values_mut' class='method'><span id='values_mut.v' class='invisible'><code>unsafe fn <a href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordDataMut.html#tymethod.values_mut' class='fnname'>values_mut</a>(&amp;mut self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a>&amp;mut <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsStyleUnit.html' title='style::gecko_bindings::structs::root::nsStyleUnit'>nsStyleUnit</a>, &amp;mut <a class='type' href='../../../../style/gecko_bindings/structs/root/type.nsStyleUnion.html' title='style::gecko_bindings::structs::root::nsStyleUnion'>nsStyleUnion</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a></code></span></h4>
+<div class='docblock'><p>Get mutably the unit and the union. <a href="../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordDataMut.html#tymethod.values_mut">Read more</a></p>
+</div><h4 id='method.reset' class='method'><span id='reset.v' class='invisible'><code>fn <a href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordDataMut.html#method.reset' class='fnname'>reset</a>(&amp;mut self)</code></span></h4>
+<div class='docblock'><p>Clean up any resources used by the union. <a href="../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordDataMut.html#method.reset">Read more</a></p>
+</div><h4 id='method.copy_from' class='method'><span id='copy_from.v' class='invisible'><code>fn <a href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordDataMut.html#method.copy_from' class='fnname'>copy_from</a>&lt;T:&nbsp;<a class='trait' href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordData.html' title='style::gecko_bindings::sugar::ns_style_coord::CoordData'>CoordData</a>&gt;(&amp;mut self, other: &amp;T)</code></span></h4>
+<div class='docblock'><p>Copies the unit and value from another <code>CoordData</code> type.</p>
+</div><h4 id='method.copy_from_unchecked' class='method'><span id='copy_from_unchecked.v' class='invisible'><code>unsafe fn <a href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordDataMut.html#method.copy_from_unchecked' class='fnname'>copy_from_unchecked</a>&lt;T:&nbsp;<a class='trait' href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordData.html' title='style::gecko_bindings::sugar::ns_style_coord::CoordData'>CoordData</a>&gt;(&amp;mut self, other: &amp;T)</code></span></h4>
+<div class='docblock'><p>Copies the unit and value from another <code>CoordData</code> type without checking the type of the value (so refcounted values like calc may leak). <a href="../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordDataMut.html#method.copy_from_unchecked">Read more</a></p>
+</div><h4 id='method.leaky_set_null' class='method'><span id='leaky_set_null.v' class='invisible'><code>fn <a href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordDataMut.html#method.leaky_set_null' class='fnname'>leaky_set_null</a>(&amp;mut self)</code></span></h4>
+<div class='docblock'><p>Useful for initializing uninits, given that <code>set_value</code> may segfault on uninits. <a href="../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordDataMut.html#method.leaky_set_null">Read more</a></p>
+</div><h4 id='method.set_value' class='method'><span id='set_value.v' class='invisible'><code>fn <a href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordDataMut.html#method.set_value' class='fnname'>set_value</a>(&amp;mut self, value: <a class='enum' href='../../../../style/gecko_bindings/sugar/ns_style_coord/enum.CoordDataValue.html' title='style::gecko_bindings::sugar::ns_style_coord::CoordDataValue'>CoordDataValue</a>)</code></span></h4>
+<div class='docblock'><p>Sets the inner value.</p>
+</div><h4 id='method.as_calc_mut' class='method'><span id='as_calc_mut.v' class='invisible'><code>unsafe fn <a href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordDataMut.html#method.as_calc_mut' class='fnname'>as_calc_mut</a>(&amp;mut self) -&gt; &amp;mut <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord_Calc.html' title='style::gecko_bindings::structs::root::nsStyleCoord_Calc'>nsStyleCoord_Calc</a></code></span></h4>
+<div class='docblock'><p>Gets the <code>Calc</code> value mutably, asserts in debug builds if the unit is not <code>Calc</code>. <a href="../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordDataMut.html#method.as_calc_mut">Read more</a></p>
+</div><h4 id='method.addref_if_calc' class='method'><span id='addref_if_calc.v' class='invisible'><code>fn <a href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordDataMut.html#method.addref_if_calc' class='fnname'>addref_if_calc</a>(&amp;mut self)</code></span></h4>
+<div class='docblock'><p>Does what it promises, if the unit is <code>calc</code>, it bumps the reference count <em>of the calc expression</em>. <a href="../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordDataMut.html#method.addref_if_calc">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

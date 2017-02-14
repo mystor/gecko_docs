@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Renderer` struct in crate `webrender`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Renderer">
+
+    <title>webrender::renderer::Renderer - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>webrender</a>::<wbr><a href='index.html'>renderer</a></p><script>window.sidebarCurrent = {name: 'Renderer', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>webrender</a>::<wbr><a href='index.html'>renderer</a>::<wbr><a class='struct' href=''>Renderer</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/webrender/renderer.rs.html#324-413' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Renderer { /* fields omitted */ }</pre><div class='docblock'><p>The renderer is responsible for submitting to the GPU the work prepared by the
+RenderBackend.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../webrender/renderer/struct.Renderer.html' title='webrender::renderer::Renderer'>Renderer</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/webrender/renderer.rs.html#415-1469' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><span id='new.v' class='invisible'><code>fn <a href='#method.new' class='fnname'>new</a>(options: <a class='struct' href='../../webrender/renderer/struct.RendererOptions.html' title='webrender::renderer::RendererOptions'>RendererOptions</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a><a class='struct' href='../../webrender/renderer/struct.Renderer.html' title='webrender::renderer::Renderer'>Renderer</a>, <a class='struct' href='../../webrender_traits/struct.RenderApiSender.html' title='webrender_traits::RenderApiSender'>RenderApiSender</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a></code></span></h4>
+<div class='docblock'><p>Initializes webrender and creates a Renderer and RenderApiSender.</p>
+
+<h1 id='examples' class='section-header'><a href='#examples'>Examples</a></h1>
+<p>Initializes a Renderer with some reasonable values. For more information see
+<a href="struct.RendererOptions.html">RendererOptions</a>.</p>
+
+<pre class='rust rust-example-rendered'>
+<span class='kw'>let</span> <span class='ident'>opts</span> <span class='op'>=</span> <span class='ident'>webrender</span>::<span class='ident'>RendererOptions</span> {
+   <span class='ident'>device_pixel_ratio</span>: <span class='number'>1.0</span>,
+   <span class='ident'>resource_override_path</span>: <span class='prelude-val'>None</span>,
+   <span class='ident'>enable_aa</span>: <span class='bool-val'>false</span>,
+   <span class='ident'>enable_profiler</span>: <span class='bool-val'>false</span>,
+};
+<span class='kw'>let</span> (<span class='ident'>renderer</span>, <span class='ident'>sender</span>) <span class='op'>=</span> <span class='ident'>Renderer</span>::<span class='ident'>new</span>(<span class='ident'>opts</span>);</pre>
+</div><h4 id='method.set_render_notifier' class='method'><span id='set_render_notifier.v' class='invisible'><code>fn <a href='#method.set_render_notifier' class='fnname'>set_render_notifier</a>(&amp;self, notifier: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='../../webrender_traits/trait.RenderNotifier.html' title='webrender_traits::RenderNotifier'>RenderNotifier</a>&gt;)</code></span></h4>
+<div class='docblock'><p>Sets the new RenderNotifier.</p>
+
+<p>The RenderNotifier will be called when processing e.g. of a (scrolling) frame is done,
+and therefore the screen should be updated.</p>
+</div><h4 id='method.set_main_thread_dispatcher' class='method'><span id='set_main_thread_dispatcher.v' class='invisible'><code>fn <a href='#method.set_main_thread_dispatcher' class='fnname'>set_main_thread_dispatcher</a>(&amp;self, dispatcher: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='../../webrender_traits/trait.RenderDispatcher.html' title='webrender_traits::RenderDispatcher'>RenderDispatcher</a>&gt;)</code></span></h4>
+<div class='docblock'><p>Sets the new MainThreadDispatcher.</p>
+
+<p>Allows to dispatch functions to the main thread&#39;s event loop.</p>
+</div><h4 id='method.set_vr_compositor_handler' class='method'><span id='set_vr_compositor_handler.v' class='invisible'><code>fn <a href='#method.set_vr_compositor_handler' class='fnname'>set_vr_compositor_handler</a>(&amp;self, creator: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='../../webrender_traits/trait.VRCompositorHandler.html' title='webrender_traits::VRCompositorHandler'>VRCompositorHandler</a>&gt;)</code></span></h4>
+<div class='docblock'><p>Sets the VRCompositorHandler.</p>
+
+<p>It&#39;s used to handle WebVR render commands.
+Some WebVR commands such as Vsync and SubmitFrame must be called in the WebGL render thread.</p>
+</div><h4 id='method.current_epoch' class='method'><span id='current_epoch.v' class='invisible'><code>fn <a href='#method.current_epoch' class='fnname'>current_epoch</a>(&amp;self, pipeline_id: <a class='struct' href='../../webrender_traits/struct.PipelineId.html' title='webrender_traits::PipelineId'>PipelineId</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../webrender_traits/struct.Epoch.html' title='webrender_traits::Epoch'>Epoch</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns the Epoch of the current frame in a pipeline.</p>
+</div><h4 id='method.flush_rendered_epochs' class='method'><span id='flush_rendered_epochs.v' class='invisible'><code>fn <a href='#method.flush_rendered_epochs' class='fnname'>flush_rendered_epochs</a>(&amp;mut self)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;<a class='struct' href='../../webrender_traits/struct.PipelineId.html' title='webrender_traits::PipelineId'>PipelineId</a>, <a class='struct' href='../../webrender_traits/struct.Epoch.html' title='webrender_traits::Epoch'>Epoch</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/core/hash/struct.BuildHasherDefault.html' title='core::hash::BuildHasherDefault'>BuildHasherDefault</a>&lt;<a class='struct' href='../../fnv/struct.FnvHasher.html' title='fnv::FnvHasher'>FnvHasher</a>&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Returns a HashMap containing the pipeline ids that have been received by the renderer and
+their respective epochs since the last time the method was called.</p>
+</div><h4 id='method.update' class='method'><span id='update.v' class='invisible'><code>fn <a href='#method.update' class='fnname'>update</a>(&amp;mut self)</code></span></h4>
+<div class='docblock'><p>Processes the result queue.</p>
+
+<p>Should be called before <code>render()</code>, as texture cache updates are done here.</p>
+</div><h4 id='method.set_external_image_handler' class='method'><span id='set_external_image_handler.v' class='invisible'><code>fn <a href='#method.set_external_image_handler' class='fnname'>set_external_image_handler</a>(&amp;mut self, handler: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='../../webrender/renderer/trait.ExternalImageHandler.html' title='webrender::renderer::ExternalImageHandler'>ExternalImageHandler</a>&gt;)</code></span></h4>
+<div class='docblock'><p>Set a callback for handling external images.</p>
+</div><h4 id='method.render' class='method'><span id='render.v' class='invisible'><code>fn <a href='#method.render' class='fnname'>render</a>(&amp;mut self, framebuffer_size: <a class='type' href='../../webrender_traits/units/type.DeviceUintSize.html' title='webrender_traits::units::DeviceUintSize'>DeviceUintSize</a>)</code></span></h4>
+<div class='docblock'><p>Renders the current frame.</p>
+
+<p>A Frame is supplied by calling <a href="../../webrender_traits/struct.RenderApi.html#method.set_root_stacking_context">set_root_stacking_context()</a>.</p>
+</div><h4 id='method.layers_are_bouncing_back' class='method'><span id='layers_are_bouncing_back.v' class='invisible'><code>fn <a href='#method.layers_are_bouncing_back' class='fnname'>layers_are_bouncing_back</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.debug_renderer' class='method'><span id='debug_renderer.v' class='invisible'><code>fn <a href='#method.debug_renderer' class='fnname'>debug_renderer</a>&lt;'a&gt;(&amp;'a mut self) -&gt; &amp;'a mut DebugRenderer</code></span></h4>
+<h4 id='method.get_profiler_enabled' class='method'><span id='get_profiler_enabled.v' class='invisible'><code>fn <a href='#method.get_profiler_enabled' class='fnname'>get_profiler_enabled</a>(&amp;mut self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_profiler_enabled' class='method'><span id='set_profiler_enabled.v' class='invisible'><code>fn <a href='#method.set_profiler_enabled' class='fnname'>set_profiler_enabled</a>(&amp;mut self, enabled: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+</div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "webrender";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

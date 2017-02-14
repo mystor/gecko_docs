@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `StyleSheet` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, StyleSheet">
+
+    <title>style::gecko_bindings::structs::root::mozilla::StyleSheet - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../../index.html'>style</a>::<wbr><a href='../../../index.html'>gecko_bindings</a>::<wbr><a href='../../index.html'>structs</a>::<wbr><a href='../index.html'>root</a>::<wbr><a href='index.html'>mozilla</a></p><script>window.sidebarCurrent = {name: 'StyleSheet', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../../../index.html'>style</a>::<wbr><a href='../../../index.html'>gecko_bindings</a>::<wbr><a href='../../index.html'>structs</a>::<wbr><a href='../index.html'>root</a>::<wbr><a href='index.html'>mozilla</a>::<wbr><a class='struct' href=''>StyleSheet</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#3809-3824' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct StyleSheet {
+    pub _base: <a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.nsIDOMCSSStyleSheet.html' title='style::gecko_bindings::structs::root::nsIDOMCSSStyleSheet'>nsIDOMCSSStyleSheet</a>,
+    pub _base_1: <a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.nsWrapperCache.html' title='style::gecko_bindings::structs::root::nsWrapperCache'>nsWrapperCache</a>,
+    pub mRefCnt: <a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.nsCycleCollectingAutoRefCnt.html' title='style::gecko_bindings::structs::root::nsCycleCollectingAutoRefCnt'>nsCycleCollectingAutoRefCnt</a>,
+    pub _mOwningThread: <a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.nsAutoOwningThread.html' title='style::gecko_bindings::structs::root::nsAutoOwningThread'>nsAutoOwningThread</a>,
+    pub mParent: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../../style/gecko_bindings/structs/root/mozilla/struct.StyleSheet.html' title='style::gecko_bindings::structs::root::mozilla::StyleSheet'>StyleSheet</a>,
+    pub mTitle: <a class='struct' href='../../../../../nsstring_vendor/struct.nsStringRepr.html' title='nsstring_vendor::nsStringRepr'>nsStringRepr</a>,
+    pub mDocument: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.nsIDocument.html' title='style::gecko_bindings::structs::root::nsIDocument'>nsIDocument</a>,
+    pub mOwningNode: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.nsINode.html' title='style::gecko_bindings::structs::root::nsINode'>nsINode</a>,
+    pub mMedia: <a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.nsMediaList.html' title='style::gecko_bindings::structs::root::nsMediaList'>nsMediaList</a>&gt;,
+    pub mNext: <a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../style/gecko_bindings/structs/root/mozilla/struct.StyleSheet.html' title='style::gecko_bindings::structs::root::mozilla::StyleSheet'>StyleSheet</a>&gt;,
+    pub mParsingMode: <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/css/enum.SheetParsingMode.html' title='style::gecko_bindings::structs::root::mozilla::css::SheetParsingMode'>SheetParsingMode</a>,
+    pub mType: <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleBackendType.html' title='style::gecko_bindings::structs::root::mozilla::StyleBackendType'>StyleBackendType</a>,
+    pub mDisabled: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub mDocumentAssociationMode: <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleSheet_DocumentAssociationMode.html' title='style::gecko_bindings::structs::root::mozilla::StyleSheet_DocumentAssociationMode'>StyleSheet_DocumentAssociationMode</a>,
+}</pre><div class='docblock'><p>Superclass for data common to CSSStyleSheet and ServoStyleSheet.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield._base' class='structfield'>
+                           <span id='_base.v' class='invisible'>
+                           <code>_base: <a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.nsIDOMCSSStyleSheet.html' title='style::gecko_bindings::structs::root::nsIDOMCSSStyleSheet'>nsIDOMCSSStyleSheet</a></code>
+                           </span></span><span class='stab '></span><span id='structfield._base_1' class='structfield'>
+                           <span id='_base_1.v' class='invisible'>
+                           <code>_base_1: <a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.nsWrapperCache.html' title='style::gecko_bindings::structs::root::nsWrapperCache'>nsWrapperCache</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mRefCnt' class='structfield'>
+                           <span id='mRefCnt.v' class='invisible'>
+                           <code>mRefCnt: <a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.nsCycleCollectingAutoRefCnt.html' title='style::gecko_bindings::structs::root::nsCycleCollectingAutoRefCnt'>nsCycleCollectingAutoRefCnt</a></code>
+                           </span></span><span class='stab '></span><span id='structfield._mOwningThread' class='structfield'>
+                           <span id='_mOwningThread.v' class='invisible'>
+                           <code>_mOwningThread: <a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.nsAutoOwningThread.html' title='style::gecko_bindings::structs::root::nsAutoOwningThread'>nsAutoOwningThread</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mParent' class='structfield'>
+                           <span id='mParent.v' class='invisible'>
+                           <code>mParent: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../../style/gecko_bindings/structs/root/mozilla/struct.StyleSheet.html' title='style::gecko_bindings::structs::root::mozilla::StyleSheet'>StyleSheet</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mTitle' class='structfield'>
+                           <span id='mTitle.v' class='invisible'>
+                           <code>mTitle: <a class='struct' href='../../../../../nsstring_vendor/struct.nsStringRepr.html' title='nsstring_vendor::nsStringRepr'>nsStringRepr</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mDocument' class='structfield'>
+                           <span id='mDocument.v' class='invisible'>
+                           <code>mDocument: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.nsIDocument.html' title='style::gecko_bindings::structs::root::nsIDocument'>nsIDocument</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mOwningNode' class='structfield'>
+                           <span id='mOwningNode.v' class='invisible'>
+                           <code>mOwningNode: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.pointer.html'>*mut </a><a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.nsINode.html' title='style::gecko_bindings::structs::root::nsINode'>nsINode</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mMedia' class='structfield'>
+                           <span id='mMedia.v' class='invisible'>
+                           <code>mMedia: <a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.nsMediaList.html' title='style::gecko_bindings::structs::root::nsMediaList'>nsMediaList</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mNext' class='structfield'>
+                           <span id='mNext.v' class='invisible'>
+                           <code>mNext: <a class='struct' href='../../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../../style/gecko_bindings/structs/root/mozilla/struct.StyleSheet.html' title='style::gecko_bindings::structs::root::mozilla::StyleSheet'>StyleSheet</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mParsingMode' class='structfield'>
+                           <span id='mParsingMode.v' class='invisible'>
+                           <code>mParsingMode: <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/css/enum.SheetParsingMode.html' title='style::gecko_bindings::structs::root::mozilla::css::SheetParsingMode'>SheetParsingMode</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mType' class='structfield'>
+                           <span id='mType.v' class='invisible'>
+                           <code>mType: <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleBackendType.html' title='style::gecko_bindings::structs::root::mozilla::StyleBackendType'>StyleBackendType</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mDisabled' class='structfield'>
+                           <span id='mDisabled.v' class='invisible'>
+                           <code>mDisabled: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mDocumentAssociationMode' class='structfield'>
+                           <span id='mDocumentAssociationMode.v' class='invisible'>
+                           <code>mDocumentAssociationMode: <a class='enum' href='../../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleSheet_DocumentAssociationMode.html' title='style::gecko_bindings::structs::root::mozilla::StyleSheet_DocumentAssociationMode'>StyleSheet_DocumentAssociationMode</a></code>
+                           </span></span><span class='stab '></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../../../../style/gecko_bindings/structs/root/mozilla/struct.StyleSheet.html' title='style::gecko_bindings::structs::root::mozilla::StyleSheet'>StyleSheet</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#3808' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../../../jquery.js"></script>
+    <script src="../../../../../main.js"></script>
+    <script defer src="../../../../../search-index.js"></script>
+</body>
+</html>

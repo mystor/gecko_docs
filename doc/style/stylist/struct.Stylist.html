@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Stylist` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Stylist">
+
+    <title>style::stylist::Stylist - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>style</a>::<wbr><a href='index.html'>stylist</a></p><script>window.sidebarCurrent = {name: 'Stylist', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>style</a>::<wbr><a href='index.html'>stylist</a>::<wbr><a class='struct' href=''>Stylist</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/style/stylist.rs.html#51-116' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Stylist {
+    pub device: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/gecko/media_queries/struct.Device.html' title='style::gecko::media_queries::Device'>Device</a>&gt;,
+    pub rule_tree: <a class='struct' href='../../style/rule_tree/struct.RuleTree.html' title='style::rule_tree::RuleTree'>RuleTree</a>,
+    // some fields omitted
+}</pre><div class='docblock'><p>This structure holds all the selectors and device characteristics
+for a given document. The selectors are converted into <code>Rule</code>s
+(defined in rust-selectors), and introduced in a <code>SelectorMap</code>
+depending on the pseudo-element (see <code>PerPseudoElementSelectorMap</code>),
+and stylesheet origin (see the fields of <code>PerPseudoElementSelectorMap</code>).</p>
+
+<p>This structure is effectively created once per pipeline, in the
+LayoutThread corresponding to that pipeline.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.device' class='structfield'>
+                           <span id='device.v' class='invisible'>
+                           <code>device: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/gecko/media_queries/struct.Device.html' title='style::gecko::media_queries::Device'>Device</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Device that the stylist is currently evaluating against.</p>
+
+<p>This field deserves a bigger comment due to the different use that Gecko
+and Servo give to it (that we should eventually unify).</p>
+
+<p>With Gecko, the device is never changed. Gecko manually tracks whether
+the device data should be reconstructed, and &quot;resets&quot; the state of the
+device.</p>
+
+<p>On Servo, on the other hand, the device is a really cheap representation
+that is recreated each time some constraint changes and calling
+<code>set_device</code>.</p>
+
+<p>In both cases, the device is actually <em>owned</em> by the Stylist, and it&#39;s
+only an <code>Arc</code> so we can implement <code>add_stylesheet</code> more idiomatically.</p>
+</div><span id='structfield.rule_tree' class='structfield'>
+                           <span id='rule_tree.v' class='invisible'>
+                           <code>rule_tree: <a class='struct' href='../../style/rule_tree/struct.RuleTree.html' title='style::rule_tree::RuleTree'>RuleTree</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The rule tree, that stores the results of selector matching.</p>
+
+<p>FIXME(emilio): Not <code>pub</code>!</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../style/stylist/struct.Stylist.html' title='style::stylist::Stylist'>Stylist</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/stylist.rs.html#118-768' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.new' class='method'><span id='new.v' class='invisible'><code>fn <a href='#method.new' class='fnname'>new</a>(device: <a class='struct' href='../../style/gecko/media_queries/struct.Device.html' title='style::gecko::media_queries::Device'>Device</a>) -&gt; Self</code></span></h4>
+<div class='docblock'><p>Construct a new <code>Stylist</code>, using a given <code>Device</code>.</p>
+</div><h4 id='method.update' class='method'><span id='update.v' class='invisible'><code>fn <a href='#method.update' class='fnname'>update</a>(&amp;mut self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; doc_stylesheets: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/stylesheets/struct.Stylesheet.html' title='style::stylesheets::Stylesheet'>Stylesheet</a>&gt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ua_stylesheets: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../style/stylesheets/struct.UserAgentStylesheets.html' title='style::stylesheets::UserAgentStylesheets'>UserAgentStylesheets</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stylesheets_changed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Update the stylist for the given document stylesheets, and optionally
+with a set of user agent stylesheets.</p>
+
+<p>This method resets all the style data each time the stylesheets change
+(which is indicated by the <code>stylesheets_changed</code> parameter), or the
+device is dirty, which means we need to re-evaluate media queries.</p>
+</div><h4 id='method.precomputed_values_for_pseudo' class='method'><span id='precomputed_values_for_pseudo.v' class='invisible'><code>fn <a href='#method.precomputed_values_for_pseudo' class='fnname'>precomputed_values_for_pseudo</a>(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pseudo: &amp;<a class='struct' href='../../style/gecko/selector_parser/struct.PseudoElement.html' title='style::gecko::selector_parser::PseudoElement'>PseudoElement</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; parent: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/gecko_properties/struct.ComputedValues.html' title='style::gecko_properties::ComputedValues'>ComputedValues</a>&gt;&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; default: &amp;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/gecko_properties/struct.ComputedValues.html' title='style::gecko_properties::ComputedValues'>ComputedValues</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inherit_all: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='struct' href='../../style/data/struct.ComputedStyle.html' title='style::data::ComputedStyle'>ComputedStyle</a></code></span></h4>
+<div class='docblock'><p>Computes the style for a given &quot;precomputed&quot; pseudo-element, taking the
+universal rules and applying them.</p>
+
+<p>If <code>inherit_all</code> is true, then all properties are inherited from the
+parent; otherwise, non-inherited properties are reset to their initial
+values. The flow constructor uses this flag when constructing anonymous
+flows.</p>
+</div><h4 id='method.lazily_compute_pseudo_element_style' class='method'><span id='lazily_compute_pseudo_element_style.v' class='invisible'><code>fn <a href='#method.lazily_compute_pseudo_element_style' class='fnname'>lazily_compute_pseudo_element_style</a>&lt;E&gt;(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; element: &amp;E,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pseudo: &amp;<a class='struct' href='../../style/gecko/selector_parser/struct.PseudoElement.html' title='style::gecko::selector_parser::PseudoElement'>PseudoElement</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; parent: &amp;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/gecko_properties/struct.ComputedValues.html' title='style::gecko_properties::ComputedValues'>ComputedValues</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; default: &amp;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../style/gecko_properties/struct.ComputedValues.html' title='style::gecko_properties::ComputedValues'>ComputedValues</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../style/data/struct.ComputedStyle.html' title='style::data::ComputedStyle'>ComputedStyle</a>&gt; <span class='where fmt-newline'>where E: <a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>TElement</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> + <a class='trait' href='../../style/dom/trait.PresentationalHintsSynthetizer.html' title='style::dom::PresentationalHintsSynthetizer'>PresentationalHintsSynthetizer</a></span></code></span></h4>
+<div class='docblock'><p>Computes a pseudo-element style lazily during layout.</p>
+
+<p>This can only be done for a certain set of pseudo-elements, like
+:selection.</p>
+
+<p>Check the documentation on lazy pseudo-elements in
+docs/components/style.md</p>
+</div><h4 id='method.viewport_constraints' class='method'><span id='viewport_constraints.v' class='invisible'><code>fn <a href='#method.viewport_constraints' class='fnname'>viewport_constraints</a>(&amp;self) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../style_traits/viewport/struct.ViewportConstraints.html' title='style_traits::viewport::ViewportConstraints'>ViewportConstraints</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns the viewport constraints that apply to this document because of
+a @viewport rule.</p>
+</div><h4 id='method.set_quirks_mode' class='method'><span id='set_quirks_mode.v' class='invisible'><code>fn <a href='#method.set_quirks_mode' class='fnname'>set_quirks_mode</a>(&amp;mut self, enabled: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<div class='docblock'><p>Sets the quirks mode of the document.</p>
+</div><h4 id='method.push_applicable_declarations' class='method'><span id='push_applicable_declarations.v' class='invisible'><code>fn <a href='#method.push_applicable_declarations' class='fnname'>push_applicable_declarations</a>&lt;E, V&gt;(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; element: &amp;E,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; parent_bf: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../selectors/bloom/struct.BloomFilter.html' title='selectors::bloom::BloomFilter'>BloomFilter</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; style_attribute: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='../../style/properties/declaration_block/struct.PropertyDeclarationBlock.html' title='style::properties::declaration_block::PropertyDeclarationBlock'>PropertyDeclarationBlock</a>&gt;&gt;&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; animation_rules: <a class='struct' href='../../style/dom/struct.AnimationRules.html' title='style::dom::AnimationRules'>AnimationRules</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pseudo_element: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='struct' href='../../style/gecko/selector_parser/struct.PseudoElement.html' title='style::gecko::selector_parser::PseudoElement'>PseudoElement</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; applicable_declarations: &amp;mut V,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; flags: &amp;mut <a class='struct' href='../../selectors/matching/struct.ElementSelectorFlags.html' title='selectors::matching::ElementSelectorFlags'>ElementSelectorFlags</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='struct' href='../../selectors/matching/struct.StyleRelations.html' title='selectors::matching::StyleRelations'>StyleRelations</a> <span class='where fmt-newline'>where E: <a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>TElement</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> + <a class='trait' href='../../style/dom/trait.PresentationalHintsSynthetizer.html' title='style::dom::PresentationalHintsSynthetizer'>PresentationalHintsSynthetizer</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;V: <a class='trait' href='../../style/sink/trait.Push.html' title='style::sink::Push'>Push</a>&lt;<a class='struct' href='../../style/stylist/struct.ApplicableDeclarationBlock.html' title='style::stylist::ApplicableDeclarationBlock'>ApplicableDeclarationBlock</a>&gt; + <a class='trait' href='../../smallvec/trait.VecLike.html' title='smallvec::VecLike'>VecLike</a>&lt;<a class='struct' href='../../style/stylist/struct.ApplicableDeclarationBlock.html' title='style::stylist::ApplicableDeclarationBlock'>ApplicableDeclarationBlock</a>&gt;</span></code></span></h4>
+<div class='docblock'><p>Returns the applicable CSS declarations for the given element.</p>
+
+<p>This corresponds to <code>ElementRuleCollector</code> in WebKit.</p>
+
+<p>The returned <code>StyleRelations</code> indicate hints about which kind of rules
+have matched.</p>
+</div><h4 id='method.is_device_dirty' class='method'><span id='is_device_dirty.v' class='invisible'><code>fn <a href='#method.is_device_dirty' class='fnname'>is_device_dirty</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Return whether the device is dirty, that is, whether the screen size or
+media type have changed (for now).</p>
+</div><h4 id='method.animations' class='method'><span id='animations.v' class='invisible'><code>fn <a href='#method.animations' class='fnname'>animations</a>(&amp;self) -&gt; &amp;<a class='type' href='../../style/stylist/type.FnvHashMap.html' title='style::stylist::FnvHashMap'>FnvHashMap</a>&lt;<a class='struct' href='../../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>, <a class='struct' href='../../style/keyframes/struct.KeyframesAnimation.html' title='style::keyframes::KeyframesAnimation'>KeyframesAnimation</a>&gt;</code></span></h4>
+<div class='docblock'><p>Returns the map of registered <code>@keyframes</code> animations.</p>
+</div><h4 id='method.match_same_not_common_style_affecting_attributes_rules' class='method'><span id='match_same_not_common_style_affecting_attributes_rules.v' class='invisible'><code>fn <a href='#method.match_same_not_common_style_affecting_attributes_rules' class='fnname'>match_same_not_common_style_affecting_attributes_rules</a>&lt;E&gt;(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; element: &amp;E,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; candidate: &amp;E)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a> <span class='where fmt-newline'>where E: <a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>TElement</a></span></code></span></h4>
+<div class='docblock'><p>Whether two elements match the same not-common style-affecting attribute
+rules.</p>
+
+<p>This is used to test elements and candidates in the style-sharing
+candidate cache.</p>
+</div><h4 id='method.rule_tree_root' class='method'><span id='rule_tree_root.v' class='invisible'><code>fn <a href='#method.rule_tree_root' class='fnname'>rule_tree_root</a>(&amp;self) -&gt; <a class='struct' href='../../style/rule_tree/struct.StrongRuleNode.html' title='style::rule_tree::StrongRuleNode'>StrongRuleNode</a></code></span></h4>
+<div class='docblock'><p>Returns the rule root node.</p>
+</div><h4 id='method.match_same_sibling_affecting_rules' class='method'><span id='match_same_sibling_affecting_rules.v' class='invisible'><code>fn <a href='#method.match_same_sibling_affecting_rules' class='fnname'>match_same_sibling_affecting_rules</a>&lt;E&gt;(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; element: &amp;E,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; candidate: &amp;E)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a> <span class='where fmt-newline'>where E: <a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>TElement</a></span></code></span></h4>
+<div class='docblock'><p>Returns whether two elements match the same sibling-affecting rules.</p>
+
+<p>This is also for the style sharing candidate cache.</p>
+</div><h4 id='method.compute_restyle_hint' class='method'><span id='compute_restyle_hint.v' class='invisible'><code>fn <a href='#method.compute_restyle_hint' class='fnname'>compute_restyle_hint</a>&lt;E&gt;(&amp;self,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; element: &amp;E,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; snapshot: &amp;<a class='struct' href='../../style/gecko/snapshot/struct.GeckoElementSnapshot.html' title='style::gecko::snapshot::GeckoElementSnapshot'>Snapshot</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='struct' href='../../style/restyle_hints/struct.RestyleHint.html' title='style::restyle_hints::RestyleHint'>RestyleHint</a> <span class='where fmt-newline'>where E: <a class='trait' href='../../style/dom/trait.TElement.html' title='style::dom::TElement'>TElement</a></span></code></span></h4>
+<div class='docblock'><p>Given an element, and a snapshot that represents a previous state of the
+element, compute the appropriate restyle hint, that is, the kind of
+restyle we need to do.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../style/stylist/struct.Stylist.html' title='style::stylist::Stylist'>Stylist</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/stylist.rs.html#770-783' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.drop' class='method'><span id='drop.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop' class='fnname'>drop</a>(&amp;mut self)</code></span></h4>
+<div class='docblock'><p>A method called when the value goes out of scope. <a href="https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

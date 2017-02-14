@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `style` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, style">
+
+    <title>style - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 'style', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>style</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/style/lib.rs.html#5-202' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Calculate <a href="https://drafts.csswg.org/css-cascade/#specified">specified</a> and <a href="https://drafts.csswg.org/css-cascade/#computed">computed values</a> from a
+tree of DOM nodes and a set of stylesheets.</p>
+
+<p>In particular, this crate contains the definitions of supported properties,
+the code to parse them into specified values and calculate the computed
+values based on the specified values, as well as the code to serialize both
+specified and computed values.</p>
+
+<p>The main entry point is <a href="traversal/fn.recalc_style_at.html"><code>recalc_style_at</code></a>.</p>
+
+<p>Major dependencies are the <a href="../cssparser/index.html">cssparser</a> and <a href="../selectors/index.html">selectors</a>
+crates.</p>
+</div><h2 id='reexports' class='section-header'><a href="#reexports">Reexports</a></h2>
+<table><tr><td><code>pub use <a class='mod' href='../style/gecko_string_cache/index.html' title='style::gecko_string_cache'>gecko_string_cache</a> as string_cache;</code></td></tr><tr><td><code>pub use gecko_string_cache::<a class='struct' href='../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a>;</code></td></tr><tr><td><code>pub use gecko_string_cache::<a class='struct' href='../style/gecko_string_cache/namespace/struct.Namespace.html' title='style::gecko_string_cache::namespace::Namespace'>Namespace</a>;</code></td></tr><tr><td><code>pub use gecko_string_cache::<a class='struct' href='../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a> as Prefix;</code></td></tr><tr><td><code>pub use gecko_string_cache::<a class='struct' href='../style/gecko_string_cache/struct.Atom.html' title='style::gecko_string_cache::Atom'>Atom</a> as LocalName;</code></td></tr></table><h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='animation/index.html'
+                                  title='style::animation'>animation</a></td>
+                           <td class='docblock-short'>
+                                <p>CSS transitions and animations.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='attr/index.html'
+                                  title='style::attr'>attr</a></td>
+                           <td class='docblock-short'>
+                                <p>Parsed representations of <a href="https://dom.spec.whatwg.org/#interface-attr">DOM attributes</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='bezier/index.html'
+                                  title='style::bezier'>bezier</a></td>
+                           <td class='docblock-short'>
+                                <p>Parametric Bézier curves.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='bloom/index.html'
+                                  title='style::bloom'>bloom</a></td>
+                           <td class='docblock-short'>
+                                <p>The style bloom filter is used as an optimization when matching deep
+descendant selectors.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='cache/index.html'
+                                  title='style::cache'>cache</a></td>
+                           <td class='docblock-short'>
+                                <p>A simple LRU cache.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='cascade_info/index.html'
+                                  title='style::cascade_info'>cascade_info</a></td>
+                           <td class='docblock-short'>
+                                <p>A structure to collect information about the cascade.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='computed_values/index.html'
+                                  title='style::computed_values'>computed_values</a></td>
+                           <td class='docblock-short'>
+                                <p>Types for <a href="https://drafts.csswg.org/css-cascade/#computed">computed values</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='context/index.html'
+                                  title='style::context'>context</a></td>
+                           <td class='docblock-short'>
+                                <p>The context within which style is calculated.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='custom_properties/index.html'
+                                  title='style::custom_properties'>custom_properties</a></td>
+                           <td class='docblock-short'>
+                                <p>Support for <a href="https://drafts.csswg.org/css-variables/">custom properties for cascading variables</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='data/index.html'
+                                  title='style::data'>data</a></td>
+                           <td class='docblock-short'>
+                                <p>Per-node data used in style calculation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='dom/index.html'
+                                  title='style::dom'>dom</a></td>
+                           <td class='docblock-short'>
+                                <p>Types and traits used to access the DOM from style calculation.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='element_state/index.html'
+                                  title='style::element_state'>element_state</a></td>
+                           <td class='docblock-short'>
+                                <p>States elements can be in.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='error_reporting/index.html'
+                                  title='style::error_reporting'>error_reporting</a></td>
+                           <td class='docblock-short'>
+                                <p>Types used to report parsing errors.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='font_face/index.html'
+                                  title='style::font_face'>font_face</a></td>
+                           <td class='docblock-short'>
+                                <p>The <a href="https://drafts.csswg.org/css-fonts/#at-font-face-rule"><code>@font-face</code></a> at-rule.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='font_metrics/index.html'
+                                  title='style::font_metrics'>font_metrics</a></td>
+                           <td class='docblock-short'>
+                                <p>Access to font metrics from the style system.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='gecko/index.html'
+                                  title='style::gecko'>gecko</a></td>
+                           <td class='docblock-short'>
+                                <p>Gecko-specific style-system bits.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='gecko_bindings/index.html'
+                                  title='style::gecko_bindings'>gecko_bindings</a></td>
+                           <td class='docblock-short'>
+                                <p>Gecko&#39;s C++ bindings, along with some rust helpers to ease its use.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='gecko_properties/index.html'
+                                  title='style::gecko_properties'>gecko_properties</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='gecko_string_cache/index.html'
+                                  title='style::gecko_string_cache'>gecko_string_cache</a></td>
+                           <td class='docblock-short'>
+                                <p>A drop-in replacement for string_cache, but backed by Gecko <code>nsIAtom</code>s.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='keyframes/index.html'
+                                  title='style::keyframes'>keyframes</a></td>
+                           <td class='docblock-short'>
+                                <p>Keyframes: <a href="https://drafts.csswg.org/css-animations/#keyframes">https://drafts.csswg.org/css-animations/#keyframes</a></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='logical_geometry/index.html'
+                                  title='style::logical_geometry'>logical_geometry</a></td>
+                           <td class='docblock-short'>
+                                <p>Geometry in flow-relative space.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='matching/index.html'
+                                  title='style::matching'>matching</a></td>
+                           <td class='docblock-short'>
+                                <p>High-level interface to CSS selector matching.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='media_queries/index.html'
+                                  title='style::media_queries'>media_queries</a></td>
+                           <td class='docblock-short'>
+                                <p><a href="https://drafts.csswg.org/mediaqueries/">Media queries</a>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='owning_handle/index.html'
+                                  title='style::owning_handle'>owning_handle</a></td>
+                           <td class='docblock-short'>
+                                <p>A handle that encapsulate a reference to a given data along with its owner.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='parallel/index.html'
+                                  title='style::parallel'>parallel</a></td>
+                           <td class='docblock-short'>
+                                <p>Implements parallel traversal over the DOM tree.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='parser/index.html'
+                                  title='style::parser'>parser</a></td>
+                           <td class='docblock-short'>
+                                <p>The context within which CSS code is parsed.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='properties/index.html'
+                                  title='style::properties'>properties</a></td>
+                           <td class='docblock-short'>
+                                <p>The CSS properties supported by the style system.
+Generated from the properties.mako.rs template by build.rs</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='restyle_hints/index.html'
+                                  title='style::restyle_hints'>restyle_hints</a></td>
+                           <td class='docblock-short'>
+                                <p>Restyle hints: an optimization to avoid unnecessarily matching selectors.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='rule_tree/index.html'
+                                  title='style::rule_tree'>rule_tree</a></td>
+                           <td class='docblock-short'>
+                                <p>The rule tree.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='scoped_tls/index.html'
+                                  title='style::scoped_tls'>scoped_tls</a></td>
+                           <td class='docblock-short'>
+                                <p>Stack-scoped thread-local storage for rayon thread pools.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='selector_parser/index.html'
+                                  title='style::selector_parser'>selector_parser</a></td>
+                           <td class='docblock-short'>
+                                <p>The pseudo-classes and pseudo-elements supported by the style system.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='sequential/index.html'
+                                  title='style::sequential'>sequential</a></td>
+                           <td class='docblock-short'>
+                                <p>Implements sequential traversal over the DOM tree.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='sink/index.html'
+                                  title='style::sink'>sink</a></td>
+                           <td class='docblock-short'>
+                                <p>Small helpers to abstract over different containers.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='str/index.html'
+                                  title='style::str'>str</a></td>
+                           <td class='docblock-short'>
+                                <p>String utils for attributes and similar stuff.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='stylesheets/index.html'
+                                  title='style::stylesheets'>stylesheets</a></td>
+                           <td class='docblock-short'>
+                                <p>Style sheets and their CSS rules.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='stylist/index.html'
+                                  title='style::stylist'>stylist</a></td>
+                           <td class='docblock-short'>
+                                <p>Selector matching.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='supports/index.html'
+                                  title='style::supports'>supports</a></td>
+                           <td class='docblock-short'>
+                                <p><a href="https://drafts.csswg.org/css-conditional-3/#at-supports">@supports rules</a></p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='thread_state/index.html'
+                                  title='style::thread_state'>thread_state</a></td>
+                           <td class='docblock-short'>
+                                <p>Supports dynamic assertions in debug builds about what sort of thread is
+running and what state it&#39;s in.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='timer/index.html'
+                                  title='style::timer'>timer</a></td>
+                           <td class='docblock-short'>
+                                <p>A timer module, used to define a <code>Timer</code> type, that is controlled by script.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='traversal/index.html'
+                                  title='style::traversal'>traversal</a></td>
+                           <td class='docblock-short'>
+                                <p>Traversing the DOM tree; the bloom filter.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='values/index.html'
+                                  title='style::values'>values</a></td>
+                           <td class='docblock-short'>
+                                <p>Common <a href="https://drafts.csswg.org/css-values/">values</a> used in CSS.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='viewport/index.html'
+                                  title='style::viewport'>viewport</a></td>
+                           <td class='docblock-short'>
+                                <p>The <a href="https://drafts.csswg.org/css-device-adapt/#atviewport-rule"><code>@viewport</code></a> at-rule and <a href="https://drafts.csswg.org/css-device-adapt/#viewport-meta"><code>meta</code></a> element.</p>
+                           </td>
+                       </tr></table><h2 id='macros' class='section-header'><a href="#macros">Macros</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.atom.html'
+                                  title='style::atom'>atom</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.css_properties_accessors.html'
+                                  title='style::css_properties_accessors'>css_properties_accessors</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.ns.html'
+                                  title='style::ns'>ns</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='macro' href='macro.property_name.html'
+                                  title='style::property_name'>property_name</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.arc_ptr_eq.html'
+                                  title='style::arc_ptr_eq'>arc_ptr_eq</a></td>
+                           <td class='docblock-short'>
+                                <p>Returns whether the two arguments point to the same value.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.serialize_comma_separated_list.html'
+                                  title='style::serialize_comma_separated_list'>serialize_comma_separated_list</a></td>
+                           <td class='docblock-short'>
+                                <p>Serializes as CSS a comma-separated list of any <code>T</code> that supports being
+serialized as CSS.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

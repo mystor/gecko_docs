@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["TypedMatrix2D","A 2d transform stored as a 2 by 3 matrix in row-major order in memory, useful to represent 2d transformations."]],"type":[["Matrix2D","The default 2d matrix type with no units."]]});

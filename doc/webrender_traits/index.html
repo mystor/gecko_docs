@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `webrender_traits` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, webrender_traits">
+
+    <title>webrender_traits - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 'webrender_traits', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>webrender_traits</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/webrender_traits/lib.rs.html#5-46' title='goto source code'>[src]</a></span></h1>
+<h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='channel/index.html'
+                                  title='webrender_traits::channel'>channel</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AuxiliaryLists.html'
+                                  title='webrender_traits::AuxiliaryLists'>AuxiliaryLists</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AuxiliaryListsDescriptor.html'
+                                  title='webrender_traits::AuxiliaryListsDescriptor'>AuxiliaryListsDescriptor</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the memory layout of the auxiliary lists.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.BorderDisplayItem.html'
+                                  title='webrender_traits::BorderDisplayItem'>BorderDisplayItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.BorderRadius.html'
+                                  title='webrender_traits::BorderRadius'>BorderRadius</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.BorderSide.html'
+                                  title='webrender_traits::BorderSide'>BorderSide</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.BoxShadowDisplayItem.html'
+                                  title='webrender_traits::BoxShadowDisplayItem'>BoxShadowDisplayItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.BuiltDisplayList.html'
+                                  title='webrender_traits::BuiltDisplayList'>BuiltDisplayList</a></td>
+                           <td class='docblock-short'>
+                                <p>A display list.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.BuiltDisplayListDescriptor.html'
+                                  title='webrender_traits::BuiltDisplayListDescriptor'>BuiltDisplayListDescriptor</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes the memory layout of a display list.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ClipRegion.html'
+                                  title='webrender_traits::ClipRegion'>ClipRegion</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ColorF.html'
+                                  title='webrender_traits::ColorF'>ColorF</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ColorU.html'
+                                  title='webrender_traits::ColorU'>ColorU</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ComplexClipRegion.html'
+                                  title='webrender_traits::ComplexClipRegion'>ComplexClipRegion</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DevicePixel.html'
+                                  title='webrender_traits::DevicePixel'>DevicePixel</a></td>
+                           <td class='docblock-short'>
+                                <p>Geometry in the coordinate system of the render target (screen or intermediate
+surface) in physical pixels.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DisplayItem.html'
+                                  title='webrender_traits::DisplayItem'>DisplayItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DisplayListBuilder.html'
+                                  title='webrender_traits::DisplayListBuilder'>DisplayListBuilder</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Epoch.html'
+                                  title='webrender_traits::Epoch'>Epoch</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ExternalEvent.html'
+                                  title='webrender_traits::ExternalEvent'>ExternalEvent</a></td>
+                           <td class='docblock-short'>
+                                <p>An opaque pointer-sized value.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ExternalImageId.html'
+                                  title='webrender_traits::ExternalImageId'>ExternalImageId</a></td>
+                           <td class='docblock-short'>
+                                <p>An arbitrary identifier for an external image provided by the
+application. It must be a unique identifier for each external
+image.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.FontKey.html'
+                                  title='webrender_traits::FontKey'>FontKey</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GlyphDimensions.html'
+                                  title='webrender_traits::GlyphDimensions'>GlyphDimensions</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GlyphInstance.html'
+                                  title='webrender_traits::GlyphInstance'>GlyphInstance</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GlyphKey.html'
+                                  title='webrender_traits::GlyphKey'>GlyphKey</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GradientDisplayItem.html'
+                                  title='webrender_traits::GradientDisplayItem'>GradientDisplayItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GradientStop.html'
+                                  title='webrender_traits::GradientStop'>GradientStop</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.IdNamespace.html'
+                                  title='webrender_traits::IdNamespace'>IdNamespace</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.IframeDisplayItem.html'
+                                  title='webrender_traits::IframeDisplayItem'>IframeDisplayItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ImageDescriptor.html'
+                                  title='webrender_traits::ImageDescriptor'>ImageDescriptor</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ImageDisplayItem.html'
+                                  title='webrender_traits::ImageDisplayItem'>ImageDisplayItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ImageKey.html'
+                                  title='webrender_traits::ImageKey'>ImageKey</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ImageMask.html'
+                                  title='webrender_traits::ImageMask'>ImageMask</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ItemRange.html'
+                                  title='webrender_traits::ItemRange'>ItemRange</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.LayerPixel.html'
+                                  title='webrender_traits::LayerPixel'>LayerPixel</a></td>
+                           <td class='docblock-short'>
+                                <p>Geometry in a layer&#39;s local coordinate space (logical pixels).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.NativeFontHandle.html'
+                                  title='webrender_traits::NativeFontHandle'>NativeFontHandle</a></td>
+                           <td class='docblock-short'>
+                                <p>Native fonts are not used on Linux; all fonts are raw.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.PipelineId.html'
+                                  title='webrender_traits::PipelineId'>PipelineId</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.PushScrollLayerItem.html'
+                                  title='webrender_traits::PushScrollLayerItem'>PushScrollLayerItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.PushStackingContextDisplayItem.html'
+                                  title='webrender_traits::PushStackingContextDisplayItem'>PushStackingContextDisplayItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.RadialGradientDisplayItem.html'
+                                  title='webrender_traits::RadialGradientDisplayItem'>RadialGradientDisplayItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.RectangleDisplayItem.html'
+                                  title='webrender_traits::RectangleDisplayItem'>RectangleDisplayItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.RenderApi.html'
+                                  title='webrender_traits::RenderApi'>RenderApi</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.RenderApiSender.html'
+                                  title='webrender_traits::RenderApiSender'>RenderApiSender</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ResourceId.html'
+                                  title='webrender_traits::ResourceId'>ResourceId</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ScrollLayerId.html'
+                                  title='webrender_traits::ScrollLayerId'>ScrollLayerId</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ScrollLayerPixel.html'
+                                  title='webrender_traits::ScrollLayerPixel'>ScrollLayerPixel</a></td>
+                           <td class='docblock-short'>
+                                <p>Geometry in a layer&#39;s scrollable parent coordinate space (logical pixels).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ScrollLayerState.html'
+                                  title='webrender_traits::ScrollLayerState'>ScrollLayerState</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ServoScrollRootId.html'
+                                  title='webrender_traits::ServoScrollRootId'>ServoScrollRootId</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.StackingContext.html'
+                                  title='webrender_traits::StackingContext'>StackingContext</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TextDisplayItem.html'
+                                  title='webrender_traits::TextDisplayItem'>TextDisplayItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.WebGLBufferId.html'
+                                  title='webrender_traits::WebGLBufferId'>WebGLBufferId</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.WebGLContextId.html'
+                                  title='webrender_traits::WebGLContextId'>WebGLContextId</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.WebGLDisplayItem.html'
+                                  title='webrender_traits::WebGLDisplayItem'>WebGLDisplayItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.WebGLFramebufferId.html'
+                                  title='webrender_traits::WebGLFramebufferId'>WebGLFramebufferId</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.WebGLProgramId.html'
+                                  title='webrender_traits::WebGLProgramId'>WebGLProgramId</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.WebGLRenderbufferId.html'
+                                  title='webrender_traits::WebGLRenderbufferId'>WebGLRenderbufferId</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.WebGLShaderId.html'
+                                  title='webrender_traits::WebGLShaderId'>WebGLShaderId</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.WebGLTextureId.html'
+                                  title='webrender_traits::WebGLTextureId'>WebGLTextureId</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.WorldPixel.html'
+                                  title='webrender_traits::WorldPixel'>WorldPixel</a></td>
+                           <td class='docblock-short'>
+                                <p>Geometry in the document&#39;s coordinate space (logical pixels).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.YuvImageDisplayItem.html'
+                                  title='webrender_traits::YuvImageDisplayItem'>YuvImageDisplayItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ApiMsg.html'
+                                  title='webrender_traits::ApiMsg'>ApiMsg</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.BorderStyle.html'
+                                  title='webrender_traits::BorderStyle'>BorderStyle</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.BoxShadowClipMode.html'
+                                  title='webrender_traits::BoxShadowClipMode'>BoxShadowClipMode</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.DisplayListMode.html'
+                                  title='webrender_traits::DisplayListMode'>DisplayListMode</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.FilterOp.html'
+                                  title='webrender_traits::FilterOp'>FilterOp</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.FontRenderMode.html'
+                                  title='webrender_traits::FontRenderMode'>FontRenderMode</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.FragmentType.html'
+                                  title='webrender_traits::FragmentType'>FragmentType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ImageData.html'
+                                  title='webrender_traits::ImageData'>ImageData</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ImageFormat.html'
+                                  title='webrender_traits::ImageFormat'>ImageFormat</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ImageRendering.html'
+                                  title='webrender_traits::ImageRendering'>ImageRendering</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.MixBlendMode.html'
+                                  title='webrender_traits::MixBlendMode'>MixBlendMode</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.RendererKind.html'
+                                  title='webrender_traits::RendererKind'>RendererKind</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ScrollEventPhase.html'
+                                  title='webrender_traits::ScrollEventPhase'>ScrollEventPhase</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ScrollLayerInfo.html'
+                                  title='webrender_traits::ScrollLayerInfo'>ScrollLayerInfo</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ScrollLocation.html'
+                                  title='webrender_traits::ScrollLocation'>ScrollLocation</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.ScrollPolicy.html'
+                                  title='webrender_traits::ScrollPolicy'>ScrollPolicy</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.SpecificDisplayItem.html'
+                                  title='webrender_traits::SpecificDisplayItem'>SpecificDisplayItem</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.VRCompositorCommand.html'
+                                  title='webrender_traits::VRCompositorCommand'>VRCompositorCommand</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.WebGLCommand.html'
+                                  title='webrender_traits::WebGLCommand'>WebGLCommand</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.WebGLError.html'
+                                  title='webrender_traits::WebGLError'>WebGLError</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.WebGLFramebufferBindingRequest.html'
+                                  title='webrender_traits::WebGLFramebufferBindingRequest'>WebGLFramebufferBindingRequest</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.WebGLParameter.html'
+                                  title='webrender_traits::WebGLParameter'>WebGLParameter</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.WebGLShaderParameter.html'
+                                  title='webrender_traits::WebGLShaderParameter'>WebGLShaderParameter</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.YuvColorSpace.html'
+                                  title='webrender_traits::YuvColorSpace'>YuvColorSpace</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='traits' class='section-header'><a href="#traits">Traits</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='trait' href='trait.RenderDispatcher.html'
+                                  title='webrender_traits::RenderDispatcher'>RenderDispatcher</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='trait' href='trait.RenderNotifier.html'
+                                  title='webrender_traits::RenderNotifier'>RenderNotifier</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='trait' href='trait.VRCompositorHandler.html'
+                                  title='webrender_traits::VRCompositorHandler'>VRCompositorHandler</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.as_scroll_parent_rect.html'
+                                  title='webrender_traits::as_scroll_parent_rect'>as_scroll_parent_rect</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.device_length.html'
+                                  title='webrender_traits::device_length'>device_length</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.DeviceIntLength.html'
+                                  title='webrender_traits::DeviceIntLength'>DeviceIntLength</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.DeviceIntPoint.html'
+                                  title='webrender_traits::DeviceIntPoint'>DeviceIntPoint</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.DeviceIntRect.html'
+                                  title='webrender_traits::DeviceIntRect'>DeviceIntRect</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.DeviceIntSize.html'
+                                  title='webrender_traits::DeviceIntSize'>DeviceIntSize</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.DevicePoint.html'
+                                  title='webrender_traits::DevicePoint'>DevicePoint</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.DeviceRect.html'
+                                  title='webrender_traits::DeviceRect'>DeviceRect</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.DeviceSize.html'
+                                  title='webrender_traits::DeviceSize'>DeviceSize</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.DeviceUintPoint.html'
+                                  title='webrender_traits::DeviceUintPoint'>DeviceUintPoint</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.DeviceUintRect.html'
+                                  title='webrender_traits::DeviceUintRect'>DeviceUintRect</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.DeviceUintSize.html'
+                                  title='webrender_traits::DeviceUintSize'>DeviceUintSize</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.LayerPoint.html'
+                                  title='webrender_traits::LayerPoint'>LayerPoint</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.LayerPoint4D.html'
+                                  title='webrender_traits::LayerPoint4D'>LayerPoint4D</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.LayerRect.html'
+                                  title='webrender_traits::LayerRect'>LayerRect</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.LayerSize.html'
+                                  title='webrender_traits::LayerSize'>LayerSize</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.LayerToScrollTransform.html'
+                                  title='webrender_traits::LayerToScrollTransform'>LayerToScrollTransform</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.LayerToWorldTransform.html'
+                                  title='webrender_traits::LayerToWorldTransform'>LayerToWorldTransform</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.LayerTransform.html'
+                                  title='webrender_traits::LayerTransform'>LayerTransform</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.LayoutPixel.html'
+                                  title='webrender_traits::LayoutPixel'>LayoutPixel</a></td>
+                           <td class='docblock-short'>
+                                <p>Geometry in a stacking context&#39;s local coordinate space (logical pixels).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.LayoutPoint.html'
+                                  title='webrender_traits::LayoutPoint'>LayoutPoint</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.LayoutRect.html'
+                                  title='webrender_traits::LayoutRect'>LayoutRect</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.LayoutSize.html'
+                                  title='webrender_traits::LayoutSize'>LayoutSize</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.LayoutTransform.html'
+                                  title='webrender_traits::LayoutTransform'>LayoutTransform</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.ScrollLayerPoint.html'
+                                  title='webrender_traits::ScrollLayerPoint'>ScrollLayerPoint</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.ScrollLayerRect.html'
+                                  title='webrender_traits::ScrollLayerRect'>ScrollLayerRect</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.ScrollLayerSize.html'
+                                  title='webrender_traits::ScrollLayerSize'>ScrollLayerSize</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.ScrollToLayerTransform.html'
+                                  title='webrender_traits::ScrollToLayerTransform'>ScrollToLayerTransform</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.ScrollToWorldTransform.html'
+                                  title='webrender_traits::ScrollToWorldTransform'>ScrollToWorldTransform</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.VRCompositorId.html'
+                                  title='webrender_traits::VRCompositorId'>VRCompositorId</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.WebGLResult.html'
+                                  title='webrender_traits::WebGLResult'>WebGLResult</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.WorldPoint.html'
+                                  title='webrender_traits::WorldPoint'>WorldPoint</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.WorldPoint4D.html'
+                                  title='webrender_traits::WorldPoint4D'>WorldPoint4D</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.WorldRect.html'
+                                  title='webrender_traits::WorldRect'>WorldRect</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.WorldSize.html'
+                                  title='webrender_traits::WorldSize'>WorldSize</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.WorldToLayerTransform.html'
+                                  title='webrender_traits::WorldToLayerTransform'>WorldToLayerTransform</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "webrender_traits";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

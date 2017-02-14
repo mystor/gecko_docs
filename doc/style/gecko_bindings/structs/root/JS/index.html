@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `JS` mod in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, JS">
+
+    <title>style::gecko_bindings::structs::root::JS - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../../index.html'>style</a>::<wbr><a href='../../../index.html'>gecko_bindings</a>::<wbr><a href='../../index.html'>structs</a>::<wbr><a href='../index.html'>root</a></p><script>window.sidebarCurrent = {name: 'JS', ty: 'mod', relpath: '../'};</script><script defer src="../sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Module <a href='../../../../index.html'>style</a>::<wbr><a href='../../../index.html'>gecko_bindings</a>::<wbr><a href='../../index.html'>structs</a>::<wbr><a href='../index.html'>root</a>::<wbr><a class='mod' href=''>JS</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#6171-6542' title='goto source code'>[src]</a></span></h1>
+<h2 id='modules' class='section-header'><a href="#modules">Modules</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='mod' href='dbg/index.html'
+                                  title='style::gecko_bindings::structs::root::JS::dbg'>dbg</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.DeletePolicy.html'
+                                  title='style::gecko_bindings::structs::root::JS::DeletePolicy'>DeletePolicy</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.FreePolicy.html'
+                                  title='style::gecko_bindings::structs::root::JS::FreePolicy'>FreePolicy</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.GCCellPtr.html'
+                                  title='style::gecko_bindings::structs::root::JS::GCCellPtr'>GCCellPtr</a></td>
+                           <td class='docblock-short'>
+                                <p>A GC pointer, tagged with the trace kind.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Handle.html'
+                                  title='style::gecko_bindings::structs::root::JS::Handle'>Handle</a></td>
+                           <td class='docblock-short'>
+                                <p>Reference to a T that has been rooted elsewhere. This is most useful
+as a parameter type, which guarantees that the T lvalue is properly
+rooted. See &quot;Move GC Stack Rooting&quot; above.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Heap.html'
+                                  title='style::gecko_bindings::structs::root::JS::Heap'>Heap</a></td>
+                           <td class='docblock-short'>
+                                <p>The Heap<T> class is a heap-stored reference to a JS GC thing. All members of
+heap classes that refer to GC things should use Heap<T> (or possibly
+TenuredHeap<T>, described below).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.MutableHandle.html'
+                                  title='style::gecko_bindings::structs::root::JS::MutableHandle'>MutableHandle</a></td>
+                           <td class='docblock-short'>
+                                <p>Similar to a handle, but the underlying storage can be changed. This is
+useful for outparams.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TenuredHeap.html'
+                                  title='style::gecko_bindings::structs::root::JS::TenuredHeap'>TenuredHeap</a></td>
+                           <td class='docblock-short'>
+                                <p>The TenuredHeap<T> class is similar to the Heap<T> class above in that it
+encapsulates the GC concerns of an on-heap reference to a JS object. However,
+it has two important differences:</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Value.html'
+                                  title='style::gecko_bindings::structs::root::JS::Value'>Value</a></td>
+                           <td class='docblock-short'>
+                                <p>JS::Value is the interface for a single JavaScript Engine value.  A few
+general notes on JS::Value:</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Value_layout.html'
+                                  title='style::gecko_bindings::structs::root::JS::Value_layout'>Value_layout</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Value_layout__bindgen_ty_1.html'
+                                  title='style::gecko_bindings::structs::root::JS::Value_layout__bindgen_ty_1'>Value_layout__bindgen_ty_1</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Value_layout__bindgen_ty_2.html'
+                                  title='style::gecko_bindings::structs::root::JS::Value_layout__bindgen_ty_2'>Value_layout__bindgen_ty_2</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Value_layout__bindgen_ty_2__bindgen_ty_1.html'
+                                  title='style::gecko_bindings::structs::root::JS::Value_layout__bindgen_ty_2__bindgen_ty_1'>Value_layout__bindgen_ty_2__bindgen_ty_1</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.Handle_CallerIdentity.html'
+                                  title='style::gecko_bindings::structs::root::JS::Handle_CallerIdentity'>Handle_CallerIdentity</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.Handle_Disambiguator.html'
+                                  title='style::gecko_bindings::structs::root::JS::Handle_Disambiguator'>Handle_Disambiguator</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.TenuredHeap__bindgen_ty_1.html'
+                                  title='style::gecko_bindings::structs::root::JS::TenuredHeap__bindgen_ty_1'>TenuredHeap__bindgen_ty_1</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='constants' class='section-header'><a href="#constants">Constants</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.TenuredHeap_flagsMask.html'
+                                  title='style::gecko_bindings::structs::root::JS::TenuredHeap_flagsMask'>TenuredHeap_flagsMask</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='constant' href='constant.TenuredHeap_maskBits.html'
+                                  title='style::gecko_bindings::structs::root::JS::TenuredHeap_maskBits'>TenuredHeap_maskBits</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.HandleValue.html'
+                                  title='style::gecko_bindings::structs::root::JS::HandleValue'>HandleValue</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Handle_ElementType.html'
+                                  title='style::gecko_bindings::structs::root::JS::Handle_ElementType'>Handle_ElementType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Heap_ElementType.html'
+                                  title='style::gecko_bindings::structs::root::JS::Heap_ElementType'>Heap_ElementType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.MutableHandleValue.html'
+                                  title='style::gecko_bindings::structs::root::JS::MutableHandleValue'>MutableHandleValue</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.MutableHandle_ElementType.html'
+                                  title='style::gecko_bindings::structs::root::JS::MutableHandle_ElementType'>MutableHandle_ElementType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.TenuredHeap_ElementType.html'
+                                  title='style::gecko_bindings::structs::root::JS::TenuredHeap_ElementType'>TenuredHeap_ElementType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Value_PayloadType.html'
+                                  title='style::gecko_bindings::structs::root::JS::Value_PayloadType'>Value_PayloadType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../../../jquery.js"></script>
+    <script src="../../../../../main.js"></script>
+    <script defer src="../../../../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `FrameMetrics` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, FrameMetrics">
+
+    <title>style::gecko_bindings::structs::root::mozilla::layers::FrameMetrics - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../../../index.html'>style</a>::<wbr><a href='../../../../index.html'>gecko_bindings</a>::<wbr><a href='../../../index.html'>structs</a>::<wbr><a href='../../index.html'>root</a>::<wbr><a href='../index.html'>mozilla</a>::<wbr><a href='index.html'>layers</a></p><script>window.sidebarCurrent = {name: 'FrameMetrics', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../../../../index.html'>style</a>::<wbr><a href='../../../../index.html'>gecko_bindings</a>::<wbr><a href='../../../index.html'>structs</a>::<wbr><a href='../../index.html'>root</a>::<wbr><a href='../index.html'>mozilla</a>::<wbr><a href='index.html'>layers</a>::<wbr><a class='struct' href=''>FrameMetrics</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#1698-1719' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct FrameMetrics {
+    pub mScrollId: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/layers/type.FrameMetrics_ViewID.html' title='style::gecko_bindings::structs::root::mozilla::layers::FrameMetrics_ViewID'>FrameMetrics_ViewID</a>,
+    pub mPresShellResolution: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+    pub mCompositionBounds: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.ParentLayerRect.html' title='style::gecko_bindings::structs::root::mozilla::ParentLayerRect'>ParentLayerRect</a>,
+    pub mDisplayPort: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSRect.html' title='style::gecko_bindings::structs::root::mozilla::CSSRect'>CSSRect</a>,
+    pub mCriticalDisplayPort: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSRect.html' title='style::gecko_bindings::structs::root::mozilla::CSSRect'>CSSRect</a>,
+    pub mScrollableRect: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSRect.html' title='style::gecko_bindings::structs::root::mozilla::CSSRect'>CSSRect</a>,
+    pub mCumulativeResolution: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.LayoutDeviceToLayerScale2D.html' title='style::gecko_bindings::structs::root::mozilla::LayoutDeviceToLayerScale2D'>LayoutDeviceToLayerScale2D</a>,
+    pub mDevPixelsPerCSSPixel: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSToLayoutDeviceScale.html' title='style::gecko_bindings::structs::root::mozilla::CSSToLayoutDeviceScale'>CSSToLayoutDeviceScale</a>,
+    pub mScrollOffset: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSPoint.html' title='style::gecko_bindings::structs::root::mozilla::CSSPoint'>CSSPoint</a>,
+    pub mZoom: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSToParentLayerScale2D.html' title='style::gecko_bindings::structs::root::mozilla::CSSToParentLayerScale2D'>CSSToParentLayerScale2D</a>,
+    pub mScrollGeneration: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mSmoothScrollOffset: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSPoint.html' title='style::gecko_bindings::structs::root::mozilla::CSSPoint'>CSSPoint</a>,
+    pub mRootCompositionSize: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSSize.html' title='style::gecko_bindings::structs::root::mozilla::CSSSize'>CSSSize</a>,
+    pub mDisplayPortMargins: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.ScreenMargin.html' title='style::gecko_bindings::structs::root::mozilla::ScreenMargin'>ScreenMargin</a>,
+    pub mPresShellId: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a>,
+    pub mViewport: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSRect.html' title='style::gecko_bindings::structs::root::mozilla::CSSRect'>CSSRect</a>,
+    pub mExtraResolution: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.ScreenToLayerScale2D.html' title='style::gecko_bindings::structs::root::mozilla::ScreenToLayerScale2D'>ScreenToLayerScale2D</a>,
+    pub mPaintRequestTime: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/struct.TimeStamp.html' title='style::gecko_bindings::structs::root::mozilla::TimeStamp'>TimeStamp</a>,
+    pub mScrollUpdateType: <a class='enum' href='../../../../../../style/gecko_bindings/structs/root/mozilla/layers/enum.FrameMetrics_ScrollOffsetUpdateType.html' title='style::gecko_bindings::structs::root::mozilla::layers::FrameMetrics_ScrollOffsetUpdateType'>FrameMetrics_ScrollOffsetUpdateType</a>,
+    pub _bitfield_1: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+}</pre><div class='docblock'><p>The viewport and displayport metrics for the painted frame at the
+time of a layer-tree transaction.  These metrics are especially
+useful for shadow layers, because the metrics values are updated
+atomically with new pixels.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.mScrollId' class='structfield'>
+                           <span id='mScrollId.v' class='invisible'>
+                           <code>mScrollId: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/layers/type.FrameMetrics_ViewID.html' title='style::gecko_bindings::structs::root::mozilla::layers::FrameMetrics_ViewID'>FrameMetrics_ViewID</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mPresShellResolution' class='structfield'>
+                           <span id='mPresShellResolution.v' class='invisible'>
+                           <code>mPresShellResolution: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mCompositionBounds' class='structfield'>
+                           <span id='mCompositionBounds.v' class='invisible'>
+                           <code>mCompositionBounds: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.ParentLayerRect.html' title='style::gecko_bindings::structs::root::mozilla::ParentLayerRect'>ParentLayerRect</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mDisplayPort' class='structfield'>
+                           <span id='mDisplayPort.v' class='invisible'>
+                           <code>mDisplayPort: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSRect.html' title='style::gecko_bindings::structs::root::mozilla::CSSRect'>CSSRect</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mCriticalDisplayPort' class='structfield'>
+                           <span id='mCriticalDisplayPort.v' class='invisible'>
+                           <code>mCriticalDisplayPort: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSRect.html' title='style::gecko_bindings::structs::root::mozilla::CSSRect'>CSSRect</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mScrollableRect' class='structfield'>
+                           <span id='mScrollableRect.v' class='invisible'>
+                           <code>mScrollableRect: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSRect.html' title='style::gecko_bindings::structs::root::mozilla::CSSRect'>CSSRect</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mCumulativeResolution' class='structfield'>
+                           <span id='mCumulativeResolution.v' class='invisible'>
+                           <code>mCumulativeResolution: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.LayoutDeviceToLayerScale2D.html' title='style::gecko_bindings::structs::root::mozilla::LayoutDeviceToLayerScale2D'>LayoutDeviceToLayerScale2D</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mDevPixelsPerCSSPixel' class='structfield'>
+                           <span id='mDevPixelsPerCSSPixel.v' class='invisible'>
+                           <code>mDevPixelsPerCSSPixel: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSToLayoutDeviceScale.html' title='style::gecko_bindings::structs::root::mozilla::CSSToLayoutDeviceScale'>CSSToLayoutDeviceScale</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mScrollOffset' class='structfield'>
+                           <span id='mScrollOffset.v' class='invisible'>
+                           <code>mScrollOffset: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSPoint.html' title='style::gecko_bindings::structs::root::mozilla::CSSPoint'>CSSPoint</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mZoom' class='structfield'>
+                           <span id='mZoom.v' class='invisible'>
+                           <code>mZoom: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSToParentLayerScale2D.html' title='style::gecko_bindings::structs::root::mozilla::CSSToParentLayerScale2D'>CSSToParentLayerScale2D</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mScrollGeneration' class='structfield'>
+                           <span id='mScrollGeneration.v' class='invisible'>
+                           <code>mScrollGeneration: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mSmoothScrollOffset' class='structfield'>
+                           <span id='mSmoothScrollOffset.v' class='invisible'>
+                           <code>mSmoothScrollOffset: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSPoint.html' title='style::gecko_bindings::structs::root::mozilla::CSSPoint'>CSSPoint</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mRootCompositionSize' class='structfield'>
+                           <span id='mRootCompositionSize.v' class='invisible'>
+                           <code>mRootCompositionSize: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSSize.html' title='style::gecko_bindings::structs::root::mozilla::CSSSize'>CSSSize</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mDisplayPortMargins' class='structfield'>
+                           <span id='mDisplayPortMargins.v' class='invisible'>
+                           <code>mDisplayPortMargins: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.ScreenMargin.html' title='style::gecko_bindings::structs::root::mozilla::ScreenMargin'>ScreenMargin</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mPresShellId' class='structfield'>
+                           <span id='mPresShellId.v' class='invisible'>
+                           <code>mPresShellId: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u32.html'>u32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mViewport' class='structfield'>
+                           <span id='mViewport.v' class='invisible'>
+                           <code>mViewport: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.CSSRect.html' title='style::gecko_bindings::structs::root::mozilla::CSSRect'>CSSRect</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mExtraResolution' class='structfield'>
+                           <span id='mExtraResolution.v' class='invisible'>
+                           <code>mExtraResolution: <a class='type' href='../../../../../../style/gecko_bindings/structs/root/mozilla/type.ScreenToLayerScale2D.html' title='style::gecko_bindings::structs::root::mozilla::ScreenToLayerScale2D'>ScreenToLayerScale2D</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mPaintRequestTime' class='structfield'>
+                           <span id='mPaintRequestTime.v' class='invisible'>
+                           <code>mPaintRequestTime: <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/struct.TimeStamp.html' title='style::gecko_bindings::structs::root::mozilla::TimeStamp'>TimeStamp</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mScrollUpdateType' class='structfield'>
+                           <span id='mScrollUpdateType.v' class='invisible'>
+                           <code>mScrollUpdateType: <a class='enum' href='../../../../../../style/gecko_bindings/structs/root/mozilla/layers/enum.FrameMetrics_ScrollOffsetUpdateType.html' title='style::gecko_bindings::structs::root::mozilla::layers::FrameMetrics_ScrollOffsetUpdateType'>FrameMetrics_ScrollOffsetUpdateType</a></code>
+                           </span></span><span class='stab '></span><span id='structfield._bitfield_1' class='structfield'>
+                           <span id='_bitfield_1.v' class='invisible'>
+                           <code>_bitfield_1: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/layers/struct.FrameMetrics.html' title='style::gecko_bindings::structs::root::mozilla::layers::FrameMetrics'>FrameMetrics</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#1748-1805' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.mIsRootContent' class='method'><span id='mIsRootContent.v' class='invisible'><code>fn <a href='#method.mIsRootContent' class='fnname'>mIsRootContent</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mIsRootContent' class='method'><span id='set_mIsRootContent.v' class='invisible'><code>fn <a href='#method.set_mIsRootContent' class='fnname'>set_mIsRootContent</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mDoSmoothScroll' class='method'><span id='mDoSmoothScroll.v' class='invisible'><code>fn <a href='#method.mDoSmoothScroll' class='fnname'>mDoSmoothScroll</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mDoSmoothScroll' class='method'><span id='set_mDoSmoothScroll.v' class='invisible'><code>fn <a href='#method.set_mDoSmoothScroll' class='fnname'>set_mDoSmoothScroll</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mUseDisplayPortMargins' class='method'><span id='mUseDisplayPortMargins.v' class='invisible'><code>fn <a href='#method.mUseDisplayPortMargins' class='fnname'>mUseDisplayPortMargins</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mUseDisplayPortMargins' class='method'><span id='set_mUseDisplayPortMargins.v' class='invisible'><code>fn <a href='#method.set_mUseDisplayPortMargins' class='fnname'>set_mUseDisplayPortMargins</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<h4 id='method.mIsScrollInfoLayer' class='method'><span id='mIsScrollInfoLayer.v' class='invisible'><code>fn <a href='#method.mIsScrollInfoLayer' class='fnname'>mIsScrollInfoLayer</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<h4 id='method.set_mIsScrollInfoLayer' class='method'><span id='set_mIsScrollInfoLayer.v' class='invisible'><code>fn <a href='#method.set_mIsScrollInfoLayer' class='fnname'>set_mIsScrollInfoLayer</a>(&amp;mut self, val: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/layers/struct.FrameMetrics.html' title='style::gecko_bindings::structs::root::mozilla::layers::FrameMetrics'>FrameMetrics</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#1697' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Copy.html' title='core::marker::Copy'>Copy</a> for <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/layers/struct.FrameMetrics.html' title='style::gecko_bindings::structs::root::mozilla::layers::FrameMetrics'>FrameMetrics</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#1697' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html' title='core::clone::Clone'>Clone</a> for <a class='struct' href='../../../../../../style/gecko_bindings/structs/root/mozilla/layers/struct.FrameMetrics.html' title='style::gecko_bindings::structs::root::mozilla::layers::FrameMetrics'>FrameMetrics</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#1745-1747' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.clone' class='method'><span id='clone.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone' class='fnname'>clone</a>(&amp;self) -&gt; Self</code></span></h4>
+<div class='docblock'><p>Returns a copy of the value. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#tymethod.clone">Read more</a></p>
+</div><h4 id='method.clone_from' class='method'><span id='clone_from.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from' class='fnname'>clone_from</a>(&amp;mut self, source: &amp;Self)</code><div class='since' title='Stable since Rust version 1.0.0'>1.0.0</div></span></h4>
+<div class='docblock'><p>Performs copy-assignment from <code>source</code>. <a href="https://doc.rust-lang.org/nightly/core/clone/trait.Clone.html#method.clone_from">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../../../../jquery.js"></script>
+    <script src="../../../../../../main.js"></script>
+    <script defer src="../../../../../../search-index.js"></script>
+</body>
+</html>

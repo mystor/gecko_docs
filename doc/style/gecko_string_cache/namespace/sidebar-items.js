@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["Namespace","A Gecko namespace is just a wrapped atom."],["WeakNamespace","A Gecko WeakNamespace is a wrapped WeakAtom."]]});

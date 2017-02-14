@@ -1,0 +1,1 @@
+initSidebarItems({"struct":[["RecalcStyleOnly","This is the simple struct that Gecko uses to encapsulate a DOM traversal for styling."]]});

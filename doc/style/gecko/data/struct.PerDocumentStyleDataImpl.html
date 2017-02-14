@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `PerDocumentStyleDataImpl` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, PerDocumentStyleDataImpl">
+
+    <title>style::gecko::data::PerDocumentStyleDataImpl - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../index.html'>style</a>::<wbr><a href='../index.html'>gecko</a>::<wbr><a href='index.html'>data</a></p><script>window.sidebarCurrent = {name: 'PerDocumentStyleDataImpl', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../index.html'>style</a>::<wbr><a href='../index.html'>gecko</a>::<wbr><a href='index.html'>data</a>::<wbr><a class='struct' href=''>PerDocumentStyleDataImpl</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../src/style/gecko/data.rs.html#28-58' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct PerDocumentStyleDataImpl {
+    pub stylist: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../../style/stylist/struct.Stylist.html' title='style::stylist::Stylist'>Stylist</a>&gt;,
+    pub stylesheets: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../../style/stylesheets/struct.Stylesheet.html' title='style::stylesheets::Stylesheet'>Stylesheet</a>&gt;&gt;,
+    pub stylesheets_changed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub new_animations_sender: <a class='struct' href='https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.Sender.html' title='std::sync::mpsc::Sender'>Sender</a>&lt;<a class='enum' href='../../../style/animation/enum.Animation.html' title='style::animation::Animation'>Animation</a>&gt;,
+    pub new_animations_receiver: <a class='struct' href='https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.Receiver.html' title='std::sync::mpsc::Receiver'>Receiver</a>&lt;<a class='enum' href='../../../style/animation/enum.Animation.html' title='style::animation::Animation'>Animation</a>&gt;,
+    pub running_animations: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;<a class='struct' href='../../../style/dom/struct.OpaqueNode.html' title='style::dom::OpaqueNode'>OpaqueNode</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='enum' href='../../../style/animation/enum.Animation.html' title='style::animation::Animation'>Animation</a>&gt;&gt;&gt;&gt;,
+    pub expired_animations: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;<a class='struct' href='../../../style/dom/struct.OpaqueNode.html' title='style::dom::OpaqueNode'>OpaqueNode</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='enum' href='../../../style/animation/enum.Animation.html' title='style::animation::Animation'>Animation</a>&gt;&gt;&gt;&gt;,
+    pub work_queue: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../rayon/api/struct.ThreadPool.html' title='rayon::api::ThreadPool'>ThreadPool</a>&gt;,
+    pub num_threads: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a>,
+}</pre><div class='docblock'><p>The container for data that a Servo-backed Gecko document needs to style
+itself.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.stylist' class='structfield'>
+                           <span id='stylist.v' class='invisible'>
+                           <code>stylist: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../../style/stylist/struct.Stylist.html' title='style::stylist::Stylist'>Stylist</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Rule processor.</p>
+</div><span id='structfield.stylesheets' class='structfield'>
+                           <span id='stylesheets.v' class='invisible'>
+                           <code>stylesheets: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../../style/stylesheets/struct.Stylesheet.html' title='style::stylesheets::Stylesheet'>Stylesheet</a>&gt;&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>List of stylesheets, mirrored from Gecko.</p>
+</div><span id='structfield.stylesheets_changed' class='structfield'>
+                           <span id='stylesheets_changed.v' class='invisible'>
+                           <code>stylesheets_changed: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Whether the stylesheets list above has changed since the last restyle.</p>
+</div><span id='structfield.new_animations_sender' class='structfield'>
+                           <span id='new_animations_sender.v' class='invisible'>
+                           <code>new_animations_sender: <a class='struct' href='https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.Sender.html' title='std::sync::mpsc::Sender'>Sender</a>&lt;<a class='enum' href='../../../style/animation/enum.Animation.html' title='style::animation::Animation'>Animation</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Unused. Will go away when we actually implement transitions and
+animations properly.</p>
+</div><span id='structfield.new_animations_receiver' class='structfield'>
+                           <span id='new_animations_receiver.v' class='invisible'>
+                           <code>new_animations_receiver: <a class='struct' href='https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.Receiver.html' title='std::sync::mpsc::Receiver'>Receiver</a>&lt;<a class='enum' href='../../../style/animation/enum.Animation.html' title='style::animation::Animation'>Animation</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Unused. Will go away when we actually implement transitions and
+animations properly.</p>
+</div><span id='structfield.running_animations' class='structfield'>
+                           <span id='running_animations.v' class='invisible'>
+                           <code>running_animations: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;<a class='struct' href='../../../style/dom/struct.OpaqueNode.html' title='style::dom::OpaqueNode'>OpaqueNode</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='enum' href='../../../style/animation/enum.Animation.html' title='style::animation::Animation'>Animation</a>&gt;&gt;&gt;&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Unused. Will go away when we actually implement transitions and
+animations properly.</p>
+</div><span id='structfield.expired_animations' class='structfield'>
+                           <span id='expired_animations.v' class='invisible'>
+                           <code>expired_animations: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/std/collections/hash/map/struct.HashMap.html' title='std::collections::hash::map::HashMap'>HashMap</a>&lt;<a class='struct' href='../../../style/dom/struct.OpaqueNode.html' title='style::dom::OpaqueNode'>OpaqueNode</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/vec/struct.Vec.html' title='collections::vec::Vec'>Vec</a>&lt;<a class='enum' href='../../../style/animation/enum.Animation.html' title='style::animation::Animation'>Animation</a>&gt;&gt;&gt;&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Unused. Will go away when we actually implement transitions and
+animations properly.</p>
+</div><span id='structfield.work_queue' class='structfield'>
+                           <span id='work_queue.v' class='invisible'>
+                           <code>work_queue: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='struct' href='../../../rayon/api/struct.ThreadPool.html' title='rayon::api::ThreadPool'>ThreadPool</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The worker thread pool.
+FIXME(bholley): This shouldn&#39;t be per-document.</p>
+</div><span id='structfield.num_threads' class='structfield'>
+                           <span id='num_threads.v' class='invisible'>
+                           <code>num_threads: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.usize.html'>usize</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The number of threads of the work queue.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../../style/gecko/data/struct.PerDocumentStyleDataImpl.html' title='style::gecko::data::PerDocumentStyleDataImpl'>PerDocumentStyleDataImpl</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/style/gecko/data.rs.html#111-137' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.reset_device' class='method'><span id='reset_device.v' class='invisible'><code>fn <a href='#method.reset_device' class='fnname'>reset_device</a>(&amp;mut self)</code></span></h4>
+<div class='docblock'><p>Reset the device state because it may have changed.</p>
+
+<p>Implies also a stylesheet flush.</p>
+</div><h4 id='method.flush_stylesheets' class='method'><span id='flush_stylesheets.v' class='invisible'><code>fn <a href='#method.flush_stylesheets' class='fnname'>flush_stylesheets</a>(&amp;mut self)</code></span></h4>
+<div class='docblock'><p>Recreate the style data if the stylesheets have changed.</p>
+</div><h4 id='method.default_computed_values' class='method'><span id='default_computed_values.v' class='invisible'><code>fn <a href='#method.default_computed_values' class='fnname'>default_computed_values</a>(&amp;self) -&gt; &amp;<a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../../style/gecko_properties/struct.ComputedValues.html' title='style::gecko_properties::ComputedValues'>ComputedValues</a>&gt;</code></span></h4>
+<div class='docblock'><p>Get the default computed values for this document.</p>
+</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html' title='core::ops::Drop'>Drop</a> for <a class='struct' href='../../../style/gecko/data/struct.PerDocumentStyleDataImpl.html' title='style::gecko::data::PerDocumentStyleDataImpl'>PerDocumentStyleDataImpl</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../src/style/gecko/data.rs.html#145-149' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.drop' class='method'><span id='drop.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop' class='fnname'>drop</a>(&amp;mut self)</code></span></h4>
+<div class='docblock'><p>A method called when the value goes out of scope. <a href="https://doc.rust-lang.org/nightly/core/ops/trait.Drop.html#tymethod.drop">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../jquery.js"></script>
+    <script src="../../../main.js"></script>
+    <script defer src="../../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["cascade_property",""],["get_initial_value",""],["parse","<length> | <percentage> | <absolute-size> | <relative-size>"],["parse_declared",""],["parse_specified",""]],"mod":[["computed_value",""]],"struct":[["SpecifiedValue",""]]});

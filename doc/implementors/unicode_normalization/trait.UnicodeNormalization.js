@@ -1,4 +1,6 @@
 (function() {var implementors = {};
+implementors["servo_config"] = [];
+implementors["style"] = [];
 implementors["unicode_normalization"] = [];
 
             if (window.register_implementors) {

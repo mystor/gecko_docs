@@ -1,4 +1,6 @@
 (function() {var implementors = {};
+implementors["servo_config"] = [];
+implementors["style"] = [];
 implementors["url"] = [];
 
             if (window.register_implementors) {

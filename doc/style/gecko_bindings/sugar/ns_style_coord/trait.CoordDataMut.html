@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `CoordDataMut` trait in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, CoordDataMut">
+
+    <title>style::gecko_bindings::sugar::ns_style_coord::CoordDataMut - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>sugar</a>::<wbr><a href='index.html'>ns_style_coord</a></p><script>window.sidebarCurrent = {name: 'CoordDataMut', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content trait">
+<h1 class='fqn'><span class='in-band'>Trait <a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>sugar</a>::<wbr><a href='index.html'>ns_style_coord</a>::<wbr><a class='trait' href=''>CoordDataMut</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../src/style/gecko_bindings/sugar/ns_style_coord.rs.html#235-378' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait CoordDataMut: <a class='trait' href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordData.html' title='style::gecko_bindings::sugar::ns_style_coord::CoordData'>CoordData</a> {
+    unsafe fn <a href='#tymethod.values_mut' class='fnname'>values_mut</a>(&amp;mut self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a>&amp;mut <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsStyleUnit.html' title='style::gecko_bindings::structs::root::nsStyleUnit'>nsStyleUnit</a>, &amp;mut <a class='type' href='../../../../style/gecko_bindings/structs/root/type.nsStyleUnion.html' title='style::gecko_bindings::structs::root::nsStyleUnion'>nsStyleUnion</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a>;
+
+    fn <a href='#method.reset' class='fnname'>reset</a>(&amp;mut self) { ... }
+    fn <a href='#method.copy_from' class='fnname'>copy_from</a>&lt;T:&nbsp;<a class='trait' href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordData.html' title='style::gecko_bindings::sugar::ns_style_coord::CoordData'>CoordData</a>&gt;(&amp;mut self, other: &amp;T) { ... }
+    unsafe fn <a href='#method.copy_from_unchecked' class='fnname'>copy_from_unchecked</a>&lt;T:&nbsp;<a class='trait' href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordData.html' title='style::gecko_bindings::sugar::ns_style_coord::CoordData'>CoordData</a>&gt;(&amp;mut self, other: &amp;T) { ... }
+    fn <a href='#method.leaky_set_null' class='fnname'>leaky_set_null</a>(&amp;mut self) { ... }
+    fn <a href='#method.set_value' class='fnname'>set_value</a>(&amp;mut self, value: <a class='enum' href='../../../../style/gecko_bindings/sugar/ns_style_coord/enum.CoordDataValue.html' title='style::gecko_bindings::sugar::ns_style_coord::CoordDataValue'>CoordDataValue</a>) { ... }
+    unsafe fn <a href='#method.as_calc_mut' class='fnname'>as_calc_mut</a>(&amp;mut self) -&gt; &amp;mut <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord_Calc.html' title='style::gecko_bindings::structs::root::nsStyleCoord_Calc'>nsStyleCoord_Calc</a> { ... }
+    fn <a href='#method.addref_if_calc' class='fnname'>addref_if_calc</a>(&amp;mut self) { ... }
+}</pre><div class='docblock'><p>A trait to abstract on top of a mutable <code>nsStyleCoord</code>-like object.</p>
+</div>
+            <h2 id='required-methods'>Required Methods</h2>
+            <div class='methods'>
+        <h3 id='tymethod.values_mut' class='method'><span id='values_mut.v' class='invisible'><code>unsafe fn <a href='#tymethod.values_mut' class='fnname'>values_mut</a>(&amp;mut self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>(</a>&amp;mut <a class='enum' href='../../../../style/gecko_bindings/structs/root/enum.nsStyleUnit.html' title='style::gecko_bindings::structs::root::nsStyleUnit'>nsStyleUnit</a>, &amp;mut <a class='type' href='../../../../style/gecko_bindings/structs/root/type.nsStyleUnion.html' title='style::gecko_bindings::structs::root::nsStyleUnion'>nsStyleUnion</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>)</a></code></span></h3><div class='docblock'><p>Get mutably the unit and the union.</p>
+
+<p>This is unsafe since it&#39;s possible to modify the unit without changing
+the union.</p>
+
+<p>NB: This can&#39;t be two methods since we can&#39;t mutably borrow twice</p>
+</div></div>
+            <h2 id='provided-methods'>Provided Methods</h2>
+            <div class='methods'>
+        <h3 id='method.reset' class='method'><span id='reset.v' class='invisible'><code>fn <a href='#method.reset' class='fnname'>reset</a>(&amp;mut self)</code></span></h3><div class='docblock'><p>Clean up any resources used by the union.</p>
+
+<p>Currently, this only happens if the nsStyleUnit is a Calc.</p>
+</div><h3 id='method.copy_from' class='method'><span id='copy_from.v' class='invisible'><code>fn <a href='#method.copy_from' class='fnname'>copy_from</a>&lt;T:&nbsp;<a class='trait' href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordData.html' title='style::gecko_bindings::sugar::ns_style_coord::CoordData'>CoordData</a>&gt;(&amp;mut self, other: &amp;T)</code></span></h3><div class='docblock'><p>Copies the unit and value from another <code>CoordData</code> type.</p>
+</div><h3 id='method.copy_from_unchecked' class='method'><span id='copy_from_unchecked.v' class='invisible'><code>unsafe fn <a href='#method.copy_from_unchecked' class='fnname'>copy_from_unchecked</a>&lt;T:&nbsp;<a class='trait' href='../../../../style/gecko_bindings/sugar/ns_style_coord/trait.CoordData.html' title='style::gecko_bindings::sugar::ns_style_coord::CoordData'>CoordData</a>&gt;(&amp;mut self, other: &amp;T)</code></span></h3><div class='docblock'><p>Copies the unit and value from another <code>CoordData</code> type without checking
+the type of the value (so refcounted values like calc may leak).</p>
+</div><h3 id='method.leaky_set_null' class='method'><span id='leaky_set_null.v' class='invisible'><code>fn <a href='#method.leaky_set_null' class='fnname'>leaky_set_null</a>(&amp;mut self)</code></span></h3><div class='docblock'><p>Useful for initializing uninits, given that <code>set_value</code> may segfault on
+uninits.</p>
+</div><h3 id='method.set_value' class='method'><span id='set_value.v' class='invisible'><code>fn <a href='#method.set_value' class='fnname'>set_value</a>(&amp;mut self, value: <a class='enum' href='../../../../style/gecko_bindings/sugar/ns_style_coord/enum.CoordDataValue.html' title='style::gecko_bindings::sugar::ns_style_coord::CoordDataValue'>CoordDataValue</a>)</code></span></h3><div class='docblock'><p>Sets the inner value.</p>
+</div><h3 id='method.as_calc_mut' class='method'><span id='as_calc_mut.v' class='invisible'><code>unsafe fn <a href='#method.as_calc_mut' class='fnname'>as_calc_mut</a>(&amp;mut self) -&gt; &amp;mut <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord_Calc.html' title='style::gecko_bindings::structs::root::nsStyleCoord_Calc'>nsStyleCoord_Calc</a></code></span></h3><div class='docblock'><p>Gets the <code>Calc</code> value mutably, asserts in debug builds if the unit is
+not <code>Calc</code>.</p>
+</div><h3 id='method.addref_if_calc' class='method'><span id='addref_if_calc.v' class='invisible'><code>fn <a href='#method.addref_if_calc' class='fnname'>addref_if_calc</a>(&amp;mut self)</code></span></h3><div class='docblock'><p>Does what it promises, if the unit is <code>calc</code>, it bumps the reference
+count <em>of the calc expression</em>.</p>
+</div></div>
+        <h2 id='implementors'>Implementors</h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><code>impl CoordDataMut for <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code></li>
+<li><code>impl&lt;'a&gt; CoordDataMut for <a class='struct' href='../../../../style/gecko_bindings/sugar/ns_style_coord/struct.SidesDataMut.html' title='style::gecko_bindings::sugar::ns_style_coord::SidesDataMut'>SidesDataMut</a>&lt;'a&gt;</code></li>
+<li><code>impl&lt;'a&gt; CoordDataMut for <a class='struct' href='../../../../style/gecko_bindings/sugar/ns_style_coord/struct.CornersDataMut.html' title='style::gecko_bindings::sugar::ns_style_coord::CornersDataMut'>CornersDataMut</a>&lt;'a&gt;</code></li>
+</ul><script type="text/javascript" async
+                         src="../../../../implementors/style/gecko_bindings/sugar/ns_style_coord/trait.CoordDataMut.js">
+                 </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

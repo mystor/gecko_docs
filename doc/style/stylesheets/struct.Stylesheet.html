@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `Stylesheet` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, Stylesheet">
+
+    <title>style::stylesheets::Stylesheet - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>style</a>::<wbr><a href='index.html'>stylesheets</a></p><script>window.sidebarCurrent = {name: 'Stylesheet', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>style</a>::<wbr><a href='index.html'>stylesheets</a>::<wbr><a class='struct' href=''>Stylesheet</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/style/stylesheets.rs.html#175-191' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct Stylesheet {
+    pub rules: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='../../style/stylesheets/struct.CssRules.html' title='style::stylesheets::CssRules'>CssRules</a>&gt;&gt;,
+    pub media: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='../../style/media_queries/struct.MediaList.html' title='style::media_queries::MediaList'>MediaList</a>&gt;&gt;,
+    pub origin: <a class='enum' href='../../style/stylesheets/enum.Origin.html' title='style::stylesheets::Origin'>Origin</a>,
+    pub base_url: <a class='struct' href='../../servo_url/struct.ServoUrl.html' title='servo_url::ServoUrl'>ServoUrl</a>,
+    pub namespaces: <a class='struct' href='../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='../../style/stylesheets/struct.Namespaces.html' title='style::stylesheets::Namespaces'>Namespaces</a>&gt;,
+    pub dirty_on_viewport_size_change: <a class='struct' href='https://doc.rust-lang.org/nightly/core/sync/atomic/struct.AtomicBool.html' title='core::sync::atomic::AtomicBool'>AtomicBool</a>,
+    pub disabled: <a class='struct' href='https://doc.rust-lang.org/nightly/core/sync/atomic/struct.AtomicBool.html' title='core::sync::atomic::AtomicBool'>AtomicBool</a>,
+}</pre><div class='docblock'><p>The structure servo uses to represent a stylesheet.</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.rules' class='structfield'>
+                           <span id='rules.v' class='invisible'>
+                           <code>rules: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='../../style/stylesheets/struct.CssRules.html' title='style::stylesheets::CssRules'>CssRules</a>&gt;&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>List of rules in the order they were found (important for
+cascading order)</p>
+</div><span id='structfield.media' class='structfield'>
+                           <span id='media.v' class='invisible'>
+                           <code>media: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;<a class='struct' href='../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='../../style/media_queries/struct.MediaList.html' title='style::media_queries::MediaList'>MediaList</a>&gt;&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>List of media associated with the Stylesheet.</p>
+</div><span id='structfield.origin' class='structfield'>
+                           <span id='origin.v' class='invisible'>
+                           <code>origin: <a class='enum' href='../../style/stylesheets/enum.Origin.html' title='style::stylesheets::Origin'>Origin</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The origin of this stylesheet.</p>
+</div><span id='structfield.base_url' class='structfield'>
+                           <span id='base_url.v' class='invisible'>
+                           <code>base_url: <a class='struct' href='../../servo_url/struct.ServoUrl.html' title='servo_url::ServoUrl'>ServoUrl</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The base url this stylesheet should use.</p>
+</div><span id='structfield.namespaces' class='structfield'>
+                           <span id='namespaces.v' class='invisible'>
+                           <code>namespaces: <a class='struct' href='../../parking_lot/rwlock/struct.RwLock.html' title='parking_lot::rwlock::RwLock'>RwLock</a>&lt;<a class='struct' href='../../style/stylesheets/struct.Namespaces.html' title='style::stylesheets::Namespaces'>Namespaces</a>&gt;</code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>The namespaces that apply to this stylesheet.</p>
+</div><span id='structfield.dirty_on_viewport_size_change' class='structfield'>
+                           <span id='dirty_on_viewport_size_change.v' class='invisible'>
+                           <code>dirty_on_viewport_size_change: <a class='struct' href='https://doc.rust-lang.org/nightly/core/sync/atomic/struct.AtomicBool.html' title='core::sync::atomic::AtomicBool'>AtomicBool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Whether this stylesheet would be dirty when the viewport size changes.</p>
+</div><span id='structfield.disabled' class='structfield'>
+                           <span id='disabled.v' class='invisible'>
+                           <code>disabled: <a class='struct' href='https://doc.rust-lang.org/nightly/core/sync/atomic/struct.AtomicBool.html' title='core::sync::atomic::AtomicBool'>AtomicBool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Whether this stylesheet should be disabled.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../style/stylesheets/struct.Stylesheet.html' title='style::stylesheets::Stylesheet'>Stylesheet</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/stylesheets.rs.html#546-720' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.from_bytes' class='method'><span id='from_bytes.v' class='invisible'><code>fn <a href='#method.from_bytes' class='fnname'>from_bytes</a>(bytes: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; base_url: <a class='struct' href='../../servo_url/struct.ServoUrl.html' title='servo_url::ServoUrl'>ServoUrl</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; protocol_encoding_label: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; environment_encoding: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../encoding/types/type.EncodingRef.html' title='encoding::types::EncodingRef'>EncodingRef</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; origin: <a class='enum' href='../../style/stylesheets/enum.Origin.html' title='style::stylesheets::Origin'>Origin</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; media: <a class='struct' href='../../style/media_queries/struct.MediaList.html' title='style::media_queries::MediaList'>MediaList</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stylesheet_loader: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='trait' href='../../style/stylesheets/trait.StylesheetLoader.html' title='style::stylesheets::StylesheetLoader'>StylesheetLoader</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; error_reporter: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='../../style/error_reporting/trait.ParseErrorReporter.html' title='style::error_reporting::ParseErrorReporter'>ParseErrorReporter</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; extra_data: <a class='struct' href='../../style/parser/struct.ParserContextExtraData.html' title='style::parser::ParserContextExtraData'>ParserContextExtraData</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='struct' href='../../style/stylesheets/struct.Stylesheet.html' title='style::stylesheets::Stylesheet'>Stylesheet</a></code></span></h4>
+<div class='docblock'><p>Parse a stylesheet from a set of bytes, potentially received over the
+network.</p>
+
+<p>Takes care of decoding the network bytes and forwards the resulting
+string to <code>Stylesheet::from_str</code>.</p>
+</div><h4 id='method.update_from_bytes' class='method'><span id='update_from_bytes.v' class='invisible'><code>fn <a href='#method.update_from_bytes' class='fnname'>update_from_bytes</a>(existing: &amp;<a class='struct' href='../../style/stylesheets/struct.Stylesheet.html' title='style::stylesheets::Stylesheet'>Stylesheet</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bytes: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>&amp;[</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a><a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.slice.html'>]</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; protocol_encoding_label: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; environment_encoding: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;<a class='type' href='../../encoding/types/type.EncodingRef.html' title='encoding::types::EncodingRef'>EncodingRef</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stylesheet_loader: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='trait' href='../../style/stylesheets/trait.StylesheetLoader.html' title='style::stylesheets::StylesheetLoader'>StylesheetLoader</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; error_reporter: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='../../style/error_reporting/trait.ParseErrorReporter.html' title='style::error_reporting::ParseErrorReporter'>ParseErrorReporter</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; extra_data: <a class='struct' href='../../style/parser/struct.ParserContextExtraData.html' title='style::parser::ParserContextExtraData'>ParserContextExtraData</a>)</code></span></h4>
+<div class='docblock'><p>Updates an empty stylesheet with a set of bytes that reached over the
+network.</p>
+</div><h4 id='method.update_from_str' class='method'><span id='update_from_str.v' class='invisible'><code>fn <a href='#method.update_from_str' class='fnname'>update_from_str</a>(existing: &amp;<a class='struct' href='../../style/stylesheets/struct.Stylesheet.html' title='style::stylesheets::Stylesheet'>Stylesheet</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; css: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stylesheet_loader: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='trait' href='../../style/stylesheets/trait.StylesheetLoader.html' title='style::stylesheets::StylesheetLoader'>StylesheetLoader</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; error_reporter: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='../../style/error_reporting/trait.ParseErrorReporter.html' title='style::error_reporting::ParseErrorReporter'>ParseErrorReporter</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; extra_data: <a class='struct' href='../../style/parser/struct.ParserContextExtraData.html' title='style::parser::ParserContextExtraData'>ParserContextExtraData</a>)</code></span></h4>
+<div class='docblock'><p>Updates an empty stylesheet from a given string of text.</p>
+</div><h4 id='method.from_str' class='method'><span id='from_str.v' class='invisible'><code>fn <a href='#method.from_str' class='fnname'>from_str</a>(css: &amp;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.str.html'>str</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; base_url: <a class='struct' href='../../servo_url/struct.ServoUrl.html' title='servo_url::ServoUrl'>ServoUrl</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; origin: <a class='enum' href='../../style/stylesheets/enum.Origin.html' title='style::stylesheets::Origin'>Origin</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; media: <a class='struct' href='../../style/media_queries/struct.MediaList.html' title='style::media_queries::MediaList'>MediaList</a>,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stylesheet_loader: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;<a class='trait' href='../../style/stylesheets/trait.StylesheetLoader.html' title='style::stylesheets::StylesheetLoader'>StylesheetLoader</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; error_reporter: <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html' title='alloc::boxed::Box'>Box</a>&lt;<a class='trait' href='../../style/error_reporting/trait.ParseErrorReporter.html' title='style::error_reporting::ParseErrorReporter'>ParseErrorReporter</a> + <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a>&gt;,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; extra_data: <a class='struct' href='../../style/parser/struct.ParserContextExtraData.html' title='style::parser::ParserContextExtraData'>ParserContextExtraData</a>)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='struct' href='../../style/stylesheets/struct.Stylesheet.html' title='style::stylesheets::Stylesheet'>Stylesheet</a></code></span></h4>
+<div class='docblock'><p>Creates an empty stylesheet and parses it with a given base url, origin
+and media.</p>
+
+<p>Effectively creates a new stylesheet and forwards the hard work to
+<code>Stylesheet::update_from_str</code>.</p>
+</div><h4 id='method.dirty_on_viewport_size_change' class='method'><span id='dirty_on_viewport_size_change.v-1' class='invisible'><code>fn <a href='#method.dirty_on_viewport_size_change' class='fnname'>dirty_on_viewport_size_change</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Whether this stylesheet can be dirty on viewport size change.</p>
+</div><h4 id='method.inserted_has_viewport_percentages' class='method'><span id='inserted_has_viewport_percentages.v' class='invisible'><code>fn <a href='#method.inserted_has_viewport_percentages' class='fnname'>inserted_has_viewport_percentages</a>(&amp;self, has_viewport_percentages: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>)</code></span></h4>
+<div class='docblock'><p>When CSSOM inserts a rule or declaration into this stylesheet, it needs to call this method
+with the return value of <code>cssparser::Parser::seen_viewport_percentages</code>.</p>
+
+<p>FIXME: actually make these calls</p>
+
+<p>Note: when <em>removing</em> a rule or declaration that contains a viewport percentage,
+to keep the flag accurate we’d need to iterator through the rest of the stylesheet to
+check for <em>other</em> such values.</p>
+
+<p>Instead, we conservatively assume there might be some.
+Restyling will some some more work than necessary, but give correct results.</p>
+</div><h4 id='method.is_effective_for_device' class='method'><span id='is_effective_for_device.v' class='invisible'><code>fn <a href='#method.is_effective_for_device' class='fnname'>is_effective_for_device</a>(&amp;self, device: &amp;<a class='struct' href='../../style/gecko/media_queries/struct.Device.html' title='style::gecko::media_queries::Device'>Device</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether the style-sheet applies for the current device depending
+on the associated MediaList.</p>
+
+<p>Always true if no associated MediaList exists.</p>
+</div><h4 id='method.effective_rules' class='method'><span id='effective_rules.v' class='invisible'><code>fn <a href='#method.effective_rules' class='fnname'>effective_rules</a>&lt;F&gt;(&amp;self, device: &amp;<a class='struct' href='../../style/gecko/media_queries/struct.Device.html' title='style::gecko::media_queries::Device'>Device</a>, f: F) <span class='where fmt-newline'>where F: <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;<a class='enum' href='../../style/stylesheets/enum.CssRule.html' title='style::stylesheets::CssRule'>CssRule</a>)</span></code></span></h4>
+<div class='docblock'><p>Return an iterator over the effective rules within the style-sheet, as
+according to the supplied <code>Device</code>.</p>
+
+<p>If a condition does not hold, its associated conditional group rule and
+nested rules will be skipped. Use <code>rules</code> if all rules need to be
+examined.</p>
+</div><h4 id='method.disabled' class='method'><span id='disabled.v-1' class='invisible'><code>fn <a href='#method.disabled' class='fnname'>disabled</a>(&amp;self) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Returns whether the stylesheet has been explicitly disabled through the
+CSSOM.</p>
+</div><h4 id='method.set_disabled' class='method'><span id='set_disabled.v' class='invisible'><code>fn <a href='#method.set_disabled' class='fnname'>set_disabled</a>(&amp;self, disabled: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>) -&gt; <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code></span></h4>
+<div class='docblock'><p>Records that the stylesheet has been explicitly disabled through the
+CSSOM.</p>
+
+<p>Returns whether the the call resulted in a change in disabled state.</p>
+
+<p>Disabled stylesheets remain in the document, but their rules are not
+added to the Stylist.</p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../style/stylesheets/struct.Stylesheet.html' title='style::stylesheets::Stylesheet'>Stylesheet</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/stylesheets.rs.html#738-750' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.effective_style_rules' class='method'><span id='effective_style_rules.v' class='invisible'><code>fn <a href='#method.effective_style_rules' class='fnname'>effective_style_rules</a>&lt;F&gt;(&amp;self, device: &amp;<a class='struct' href='../../style/gecko/media_queries/struct.Device.html' title='style::gecko::media_queries::Device'>Device</a>, f: F) <span class='where fmt-newline'>where F: <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;<a class='struct' href='../../style/stylesheets/struct.StyleRule.html' title='style::stylesheets::StyleRule'>StyleRule</a>)</span></code></span></h4>
+<h4 id='method.effective_media_rules' class='method'><span id='effective_media_rules.v' class='invisible'><code>fn <a href='#method.effective_media_rules' class='fnname'>effective_media_rules</a>&lt;F&gt;(&amp;self, device: &amp;<a class='struct' href='../../style/gecko/media_queries/struct.Device.html' title='style::gecko::media_queries::Device'>Device</a>, f: F) <span class='where fmt-newline'>where F: <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;<a class='struct' href='../../style/stylesheets/struct.MediaRule.html' title='style::stylesheets::MediaRule'>MediaRule</a>)</span></code></span></h4>
+<h4 id='method.effective_font_face_rules' class='method'><span id='effective_font_face_rules.v' class='invisible'><code>fn <a href='#method.effective_font_face_rules' class='fnname'>effective_font_face_rules</a>&lt;F&gt;(&amp;self, device: &amp;<a class='struct' href='../../style/gecko/media_queries/struct.Device.html' title='style::gecko::media_queries::Device'>Device</a>, f: F) <span class='where fmt-newline'>where F: <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;<a class='struct' href='../../style/font_face/struct.FontFaceRule.html' title='style::font_face::FontFaceRule'>FontFaceRule</a>)</span></code></span></h4>
+<h4 id='method.effective_viewport_rules' class='method'><span id='effective_viewport_rules.v' class='invisible'><code>fn <a href='#method.effective_viewport_rules' class='fnname'>effective_viewport_rules</a>&lt;F&gt;(&amp;self, device: &amp;<a class='struct' href='../../style/gecko/media_queries/struct.Device.html' title='style::gecko::media_queries::Device'>Device</a>, f: F) <span class='where fmt-newline'>where F: <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;<a class='struct' href='../../style/viewport/struct.ViewportRule.html' title='style::viewport::ViewportRule'>ViewportRule</a>)</span></code></span></h4>
+<h4 id='method.effective_keyframes_rules' class='method'><span id='effective_keyframes_rules.v' class='invisible'><code>fn <a href='#method.effective_keyframes_rules' class='fnname'>effective_keyframes_rules</a>&lt;F&gt;(&amp;self, device: &amp;<a class='struct' href='../../style/gecko/media_queries/struct.Device.html' title='style::gecko::media_queries::Device'>Device</a>, f: F) <span class='where fmt-newline'>where F: <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;<a class='struct' href='../../style/stylesheets/struct.KeyframesRule.html' title='style::stylesheets::KeyframesRule'>KeyframesRule</a>)</span></code></span></h4>
+<h4 id='method.effective_supports_rules' class='method'><span id='effective_supports_rules.v' class='invisible'><code>fn <a href='#method.effective_supports_rules' class='fnname'>effective_supports_rules</a>&lt;F&gt;(&amp;self, device: &amp;<a class='struct' href='../../style/gecko/media_queries/struct.Device.html' title='style::gecko::media_queries::Device'>Device</a>, f: F) <span class='where fmt-newline'>where F: <a class='trait' href='https://doc.rust-lang.org/nightly/core/ops/trait.FnMut.html' title='core::ops::FnMut'>FnMut</a>(&amp;<a class='struct' href='../../style/stylesheets/struct.SupportsRule.html' title='style::stylesheets::SupportsRule'>SupportsRule</a>)</span></code></span></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>HasFFI</a> for <a class='struct' href='../../style/stylesheets/struct.Stylesheet.html' title='style::stylesheets::Stylesheet'>Stylesheet</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/gecko/conversions.rs.html#26-28' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.FFIType' class='type'><span id='FFIType.t' class='invisible'><code>type <a href='../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html#associatedtype.FFIType' class='type'>FFIType</a> = <a class='struct' href='../../style/gecko_bindings/bindings/struct.RawServoStyleSheet.html' title='style::gecko_bindings::bindings::RawServoStyleSheet'>RawServoStyleSheet</a></code></span></h4>
+<div class='docblock'><p>The corresponding Gecko type that this rust type represents. <a href="../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html#associatedtype.FFIType">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='../../style/gecko_bindings/sugar/ownership/trait.HasArcFFI.html' title='style::gecko_bindings::sugar::ownership::HasArcFFI'>HasArcFFI</a> for <a class='struct' href='../../style/stylesheets/struct.Stylesheet.html' title='style::stylesheets::Stylesheet'>Stylesheet</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/gecko/conversions.rs.html#29' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref_opt' class='method'><span id='addref_opt.v' class='invisible'><code>unsafe fn <a href='../../style/gecko_bindings/sugar/ownership/trait.HasArcFFI.html#method.addref_opt' class='fnname'>addref_opt</a>(ptr: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;Self::<a class='trait' href='../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>&gt;)</code></span></h4>
+<div class='docblock'><p>Artificially increments the refcount of a (possibly null) borrowed Arc over FFI. <a href="../../style/gecko_bindings/sugar/ownership/trait.HasArcFFI.html#method.addref_opt">Read more</a></p>
+</div><h4 id='method.release_opt' class='method'><span id='release_opt.v' class='invisible'><code>unsafe fn <a href='../../style/gecko_bindings/sugar/ownership/trait.HasArcFFI.html#method.release_opt' class='fnname'>release_opt</a>(ptr: <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;Self::<a class='trait' href='../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>&gt;)</code></span></h4>
+<div class='docblock'><p>Given a (possibly null) borrowed FFI reference, decrements the refcount. Unsafe since it doesn&#39;t consume the backing Arc. Run it only when you know that a strong reference to the backing Arc is disappearing (usually on the C++ side) without running the Arc destructor. <a href="../../style/gecko_bindings/sugar/ownership/trait.HasArcFFI.html#method.release_opt">Read more</a></p>
+</div><h4 id='method.addref' class='method'><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../style/gecko_bindings/sugar/ownership/trait.HasArcFFI.html#method.addref' class='fnname'>addref</a>(ptr: &amp;Self::<a class='trait' href='../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>)</code></span></h4>
+<div class='docblock'><p>Artificially increments the refcount of a borrowed Arc over FFI.</p>
+</div><h4 id='method.release' class='method'><span id='release.v' class='invisible'><code>unsafe fn <a href='../../style/gecko_bindings/sugar/ownership/trait.HasArcFFI.html#method.release' class='fnname'>release</a>(ptr: &amp;Self::<a class='trait' href='../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>)</code></span></h4>
+<div class='docblock'><p>Given a non-null borrowed FFI reference, decrements the refcount. Unsafe since it doesn&#39;t consume the backing Arc. Run it only when you know that a strong reference to the backing Arc is disappearing (usually on the C++ side) without running the Arc destructor. <a href="../../style/gecko_bindings/sugar/ownership/trait.HasArcFFI.html#method.release">Read more</a></p>
+</div><h4 id='method.as_arc' class='method'><span id='as_arc.v' class='invisible'><code>fn <a href='../../style/gecko_bindings/sugar/ownership/trait.HasArcFFI.html#method.as_arc' class='fnname'>as_arc</a>&lt;'a&gt;(ptr: &amp;'a &amp;Self::<a class='trait' href='../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>) -&gt; &amp;'a <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;Self&gt;</code></span></h4>
+<div class='docblock'><p>Converts a borrowed FFI reference to a borrowed Arc. <a href="../../style/gecko_bindings/sugar/ownership/trait.HasArcFFI.html#method.as_arc">Read more</a></p>
+</div><h4 id='method.arc_as_borrowed' class='method'><span id='arc_as_borrowed.v' class='invisible'><code>fn <a href='../../style/gecko_bindings/sugar/ownership/trait.HasArcFFI.html#method.arc_as_borrowed' class='fnname'>arc_as_borrowed</a>&lt;'a&gt;(arc: &amp;'a <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;Self&gt;) -&gt; &amp;'a &amp;Self::<a class='trait' href='../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a></code></span></h4>
+<div class='docblock'><p>Converts a borrowed Arc to a borrowed FFI reference. <a href="../../style/gecko_bindings/sugar/ownership/trait.HasArcFFI.html#method.arc_as_borrowed">Read more</a></p>
+</div><h4 id='method.arc_from_borrowed' class='method'><span id='arc_from_borrowed.v' class='invisible'><code>fn <a href='../../style/gecko_bindings/sugar/ownership/trait.HasArcFFI.html#method.arc_from_borrowed' class='fnname'>arc_from_borrowed</a>&lt;'a&gt;(ptr: &amp;'a <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;Self::<a class='trait' href='../../style/gecko_bindings/sugar/ownership/trait.HasFFI.html' title='style::gecko_bindings::sugar::ownership::HasFFI'>FFIType</a>&gt;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/option/enum.Option.html' title='core::option::Option'>Option</a>&lt;&amp;'a <a class='struct' href='https://doc.rust-lang.org/nightly/alloc/arc/struct.Arc.html' title='alloc::arc::Arc'>Arc</a>&lt;Self&gt;&gt;</code></span></h4>
+<div class='docblock'><p>Converts a borrowed nullable FFI reference to a borrowed Arc. <a href="../../style/gecko_bindings/sugar/ownership/trait.HasArcFFI.html#method.arc_from_borrowed">Read more</a></p>
+</div></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../style/stylesheets/struct.Stylesheet.html' title='style::stylesheets::Stylesheet'>Stylesheet</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/style/stylesheets.rs.html#174' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

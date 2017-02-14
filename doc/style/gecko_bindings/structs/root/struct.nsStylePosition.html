@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsStylePosition` struct in crate `style`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsStylePosition">
+
+    <title>style::gecko_bindings::structs::root::nsStylePosition - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>structs</a>::<wbr><a href='index.html'>root</a></p><script>window.sidebarCurrent = {name: 'nsStylePosition', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../../../index.html'>style</a>::<wbr><a href='../../index.html'>gecko_bindings</a>::<wbr><a href='../index.html'>structs</a>::<wbr><a href='index.html'>root</a>::<wbr><a class='struct' href=''>nsStylePosition</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#17973-18011' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsStylePosition {
+    pub mObjectPosition: <a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.Position.html' title='style::gecko_bindings::structs::root::mozilla::Position'>Position</a>,
+    pub mOffset: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleSides.html' title='style::gecko_bindings::structs::root::nsStyleSides'>nsStyleSides</a>,
+    pub mWidth: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mMinWidth: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mMaxWidth: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mHeight: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mMinHeight: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mMaxHeight: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mFlexBasis: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mGridAutoColumnsMin: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mGridAutoColumnsMax: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mGridAutoRowsMin: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mGridAutoRowsMax: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mGridAutoFlow: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mBoxSizing: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleBoxSizing.html' title='style::gecko_bindings::structs::root::mozilla::StyleBoxSizing'>StyleBoxSizing</a>,
+    pub mAlignContent: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>,
+    pub mAlignItems: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mAlignSelf: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mJustifyContent: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a>,
+    pub mJustifyItems: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mJustifySelf: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mFlexDirection: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mFlexWrap: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mObjectFit: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a>,
+    pub mOrder: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a>,
+    pub mFlexGrow: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+    pub mFlexShrink: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a>,
+    pub mZIndex: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mGridTemplateColumns: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleGridTemplate.html' title='style::gecko_bindings::structs::root::nsStyleGridTemplate'>nsStyleGridTemplate</a>,
+    pub mGridTemplateRows: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleGridTemplate.html' title='style::gecko_bindings::structs::root::nsStyleGridTemplate'>nsStyleGridTemplate</a>,
+    pub mGridTemplateAreas: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.GridTemplateAreasValue.html' title='style::gecko_bindings::structs::root::mozilla::css::GridTemplateAreasValue'>GridTemplateAreasValue</a>&gt;,
+    pub mGridColumnStart: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleGridLine.html' title='style::gecko_bindings::structs::root::nsStyleGridLine'>nsStyleGridLine</a>,
+    pub mGridColumnEnd: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleGridLine.html' title='style::gecko_bindings::structs::root::nsStyleGridLine'>nsStyleGridLine</a>,
+    pub mGridRowStart: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleGridLine.html' title='style::gecko_bindings::structs::root::nsStyleGridLine'>nsStyleGridLine</a>,
+    pub mGridRowEnd: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleGridLine.html' title='style::gecko_bindings::structs::root::nsStyleGridLine'>nsStyleGridLine</a>,
+    pub mGridColumnGap: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+    pub mGridRowGap: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a>,
+}</pre><h2 class='fields'>Fields</h2><span id='structfield.mObjectPosition' class='structfield'>
+                           <span id='mObjectPosition.v' class='invisible'>
+                           <code>mObjectPosition: <a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/struct.Position.html' title='style::gecko_bindings::structs::root::mozilla::Position'>Position</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mOffset' class='structfield'>
+                           <span id='mOffset.v' class='invisible'>
+                           <code>mOffset: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleSides.html' title='style::gecko_bindings::structs::root::nsStyleSides'>nsStyleSides</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mWidth' class='structfield'>
+                           <span id='mWidth.v' class='invisible'>
+                           <code>mWidth: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mMinWidth' class='structfield'>
+                           <span id='mMinWidth.v' class='invisible'>
+                           <code>mMinWidth: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mMaxWidth' class='structfield'>
+                           <span id='mMaxWidth.v' class='invisible'>
+                           <code>mMaxWidth: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mHeight' class='structfield'>
+                           <span id='mHeight.v' class='invisible'>
+                           <code>mHeight: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mMinHeight' class='structfield'>
+                           <span id='mMinHeight.v' class='invisible'>
+                           <code>mMinHeight: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mMaxHeight' class='structfield'>
+                           <span id='mMaxHeight.v' class='invisible'>
+                           <code>mMaxHeight: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mFlexBasis' class='structfield'>
+                           <span id='mFlexBasis.v' class='invisible'>
+                           <code>mFlexBasis: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mGridAutoColumnsMin' class='structfield'>
+                           <span id='mGridAutoColumnsMin.v' class='invisible'>
+                           <code>mGridAutoColumnsMin: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mGridAutoColumnsMax' class='structfield'>
+                           <span id='mGridAutoColumnsMax.v' class='invisible'>
+                           <code>mGridAutoColumnsMax: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mGridAutoRowsMin' class='structfield'>
+                           <span id='mGridAutoRowsMin.v' class='invisible'>
+                           <code>mGridAutoRowsMin: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mGridAutoRowsMax' class='structfield'>
+                           <span id='mGridAutoRowsMax.v' class='invisible'>
+                           <code>mGridAutoRowsMax: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mGridAutoFlow' class='structfield'>
+                           <span id='mGridAutoFlow.v' class='invisible'>
+                           <code>mGridAutoFlow: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mBoxSizing' class='structfield'>
+                           <span id='mBoxSizing.v' class='invisible'>
+                           <code>mBoxSizing: <a class='enum' href='../../../../style/gecko_bindings/structs/root/mozilla/enum.StyleBoxSizing.html' title='style::gecko_bindings::structs::root::mozilla::StyleBoxSizing'>StyleBoxSizing</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mAlignContent' class='structfield'>
+                           <span id='mAlignContent.v' class='invisible'>
+                           <code>mAlignContent: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mAlignItems' class='structfield'>
+                           <span id='mAlignItems.v' class='invisible'>
+                           <code>mAlignItems: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mAlignSelf' class='structfield'>
+                           <span id='mAlignSelf.v' class='invisible'>
+                           <code>mAlignSelf: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mJustifyContent' class='structfield'>
+                           <span id='mJustifyContent.v' class='invisible'>
+                           <code>mJustifyContent: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u16.html'>u16</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mJustifyItems' class='structfield'>
+                           <span id='mJustifyItems.v' class='invisible'>
+                           <code>mJustifyItems: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mJustifySelf' class='structfield'>
+                           <span id='mJustifySelf.v' class='invisible'>
+                           <code>mJustifySelf: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mFlexDirection' class='structfield'>
+                           <span id='mFlexDirection.v' class='invisible'>
+                           <code>mFlexDirection: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mFlexWrap' class='structfield'>
+                           <span id='mFlexWrap.v' class='invisible'>
+                           <code>mFlexWrap: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mObjectFit' class='structfield'>
+                           <span id='mObjectFit.v' class='invisible'>
+                           <code>mObjectFit: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.u8.html'>u8</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mOrder' class='structfield'>
+                           <span id='mOrder.v' class='invisible'>
+                           <code>mOrder: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.i32.html'>i32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mFlexGrow' class='structfield'>
+                           <span id='mFlexGrow.v' class='invisible'>
+                           <code>mFlexGrow: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mFlexShrink' class='structfield'>
+                           <span id='mFlexShrink.v' class='invisible'>
+                           <code>mFlexShrink: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.f32.html'>f32</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mZIndex' class='structfield'>
+                           <span id='mZIndex.v' class='invisible'>
+                           <code>mZIndex: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mGridTemplateColumns' class='structfield'>
+                           <span id='mGridTemplateColumns.v' class='invisible'>
+                           <code>mGridTemplateColumns: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleGridTemplate.html' title='style::gecko_bindings::structs::root::nsStyleGridTemplate'>nsStyleGridTemplate</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mGridTemplateRows' class='structfield'>
+                           <span id='mGridTemplateRows.v' class='invisible'>
+                           <code>mGridTemplateRows: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleGridTemplate.html' title='style::gecko_bindings::structs::root::nsStyleGridTemplate'>nsStyleGridTemplate</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mGridTemplateAreas' class='structfield'>
+                           <span id='mGridTemplateAreas.v' class='invisible'>
+                           <code>mGridTemplateAreas: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.RefPtr.html' title='style::gecko_bindings::structs::root::RefPtr'>RefPtr</a>&lt;<a class='struct' href='../../../../style/gecko_bindings/structs/root/mozilla/css/struct.GridTemplateAreasValue.html' title='style::gecko_bindings::structs::root::mozilla::css::GridTemplateAreasValue'>GridTemplateAreasValue</a>&gt;</code>
+                           </span></span><span class='stab '></span><span id='structfield.mGridColumnStart' class='structfield'>
+                           <span id='mGridColumnStart.v' class='invisible'>
+                           <code>mGridColumnStart: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleGridLine.html' title='style::gecko_bindings::structs::root::nsStyleGridLine'>nsStyleGridLine</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mGridColumnEnd' class='structfield'>
+                           <span id='mGridColumnEnd.v' class='invisible'>
+                           <code>mGridColumnEnd: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleGridLine.html' title='style::gecko_bindings::structs::root::nsStyleGridLine'>nsStyleGridLine</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mGridRowStart' class='structfield'>
+                           <span id='mGridRowStart.v' class='invisible'>
+                           <code>mGridRowStart: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleGridLine.html' title='style::gecko_bindings::structs::root::nsStyleGridLine'>nsStyleGridLine</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mGridRowEnd' class='structfield'>
+                           <span id='mGridRowEnd.v' class='invisible'>
+                           <code>mGridRowEnd: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleGridLine.html' title='style::gecko_bindings::structs::root::nsStyleGridLine'>nsStyleGridLine</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mGridColumnGap' class='structfield'>
+                           <span id='mGridColumnGap.v' class='invisible'>
+                           <code>mGridColumnGap: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.mGridRowGap' class='structfield'>
+                           <span id='mGridRowGap.v' class='invisible'>
+                           <code>mGridRowGap: <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStyleCoord.html' title='style::gecko_bindings::structs::root::nsStyleCoord'>nsStyleCoord</a></code>
+                           </span></span><span class='stab '></span><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Send.html' title='core::marker::Send'>Send</a> for <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStylePosition.html' title='style::gecko_bindings::structs::root::nsStylePosition'>nsStylePosition</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/bindings.rs.html#108' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/marker/trait.Sync.html' title='core::marker::Sync'>Sync</a> for <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStylePosition.html' title='style::gecko_bindings::structs::root::nsStylePosition'>nsStylePosition</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/bindings.rs.html#109' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'></div><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html' title='core::fmt::Debug'>Debug</a> for <a class='struct' href='../../../../style/gecko_bindings/structs/root/struct.nsStylePosition.html' title='style::gecko_bindings::structs::root::nsStylePosition'>nsStylePosition</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../../../src/style/home/mlayzell/Code/gecko_rustdoc/debug/build/style-e21a99fb60ed644f/out/gecko/structs_debug.rs.html#17972' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.fmt' class='method'><span id='fmt.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html#tymethod.fmt' class='fnname'>fmt</a>(&amp;self, __arg_0: &amp;mut <a class='struct' href='https://doc.rust-lang.org/nightly/core/fmt/struct.Formatter.html' title='core::fmt::Formatter'>Formatter</a>) -&gt; <a class='type' href='https://doc.rust-lang.org/nightly/core/fmt/type.Result.html' title='core::fmt::Result'>Result</a></code></span></h4>
+<div class='docblock'><p>Formats the value using the given formatter.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../";
+        window.currentCrate = "style";
+    </script>
+    <script src="../../../../jquery.js"></script>
+    <script src="../../../../main.js"></script>
+    <script defer src="../../../../search-index.js"></script>
+</body>
+</html>

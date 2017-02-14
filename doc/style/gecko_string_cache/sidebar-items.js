@@ -1,0 +1,1 @@
+initSidebarItems({"mod":[["atom_macro",""],["namespace","A type to represent a namespace."]],"struct":[["Atom","A strong reference to a Gecko atom."],["WeakAtom","An atom *without* a strong reference."]],"type":[["BorrowedAtom","A BorrowedAtom for Gecko is just a weak reference to a `nsIAtom`, that hasn't been bumped."]]});

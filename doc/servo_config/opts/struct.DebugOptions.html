@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `DebugOptions` struct in crate `servo_config`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, DebugOptions">
+
+    <title>servo_config::opts::DebugOptions - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'><a href='../index.html'>servo_config</a>::<wbr><a href='index.html'>opts</a></p><script>window.sidebarCurrent = {name: 'DebugOptions', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content struct">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>servo_config</a>::<wbr><a href='index.html'>opts</a>::<wbr><a class='struct' href=''>DebugOptions</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/servo_config/opts.rs.html#243-349' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'>pub struct DebugOptions {
+    pub help: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub bubble_widths: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub disable_text_aa: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub enable_subpixel_aa: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub disable_canvas_aa: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub dump_style_tree: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub dump_rule_tree: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub dump_flow_tree: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub dump_display_list: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub dump_display_list_json: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub dump_layer_tree: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub relayout_event: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub profile_script_events: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub profile_heartbeats: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub show_compositor_borders: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub show_fragment_borders: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub show_parallel_paint: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub show_parallel_layout: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub paint_flashing: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub trace_layout: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub disable_share_style_cache: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub style_sharing_stats: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub convert_mouse_to_touch: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub replace_surrogates: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub gc_profile: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub load_webfonts_synchronously: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub disable_vsync: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub webrender_stats: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub webrender_debug: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub webrender_record: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub use_msaa: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub full_backtraces: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub precache_shaders: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+    pub signpost: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a>,
+}</pre><div class='docblock'><p>Debug options for Servo, currently set on the command line with -Z</p>
+</div><h2 class='fields'>Fields</h2><span id='structfield.help' class='structfield'>
+                           <span id='help.v' class='invisible'>
+                           <code>help: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>List all the debug options.</p>
+</div><span id='structfield.bubble_widths' class='structfield'>
+                           <span id='bubble_widths.v' class='invisible'>
+                           <code>bubble_widths: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Bubble intrinsic widths separately like other engines.</p>
+</div><span id='structfield.disable_text_aa' class='structfield'>
+                           <span id='disable_text_aa.v' class='invisible'>
+                           <code>disable_text_aa: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Disable antialiasing of rendered text.</p>
+</div><span id='structfield.enable_subpixel_aa' class='structfield'>
+                           <span id='enable_subpixel_aa.v' class='invisible'>
+                           <code>enable_subpixel_aa: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Enable subpixel antialiasing of rendered text.</p>
+</div><span id='structfield.disable_canvas_aa' class='structfield'>
+                           <span id='disable_canvas_aa.v' class='invisible'>
+                           <code>disable_canvas_aa: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Disable antialiasing of rendered text on the HTML canvas element.</p>
+</div><span id='structfield.dump_style_tree' class='structfield'>
+                           <span id='dump_style_tree.v' class='invisible'>
+                           <code>dump_style_tree: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Print the DOM after each restyle.</p>
+</div><span id='structfield.dump_rule_tree' class='structfield'>
+                           <span id='dump_rule_tree.v' class='invisible'>
+                           <code>dump_rule_tree: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Dumps the rule tree.</p>
+</div><span id='structfield.dump_flow_tree' class='structfield'>
+                           <span id='dump_flow_tree.v' class='invisible'>
+                           <code>dump_flow_tree: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Print the flow tree after each layout.</p>
+</div><span id='structfield.dump_display_list' class='structfield'>
+                           <span id='dump_display_list.v' class='invisible'>
+                           <code>dump_display_list: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Print the display list after each layout.</p>
+</div><span id='structfield.dump_display_list_json' class='structfield'>
+                           <span id='dump_display_list_json.v' class='invisible'>
+                           <code>dump_display_list_json: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Print the display list in JSON form.</p>
+</div><span id='structfield.dump_layer_tree' class='structfield'>
+                           <span id='dump_layer_tree.v' class='invisible'>
+                           <code>dump_layer_tree: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Print the layer tree whenever it changes.</p>
+</div><span id='structfield.relayout_event' class='structfield'>
+                           <span id='relayout_event.v' class='invisible'>
+                           <code>relayout_event: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Print notifications when there is a relayout.</p>
+</div><span id='structfield.profile_script_events' class='structfield'>
+                           <span id='profile_script_events.v' class='invisible'>
+                           <code>profile_script_events: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Profile which events script threads spend their time on.</p>
+</div><span id='structfield.profile_heartbeats' class='structfield'>
+                           <span id='profile_heartbeats.v' class='invisible'>
+                           <code>profile_heartbeats: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Enable all heartbeats for profiling.</p>
+</div><span id='structfield.show_compositor_borders' class='structfield'>
+                           <span id='show_compositor_borders.v' class='invisible'>
+                           <code>show_compositor_borders: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Paint borders along layer and tile boundaries.</p>
+</div><span id='structfield.show_fragment_borders' class='structfield'>
+                           <span id='show_fragment_borders.v' class='invisible'>
+                           <code>show_fragment_borders: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Paint borders along fragment boundaries.</p>
+</div><span id='structfield.show_parallel_paint' class='structfield'>
+                           <span id='show_parallel_paint.v' class='invisible'>
+                           <code>show_parallel_paint: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Overlay tiles with colors showing which thread painted them.</p>
+</div><span id='structfield.show_parallel_layout' class='structfield'>
+                           <span id='show_parallel_layout.v' class='invisible'>
+                           <code>show_parallel_layout: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Mark which thread laid each flow out with colors.</p>
+</div><span id='structfield.paint_flashing' class='structfield'>
+                           <span id='paint_flashing.v' class='invisible'>
+                           <code>paint_flashing: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Overlay repainted areas with a random color.</p>
+</div><span id='structfield.trace_layout' class='structfield'>
+                           <span id='trace_layout.v' class='invisible'>
+                           <code>trace_layout: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Write layout trace to an external file for debugging.</p>
+</div><span id='structfield.disable_share_style_cache' class='structfield'>
+                           <span id='disable_share_style_cache.v' class='invisible'>
+                           <code>disable_share_style_cache: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Disable the style sharing cache.</p>
+</div><span id='structfield.style_sharing_stats' class='structfield'>
+                           <span id='style_sharing_stats.v' class='invisible'>
+                           <code>style_sharing_stats: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Whether to show in stdout style sharing cache stats after a restyle.</p>
+</div><span id='structfield.convert_mouse_to_touch' class='structfield'>
+                           <span id='convert_mouse_to_touch.v' class='invisible'>
+                           <code>convert_mouse_to_touch: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Translate mouse input into touch events.</p>
+</div><span id='structfield.replace_surrogates' class='structfield'>
+                           <span id='replace_surrogates.v' class='invisible'>
+                           <code>replace_surrogates: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Replace unpaires surrogates in DOM strings with U+FFFD.
+See <a href="https://github.com/servo/servo/issues/6564">https://github.com/servo/servo/issues/6564</a></p>
+</div><span id='structfield.gc_profile' class='structfield'>
+                           <span id='gc_profile.v' class='invisible'>
+                           <code>gc_profile: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Log GC passes and their durations.</p>
+</div><span id='structfield.load_webfonts_synchronously' class='structfield'>
+                           <span id='load_webfonts_synchronously.v' class='invisible'>
+                           <code>load_webfonts_synchronously: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Load web fonts synchronously to avoid non-deterministic network-driven reflows.</p>
+</div><span id='structfield.disable_vsync' class='structfield'>
+                           <span id='disable_vsync.v' class='invisible'>
+                           <code>disable_vsync: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Disable vsync in the compositor</p>
+</div><span id='structfield.webrender_stats' class='structfield'>
+                           <span id='webrender_stats.v' class='invisible'>
+                           <code>webrender_stats: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Show webrender profiling stats on screen.</p>
+</div><span id='structfield.webrender_debug' class='structfield'>
+                           <span id='webrender_debug.v' class='invisible'>
+                           <code>webrender_debug: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Show webrender debug on screen.</p>
+</div><span id='structfield.webrender_record' class='structfield'>
+                           <span id='webrender_record.v' class='invisible'>
+                           <code>webrender_record: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Enable webrender recording.</p>
+</div><span id='structfield.use_msaa' class='structfield'>
+                           <span id='use_msaa.v' class='invisible'>
+                           <code>use_msaa: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>Use multisample antialiasing in WebRender.</p>
+</div><span id='structfield.full_backtraces' class='structfield'>
+                           <span id='full_backtraces.v' class='invisible'>
+                           <code>full_backtraces: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><span id='structfield.precache_shaders' class='structfield'>
+                           <span id='precache_shaders.v' class='invisible'>
+                           <code>precache_shaders: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>True to compile all webrender shaders at init time. This is mostly
+useful when modifying the shaders, to ensure they all compile
+after each change is made.</p>
+</div><span id='structfield.signpost' class='structfield'>
+                           <span id='signpost.v' class='invisible'>
+                           <code>signpost: <a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.bool.html'>bool</a></code>
+                           </span></span><span class='stab '></span><div class='docblock'><p>True to use OS native signposting facilities. This makes profiling events (script activity,
+reflow, compositing, etc.) appear in Instruments.app on macOS.</p>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><span class='in-band'><code>impl <a class='struct' href='../../servo_config/opts/struct.DebugOptions.html' title='servo_config::opts::DebugOptions'>DebugOptions</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/servo_config/opts.rs.html#352-396' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.extend' class='method'><span id='extend.v' class='invisible'><code>fn <a href='#method.extend' class='fnname'>extend</a>(&amp;mut self, debug_string: <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>) -&gt; <a class='enum' href='https://doc.rust-lang.org/nightly/core/result/enum.Result.html' title='core::result::Result'>Result</a>&lt;<a class='primitive' href='https://doc.rust-lang.org/nightly/std/primitive.tuple.html'>()</a>, <a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;</code></span></h4>
+</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><span class='in-band'><code>impl <a class='trait' href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html' title='core::default::Default'>Default</a> for <a class='struct' href='../../servo_config/opts/struct.DebugOptions.html' title='servo_config::opts::DebugOptions'>DebugOptions</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/servo_config/opts.rs.html#242' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.default' class='method'><span id='default.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default' class='fnname'>default</a>() -&gt; <a class='struct' href='../../servo_config/opts/struct.DebugOptions.html' title='servo_config::opts::DebugOptions'>DebugOptions</a></code></span></h4>
+<div class='docblock'><p>Returns the &quot;default value&quot; for a type. <a href="https://doc.rust-lang.org/nightly/core/default/trait.Default.html#tymethod.default">Read more</a></p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "servo_config";
+    </script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>
