@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `mp4parse_capi` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, mp4parse_capi">
+
+    <title>mp4parse_capi - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 'mp4parse_capi', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>mp4parse_capi</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/mp4parse_capi/lib.rs.html#1-1007' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>C API for mp4parse module.</p>
+
+<p>Parses ISO Base Media Format aka video/mp4 streams.</p>
+
+<h1 id='examples' class='section-header'><a href='#examples'>Examples</a></h1>
+<pre class='rust rust-example-rendered'>
+<span class='kw'>extern</span> <span class='kw'>crate</span> <span class='ident'>mp4parse_capi</span>;
+<span class='kw'>use</span> <span class='ident'>std</span>::<span class='ident'>io</span>::<span class='ident'>Read</span>;
+
+<span class='kw'>extern</span> <span class='kw'>fn</span> <span class='ident'>buf_read</span>(<span class='ident'>buf</span>: <span class='kw-2'>*</span><span class='kw-2'>mut</span> <span class='ident'>u8</span>, <span class='ident'>size</span>: <span class='ident'>usize</span>, <span class='ident'>userdata</span>: <span class='kw-2'>*</span><span class='kw-2'>mut</span> <span class='ident'>std</span>::<span class='ident'>os</span>::<span class='ident'>raw</span>::<span class='ident'>c_void</span>) <span class='op'>-&gt;</span> <span class='ident'>isize</span> {
+   <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>input</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>std</span>::<span class='ident'>fs</span>::<span class='ident'>File</span> <span class='op'>=</span> <span class='kw'>unsafe</span> { <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='kw-2'>*</span>(<span class='ident'>userdata</span> <span class='kw'>as</span> <span class='kw-2'>*</span><span class='kw-2'>mut</span> _) };
+   <span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>buf</span> <span class='op'>=</span> <span class='kw'>unsafe</span> { <span class='ident'>std</span>::<span class='ident'>slice</span>::<span class='ident'>from_raw_parts_mut</span>(<span class='ident'>buf</span>, <span class='ident'>size</span>) };
+   <span class='kw'>match</span> <span class='ident'>input</span>.<span class='ident'>read</span>(<span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>buf</span>) {
+       <span class='prelude-val'>Ok</span>(<span class='ident'>n</span>) <span class='op'>=&gt;</span> <span class='ident'>n</span> <span class='kw'>as</span> <span class='ident'>isize</span>,
+       <span class='prelude-val'>Err</span>(_) <span class='op'>=&gt;</span> <span class='op'>-</span><span class='number'>1</span>,
+   }
+}
+
+<span class='kw'>let</span> <span class='kw-2'>mut</span> <span class='ident'>file</span> <span class='op'>=</span> <span class='ident'>std</span>::<span class='ident'>fs</span>::<span class='ident'>File</span>::<span class='ident'>open</span>(<span class='string'>&quot;../mp4parse/tests/minimal.mp4&quot;</span>).<span class='ident'>unwrap</span>();
+<span class='kw'>let</span> <span class='ident'>io</span> <span class='op'>=</span> <span class='ident'>mp4parse_capi</span>::<span class='ident'>mp4parse_io</span> {
+    <span class='ident'>read</span>: <span class='ident'>buf_read</span>,
+    <span class='ident'>userdata</span>: <span class='kw-2'>&amp;</span><span class='kw-2'>mut</span> <span class='ident'>file</span> <span class='kw'>as</span> <span class='kw-2'>*</span><span class='kw-2'>mut</span> _ <span class='kw'>as</span> <span class='kw-2'>*</span><span class='kw-2'>mut</span> <span class='ident'>std</span>::<span class='ident'>os</span>::<span class='ident'>raw</span>::<span class='ident'>c_void</span>
+};
+<span class='kw'>unsafe</span> {
+    <span class='kw'>let</span> <span class='ident'>parser</span> <span class='op'>=</span> <span class='ident'>mp4parse_capi</span>::<span class='ident'>mp4parse_new</span>(<span class='kw-2'>&amp;</span><span class='ident'>io</span>);
+    <span class='kw'>let</span> <span class='ident'>rv</span> <span class='op'>=</span> <span class='ident'>mp4parse_capi</span>::<span class='ident'>mp4parse_read</span>(<span class='ident'>parser</span>);
+    <span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>rv</span>, <span class='ident'>mp4parse_capi</span>::<span class='ident'>mp4parse_error</span>::<span class='ident'>MP4PARSE_OK</span>);
+    <span class='ident'>mp4parse_capi</span>::<span class='ident'>mp4parse_free</span>(<span class='ident'>parser</span>);
+}</pre>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.mp4parse_byte_data.html'
+                                  title='mp4parse_capi::mp4parse_byte_data'>mp4parse_byte_data</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.mp4parse_fragment_info.html'
+                                  title='mp4parse_capi::mp4parse_fragment_info'>mp4parse_fragment_info</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.mp4parse_io.html'
+                                  title='mp4parse_capi::mp4parse_io'>mp4parse_io</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.mp4parse_parser.html'
+                                  title='mp4parse_capi::mp4parse_parser'>mp4parse_parser</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.mp4parse_pssh_info.html'
+                                  title='mp4parse_capi::mp4parse_pssh_info'>mp4parse_pssh_info</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.mp4parse_track_audio_info.html'
+                                  title='mp4parse_capi::mp4parse_track_audio_info'>mp4parse_track_audio_info</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.mp4parse_track_info.html'
+                                  title='mp4parse_capi::mp4parse_track_info'>mp4parse_track_info</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.mp4parse_track_video_info.html'
+                                  title='mp4parse_capi::mp4parse_track_video_info'>mp4parse_track_video_info</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.mp4parser_sinf_info.html'
+                                  title='mp4parse_capi::mp4parser_sinf_info'>mp4parser_sinf_info</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.mp4parse_codec.html'
+                                  title='mp4parse_capi::mp4parse_codec'>mp4parse_codec</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.mp4parse_error.html'
+                                  title='mp4parse_capi::mp4parse_error'>mp4parse_error</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.mp4parse_track_type.html'
+                                  title='mp4parse_capi::mp4parse_track_type'>mp4parse_track_type</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.mp4parse_free.html'
+                                  title='mp4parse_capi::mp4parse_free'>mp4parse_free</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Free an <code>mp4parse_parser*</code> allocated by <code>mp4parse_new()</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.mp4parse_get_fragment_info.html'
+                                  title='mp4parse_capi::mp4parse_get_fragment_info'>mp4parse_get_fragment_info</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Fill the supplied <code>mp4parse_fragment_info</code> with metadata from fragmented file.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.mp4parse_get_pssh_info.html'
+                                  title='mp4parse_capi::mp4parse_get_pssh_info'>mp4parse_get_pssh_info</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Get &#39;pssh&#39; system id and &#39;pssh&#39; box content for eme playback.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.mp4parse_get_track_audio_info.html'
+                                  title='mp4parse_capi::mp4parse_get_track_audio_info'>mp4parse_get_track_audio_info</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Fill the supplied <code>mp4parse_track_audio_info</code> with metadata for <code>track</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.mp4parse_get_track_count.html'
+                                  title='mp4parse_capi::mp4parse_get_track_count'>mp4parse_get_track_count</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Return the number of tracks parsed by previous <code>mp4parse_read()</code> call.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.mp4parse_get_track_info.html'
+                                  title='mp4parse_capi::mp4parse_get_track_info'>mp4parse_get_track_info</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Fill the supplied <code>mp4parse_track_info</code> with metadata for <code>track</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.mp4parse_get_track_video_info.html'
+                                  title='mp4parse_capi::mp4parse_get_track_video_info'>mp4parse_get_track_video_info</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Fill the supplied <code>mp4parse_track_video_info</code> with metadata for <code>track</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.mp4parse_is_fragmented.html'
+                                  title='mp4parse_capi::mp4parse_is_fragmented'>mp4parse_is_fragmented</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>A fragmented file needs mvex table and contains no data in stts, stsc, and stco boxes.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.mp4parse_log.html'
+                                  title='mp4parse_capi::mp4parse_log'>mp4parse_log</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Enable mp4_parser log.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.mp4parse_new.html'
+                                  title='mp4parse_capi::mp4parse_new'>mp4parse_new</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Allocate an <code>mp4parse_parser*</code> to read from the supplied <code>mp4parse_io</code>.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.mp4parse_read.html'
+                                  title='mp4parse_capi::mp4parse_read'>mp4parse_read</a><a title='unsafe function' href='#'><sup>⚠</sup></a></td>
+                           <td class='docblock-short'>
+                                <p>Run the <code>mp4parse_parser*</code> allocated by <code>mp4parse_new()</code> until EOF or error.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "mp4parse_capi";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `mp4parse` crate.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, mp4parse">
+
+    <title>mp4parse - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'></p><script>window.sidebarCurrent = {name: 'mp4parse', ty: 'mod', relpath: '../'};</script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content mod">
+<h1 class='fqn'><span class='in-band'>Crate <a class='mod' href=''>mp4parse</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/mp4parse/lib.rs.html#1-1954' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p>Module for parsing ISO Base Media Format aka video/mp4 streams.</p>
+</div><h2 id='structs' class='section-header'><a href="#structs">Structs</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.AudioSampleEntry.html'
+                                  title='mp4parse::AudioSampleEntry'>AudioSampleEntry</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ES_Descriptor.html'
+                                  title='mp4parse::ES_Descriptor'>ES_Descriptor</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.EmptySampleTableBoxes.html'
+                                  title='mp4parse::EmptySampleTableBoxes'>EmptySampleTableBoxes</a></td>
+                           <td class='docblock-short'>
+                                <p>A fragmented file contains no sample data in stts, stsc, and stco.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.FLACMetadataBlock.html'
+                                  title='mp4parse::FLACMetadataBlock'>FLACMetadataBlock</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.FLACSpecificBox.html'
+                                  title='mp4parse::FLACSpecificBox'>FLACSpecificBox</a></td>
+                           <td class='docblock-short'>
+                                <p>Represet a FLACSpecificBox &#39;dfLa&#39;</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.MediaContext.html'
+                                  title='mp4parse::MediaContext'>MediaContext</a></td>
+                           <td class='docblock-short'>
+                                <p>Internal data structures.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.MediaScaledTime.html'
+                                  title='mp4parse::MediaScaledTime'>MediaScaledTime</a></td>
+                           <td class='docblock-short'>
+                                <p>A time to be scaled by the media&#39;s global (mvhd) timescale.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.MediaTimeScale.html'
+                                  title='mp4parse::MediaTimeScale'>MediaTimeScale</a></td>
+                           <td class='docblock-short'>
+                                <p>The media&#39;s global (mvhd) timescale in units per second.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.MovieExtendsBox.html'
+                                  title='mp4parse::MovieExtendsBox'>MovieExtendsBox</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.OpusSpecificBox.html'
+                                  title='mp4parse::OpusSpecificBox'>OpusSpecificBox</a></td>
+                           <td class='docblock-short'>
+                                <p>Represent an OpusSpecificBox &#39;dOps&#39;</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ProtectionSchemeInfoBox.html'
+                                  title='mp4parse::ProtectionSchemeInfoBox'>ProtectionSchemeInfoBox</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.ProtectionSystemSpecificHeaderBox.html'
+                                  title='mp4parse::ProtectionSystemSpecificHeaderBox'>ProtectionSystemSpecificHeaderBox</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.Track.html'
+                                  title='mp4parse::Track'>Track</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TrackEncryptionBox.html'
+                                  title='mp4parse::TrackEncryptionBox'>TrackEncryptionBox</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TrackHeaderBox.html'
+                                  title='mp4parse::TrackHeaderBox'>TrackHeaderBox</a></td>
+                           <td class='docblock-short'>
+                                <p>Track header box &#39;tkhd&#39;</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TrackScaledTime.html'
+                                  title='mp4parse::TrackScaledTime'>TrackScaledTime</a></td>
+                           <td class='docblock-short'>
+                                <p>A time to be scaled by the track&#39;s local (mdhd) timescale.
+Members are time in scale units and the track id.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.TrackTimeScale.html'
+                                  title='mp4parse::TrackTimeScale'>TrackTimeScale</a></td>
+                           <td class='docblock-short'>
+                                <p>The track&#39;s local (mdhd) timescale.
+Members are timescale units per second and the track id.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.VPxConfigBox.html'
+                                  title='mp4parse::VPxConfigBox'>VPxConfigBox</a></td>
+                           <td class='docblock-short'>
+                                <p>Represent a Video Partition Codec Configuration &#39;vpcC&#39; box (aka vp9).</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='struct' href='struct.VideoSampleEntry.html'
+                                  title='mp4parse::VideoSampleEntry'>VideoSampleEntry</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='enums' class='section-header'><a href="#enums">Enums</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.AudioCodecSpecific.html'
+                                  title='mp4parse::AudioCodecSpecific'>AudioCodecSpecific</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.CodecType.html'
+                                  title='mp4parse::CodecType'>CodecType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.Error.html'
+                                  title='mp4parse::Error'>Error</a></td>
+                           <td class='docblock-short'>
+                                <p>Describes parser failures.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.SampleEntry.html'
+                                  title='mp4parse::SampleEntry'>SampleEntry</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.TrackType.html'
+                                  title='mp4parse::TrackType'>TrackType</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='enum' href='enum.VideoCodecSpecific.html'
+                                  title='mp4parse::VideoCodecSpecific'>VideoCodecSpecific</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.read_mp4.html'
+                                  title='mp4parse::read_mp4'>read_mp4</a></td>
+                           <td class='docblock-short'>
+                                <p>Read the contents of a box, including sub boxes.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.serialize_opus_header.html'
+                                  title='mp4parse::serialize_opus_header'>serialize_opus_header</a></td>
+                           <td class='docblock-short'>
+                                <p>Re-serialize the Opus codec-specific config data as an <code>OpusHead</code> packet.</p>
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='fn' href='fn.set_debug_mode.html'
+                                  title='mp4parse::set_debug_mode'>set_debug_mode</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr></table><h2 id='types' class='section-header'><a href="#types">Type Definitions</a></h2>
+<table>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.ByteData.html'
+                                  title='mp4parse::ByteData'>ByteData</a></td>
+                           <td class='docblock-short'>
+                                
+                           </td>
+                       </tr>
+                       <tr class=' module-item'>
+                           <td><a class='type' href='type.Result.html'
+                                  title='mp4parse::Result'>Result</a></td>
+                           <td class='docblock-short'>
+                                <p>Result shorthand using our Error enum.</p>
+                           </td>
+                       </tr></table></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>&larrb;</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>&rarrb;</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt>+</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "mp4parse";
+    </script>
+    <script src="../jquery.js"></script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>
